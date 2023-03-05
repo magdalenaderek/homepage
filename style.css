@@ -1,0 +1,33 @@
+.body {
+    background: #6C534E;
+}
+.section {
+    background: #FFFFFF;
+}
+.paragraph {
+    background: #FFFFFF;
+}
+.article {
+    background: #FFFFFF;
+}
+.main-header {
+    color: #FFB140;
+}
+.section-header {
+    color: #084C61;
+}
+.article-header {
+    color: #084C61;
+}
+.footer {
+    color: #FFFFFF;
+}
+.header-link {
+    color: #FFB140;
+}
+.footer-link {
+    color: #FFB140;
+}
+.link {
+    color: #F51AA4;
+}
