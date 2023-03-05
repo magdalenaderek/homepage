@@ -208,39 +208,96 @@
                     cd ../.. - powoduje przejście dwa katalogi wyżej;<br />
                     mkdir nowyfolder - tworzy w bieżącej lokalizacji nowy katalog o nazwie "nowyfolder";<br />
                     code . - otwiera visual studio code w bieżącym katalogu;<br />
-                    code katalog - otwiera folder katalog" w visual studio code.<br/>
-                    Do skakania po wprowadzonych poleceeniach, by wprowadzić w nowej linii ich zawartość, można używać strzałek góra/dół.
+                    code katalog - otwiera folder katalog" w visual studio code;<br />
+                    clear - czyści historię bieżących poelceń w terminalu.<br />
+                    Do skakania po wprowadzonych poleceeniach, by wprowadzić w nowej linii ich zawartość, można używać
+                    strzałek góra/dół.
                 </p>
                 <img class="image" src="terminal-commands.JPG"
                     alt="Podstawowe komendy dla terminala w systemie Windows." /><br />
             </article>
         </section>
-                <section class="section">
+        <section class="section">
             <h2 class="section-header">Varia - tydzień 4</h2>
             <article class="article">
                 <h3 class="article-header">GIT</h3>
                 <p class="paragraph">
-                    GIT narzędzie kontroli wersji kodu, wersjonowania kodu. Można z niego korzystać za pomocą terminali:<br/>
-                    - cmd,<br/>
-                    - powershell,<br/>
-                    - git bash.<br/>
-                <p class="paragraph"> Po pobraniu i zainstalowaniu GIT-a należy go skonfigurować pod nasze dane z poziomu terminala. Dostępne są następujące polecenia:
-                    git --version sprawdza wersję zainstalowanego GIT-a<br/>
-                    git config --global user.name "Magdalena Derek"<br/>
+                    GIT narzędzie kontroli wersji kodu, wersjonowania kodu. Można z niego korzystać za pomocą
+                    terminali:<br />
+                    - cmd,<br />
+                    - powershell,<br />
+                    - git bash.<br />
+                <p class="paragraph"> Po pobraniu i zainstalowaniu GIT-a należy go skonfigurować pod nasze dane z
+                    poziomu terminala. Dostępne są następujące polecenia:
+                    git --version sprawdza wersję zainstalowanego GIT-a<br />
+                    git config --global user.name "Magdalena Derek"<br />
                     git config --global user.email magdalena.derek@tlen.pl
-                </p>    
-                <p class="paragraph">Poprawność wprowadzonych danych można sprawdzić za pomocą następujących poleceń:<br/>
-                git config --get user.name<br/>
-                git config --get user.email
                 </p>
-                <p class="paragraph"> 
-                    GIT składa się z repozytoriów. Repozytorium to nasz projekt, czyli katalog, w którym znajdują się wszystkie pliki.<br/>
-                    Aby założyć repozytorium dla naszego projektu, z poziomu terminala wchodzimy do katalogu projektu (w tym przypadku katalog homepage) i używamy polecenia <b>git init</b>. W efekcie pojawia sie informacja o utworzeniu pustego repozytorium i w katalogu homepage pojawia się nowy katalog <b>.git</b>, który jest katalogiem ukrytym i nie należy go kasować. W katalogu tym przechowywana jest cała historia GIT-a.<br/>
-                    C:\dev\homepage>git init<br/>
+                <p class="paragraph">Poprawność wprowadzonych danych można sprawdzić za pomocą następujących
+                    poleceń:<br />
+                    git config --get user.name<br />
+                    git config --get user.email
+                </p>
+                <p class="paragraph">
+                    GIT składa się z repozytoriów. Repozytorium to nasz projekt, czyli katalog, w którym znajdują się
+                    wszystkie pliki.<br />
+                    Aby założyć repozytorium dla naszego projektu, z poziomu terminala wchodzimy do katalogu projektu (w
+                    tym przypadku katalog homepage) i używamy polecenia <b>git init</b>. W efekcie pojawia sie
+                    informacja o utworzeniu pustego repozytorium i w katalogu homepage pojawia się nowy katalog
+                    <b>.git</b>, który jest katalogiem ukrytym i nie należy go kasować. W katalogu tym przechowywana
+                    jest cała historia GIT-a.<br />
+                    C:\dev\homepage>git init<br />
                     Initialized empty Git repository in C:/dev/homepage/.git/
                 </p>
-                <img class="image" src="commit-process.JPG" alt="Obrazek przedstawiający, na czym polega commit. Na osi czasu znajdują się punkty będące commitami z opisem zmian w projekcie."/><br/>
-                
+                <img class="image" src="commit-process.JPG"
+                    alt="Obrazek przedstawiający, na czym polega commit. Na osi czasu znajdują się punkty będące commitami z opisem zmian w projekcie." /><br />
+                <p class="paragraph">
+                    <b>Commit</b> - stan projektu na daną chwilę i opis tego, co się zmieniło od ostatniego zapisu. W
+                    commicie zapisywana jest historia zmian, czyli tylko to, co się zmieniło.<br />
+                    <b>git status</b> - sprawdza stan plików w katalogu, w którym się znajdujemy<br />
+                    <b>git add .</b> - opcja z kropką powoduje dodanie wszystkic plików z katalogu, w kórym się
+                    znajdujemy do śledzenia w ramach kontroli wersji kodu.
+                </p>
+                <p class="paragraph">
+                    Po dodaniu do śledzenia plików z katalogu, w którym się znajdujemy, kolejne zapytanie git status
+                    pokazuje jakie zmiany w plikach zostały wprowadzone i jakie pojawiły się nowe pliki, które należy
+                    skomitować.<br />
+                    <b>git commit -m "initial commit</b>"<br />
+                    Komitując zmiany, w cudzysłowiu opisujemy jakie zmiany wrzucamy w ramach tego commita. Opis może być
+                    po polsku, ale najlepiej po angielsku.<br />
+                    Jako zworotkę dostajemy informację, jakie zmiany zostały wykonane w ramach danego commita wraz z
+                    unikalnym identyfikatorem tego commita.
+                </p>
+                <p class="paragraph">
+                    GIT przyjmuje wszystkie rodzaje plików, ale zmiany śledzi tylko w plikach tekstowych. Nie śledzi
+                    zmian w obrazkach (i innych plikach) - jeśli takie zmiany zostały wprowadzone, to traktuje taki
+                    obrazek jako nowy plik i go po prostu podmienia, bez wskazywania konkretnych, zmienionych elementów
+                    w tym obrazku.
+                </p>
+                <p class="paragraph">
+                    <b>gitk</b> - pokazuje w nowym oknie poza terminalem historię zmian: kto, kiedy , co i w jaki sposób
+                    zmienił <br />
+                    Po wprowadzeniu zmian w plikach, wpisujemy w terminalu polecenie git status, następnie git add . i
+                    komitujemy zmiany za pomoca polecenia git commit -m "description of changes", po czym sprawdzamy
+                    historię poleceniem gitk.
+                </p>
+                <p class="paragraph">
+                    W visual studio code jest wbudowane narzędzie, które pozwala na podglądanie repozytorium i bieżące
+                    sprawdzanie wprowadzonych zmian. Jest widoczne w edytorze w menu po lewej stronie jako trzecia ikona
+                    od góry (pod lupą) pod nazwą source control. Pokazywane są w nim zmiany wprowadzone od czasu
+                    ostatniego commita. Można również z tego narzędzia korzystać do komitowania zmian.
+                </p>
+                <p class="paragraph">
+                    Oprócz tego w VSC dostępne jest rozszerzenie <b>git lens</b>, które można dodatkowo zainstalować.
+                    Pojawi się ono wówczas jako kolejna ikona w menu po lewej stronie. Pokazywana jest tam historia
+                    wykonanych commitów i można wykonywać polecenia GIT-owe. Historia zmian wyświetlana jest dla pliku,
+                    w którym się znajdujemy aktualnie. Widoczne są też zmiany dla konkretnej linijki kodu, w której się
+                    znajdujemy.
+                </p>
+                <p class="paragraph">
+                    Do obsługi GIT-a można ponadto wykorzystywać całe mnóstwo innych programów graficznych (stanowią
+                    jakby wizualną nakładkę na GIT-a).
+                </p>
             </article>
         </section>
 
