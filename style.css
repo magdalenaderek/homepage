@@ -1,33 +1,43 @@
 .body {
-    background: #6C534E;
+	background: #6C534E;
 }
+
 .section {
-    background: #FFFFFF;
+	background: #FFFFFF;
 }
+
 .paragraph {
-    background: #FFFFFF;
+	background: #FFFFFF;
 }
+
 .article {
-    background: #FFFFFF;
+	background: #FFFFFF;
 }
+
 .main-header {
-    color: #FFB140;
+	color: #FFB140;
 }
+
 .section-header {
-    color: #084C61;
+	color: #084C61;
 }
+
 .article-header {
-    color: #084C61;
+	color: #084C61;
 }
+
 .footer {
-    color: #FFFFFF;
+	color: #FFFFFF;
 }
+
 .header-link {
-    color: #FFB140;
+	color: #FFB140;
 }
+
 .footer-link {
-    color: #FFB140;
+	color: #FFB140;
 }
+
 .link {
-    color: #F51AA4;
+	color: #F51AA4;
 }

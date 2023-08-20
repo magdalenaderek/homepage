@@ -2,311 +2,318 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Notatki z frontendu</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body class="body">
-    <header class="header">
-        <nav>
-            <a class="header-link" href="index.html">Strona główna</a>
-            <a class="header-link" href="nauka-html.html">Nauka HTML</a>
-            <a class="header-link" href="nauka-css.html">Nauka CSS</a>
-            <a class="header-link" href="nauka-js.html">Nauka JavaScriptu</a>
-            <a class="header-link" href="nauka-varia.html">Nauka - varia</a>
-        </nav>
+	<header class="header">
+		<nav>
+			<a class="header-link" href="index.html">Strona główna</a>
+			<a class="header-link" href="nauka-html.html">Nauka HTML</a>
+			<a class="header-link" href="nauka-css.html">Nauka CSS</a>
+			<a class="header-link" href="nauka-js.html">Nauka JavaScriptu</a>
+			<a class="header-link" href="nauka-varia.html">Nauka - varia</a>
+		</nav>
 
-    </header>
-    <main class="main">
-        <header id="top">
-            <h1 class="main-header">Nauka - pozostałe tematy</h1>
+	</header>
+	<main class="main">
+		<header id="top">
+			<h1 class="main-header">Nauka - pozostałe tematy</h1>
 
-        </header>
+		</header>
 
-        <section class="section">
-            <h2 class="section-header">Varia - tydzień 2</h2>
-            <article id="schemat-blokowy" class="article">
-                <h3 class="article-header">Schemat blokowy</h3>
-                <p class="paragraph">
-                    Zapis kroków/instrukcji, które powinny się po sobie wydarzać to
-                    algorytmy. Algorytm można zapisać za pomocą <b>schematu blokowego</b>. <br />
-                    Prostokąt – wykonywane akcje <br />
-                    Romb – sprawdzany warunek – w zależności od odpowiedzi wykonujemy inną akcję <br />
-                    Trapez – rzeczy, które trzeba przygotować przed rozpoczęciem akcji, warunki rozpoczęcia <br />
-                    Okręgi – start i stop – rozpoczęcie i zakończenie algorytmu
-                </p>
-                <img class="image" src="schemat-blokowy.JPG"
-                    alt="Krótki schemat blokowy na przykładzie akcji czytania książki." />
-                <p class="paragraph">Devtools – narzędzia developerskie w przeglądarce. </p>
-            </article>
-        </section>
-        <section class="section">
-            <h2 class="section-header">Varia - tydzień 3</h2>
-            <article class="article">
-                <h3 class="article-header">Nazywanie rzeczy</h3>
-                <p class="paragraph">
-                    Wymyślając nazwy, które stosujemy w programowaniu, należy stosować się do następujących zasad:
-                    <br />
-                    1. Nie używamy znaków diakrytycznych. <br />
-                    2. Nie używamy spacji. <br />
-                    3. Stosujemy angielskie nazwy (rekomendacja, a nie wymóg). <br />
-                    4. Trzymamy się konsekwentnie jednego, wybranego schematu.
-                </p>
-                <p class="paragraph">
-                    Stosuje się następujące konwencje nazewnictwa: <br />
-                    1. camelCase - całą frazę piszemy łącznie, gdy składa się z kilku słów, to pierwsze rozpoczynamy z
-                    małej litery, wszystkie kolejne natomiast rozpoczynamy wielką literą, np. id "my super bod header"
-                    zgodnie z tą konwencją
-                    zostałby zapisany w następujacy sposób: mySuperBoldHeader. <br />
-                    2. kebab-case - wszystkie słowa występujące w danej frazie piszemy z małej litery i rozdzielamy je
-                    myślnikiem, np. id "my super bod header" zgodnei z tą konwencją
-                    zostałby zapisany w następujacy sposób: my-super-bold-header. <br />
-                    3. snake_case - wszystkie słowa występujące w danej frazie piszemy z małej litery i rozdzielamy je
-                    podkreślinikiem, np. id "my super bod header" zgodnei z tą konwencją
-                    zostałby zapisany w następujacy sposób: my_super_bold_header. <br />
-                    4. PascalCase - wywodzi się z języka Pascal; całą frazę piszemy łącznie, gdy składa się z kilku
-                    słów, to zarówno pierwsze
-                    pierwsze słowo, jak i kolejne rozpoczynamy z wielkiej litery, np. id "my super bod header" zgodnie z
-                    tą konwencją zostałby zapisany w następujacy sposób: MySuperBoldHeader. <br />
-                    W praktyce najczęściej wykorzystuje się dwa pierwsze sposoby zapisu, czyli camelCase i kebab-case.
-                </p>
-            </article>
-            <article class="article">
-                <h3 class="article-header">Działanie przeglądarki</h3>
-                <p class="paragraph">
-                    HTTP (HTTPS) - protokół, z którego zazwyczaj korzysta przeglądarka, żeby pobrać pliki występujace na
-                    stronach, a następnie wyświetlić je użytkownikowi. <b>HTTP - HyperText Transfer Protocol</b>, a
-                    zatem HTTP
-                    to protkół do transferowania HTML-a i całej reszty widocznej na stronach internetowych. <br />
-                    Z kolei <b>HTTPS - Hypertext Transfer Protocol Secure</b> to protokół szyfrowany, rekomendowany do
-                    stosowania. Zasada działania jest jednak analogiczna jak w HTTP.<br />
-                    Obecnie coraz częściej wykorzystuje się protokół HTTP/2, który pozwala na tworzenie równoległych
-                    połączeń i nie blokuje tak bardzo serwera,
-                    dzięki czemu strona działa szybciej.
-                </p>
-                <p class="paragraph">
-                    <b>URL - Uniform Resource Locator</b> - adres wpisywanej strony.<br />
-                    <img class="image" src="url.jpg" alt="Adres strony internetowej rozbity na elementy." /><br />
-                    Port najczęściej nie jest widoczny, przeglądarka sama go sobie dopisuje automatycznie,
-                    gdy wykrywa, czy korzystamy z protokołu HTTP czy HTTPS. Port to informacja, w którym miejscu
-                    na serwerze znajdują się pliki. Innymi słowy, na którym porcie przeglądarka musi dogadywać się
-                    z serwerem, aby transfer doszedł do skutku.<br />
-                    Ścieżka dostęu do zasobu - gdy połączymy się już z serwerem, to serwer ten szuka u siebie
-                    danego, wskazanego pliku, np. index.html. Zależnie od konfiguracji serwera, po ścieżce dostępu
-                    może być jeszcze widoczny znak zapytania oraz parametry, które są przekazywane do serwera
-                    lub mogą być one niewidoczne, a mimo to są i działają.
-                </p>
-                <p class="paragraph">
-                    <b>Flow działania przeglądarki</b><br />
-                    1. Wpisanie adresu cotenfrontend.pl.<br />
-                    2. Przeglądarka szuka serwera cotenfrontend.pl. (Odpowiada za to DNS, który tłumaczy adresy pisane
-                    słownie na adresy IP).<br />
-                    3. Po znalezieniu serwera, przeglądarka wypytuje go o index (jeśli podamy sam adres serwera).
-                    To, co jest indeksem zależy od konfiguracji serwera. Nie musi to być index.html, chociaż w przypadku
-                    stron statytycznych jest tak zazwyczaj (przyjęło się, że index.html to główny plik, który jest
-                    ładowany,
-                    jeśli nie podamy żadnej nazwy pliku).<br />
-                    4. Serwer wysyła do przeglądarki zawartość HTML.<br />
-                    5. Przeglądarka wczytuje HTML i szuka wszystkich dodatkowych zasobów: style, skrypty, obrazki, etc.
-                    i dla każdego z tych zasobów wykonuje osobne zapytanie.<br />
-                    6. Przeglądarka parsuje (sprawdza składnię strony) i renderuje stronę (zamienia kod HTML na to, co
-                    widzimy,
-                    dodatkowo aplikując wszystkie style i ładując dodatkowe zasoby).<br />
-                </p>
-                <p class="paragraph">
-                    DNS (Domain Name System) to protokół, którego główna funkcja polega na tłumaczeniu łatwych do
-                    zapamiętania przez człowieka nazw domen na zrozumiałe dla komputerów dane liczbowe.<br />
-                    Serwer DNS wyszukuje adres IP danej strony na podstawie wpisu użytkownika zamieszczonego w polu
-                    adresu wyszukiwarki.
-                </p>
-                <p class="paragraph">
-                    Schemat komunikacji między przeglądarką i serwerem.<br />
-                    <img class="image" src="request-response-schema.JPG"
-                        alt="Schemat komunikacji między przeglądarką i serwerem w modelu request-response." /><br />
-                    Komunikacja przeglądarki i serwera jest w modelu request-response, czyli przeglądarka wysyła
-                    zapytanie
-                    o dany zasób, a serwer odpowiada, że dany zasób posiada (lub nie) i przesyła odpowiednią zwrotkę.
-                    Serwer może również nie odpowiadać (wówczas dostajemy błędy) lub odpowiadać z błędem.
-                </p>
-            </article>
-            <article class="article">
-                <h3 class="article-header">Kody odpowiedzi protokołu HTTP</h3>
-                <p class="paragraph">
-                    100 - poczekaj, za chwilę dostaniesz opowiedź.<br />
-                    200 - OK, serwer odpowiada, że ma taki zasób i przekazuje go przeglądarce.<br />
-                    30x - przekierowania, serwer odpowiada: szukasz w złym miejscu, przekieruję Cię w dobre, bo wiem,
-                    gdzie.<br />
-                    404 - nie mam tego, czego potrzebujesz, sorry.<br />
-                    50x - wewnętrzne błędy serwera.
-                </p>
-                <p class="paragraph">
-                    <b>Kody HTTP</b><br />
-                    1xx - hold on<br />
-                    2xx - here you go<br />
-                    3xx - go away<br />
-                    4xx - you fucked up<br />
-                    5xx - I fucked up
-                </p>
-            </article>
-            <article class="article">
-                <h3 class="article-header">ROOT /</h3>
-                <p class="paragraph">
-                    Root to istotna część ścieżki do zasobu - mówi, wktórym miejscu przeglądarka powinna szukać danego
-                    zasobu.<br />
-                    Rozróżniamy tutaj ścieżki bezwzględne, gdzie na początku adresu zasobu jest podany znak /, oraz
-                    ścieżki względne, gdzie na początku adresu zasobu znaku / nie ma.
-                </p>
+		<section class="section">
+			<h2 class="section-header">Varia - tydzień 2</h2>
+			<article id="schemat-blokowy" class="article">
+				<h3 class="article-header">Schemat blokowy</h3>
+				<p class="paragraph">
+					Zapis kroków/instrukcji, które powinny się po sobie wydarzać to
+					algorytmy. Algorytm można zapisać za pomocą <b>schematu blokowego</b>. <br />
+					Prostokąt – wykonywane akcje <br />
+					Romb – sprawdzany warunek – w zależności od odpowiedzi wykonujemy inną akcję <br />
+					Trapez – rzeczy, które trzeba przygotować przed rozpoczęciem akcji, warunki rozpoczęcia <br />
+					Okręgi – start i stop – rozpoczęcie i zakończenie algorytmu
+				</p>
+				<img class="image" src="schemat-blokowy.JPG"
+					alt="Krótki schemat blokowy na przykładzie akcji czytania książki." />
+				<p class="paragraph">Devtools – narzędzia developerskie w przeglądarce. </p>
+			</article>
+		</section>
+		<section class="section">
+			<h2 class="section-header">Varia - tydzień 3</h2>
+			<article class="article">
+				<h3 class="article-header">Nazywanie rzeczy</h3>
+				<p class="paragraph">
+					Wymyślając nazwy, które stosujemy w programowaniu, należy stosować się do następujących zasad:
+					<br />
+					1. Nie używamy znaków diakrytycznych. <br />
+					2. Nie używamy spacji. <br />
+					3. Stosujemy angielskie nazwy (rekomendacja, a nie wymóg). <br />
+					4. Trzymamy się konsekwentnie jednego, wybranego schematu.
+				</p>
+				<p class="paragraph">
+					Stosuje się następujące konwencje nazewnictwa: <br />
+					1. camelCase - całą frazę piszemy łącznie, gdy składa się z kilku słów, to pierwsze rozpoczynamy z
+					małej litery, wszystkie kolejne natomiast rozpoczynamy wielką literą, np. id "my super bod header"
+					zgodnie z tą konwencją
+					zostałby zapisany w następujacy sposób: mySuperBoldHeader. <br />
+					2. kebab-case - wszystkie słowa występujące w danej frazie piszemy z małej litery i rozdzielamy je
+					myślnikiem, np. id "my super bod header" zgodnei z tą konwencją
+					zostałby zapisany w następujacy sposób: my-super-bold-header. <br />
+					3. snake_case - wszystkie słowa występujące w danej frazie piszemy z małej litery i rozdzielamy je
+					podkreślinikiem, np. id "my super bod header" zgodnei z tą konwencją
+					zostałby zapisany w następujacy sposób: my_super_bold_header. <br />
+					4. PascalCase - wywodzi się z języka Pascal; całą frazę piszemy łącznie, gdy składa się z kilku
+					słów, to zarówno pierwsze
+					pierwsze słowo, jak i kolejne rozpoczynamy z wielkiej litery, np. id "my super bod header" zgodnie z
+					tą konwencją zostałby zapisany w następujacy sposób: MySuperBoldHeader. <br />
+					W praktyce najczęściej wykorzystuje się dwa pierwsze sposoby zapisu, czyli camelCase i kebab-case.
+				</p>
+			</article>
+			<article class="article">
+				<h3 class="article-header">Działanie przeglądarki</h3>
+				<p class="paragraph">
+					HTTP (HTTPS) - protokół, z którego zazwyczaj korzysta przeglądarka, żeby pobrać pliki występujace na
+					stronach, a następnie wyświetlić je użytkownikowi. <b>HTTP - HyperText Transfer Protocol</b>, a
+					zatem HTTP
+					to protkół do transferowania HTML-a i całej reszty widocznej na stronach internetowych. <br />
+					Z kolei <b>HTTPS - Hypertext Transfer Protocol Secure</b> to protokół szyfrowany, rekomendowany do
+					stosowania. Zasada działania jest jednak analogiczna jak w HTTP.<br />
+					Obecnie coraz częściej wykorzystuje się protokół HTTP/2, który pozwala na tworzenie równoległych
+					połączeń i nie blokuje tak bardzo serwera,
+					dzięki czemu strona działa szybciej.
+				</p>
+				<p class="paragraph">
+					<b>URL - Uniform Resource Locator</b> - adres wpisywanej strony.<br />
+					<img class="image" src="url.jpg" alt="Adres strony internetowej rozbity na elementy." /><br />
+					Port najczęściej nie jest widoczny, przeglądarka sama go sobie dopisuje automatycznie,
+					gdy wykrywa, czy korzystamy z protokołu HTTP czy HTTPS. Port to informacja, w którym miejscu
+					na serwerze znajdują się pliki. Innymi słowy, na którym porcie przeglądarka musi dogadywać się
+					z serwerem, aby transfer doszedł do skutku.<br />
+					Ścieżka dostęu do zasobu - gdy połączymy się już z serwerem, to serwer ten szuka u siebie
+					danego, wskazanego pliku, np. index.html. Zależnie od konfiguracji serwera, po ścieżce dostępu
+					może być jeszcze widoczny znak zapytania oraz parametry, które są przekazywane do serwera
+					lub mogą być one niewidoczne, a mimo to są i działają.
+				</p>
+				<p class="paragraph">
+					<b>Flow działania przeglądarki</b><br />
+					1. Wpisanie adresu cotenfrontend.pl.<br />
+					2. Przeglądarka szuka serwera cotenfrontend.pl. (Odpowiada za to DNS, który tłumaczy adresy pisane
+					słownie na adresy IP).<br />
+					3. Po znalezieniu serwera, przeglądarka wypytuje go o index (jeśli podamy sam adres serwera).
+					To, co jest indeksem zależy od konfiguracji serwera. Nie musi to być index.html, chociaż w przypadku
+					stron statytycznych jest tak zazwyczaj (przyjęło się, że index.html to główny plik, który jest
+					ładowany,
+					jeśli nie podamy żadnej nazwy pliku).<br />
+					4. Serwer wysyła do przeglądarki zawartość HTML.<br />
+					5. Przeglądarka wczytuje HTML i szuka wszystkich dodatkowych zasobów: style, skrypty, obrazki, etc.
+					i dla każdego z tych zasobów wykonuje osobne zapytanie.<br />
+					6. Przeglądarka parsuje (sprawdza składnię strony) i renderuje stronę (zamienia kod HTML na to, co
+					widzimy,
+					dodatkowo aplikując wszystkie style i ładując dodatkowe zasoby).<br />
+				</p>
+				<p class="paragraph">
+					DNS (Domain Name System) to protokół, którego główna funkcja polega na tłumaczeniu łatwych do
+					zapamiętania przez człowieka nazw domen na zrozumiałe dla komputerów dane liczbowe.<br />
+					Serwer DNS wyszukuje adres IP danej strony na podstawie wpisu użytkownika zamieszczonego w polu
+					adresu wyszukiwarki.
+				</p>
+				<p class="paragraph">
+					Schemat komunikacji między przeglądarką i serwerem.<br />
+					<img class="image" src="request-response-schema.JPG"
+						alt="Schemat komunikacji między przeglądarką i serwerem w modelu request-response." /><br />
+					Komunikacja przeglądarki i serwera jest w modelu request-response, czyli przeglądarka wysyła
+					zapytanie
+					o dany zasób, a serwer odpowiada, że dany zasób posiada (lub nie) i przesyła odpowiednią zwrotkę.
+					Serwer może również nie odpowiadać (wówczas dostajemy błędy) lub odpowiadać z błędem.
+				</p>
+			</article>
+			<article class="article">
+				<h3 class="article-header">Kody odpowiedzi protokołu HTTP</h3>
+				<p class="paragraph">
+					100 - poczekaj, za chwilę dostaniesz opowiedź.<br />
+					200 - OK, serwer odpowiada, że ma taki zasób i przekazuje go przeglądarce.<br />
+					30x - przekierowania, serwer odpowiada: szukasz w złym miejscu, przekieruję Cię w dobre, bo wiem,
+					gdzie.<br />
+					404 - nie mam tego, czego potrzebujesz, sorry.<br />
+					50x - wewnętrzne błędy serwera.
+				</p>
+				<p class="paragraph">
+					<b>Kody HTTP</b><br />
+					1xx - hold on<br />
+					2xx - here you go<br />
+					3xx - go away<br />
+					4xx - you fucked up<br />
+					5xx - I fucked up
+				</p>
+			</article>
+			<article class="article">
+				<h3 class="article-header">ROOT /</h3>
+				<p class="paragraph">
+					Root to istotna część ścieżki do zasobu - mówi, wktórym miejscu przeglądarka powinna szukać danego
+					zasobu.<br />
+					Rozróżniamy tutaj ścieżki bezwzględne, gdzie na początku adresu zasobu jest podany znak /, oraz
+					ścieżki względne, gdzie na początku adresu zasobu znaku / nie ma.
+				</p>
 
-                <img class="image" src="root-explanation1.JPG"
-                    alt="Przedstawienie na przykładzie adresu cotenfrontend.pl, na czym polega działanie roota, gdy adres obrazka podany jest ze znakiem slash na początku i bez tego znaku." /><br />
-                <p class="paragraph">
-                    Gdy wchodzimy na stronę <b>https://cotenfrontend.pl/</b>, do doklejamy wskazany wyżej adres obrazka
-                    na
-                    końcu adresu strony i w obu przypadkach dostajemy 200, bo w efekcie mamy ten sam adres obrazka, pod
-                    którym obrazek faktycznie się znajduje.<br />
-                    W pierwszym przypadku, gdy adres obrazka podany był z / na początku adresu, po doklejeniu tego
-                    adresu do adresu strony, znak / z końca adresu strony zamieniany jest przez znak / z początku adresu
-                    obrazka.<br />
-                    W drugim przypadku, gdy adres obrazka podany jest bez znaku / na początku adresu, po doklejeniu
-                    adresu obrazka do adresu strony, gdzie znak / znajduje się na końcu adresu, dostajemy pełny adres
-                    obrazka.<br /><br />
-                </p>
+				<img class="image" src="root-explanation1.JPG"
+					alt="Przedstawienie na przykładzie adresu cotenfrontend.pl, na czym polega działanie roota, gdy adres obrazka podany jest ze znakiem slash na początku i bez tego znaku." /><br />
+				<p class="paragraph">
+					Gdy wchodzimy na stronę <b>https://cotenfrontend.pl/</b>, do doklejamy wskazany wyżej adres obrazka
+					na
+					końcu adresu strony i w obu przypadkach dostajemy 200, bo w efekcie mamy ten sam adres obrazka, pod
+					którym obrazek faktycznie się znajduje.<br />
+					W pierwszym przypadku, gdy adres obrazka podany był z / na początku adresu, po doklejeniu tego
+					adresu do adresu strony, znak / z końca adresu strony zamieniany jest przez znak / z początku adresu
+					obrazka.<br />
+					W drugim przypadku, gdy adres obrazka podany jest bez znaku / na początku adresu, po doklejeniu
+					adresu obrazka do adresu strony, gdzie znak / znajduje się na końcu adresu, dostajemy pełny adres
+					obrazka.<br /><br />
+				</p>
 
-                <img class="image" src="root-explanation2.JPG"
-                    alt="Przedstawienie na przykładzie podstrony domeny cotenforntend.pl, na czym polega działanie roota, gdy adres obrazka podany jest ze znakiem slash na początku i bez tego znaku." /><br />
-                <p class="paragraph">
-                    Jeśli natomiast wejdziemy na podstronę o adresie <b>https://cotenfrontend.pl/podstrona/</b>, to w
-                    pierwszym
-                    przypadku, mając informację o znaku / na początku adresu obrazka, będzie on doklejony do końca
-                    adresu strony, czyli zapytanie pójdzie pod właściwy adres i obrazek zostanie pobrany.<br />
-                    W drugim przypadku z kolei, gdy w adresie obrazka nie ma znaku /, to nastąpi próba doklejenia adresu
-                    obrazka do znaku / na końcu podstrony w podanym adresie zerwera i w efekcie nastąpi próba szukania
-                    obrazka w miejscu, w którym go nie ma.<br />
+				<img class="image" src="root-explanation2.JPG"
+					alt="Przedstawienie na przykładzie podstrony domeny cotenforntend.pl, na czym polega działanie roota, gdy adres obrazka podany jest ze znakiem slash na początku i bez tego znaku." /><br />
+				<p class="paragraph">
+					Jeśli natomiast wejdziemy na podstronę o adresie <b>https://cotenfrontend.pl/podstrona/</b>, to w
+					pierwszym
+					przypadku, mając informację o znaku / na początku adresu obrazka, będzie on doklejony do końca
+					adresu strony, czyli zapytanie pójdzie pod właściwy adres i obrazek zostanie pobrany.<br />
+					W drugim przypadku z kolei, gdy w adresie obrazka nie ma znaku /, to nastąpi próba doklejenia adresu
+					obrazka do znaku / na końcu podstrony w podanym adresie zerwera i w efekcie nastąpi próba szukania
+					obrazka w miejscu, w którym go nie ma.<br />
 
-                </p>
-                <p class="paragraph">
-                    Tworząc stronę uruchamianą z dysku (tak, jak teraz) lepiej jednak pomijać używanie slasha na
-                    początku adresów zasobów.
-                </p>
-            </article>
-            <article class="article">
-                <h3 class="article-header">Terminal</h3>
-                <p class="paragraph">
-                    W Windowsie wchodzimy do terminala poprzez komendę cmd wpisaną w wyszukiwarce systemowej i wybieramy
-                    wiersz poleceń.<br />
-                </p>
-                <p class="paragraph">
-                    <b>Podstawowe polecenia:</b><br />
-                    dir - wyświetla wszystko, co jest w bbieżącym katalogu;<br />
-                    cd - wyświetla ścieżkę bieżącego katalogu;<br />
-                    cd (change directory) - powoduje przejście w wybrane miejsce, np do głównego katalogu (cd C:/);
-                    jeśli zaczniemy wpisywać nazwę katalogu w ścieżce, to po kliknięciu w TAB, system zacznie dopełniać
-                    nam ją podpowiedziami z danej lokalizacji;<br />
-                    cd .. - powoduje przejście do katalogu wyżej;<br />
-                    cd ../.. - powoduje przejście dwa katalogi wyżej;<br />
-                    mkdir nowyfolder - tworzy w bieżącej lokalizacji nowy katalog o nazwie "nowyfolder";<br />
-                    code . - otwiera visual studio code w bieżącym katalogu;<br />
-                    code katalog - otwiera folder katalog" w visual studio code;<br />
-                    clear - czyści historię bieżących poelceń w terminalu.<br />
-                    Do skakania po wprowadzonych poleceeniach, by wprowadzić w nowej linii ich zawartość, można używać
-                    strzałek góra/dół.
-                </p>
-                <img class="image" src="terminal-commands.JPG"
-                    alt="Podstawowe komendy dla terminala w systemie Windows." /><br />
-            </article>
-        </section>
-        <section class="section">
-            <h2 class="section-header">Varia - tydzień 4</h2>
-            <article class="article">
-                <h3 class="article-header">GIT</h3>
-                <p class="paragraph">
-                    GIT narzędzie kontroli wersji kodu, wersjonowania kodu. Można z niego korzystać za pomocą
-                    terminali:<br />
-                    - cmd,<br />
-                    - powershell,<br />
-                    - git bash.<br />
-                <p class="paragraph"> Po pobraniu i zainstalowaniu GIT-a należy go skonfigurować pod nasze dane z
-                    poziomu terminala. Dostępne są następujące polecenia:
-                    git --version sprawdza wersję zainstalowanego GIT-a<br />
-                    git config --global user.name "Magdalena Derek"<br />
-                    git config --global user.email magdalena.derek@tlen.pl
-                </p>
-                <p class="paragraph">Poprawność wprowadzonych danych można sprawdzić za pomocą następujących
-                    poleceń:<br />
-                    git config --get user.name<br />
-                    git config --get user.email
-                </p>
-                <p class="paragraph">
-                    GIT składa się z repozytoriów. Repozytorium to nasz projekt, czyli katalog, w którym znajdują się
-                    wszystkie pliki.<br />
-                    Aby założyć repozytorium dla naszego projektu, z poziomu terminala wchodzimy do katalogu projektu (w
-                    tym przypadku katalog homepage) i używamy polecenia <b>git init</b>. W efekcie pojawia sie
-                    informacja o utworzeniu pustego repozytorium i w katalogu homepage pojawia się nowy katalog
-                    <b>.git</b>, który jest katalogiem ukrytym i nie należy go kasować. W katalogu tym przechowywana
-                    jest cała historia GIT-a.<br />
-                    C:\dev\homepage>git init<br />
-                    Initialized empty Git repository in C:/dev/homepage/.git/
-                </p>
-                <img class="image" src="commit-process.JPG"
-                    alt="Obrazek przedstawiający, na czym polega commit. Na osi czasu znajdują się punkty będące commitami z opisem zmian w projekcie." /><br />
-                <p class="paragraph">
-                    <b>Commit</b> - stan projektu na daną chwilę i opis tego, co się zmieniło od ostatniego zapisu. W
-                    commicie zapisywana jest historia zmian, czyli tylko to, co się zmieniło.<br />
-                    <b>git status</b> - sprawdza stan plików w katalogu, w którym się znajdujemy<br />
-                    <b>git add .</b> - opcja z kropką powoduje dodanie wszystkic plików z katalogu, w kórym się
-                    znajdujemy do śledzenia w ramach kontroli wersji kodu.
-                </p>
-                <p class="paragraph">
-                    Po dodaniu do śledzenia plików z katalogu, w którym się znajdujemy, kolejne zapytanie git status
-                    pokazuje jakie zmiany w plikach zostały wprowadzone i jakie pojawiły się nowe pliki, które należy
-                    skomitować.<br />
-                    <b>git commit -m "initial commit</b>"<br />
-                    Komitując zmiany, w cudzysłowiu opisujemy jakie zmiany wrzucamy w ramach tego commita. Opis może być
-                    po polsku, ale najlepiej po angielsku.<br />
-                    Jako zworotkę dostajemy informację, jakie zmiany zostały wykonane w ramach danego commita wraz z
-                    unikalnym identyfikatorem tego commita.
-                </p>
-                <p class="paragraph">
-                    GIT przyjmuje wszystkie rodzaje plików, ale zmiany śledzi tylko w plikach tekstowych. Nie śledzi
-                    zmian w obrazkach (i innych plikach) - jeśli takie zmiany zostały wprowadzone, to traktuje taki
-                    obrazek jako nowy plik i go po prostu podmienia, bez wskazywania konkretnych, zmienionych elementów
-                    w tym obrazku.
-                </p>
-                <p class="paragraph">
-                    <b>gitk</b> - pokazuje w nowym oknie poza terminalem historię zmian: kto, kiedy , co i w jaki sposób
-                    zmienił <br />
-                    Po wprowadzeniu zmian w plikach, wpisujemy w terminalu polecenie git status, następnie git add . i
-                    komitujemy zmiany za pomoca polecenia git commit -m "description of changes", po czym sprawdzamy
-                    historię poleceniem gitk.
-                </p>
-                <p class="paragraph">
-                    W visual studio code jest wbudowane narzędzie, które pozwala na podglądanie repozytorium i bieżące
-                    sprawdzanie wprowadzonych zmian. Jest widoczne w edytorze w menu po lewej stronie jako trzecia ikona
-                    od góry (pod lupą) pod nazwą source control. Pokazywane są w nim zmiany wprowadzone od czasu
-                    ostatniego commita. Można również z tego narzędzia korzystać do komitowania zmian.
-                </p>
-                <p class="paragraph">
-                    Oprócz tego w VSC dostępne jest rozszerzenie <b>git lens</b>, które można dodatkowo zainstalować.
-                    Pojawi się ono wówczas jako kolejna ikona w menu po lewej stronie. Pokazywana jest tam historia
-                    wykonanych commitów i można wykonywać polecenia GIT-owe. Historia zmian wyświetlana jest dla pliku,
-                    w którym się znajdujemy aktualnie. Widoczne są też zmiany dla konkretnej linijki kodu, w której się
-                    znajdujemy.
-                </p>
-                <p class="paragraph">
-                    Do obsługi GIT-a można ponadto wykorzystywać całe mnóstwo innych programów graficznych (stanowią
-                    jakby wizualną nakładkę na GIT-a).
-                </p>
-            </article>
-        </section>
+				</p>
+				<p class="paragraph">
+					Tworząc stronę uruchamianą z dysku (tak, jak teraz) lepiej jednak pomijać używanie slasha na
+					początku adresów zasobów.
+				</p>
+			</article>
+			<article class="article">
+				<h3 class="article-header">Terminal</h3>
+				<p class="paragraph">
+					W Windowsie wchodzimy do terminala poprzez komendę cmd wpisaną w wyszukiwarce systemowej i wybieramy
+					wiersz poleceń.<br />
+				</p>
+				<p class="paragraph">
+					<b>Podstawowe polecenia:</b><br />
+					dir - wyświetla wszystko, co jest w bieżącym katalogu;<br />
+					cd - wyświetla ścieżkę bieżącego katalogu;<br />
+					cd (change directory) - powoduje przejście w wybrane miejsce, np do głównego katalogu (cd C:/);
+					jeśli zaczniemy wpisywać nazwę katalogu w ścieżce, to po kliknięciu w TAB, system zacznie dopełniać
+					nam ją podpowiedziami z danej lokalizacji;<br />
+					cd .. - powoduje przejście do katalogu wyżej;<br />
+					cd ../.. - powoduje przejście dwa katalogi wyżej;<br />
+					mkdir nowyfolder - tworzy w bieżącej lokalizacji nowy katalog o nazwie "nowyfolder";<br />
+					code . - otwiera visual studio code w bieżącym katalogu;<br />
+					code katalog - otwiera folder katalog" w visual studio code;<br />
+					cls - czyści historię bieżących poleceń w terminalu.<br />
+					Do skakania po wprowadzonych poleceniach, by wprowadzić w nowej linii ich zawartość, można używać
+					strzałek góra/dół.
+				</p>
+				<img class="image" src="terminal-commands.JPG"
+					alt="Podstawowe komendy dla terminala w systemie Windows." /><br />
+			</article>
+		</section>
+		<section class="section">
+			<h2 class="section-header">Varia - tydzień 4</h2>
+			<article class="article">
+				<h3 class="article-header">GIT</h3>
+				<p class="paragraph">
+					GIT narzędzie kontroli wersji kodu, wersjonowania kodu, stworzone przez Linusa Torvaldsa (tego od
+					Linuxa). Można z niego korzystać za pomocą terminali:<br />
+					- cmd,<br />
+					- powershell,<br />
+					- git bash.
+				</p>
+				<p class="paragraph"> Po pobraniu i zainstalowaniu GIT-a należy go skonfigurować pod nasze dane z
+					poziomu terminala. Dostępne są następujące polecenia:
+					git --version sprawdza wersję zainstalowanego GIT-a<br />
+					git config --global user.name "Magdalena Derek"<br />
+					git config --global user.email magdalena.derek@tlen.pl
+				</p>
+				<p class="paragraph">Poprawność wprowadzonych danych można sprawdzić za pomocą następujących
+					poleceń:<br />
+					git config --get user.name<br />
+					git config --get user.email
+				</p>
+				<p class="paragraph">
+					GIT składa się z repozytoriów. Repozytorium to nasz projekt, czyli katalog, w którym znajdują się
+					wszystkie pliki, które chcemy rozwijać.<br />
+					Aby założyć repozytorium dla naszego projektu, z poziomu terminala wchodzimy do katalogu projektu (w
+					tym przypadku katalog homepage) i używamy polecenia <b>git init</b>. W efekcie pojawia się
+					informacja o utworzeniu pustego repozytorium i w katalogu homepage pojawia się nowy katalog
+					<b>.git</b>, który jest katalogiem ukrytym i nie należy go kasować. W katalogu tym przechowywana
+					jest cała historia GIT-a, informacje na temat plików. Zarządza nim program GIT, my nic tam nie robimy.<br />
+					C:\dev\homepage>git init<br />
+					Initialized empty Git repository in C:/dev/homepage/.git/
+				</p>
+				<img class="image" src="commit-process.JPG"
+					alt="Obrazek przedstawiający, na czym polega commit. Na osi czasu znajdują się punkty będące commitami z opisem zmian w projekcie." /><br />
+				<p class="paragraph">
+					<b>Commit</b> - stan projektu na daną chwilę i opis tego, co się zmieniło od ostatniego zapisu. W
+					commicie zapisywana jest historia zmian, czyli tylko to, co się zmieniło.<br />
+					<b>git status</b> - sprawdza stan plików w katalogu, w którym się znajdujemy<br />
+					<b>git add .</b> - opcja z kropką powoduje dodanie wszystkich plików z katalogu, w kórym się
+					znajdujemy do śledzenia w ramach kontroli wersji kodu.
+				</p>
+				<p class="paragraph">
+					Po dodaniu do śledzenia plików z katalogu, w którym się znajdujemy, kolejne zapytanie git status
+					pokazuje jakie zmiany w plikach zostały wprowadzone i jakie pojawiły się nowe pliki, które należy
+					skomitować.<br />
+					<b>git commit -m "initial commit</b>"<br />
+					Komitując zmiany, w cudzysłowiu opisujemy jakie zmiany wrzucamy w ramach tego commita. Opis może być
+					po polsku, ale najlepiej po angielsku.<br />
+					Jako zwrotkę dostajemy informację, jakie zmiany zostały wykonane w ramach danego commita wraz z
+					unikalnym identyfikatorem tego commita.
+				</p>
+				<p class="paragraph">
+					GIT przyjmuje wszystkie rodzaje plików, ale zmiany śledzi tylko w plikach tekstowych. Nie śledzi
+					zmian w obrazkach (i innych plikach) - jeśli takie zmiany zostały wprowadzone, to traktuje taki
+					obrazek jako nowy plik i go po prostu podmienia, bez wskazywania konkretnych, zmienionych elementów
+					w tym obrazku.
+				</p>
+				<p class="paragraph">
+					<b>gitk</b> - pokazuje w nowym oknie poza terminalem historię zmian: kto, kiedy, co i w jaki sposób
+					zmienił <br />
+					Po wprowadzeniu zmian w plikach, wpisujemy w terminalu polecenie git status, następnie git add . i
+					komitujemy zmiany za pomoca polecenia git commit -m "description of changes", po czym sprawdzamy
+					historię poleceniem gitk.
+				</p>
+				<p class="paragraph">
+					W visual studio code jest wbudowane narzędzie, które pozwala na podglądanie repozytorium i bieżące
+					sprawdzanie wprowadzonych zmian. Jest widoczne w edytorze w menu po lewej stronie jako trzecia ikona
+					od góry (pod lupą) pod nazwą source control. Pokazywane są w nim zmiany wprowadzone od czasu
+					ostatniego commita. Można również z tego narzędzia korzystać do komitowania zmian.
+				</p>
+				<p class="paragraph">
+					Oprócz tego w VSC dostępne jest rozszerzenie <b>git lens</b>, które można dodatkowo zainstalować.
+					Pojawi się ono wówczas jako kolejna ikona w menu po lewej stronie. Pokazywana jest tam historia
+					wykonanych commitów i można wykonywać polecenia GIT-owe. Historia zmian wyświetlana jest dla pliku,
+					w którym się znajdujemy aktualnie. Widoczne są też zmiany dla konkretnej linijki kodu, w której się
+					znajdujemy.
+				</p>
+				<p class="paragraph">
+					Do obsługi GIT-a można ponadto wykorzystywać całe mnóstwo programów graficznych (GUI - graphical user interface, stanowią
+					jakby wizualną nakładkę na GIT-a). My będziemy korzystać z narzędzia GitHub Desktop.
+				</p>
+			</article>
+			<article class="article">
+<h3 class="article-header">GitHub</h3>
+<p class="paragraph">
+GitHuba to nie GIT, choć mają części wspólne. GIT to narzędzie kontroli wersji do wykorzystywania na naszym komputerze. GitHuba natomiast to platforma, z której korzystają programiści na całym świecie, na którą mogą oni wrzucać swój kod, by dzielić się nim z innymi, współpracować nad kodem lub też pracować nad swoimi projektami prywatnymi, nieudostępnionymi innym.
+</p>
+			</article>
+		</section>
 
-    </main>
-    <footer class="footer">Strona domowa Magdaleny Derek, wszystkie treści są wynikiem nauki w ramach szkolenia WTF: Co
-        ten frontend.
-        <a class="footer-link" href="#top">Wróć na górę strony</a>
-    </footer>
-    <script src="main.js"></script>
+	</main>
+	<footer class="footer">Strona domowa Magdaleny Derek, wszystkie treści są wynikiem nauki w ramach szkolenia WTF: Co
+		ten frontend.
+		<a class="footer-link" href="#top">Wróć na górę strony</a>
+	</footer>
+	<script src="main.js"></script>
 </body>
 
 </html>
