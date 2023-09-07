@@ -33,21 +33,21 @@
 				</p>
 				<p class="paragraph">
 					ECMAScript - skryptowy język oprogramowania, ustandaryzowany przez organizację ECMA, ECMAScript
-					Language Specification.<br />
+					Language Specification.<br>
 					ECMA - European Association for Standardizing Information and Communication Systems jest to
-					organizacja, której zadaniem jest tworzenie standardów technologicznych.<br />
+					organizacja, której zadaniem jest tworzenie standardów technologicznych.<br>
 					Co roku jest aktualizowany, w kursie wykorzystywany ES6+ dla roku 2015+ i nowszych, do 2020
 					włącznie. JavaScript implementuje rzeczy ze specyfikacji ECMAScript.
-					Nowo wprowadzone feature'y, funkcje języka, mogą nie być wspierane we wszystkich przeglądarkach, ale
+					Nowo wprowadzone feature'y, funkcje języka, mogą nie być wspierane we wszystkich przeglądarkach, które też muszą wprowadzać nowe wersje, żeby gonić standardy, ale
 					można to obejść.
 				</p>
 				<p class="paragraph">
-					JavaScript jest obiektowym językiem programowania i składa się z następujących elementów:<br />
-					- wartości,<br />
-					- zmienne,<br />
-					- funkcje,<br />
-					- literały,<br />
-					- obiekty,<br />
+					JavaScript jest obiektowym językiem programowania i składa się z następujących elementów:<br>
+					- wartości,<br>
+					- zmienne,<br>
+					- funkcje,<br>
+					- literały,<br>
+					- obiekty,<br>
 					- operacje porównywania.
 				</p>
 				<p class="paragraph">
@@ -57,12 +57,12 @@
 				</p>
 				<p class="paragraph">
 					Pliki zawierające kod JavaScript mają rozszerzenie .js. Podobnie jak style mają też swój znacznik
-					"script".<br />
+					"script".<br>
 					Znacznik "script" dodajemy na samym dole strony, po stopce "footer", tuż przed domknięciem znacznika
-					"body".<br />
+					"body".<br>
 					Przykładem może być funkcja alert, która składa się z nazwy funkcji, nawiasów otwartych oraz
-					znajdujących się w nawiasie parametrów w pojedynczych apostrofach. Na końcu dajemy średnik ;
-					oznaczający zakończenie linii.<br />
+					znajdujących się w nawiasie parametrów w pojedynczych apostrofach (zamiast pojedynczych apostrofów, można dać podwójne - cudzysłów, to też zadziała). Na końcu dajemy średnik ;
+					oznaczający zakończenie linii.<br>
 
 				</p>
 				<img class="image" src="tag-script.JPG"
@@ -76,47 +76,47 @@
 				<p class="paragraph">
 					Tak, jak w przypadku stylów, bezpośrednie pisanie kodu JavaScript w pliku z htmlem zadziała, ale
 					jest mało praktyczne, dlatego stosuje się wydzielanie kodu JavaScript do osobnego pliku, np.
-					main.js.<br />
+					main.js.<br>
 					W pliku zawieramy po prostu bezpośrednio treść naszego kodu JavaScript w kolejności, w jakiej ma być
-					wykonywany.<br />
-					Odniesienie do pliku z kodem JavaScript umieszczamy na końcu strony przed domknięciem znacznika
+					wykonywany.<br>
+					Odniesienie do pliku z kodem JavaScript umieszczamy na końcu strony, przed domknięciem znacznika
 					body, używając znacznika "script".
 					Używamy atrybutu "src", tak jak w obrazkach, a nie "href", tak jak w przypadku stylów.
 				</p>
 				<img class="image" src="main-file.JPG" alt="Odwołanie do pliku z kodem JavaScript w pliku HTML." />
 				<p class="paragraph">
 					Kolejnym poleceniem jest funkcja console.log, która w przeciwieństwie do funkcji alert nie wyświetla
-					informacji na stronie, ale w narzędziach deweloperskich w zakładce "console".<br />
-					Funkcja console.log pozwala na wyśietlenie określonego tekstu lub wartości, np.:<br />
-					console.log('tekst');<br />
+					informacji na stronie, ale w narzędziach deweloperskich w zakładce "console".<br>
+					Funkcja console.log pozwala na wyświetlenie określonego tekstu lub wartości, np.:<br>
+					console.log('tekst');<br>
 					Jeśli wpisze się funkcję dwa razy, to zostanie ona wywołana dwukrotnie.
 				</p>
 				<img class="image" src="consolelog-example1.JPG"
 					alt="Przykład dwukrotnego wywołania funkcji console.log w konsoli w narzędziach deweloperskich w przeglądarce." />
 				<p class="paragraph">
 					Zmienna w JavaScript to stworzenie powiązania między nazwą, której chcemy użyć a wartością, którą chcemy
-					przypisać tej zmiennej.<br />
-					const name = 'Magdusia';<br />
-					const age = 38;<br />
+					przypisać tej zmiennej.<br>
+					const name = 'Magdusia';<br>
+					const age = 38;<br>
 					Zmiennej o nazwie "name" przypisujemy wartość słowną "Magdusia", używając apostrofów. Zmiennej o nazwie "age"
-					przypisujemy wartość liczbową "38", nie używając apostrofów.<br />
+					przypisujemy wartość liczbową "38", nie używając apostrofów.<br>
 					Przy tworzeniu zmiennych nie trzeba dawać średnika na końcu linii, przeglądarka to przetworzy. Jednak dla
-					dobrej praktyki lepiej to robić, żeby zaznaczyć w ten sposób koniec linii.<br />
-					Wywołując nazwę zmiennej w funkcji nie używamy apostrofów.<br />
+					dobrej praktyki lepiej to robić, żeby zaznaczyć w ten sposób koniec linii.<br>
+					Wywołując nazwę zmiennej w funkcji nie używamy apostrofów.<br>
 					<img class="image" src="consolelog-example2.JPG"
 						alt="Stworzenie zmiennej słownej i liczbowej oraz ich wywołanie w funkcji console.log." />
 
 				</p>
 				<p class="paragraph">
-					Backtick/backquote (`) - przetrącony apostrof, na klawiaturze znajduje się tam, gdzie tylda ~.<br />
+					Backtick/backquote (`) - przetrącony apostrof, na klawiaturze znajduje się tam, gdzie tylda ~.<br>
 					Używamy go, jeśli chcemy wykorzystać w jakiejś funkcji jednocześnie zmienną i tekst - taki ciąg znaków
-					nazywamy <b>literałem</b>.<br />
+					nazywamy <b>literałem</b>.<br>
 					console.log(`Nazywam się ${firstName} i mam ${age} lat.`);
 				</p>
 				<img class="image" src="consolelog-example3.JPG"
 					alt="Wykorzystanie w funkcji console.log jednocześnie zmiennej oraz tekstu, czyli literału." />
 				<p class="paragraph">
-					Kod Js uruchamia się raz (po załadowaniu strony). Może też oczywiście działać później, jeśli ma odpowiednie
+					Kod JS uruchamia się raz (po załadowaniu strony). Może też oczywiście działać później, jeśli ma odpowiednie
 					instrukcje.
 				</p>
 			</article>
@@ -126,7 +126,7 @@
 	</main>
 	<footer class="footer">Strona domowa Magdaleny Derek, wszystkie treści są wynikiem nauki w ramach szkolenia WTF: Co
 		ten frontend.
-		<a class="footer-link" href="#top">Wróć na górę strony</a>
+		<a class="footer-link" href="#top">Wróć na górę strony ⬆️</a>
 	</footer>
 	<script src="main.js"></script>
 </body>

@@ -29,18 +29,18 @@
 			<article class="article">
 				<h3 class="article-header">CSS - podstawowe informacje i selektory, kolory</h3>
 				<p class="paragraph"><b>CSS – Cascading style sheets</b> – odpowiada za prezentację, wygląd treści.
-					Każdy język ma swoją składnię, w przypadku CSS są to reguły, mające następującą budowę: <br />
-					selektor { <br />
-					właściwość: wartość; <br />
+					Każdy język ma swoją składnię, w przypadku CSS są to reguły, mające następującą budowę: <br>
+					selektor { <br>
+					właściwość: wartość; <br>
 					}
 				</p>
 				<p class="paragraph">Style co do zasady definiuje się w osobnym pliku o rozszerzeniu .css, ale można je
 					też zdefiniować w
 					pliku html w sekcji "head" poprzez dodanie znacznika "style", gdzie definiujemy właściwości
 					poszczególnych elementów, odnosząc się do nich za pomocą selektorów, którymi mogą być nazwy tych
-					elementów (np. h1, p), np.: <br />
-					p { <br />
-					color: green; <br />
+					elementów (np. h1, p), np.: <br>
+					p { <br>
+					color: green; <br>
 					}
 				</p>
 				<p class="paragraph">Sposobów zapisu kolorów jest kilka, np. angielska nazwa, zapis heksadecymalny,
@@ -49,9 +49,9 @@
 					Style określa się jednak najczęściej w zewnętrznym arkuszu stylów, a w samym pliku html zawiera się
 					do niego odnośnik poprzez odpowiednia frazę – znacznik "link" o odpowiedniej składni.
 					Kolejną własnością, obok koloru, jest tło. Można je określić dla całej strony wskazując jako
-					selektor "body", czyli np.: <br />
-					body { <br />
-					background: lightyellow; <br />
+					selektor "body", czyli np.: <br>
+					body { <br>
+					background: lightyellow; <br>
 					}
 				</p>
 				<p class="paragraph">
@@ -66,52 +66,52 @@
 				<h3 class="article-header">Stylowanie w oparciu o atrybuty element, id i klasa</h3>
 				<p class="paragraph">
 					Oprócz tego, że style można zamieścić w ramach znacznika style w sekcji "head" lub w pliku
-					zewnętrznym, mozna je też zastosować używając atrybutu "style" i przypisując go do konkretnego
-					znacznika, np. section, h1, p, etc. wg schematu: <br />
-					znacznik style="color:yellow; background:#ffffff;" treść /znacznik <br />
+					zewnętrznym, można je też zastosować używając atrybutu "style" i przypisując go do konkretnego
+					znacznika, np. section, h1, p, etc. wg schematu: <br>
+					znacznik style="color:yellow; background:#ffffff;" treść /znacznik <br>
 					Styl przy znaczniku z wykorzystaniem atrybutu "style" nazywamy stylem inline, liniowym. Znajduje on
-					zastosowanie jedynie do tego konkretnego znacznika, przy którym atrybut ten został wpisany. <br />
+					zastosowanie jedynie do tego konkretnego znacznika, przy którym atrybut ten został wpisany. <br>
 					Aplikowanie stylów w ten sposób nie ma jednak większego sensu, bo robi się bałagan - kod staje się
 					nieczytelny i trudny do modyfikacji. I tutaj właśnie w grę wchodzą tzw. prawdziwe selektory -
 					wcześniej stylowaliśmy odnosząc się do elementów, natomiast najlepiej to robić w oparciu o
 					identyfikatory i klasy: #id i .class. Zwłaszcza klasy, które dodaje się do znaczników wg schematu:
-					<br />
-					znacznik class="name" treść /znacznik <br />
+					<br>
+					znacznik class="name" treść /znacznik <br>
 					Atrybut .class dodajemy w html przy danych tagach/znacznikach (pozwala na pogrupowanie elementów),
 					natomiast przekłada się on na stylowanie i cssy. Nazwę, którą nadajemy danej klasie, tworzymy wg
 					schematu kebab-case. Aby ostylować elementy, które mają przypisaną daną klasę, odnosimy się do nich
-					w pliku ze stylami w następujący sposób: <br />
-					.name { <br />
-					właściwość: wartość; <br />
-					} <br />
+					w pliku ze stylami w następujący sposób: <br>
+					.name { <br>
+					właściwość: wartość; <br>
+					} <br>
 					.(kropka) - to selektor klasy
 				</p>
 				<p class="paragraph">
 					Do stylowania elementów można wykorzystać również id, które wcześniej nadaliśmy tagom po to, by
-					wykorzystać je jako kotwicę służącą do przenoszenia sie w ramach dokumentu do konkretnej sekcji.
-					Identyfikator nadaje się elementom i wykorzystuje do stylowania wg następującego schematu: <br />
-					znacznik id="name" treść /znacznik <br />
-					#name { <br />
-					właściwość: wartość; <br />
-					} <br />
-					# (hash) - to selektor id <br />
+					wykorzystać je jako kotwicę służącą do przenoszenia się w ramach dokumentu do konkretnej sekcji.
+					Identyfikator nadaje się elementom i wykorzystuje do stylowania wg następującego schematu: <br>
+					znacznik id="name" treść /znacznik <br>
+					#name { <br>
+					właściwość: wartość; <br>
+					} <br>
+					# (hash) - to selektor id <br>
 					Na danej stronie dokumentu może znajdować się tylko jedno id o danej konkretnej wartości, przypisane
 					do jednego konkretnego elementu.
 				</p>
 				<p class="paragraph">
 					Selektory można łączyć, czyli do danego znacznika może byc przypisane konkretne id i określona
-					klasa. <br />
+					klasa. <br>
 					Jeśli chcemy ostylować wg określonego wzoru wszystkie linki, które znajdują się w obszarze nawigacji
 					"nav", tak by stylowanie odróżniało je od pozostałych linków występujących w treści dokumentu.
 					Elementy o znaczniku "a" są zatem zagnieżdżone w znaczniku "nav", chcemy więc ostylować elementy
 					znajdujące się w innym elemencie. Odnosimy się do nich w pliku z cssami wpisując po sobie elementy
-					"nav" i po spacji "a" wg wzoru: <br />
-					nav a { <br />
-					własność: wartość1; <br />
-					} <br />
-					a { <br />
-					własność: wartość2; <br />
-					} <br />
+					"nav" i po spacji "a" wg wzoru: <br>
+					nav a { <br>
+					własność: wartość1; <br>
+					} <br>
+					a { <br>
+					własność: wartość2; <br>
+					} <br>
 					Przy takim zapisie style nie zaaplikują się do samego znacznika "nav", ale do zawartych w nim
 					elementów "a", gdzie dana własnośc będzie miała wartość1. Natomiast pozostałe elementy "a", które
 					nie są zagnieżdżone w "nav" przyjmą wartość2 dla tej własności. Odnosząc się do elementów "a"
@@ -127,32 +127,32 @@
 					dopisany przy wartości dla danej własności opisującej określony element sprawia, że styl, przy
 					którym został on dodany nadpisuje wszystkie inne style, które zostały zdefiniowane dla danego
 					elementu. Opierając się na wcześniejszym przykładzie rozróżnienia stylów linków zagnieżdżonych w
-					znaczniku "nav" oraz linków znajdujących sie poza tym znacznikiem w treści dokumentu, dodanie
+					znaczniku "nav" oraz linków znajdujących się poza tym znacznikiem w treści dokumentu, dodanie
 					"!important" przy własności zdefiniowanej dla linków niezagnieżdżonych sprawia, że wszystkie linki,
 					zagnieżdżone i niezagnieżdżone, zostaną ostylowanie zgodnie z tym stylem. Przykład takiego zapisu:
-					<br />
-					nav a { <br />
-					własność: wartość1; <br />
-					} <br />
-					a { <br />
-					własność: wartość2 !important; <br />
-					} <br />
-					Wstawienie importanta w jakimś miejscu może więc sprawić, ze stylowanie całej strony się pozypie.
+					<br>
+					nav a { <br>
+					własność: wartość1; <br>
+					} <br>
+					a { <br>
+					własność: wartość2 !important; <br>
+					} <br>
+					Wstawienie importanta w jakimś miejscu może więc sprawić, że stylowanie całej strony się posypie.
 					Zatem jeśli nie musimy i zastosowanie importanta nie jest naprawdę celowe w danym przypadku, to go
 					nie używajmy.
 				</p>
 				<p class="paragraph">
 					Co w sytuacji, gdy do danego elementu mamy zdefiniowane stylowanie zarówno w pliku css, jak i przy
-					danym znaczniku jako inline, tak jak na poniższym przykładzie? <br />
-					W pliku CSS mamy zapis: <br />
-					#name { <br />
-					color: red; <br />
-					} <br />
-					Natomiast w kodzie html przy danym elemencie mamy wstawiony inline: <br />
-					span id="name" style="color: yellow" treść /span <br />
+					danym znaczniku jako inline, tak jak na poniższym przykładzie? <br>
+					W pliku CSS mamy zapis: <br>
+					#name { <br>
+					color: red; <br>
+					} <br>
+					Natomiast w kodzie html przy danym elemencie mamy wstawiony inline: <br>
+					span id="name" style="color: yellow" treść /span <br>
 					Dla treści elementu span o id=name mamy więc zdefiniowany w pliku css kolor czerwony, natomiast w
 					stylu liniowym kolor żółty. Przeglądarka zastosuje tutaj styl zdefiniowany w inline, czyli treść
-					będzie miała kolor żółty. <br />
+					będzie miała kolor żółty. <br>
 					Jest to przykład występowania specyficzności w CSS, czyli zasad ważności sposobów zastosowania
 					stylów w sytuacji, gdy są one w konflikcie. Specificity to zatem zasada, która określa który
 					selektor ma pierwszeństwo w przypadku, kiedy wiele z nich ustawia te same reguły CSS dla tego samego
@@ -163,19 +163,19 @@
 				<p class="paragraph">
 					Zastosowanie ma zatem następująca kolejność wg pierwszeństwa obowiązywania reguł wprowadzonych przez
 					selektory: important, inline, id, klasa, element. Przy czym dwa pierwsze, important i inline, są
-					stosowane rzadko, dlatego zostały ujęte w nawiasie. <br />
+					stosowane rzadko, dlatego zostały ujęte w nawiasie. <br>
 					Przykładowo, jeśli mamy zdefiniowane dwie reguły css dla znacznika h1 w taki sposób jak poniżej,
 					czyli w jednej z nich jako selektor podajemy sam pojedynczy znacznik h1, natomiast w drugiej
 					uwzględniamy zagnieżdżenie tego znacznika h1 w elemencie body (jako selektor podajemy dwa elementy -
 					dziecko i rodzica), to w opierając się na zasadach specificity, zastosowanie będzie miała reguła CSS
 					zdefiniowana w oparciu o selektor z dwoma elementami (bo dwa elementy to więcej niż jeden element).
-					<br />
-					h1 { <br />
-					color: red; <br />
-					} <br />
-					body h1 { <br />
-					color: yellow; <br />
-					} <br />
+					<br>
+					h1 { <br>
+					color: red; <br>
+					} <br>
+					body h1 { <br>
+					color: yellow; <br>
+					} <br>
 					Nagłówek będzie zatem żółty, ponieważ reguła CSS definiująca ten styl <b>ma wyższą
 						specyficzność</b>. Poniżej znajduje się obrazek przedstawiający wizualizację tego
 					przykładu.
@@ -186,27 +186,30 @@
 					To, która z reguł CSS będzie miała zastosowane jest również widoczne w devtools w przeglądarce -
 					styl, który został nadpisany jest przekreślony. Przekreślone są również zwykle domyślne style
 					przeglądarki, gdy są nadpisywane przez nas. W tym przypadku nie są przekreślone, bo taka własność
-					nie została zdefiniowana w przeglądarce (zadziałoby się tak np. w przypadku stylów zdefiniowanych dla
+					nie została zdefiniowana w przeglądarce (zadziałoby się tak np. w przypadku stylów zdefiniowanych
+					dla
 					linków). Poniżej zrzut ekranu z devtools dla omawianego przypadku.
 				</p>
 				<img class="image" src="specificity-example-devtools.jpg"
 					alt="Zrzut ekranu z devtools przedstawiający pierwszeństwo zastosowania reguł CSS, gdy jedna jest zdefiniowana w oparciu o selektor jednoelementowy, a druga dwuelementowy." />
 				<p class="paragraph">
-					Devtools pozwala też na dodanie w zakładce elements do znacznika body atrybutu "contenteditable", poprzez
-					kliknięcie prawym przyciskiem i wybór opcji add atribute. Po dodaniu atrybutu można na żywo edytować stronę z
+					Devtools pozwala też na dodanie w zakładce elements do znacznika body atrybutu "contenteditable",
+					poprzez
+					kliknięcie prawym przyciskiem i wybór opcji add atribute. Po dodaniu atrybutu można na żywo edytować
+					stronę z
 					poziomu jej widoku, a nie narzędzi w devtools.
 				</p>
 
 				<p class="paragraph">
 					Kolejnym przykładem zastosowania reguł specyficzności css jest sytuacja, gdy do danego nagłówka
 					zostały użyte reguły css, z których jedna styluje go w oparciu o selektor składający się z trzech
-					elementów, natomiast druga używa selektora w postaci id. <br />
-					html body h1 { <br />
-					color: yellow; <br />
-					} <br />
-					#main-header { <br />
-					color: red; <br />
-					} <br />
+					elementów, natomiast druga używa selektora w postaci id. <br>
+					html body h1 { <br>
+					color: yellow; <br>
+					} <br>
+					#main-header { <br>
+					color: red; <br>
+					} <br>
 					Wyższą specyficzność będzie miała tu reguła definiująca kolor czerwony. Mimo tego, że kolor żółty
 					opiera sie na selektorze składającym się z trzech elementów, a kolor czerwony określany jest dla
 					selektora składającego sie z jednego id, to id ma większą wagę i pierwszeństwo w zasadach
@@ -219,31 +222,33 @@
 					elementy, natomiast drugi w oparciu o id, klasę i jeden element. Wyższą specyficzność będzie miała
 					reguła CSS bazująca na id, klasie i jednym elemencie, ponieważ zawiera więcej selektorów o wyższej
 					wadze - id i klasa (2). Można to też przeczytać jako całe liczby i w ten sposób 111 > 103, a zatem
-					nagłówek będzie miał kolor czerwony. Poniżej zapis kodu i obrazek, który ilustruje ten przykład.
-					<br />
-					html body h1 #main-header { <br />
-					color: yellow; <br />
-					} <br />
-					body .section #main-header { <br />
-					color: red; <br />
+					nagłówek będzie miał kolor czerwony. Poniżej zapis kodu i obrazek, który ilustruje ten przykład.<br>
+					(Selektor id piszemy łącznie z selektorem elementu, do którego się odnosi, bez spacji. To samo w
+					przypadku selektora klasy, który odnosi się do danego elementu).
+					<br>
+					html body h1#main-header { <br>
+					color: yellow; <br>
+					} <br>
+					body .section #main-header { <br>
+					color: red; <br>
 					}
 				</p>
 				<img class="image" src="specificity-example3.JPG"
 					alt="Obrazek przedstawiający pierwszeństwo zastosowania reguł CSS, gdy jedna jest zdefiniowana w oparciu o id i trzy elementy, a druga w oparciu o selektor id, klasę i jeden element." />
 				<p class="paragraph">
 					<strong>Jeśli specyficzność jest równa, to pierwszeństwo ma selektor znajdujący się "bliżej"
-						elementu.</strong> <br />
+						elementu.</strong> <br>
 					Przykładowo w jednym pliku style.css mamy zdefiniowane dwie reguły składające się z tych samych
 					selektorów,
 					lecz każda z tych reguł styluje dany element w inny sposób. I jedna z reguł znajduje się pod drugą w
 					treści pliku, przy czym reguła definiująca kolor czerwony znajduje się wyżej niż reguła stylująca
 					kolor niebieski. Zastosowanie będzie miała tu reguła stylująca kolor niebieski, czyli ta, która jest
-					niżej, ponieważ znajduje się ona bliżej stylowanego elementu.<br />
-					body section#main h1.heading { <br />
-					color: red; <br />
-					} <br />
-					body section#main h1.heading { <br />
-					color: blue; <br />
+					niżej, ponieważ znajduje się ona bliżej stylowanego elementu.<br>
+					body section#main h1.heading { <br>
+					color: red; <br>
+					} <br>
+					body section#main h1.heading { <br>
+					color: blue; <br>
 					}
 				</p>
 				<p class="paragraph">
@@ -258,11 +263,11 @@
 					alt="Zrzut ekranu przedstawiający, na czym polega bliskość stylowanego elementu reguły znajdującej sie niżej w pliku." />
 				<p class="paragraph">
 					Analogicznie wygląda sytuacja, jeśli wpiszemy w pliku style.css dwa style w jeden selektor, np.:
-					<br />
-					body section#main h1.heading { <br />
-					color: red; <br />
-					color: blue; <br />
-					} <br />
+					<br>
+					body section#main h1.heading { <br>
+					color: red; <br>
+					color: blue; <br>
+					} <br>
 					Pierwszeństwo będzie miał ten, który jest niżej, czyli w tym przypadku niebieski.
 				</p>
 				<p class="paragraph">
@@ -271,12 +276,145 @@
 						kilku elementów).</strong>
 				</p>
 				<p class="paragraph">
-					Można przyjąć następujące wytyczne dla tworzenia nazw klas: <br />
+					Można przyjąć następujące wytyczne dla tworzenia nazw klas: <br>
 					1. Używamy pojedynczych angielskich słów rozpoczynających się od małej litery, a jeśli jest
-					konieczne użcie dwóch słów, to stosujemy kebab-case. <br />
-					2. Nie zaczynamy od cyfry. <br />
-					3. Nazywamy rzeczy zgodnie z ich funkcją na stronie. <br />
-					4. Nie zwiększamy specyficzności bez potrzeby - staramy się, by element miał jedną klasę.
+					konieczne użcie dwóch słów, to stosujemy kebab-case. <br>
+					2. Nie zaczynamy od cyfry. <br>
+					3. Nazywamy rzeczy zgodnie z ich funkcją na stronie. <br>
+					4. Nie zwiększamy specyficzności bez potrzeby - staramy się, by element miał tylko jedną klasę i
+					stylujemy po klasach.
+				</p>
+			</article>
+			<article class="article">
+				<h3 class="article-header">Dziedziczenie</h3>
+				<p class="paragraph">
+					Cześć własności, zdefiniowanych dla danego elementu, może być dziedziczona (ale nie wszystkie).
+					Dziedziczenie idzie z góry do dołu, od rodzica, do potomków. Jeśli nie mamy jawnie zdefiniowanych
+					stylów dla danego elementu, to dziedziczy on style od swojego rodzica, dla którego te style zostały
+					zdefiniowane. Przykładowo, jeśli mamy strukturę, w ramach której jest artykuł, a w nim nagłówek h3
+					oraz paragraf i ten artykuł ma nadaną klasę, w ramach której został zdefiniowany kolor czcionki, to
+					kolor ten zostanie zaimplementowany również do nagłówka h3 oraz paragrafu, dla których bezpośrednio
+					żadne style nie zostały zdefiniowane. Jeśli natomiast w podanym przykładzie dla paragrafu zostałaby
+					nadana klasa, w ramach której zdefiniowany zostałby kolor czcionki, to nagłówek h3 odziedziczy kolor
+					czcionki zdefiniowany dla artykułu, natomiast do paragrafu zostanie zastosowany kolor czcionki,
+					który został dla niego zdefiniowany bezpośrednio. Taka sama sytuacja będzie miała miejsce nawet,
+					jeśli do stylu zaapliowanego do artykułu dodamy importanta - do paragrafu nadal będzie miał
+					zastosowanie kolor czcionki, który zdefiniowany jest dla niego bezpośrednio. Pierwszeństwo ma zawsze
+					definicja jawna, bez dziedziczenia.
+				</p>
+				<p class="paragraph">
+					Gdybyśmy mieli strukturę, w ramach której jest artykuł, a w nim nagłówek h3 oraz paragraf, w
+					którym znajduje się link, i ten artykuł ma nadaną klasę, w ramach której został zdefiniowany kolor
+					czcionki, to kolor ten zostanie zaimplementowany również do nagłówka h3 oraz paragrafu, dla których
+					bezpośrednio żadne style nie zostały zdefiniowane. Do linku jednak kolor czcionki zdefiniowany dla
+					klasy artykułu nie zostanie zaimplementowany. Mimo, że my dla linków nie mamy zdefiniowanych
+					bezpośredniostylów czcionki, to takie definicje ma w sposób jawny utworzone sama przeglądarka i w
+					tym przypadku do koloru czcionki linku, który znajduje si e w paragrafie, zostanie zaimplementowany
+					domyślny styl z przeglądarki (można te definicje podejrzeć w devtools, badając dany element).
+				</p>
+				<p>
+					Do definicji stylów można zastosować wartość <strong>inherit</strong>. W takim przypadku, mając
+					strukturę, w ramach której jest artykuł, a w nim nagłówek h3 oraz paragraf, w którym znajduje się
+					link, i ten artykuł ma nadaną klasę, w ramach której został zdefiniowany kolor czcionki, to dodając
+					w stylach dla linków kolor czcionki o wartości "inherit", kolor linku zostanie odziedziczony z
+					definicji dla artykułu, pomimo tego, że dla linku nie mamy zdefiniowanych kolorów jako takich i
+					pomimo jawnej definicji koloru linku z przeglądarki.<br>
+					article a {<br>
+					color: inherit;<br>
+					}<br>
+					Jeśli chcemy, by linki zawsze dziedziczyły kolor z elementów powyżej i były w tym samym kolorze, co
+					tekst naokoło, to można dodać w stylach definicję odnoszącą się do wszystkich linków:<br>
+					a {<br>
+					color: inherit;<br>
+					}<br>
+					W ten sposób pozbywamy się definitywnie domyślnych definicji dla koloru linków z prezglądarki i nie
+					musimy tworzyć osobnych definicji dla kolorów linków w różnych miejscach. Możemy sobie je potem
+					oczywiście nadpisywać, np. za pomocą klas.
+				</p>
+				<img class="image" src="inherited-styles.jpg"
+					alt="Lista własności, których style mogą być dziedziczone." />
+			</article>
+		</section>
+		<section class="section">
+			<h2 class="section-header">CSS - tydzień 4</h2>
+			<article class="article">
+				<h3 class="article-header">Box model</h3>
+				<p class="paragraph">
+					Box model to fundamentalny model, z którego korzysta nasza przeglądarka do wyświetlania treści.
+					Świat stron internetowych jest co do zasady płaski, dwuwymiarowy. Poruszamy się w przestrzeni x i y.</br>
+					&lt;div&gt; tzw. pudełko, znacznik, który nie ma żadnego znaczenia semantycznego, służy do
+					opakowywania różnych treści w sytuacji, gdy nie istnieje odpowiedni semantyczny znacznik. Znacznik
+					ten przydaje się przy stylowaniu, ale jeśli używamy go po prostu do opakowywywania treści, to
+					prawdopodobnie robimy to źle.
+				</p>
+				<h4 class="content-header">Własności CSS</h4>
+				<p class="paragraph">
+				<h5 class="paragraph-header">Display</h5>
+				<b>display: block;</b> - powoduje, że element, który ostylujemy, nadając mu własność display o wartości
+				block, zajmuje całą szerokość, jaką może zająć, a kolejne elementy będą przerzucane do nowej linii.
+				Tworzony jest blok, który zajmuje całą szerokość, a kolejne rzeczy przerzucane są niżej. Jest to
+				domyślny styl, jaki przeglądarka nadaje elementom na stronie (również w przypadku treści opakowanej w
+				znaczniki &lt;section&gt; czy &lt;article&gt;). Styl display: block; można jednak stosować również do
+				innych elementów niż te, które przeglądarka domyślnie ostylowuje w ten sposób, np. do linków, obrazków,
+				etc.<br>
+				Jeśli do stylowania elementu dodamy również takie własności jak wysokość i szerokość, to w sytuacji, gdy
+				dostępna szerokość będzie większa niż zdefiniowana, sam element będzie miał szerkość określoną w
+				definicji, ale reszta przestrzeni zostanie zarezerowana również dla tego elementu, a pozostałe elementy
+				zrzucone niżej. <br>
+				<img class="image" src="display-block.jpg"
+					alt="Przykład treści ostylowanej za pomocą własności display: block." />
+				<b>display: inline;</b> - każdy z boxów, który ostylujemy w ten sposób, dostosowuje się do tego, co się
+				w nim znajduje. Nie zajmuje zatem całej dostępnej szerokości, a tylko taką, jaka potrzebna jest do
+				wyświetlenia jego zawartości. Ponadto do elementu ostylowanego w ten sposób nie będą miały zastosowania
+				zdefiniowane dla niego wartości height i width, element taki musi być liniowy.<br>
+				<img class="image" src="display-inline.jpg"
+					alt="Przykład treści ostylowanej za pomocą własności display: inline." />
+				<b>display: inline-block;</b> - jest to hybryda wartości inline i block; elementy ostylowane w ten
+				sposób, jeśli mają małą zawartość, to zachowują się jak elementy inline. Jeśli natomiast element jest
+				szerszy i wychodzi na kolejny wiersz, to rozszerza się i blokuje całą jego szerokość.<br> Jeśli
+				natomiast element taki będzie miał zdefiniowaną wysokość i szerokość, to podobnie, jak w przypadku
+				wartości block, gdy jest dostępna przestrzeń większa niż zdefiniowana, element będzie miał szerokość
+				określoną w definicji, ale pozostała przestrzeń nie będzie już dla niego zarezerwowana, zostanie zajęta
+				przez kolejny element.<br>
+				<img class="image" src="display-inline-block.jpg"
+					alt="Przykład treści ostylowanej za pomocą własności display: inline-block." />
+				</p>
+				<p class="paragraph">
+				<h5 class="paragraph-header">Width i height</h5>
+				Jeśli nasz element ma zdefiniowaną wysokość i szerokość i zmniejszymy okno przeglądarki, to sam element
+				pozostanie cały czas tej samej szerkości/wysokości, ale w oknie przeglądarki pojawi się scroll, który
+				pozwoli na przewinięcie do fragmentów elementu niedostępnych w widoku. Jeśli natomist wartości te nie są
+				zdefiniowane, to przy zmniejszaniu/zwiększaniu okna przeglądarki, wielkość elementu zmienia się,
+				dostosowując do dostępnego miejsca.<br>
+				<b>max-width</b> - Jeśli okno przeglądarki jest szersze niż zdefiniowana wartość dla szerkości elementu,
+				to jego szerokość jest dokładnie taka, jak określono w definicji. Jeśli natomiast zmiejszymy okno
+				przeglądarki i jej szerokość będzie mniejsza niż maksymalna szerokość zdefiniowana dla elementu, to
+				szerokość elementu się zmniejszy i dostosowuje się on do dostępnej przestrzeni. Czyli wraz ze zmianą
+				szerokości okna przeglądarki, szerokość elementu może się zmniejszać, ale nie zwiększy się bardziej niż
+				wartość określona w max-width.<br>
+				<b>max-height</b> - Jeśli określimy max-height i będzie ona większa niż zawartość elementu, który
+				stanowi przykładowo jakiś literał, to w oknie przeglądarki element zajmie najmniejszą potrzebną mu
+				wysokość - w tym przypadku jeden wiersz. Jeśli natomiast zawartość elementu jest większa niż wartość
+				max-height, np. jest to wiele linijek tekstu, to element wyświetli się w maksymalnie określonej
+				wysokości, natomiast jego zawartość będzie wykraczać poza przewidzianą dla elementu przestrzeń.<br>
+				<img class="image" src="max-height.jpg"
+					alt="Przykład treści ostylowanej za pomocą wartości max-height, gdy zawartość elementu jest wyższa i wystaje poza element." /> </br>
+					<b>min-width</b> - Jeśli ustalimy minimalną szerokość większą niż dostępna szerokość okna, to pojawi się scroll, który pozwoli na dostanie się do niedostępnej części elementu.<br>
+					<b>min-height</b> - Jeśli ustalimy minimalną wysokość dla elementów, to te elementy, których zawartość nie przekracza ustalonej wysokości minimalnej będą miały taką wysokość, jak zdefiniowana minimalna. Jeśli natomiast zawartość elementu ma większą wysokość niż zdefiniowana minimalna, to element przyjmie taką wysokość, jaka jest potrzebna, by zmieścić zawartość.			
+				</p>
+				<p class="paragraph">
+					<h5 class="paragraph-header">Overflow</h5>
+					Własność overflow definiuje, jak ma zachować się element w sytuacji, gdy treść za niego wystaje.<br>
+					<b>overflow: hidden;</b> - ukrywa całą treść, która nie mieści się w elemencie, ucina wszystko, co wystaje poza jego zdefiniowaną wysokość i szerokość.<br>
+					<b>overflow: auto;</b> - w sytuacji, gdy zawrtość elementu jest wyższa niż element, własność overflow o wartości auto dodaje wewnątrz elementu scrolla, który pozwala na dostęp do całej treści zawartej w elemencie.<br>
+					<b>overflow: clip;</b> - na naszym obecnym przykładzie zachowuje się jak overflow:hidden, ale gdy stylujemy nasze strony w bardziej zaawansowany sposób, to wykorzystujemy w sytuacji, gdy pewne elementy chcemy tak wypozycjonować, by wykraczały poza nasze body.<br>
+					<b>overflow: scroll;</b> - dodawany jest scroll do wszystkich elementów ostylowanych w ten sposób, niezależnie od wysokości i szerokości. Nie we wszystkich elementach scroll będzie działać, a jedynie w tych, w przypadku których zawartość elementu wykracza poza określoną dla niego wysokość lub szerokość. W przypadku overflow: auto, scroll dodawany jest tylko tam, gdzie jest naprawdę potrzebny.<br>
+					<b>overflow: visible;</b> - powoduje, że treść, która wykracza poza dostępną wysokość lub szerokość elementu nie jest ukrywana, ale wystaje za element. Jeśli za elementem, z którego wystaje treść, umieścimy kolejny, w którym określona dla niego zawrtość się mieści, to element ten dodawany jest od razu za poprzedzającym go elementem. Przestrzeń nie jest rezerowana na niemieszczącą się treść. W takiej sytuacji treści obu elementów mogą się na siebie nakładać.
+				</p>
+				<h4 class="content-header">Jednostki</h4>
+				<p class="paragraph">
+				<h5 class="paragraph-header">xxx</h5>
+				<b>xxx;</b> 
 				</p>
 			</article>
 		</section>
@@ -284,7 +422,7 @@
 	</main>
 	<footer class="footer">Strona domowa Magdaleny Derek, wszystkie treści są wynikiem nauki w ramach szkolenia WTF: Co
 		ten frontend.
-		<a class="footer-link" href="#top">Wróć na górę strony</a>
+		<a class="footer-link" href="#top">Wróć na górę strony ⬆️</a>
 	</footer>
 	<script src="main.js"></script>
 </body>
