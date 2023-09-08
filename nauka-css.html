@@ -338,7 +338,7 @@
 		<section class="section">
 			<h2 class="section-header">CSS - tydzień 4</h2>
 			<article class="article">
-				<h3 class="article-header">Box model</h3>
+				<h3 class="article-header">Box model i własności CSS</h3>
 				<p class="paragraph">
 					Box model to fundamentalny model, z którego korzysta nasza przeglądarka do wyświetlania treści.
 					Świat stron internetowych jest co do zasady płaski, dwuwymiarowy. Poruszamy się w przestrzeni x i y.</br>
@@ -347,9 +347,8 @@
 					ten przydaje się przy stylowaniu, ale jeśli używamy go po prostu do opakowywywania treści, to
 					prawdopodobnie robimy to źle.
 				</p>
-				<h4 class="content-header">Własności CSS</h4>
 				<p class="paragraph">
-				<h5 class="paragraph-header">Display</h5>
+				<h4 class="paragraph-header">Display</h4>
 				<b>display: block;</b> - powoduje, że element, który ostylujemy, nadając mu własność display o wartości
 				block, zajmuje całą szerokość, jaką może zająć, a kolejne elementy będą przerzucane do nowej linii.
 				Tworzony jest blok, który zajmuje całą szerokość, a kolejne rzeczy przerzucane są niżej. Jest to
@@ -380,7 +379,7 @@
 					alt="Przykład treści ostylowanej za pomocą własności display: inline-block." />
 				</p>
 				<p class="paragraph">
-				<h5 class="paragraph-header">Width i height</h5>
+				<h4 class="paragraph-header">Width i height</h4>
 				Jeśli nasz element ma zdefiniowaną wysokość i szerokość i zmniejszymy okno przeglądarki, to sam element
 				pozostanie cały czas tej samej szerkości/wysokości, ale w oknie przeglądarki pojawi się scroll, który
 				pozwoli na przewinięcie do fragmentów elementu niedostępnych w widoku. Jeśli natomist wartości te nie są
@@ -403,20 +402,48 @@
 					<b>min-height</b> - Jeśli ustalimy minimalną wysokość dla elementów, to te elementy, których zawartość nie przekracza ustalonej wysokości minimalnej będą miały taką wysokość, jak zdefiniowana minimalna. Jeśli natomiast zawartość elementu ma większą wysokość niż zdefiniowana minimalna, to element przyjmie taką wysokość, jaka jest potrzebna, by zmieścić zawartość.			
 				</p>
 				<p class="paragraph">
-					<h5 class="paragraph-header">Overflow</h5>
+					<h4 class="paragraph-header">Overflow</h4>
 					Własność overflow definiuje, jak ma zachować się element w sytuacji, gdy treść za niego wystaje.<br>
 					<b>overflow: hidden;</b> - ukrywa całą treść, która nie mieści się w elemencie, ucina wszystko, co wystaje poza jego zdefiniowaną wysokość i szerokość.<br>
 					<b>overflow: auto;</b> - w sytuacji, gdy zawrtość elementu jest wyższa niż element, własność overflow o wartości auto dodaje wewnątrz elementu scrolla, który pozwala na dostęp do całej treści zawartej w elemencie.<br>
+					<img class="image" src="overflow-auto.jpg" alt="Przykład treści ostylowanej za pomocą własności overflow: auto." /> <br>
 					<b>overflow: clip;</b> - na naszym obecnym przykładzie zachowuje się jak overflow:hidden, ale gdy stylujemy nasze strony w bardziej zaawansowany sposób, to wykorzystujemy w sytuacji, gdy pewne elementy chcemy tak wypozycjonować, by wykraczały poza nasze body.<br>
 					<b>overflow: scroll;</b> - dodawany jest scroll do wszystkich elementów ostylowanych w ten sposób, niezależnie od wysokości i szerokości. Nie we wszystkich elementach scroll będzie działać, a jedynie w tych, w przypadku których zawartość elementu wykracza poza określoną dla niego wysokość lub szerokość. W przypadku overflow: auto, scroll dodawany jest tylko tam, gdzie jest naprawdę potrzebny.<br>
-					<b>overflow: visible;</b> - powoduje, że treść, która wykracza poza dostępną wysokość lub szerokość elementu nie jest ukrywana, ale wystaje za element. Jeśli za elementem, z którego wystaje treść, umieścimy kolejny, w którym określona dla niego zawrtość się mieści, to element ten dodawany jest od razu za poprzedzającym go elementem. Przestrzeń nie jest rezerowana na niemieszczącą się treść. W takiej sytuacji treści obu elementów mogą się na siebie nakładać.
-				</p>
-				<h4 class="content-header">Jednostki</h4>
-				<p class="paragraph">
-				<h5 class="paragraph-header">xxx</h5>
-				<b>xxx;</b> 
+					<img class="image" src="overflow-scroll.jpg" alt="Przykład treści ostylowanej za pomocą własności overflow: scroll." /> <br>
+					<b>overflow: visible;</b> - powoduje, że treść, która wykracza poza dostępną wysokość lub szerokość elementu nie jest ukrywana, ale wystaje za element. Jeśli za elementem, z którego wystaje treść, umieścimy kolejny, w którym określona dla niego zawrtość się mieści, to element ten dodawany jest od razu za poprzedzającym go elementem. Przestrzeń nie jest rezerowana na niemieszczącą się treść. W takiej sytuacji treści obu elementów mogą się na siebie nakładać.<br>
+					<img class="image" src="overflow-visible.jpg" alt="Przykład treści ostylowanej za pomocą własności overflow: visible." />
 				</p>
 			</article>
+			<article class="article">
+				<h3 class="article-header">Jednostki</h3>
+				<p class="paragraph">
+					<h4 class="paragraph-header">Piksele</h4>
+					Wartość 0 możemy zapisywać bez jednostek. Nie ma znaczenia, czy są to piksele, procenty czy jeszcze coś innego, zapisujemy po prostu 0.<br>
+				Piksele zapisujemy jako px, piksel jest to po prostu punkt na ekranie. Jednostke zapisujemy razem z liczbą, bez spacji, np. 200px, w przeciwnym razie to nie zadziała. Piksel jako jednostka nie ma przełożenia na gęstość pikselową ekranów. Piksele określające np. rozdzielczość HD składają się na większe piksele, które stosowane są jako jednostki. To, że rozdzielczość ekranów zmienia się, składa się na nią coraz większa liczba pikseli, poprawiając jakość obrazu, nie wpływa na zmianę wielkości piskeli jako jednostek, które wciąż pozostają takie same. Przeglądarka sobie to poprawnie przelicza.
+				</p>
+				<p class="paragraph">
+					<h4 class="paragraph-header">Procenty</h4>
+				Procenty zapisujemy jako %, również bez spacji, np. 50%. Wartość ta musi mieć jakiś punkt odniesienia, rodzica, w naszym przypadku będzie to po prostu body. Jeśli podamy dla elementu szerokość 50%, to będzie on zajmował połowę dostępnego okna przeglądarki. W przypadku wysokości natomiast nie jest to już tak proste, bo rodzic nie ma domyślnej wartości, do której moglibyśmy się odnieść, a wysokość okna zależy od zawartości elementów, co może być zmienne. Jeśli chcemy wysokość jakiegość elementu określić procentowo, to musimy zdefiniować wysokość dla wszystkich elementów nadrzędnych, w których dany element jest zagnieżdżony. W przypadku div'a zagnieżdżonego bezpośrednio w body, aby określić jego procentową wysokość, musimy określić wysokość body oraz naszego root'a, czyli html np. jako 100% albo w pikselach. Generalnie jednak nie definiujemy wysokości w ten sposób jak na podanym przykładzie, jest to bardzo ekstremalny przypadek.<br>
+				<img class="image" src="height-in-percent.jpg" alt="Przykład treści ostylowanej za pomocą wysokości zdefiniowanej w procentach."/><br>
+				Jeśli natomiast będziemy mieć element zawarty w innym elemencie, którego wysokość i szerokość zostały zdefiniowane, do nadając temu zagnieżdżonemu elementowi wysokość i szerokość o wartości 50%, zajmie on połowę wysokości i szerokości rodzica, a nie całego body.
+				</p>
+				<p class="paragraph">
+					<h4 class="paragraph-header">Viewport width i viewport height</h4>
+					Viewport width (vw) jest to jednostka odnosząca się do szerokości okna, w którym wyświetla się nasz dokument. Jednostka ta zawsze działa w kontekście szerokości całego ekranu, czyli nawet jeśli mamy element zagnieżdżony w innym elemencie o określonej szerokości, to nadając temu zagnieżdżonemu elementowi szerokość 50vw, zajmie on połowę dostępnego ekranu, a nie połowę szerokości rodzica.<br>
+					W przypadku jednostki viewport height (vh) jej zastosowanie nie powoduje takich problemów jak definiowanie wysokości w procentach. Jednostka vieport height bazuje na wysokości dostępnego okna, w którym wyświetla się treść, a nie wysokości całego dokumentu. Czyli jeśli wysokość elementu zdefiniujemy na 33vh, to zajmie on 33% dostępnego okna przeglądarki. Jeśli natomiast wysokość elementu zdefiniujemy na 100vh, to zajmie on 100% dostępnego okna przeglądarki i by dostać się do treści spoza elementu, będziemy musieli się przescrollować. Można w ten sposób np. wykonać pokaz slajdów na stronie.
+					</p>
+			</article>
+			<article class="article">
+				<h3 class="article-header">Box model</h3>
+				<p class="paragraph">
+					<h4 class="paragraph-header"></h4>
+					Wszystkie elementy na stronie internetowej otoczone są niewidzialnym prostokątem, który ma jakąś wysokość i szerokość i który możemy podejrzeć, najeżdżąjąc na te elementy za pomocą devtools. Box model jest to zatem opis wymiarów naszego elementu, który składa się z kilku wartości:<br>
+					- element - znajduje się w środku i ma określoną wysokość i szerokość;<br>
+					- padding - jest to wewnętrzny margines, który definiuje, jaka ma być odległość między treścią, zawartością naszego elementu a ramką tego elementu;<br>
+					- border - ramka elementu, zamyka element;<br>
+					- margin - nie jest już częścią elementu, ale definiuje jego zachowanie, określa o ile nasz element ma być oddalony od innych elementów i o ile te inne elementy mają być oddalone od naszego elementu.
+					</p>
+					</article>
 		</section>
 
 	</main>
