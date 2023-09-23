@@ -481,7 +481,7 @@
 				</p>
 			</article>
 			<article class="article">
-				<h3 class="article-header">Box model</h3>
+				<h3 class="article-header">Box model: padding, border i margin</h3>
 				<p class="paragraph">
 
 					Wszystkie elementy na stronie internetowej otoczone są niewidzialnym prostokątem, który ma jakąś
@@ -554,8 +554,37 @@ Marginesy zapisujemy tak samo jak padding. Marginesy zewnętrzne nakładają si�
 				</p>
 			</article>
 			<article class="article">
-				<h3 class="article-header">Box sizing</h3>
+				<h3 class="article-header">Box sizing - content-box versus border-box</h3>
 				<p class="paragraph">
+					Domyślny box sizing to content-box, czyli definicja szerokości i wysokości elementu odnosi się do samego contentu, nie obejmuje paddingu i borderu. Jeśli zatem zmniejszymy lub zwiększymy padding i/lub border, to wpłynie to również na wielkość samego elementu.<br>
+					Box sizing może być jednak również określany przez wartość border-box, gdzie definicja wysokości i szerokości elementu odnosi się do całego elementu i oprócz contentu obejmuje również padding i border. Aby było to mozłiwe, należy dla danego elementu lub grupy elementów dodać własność box-sizing: border-box. Definiowanie wielkości elementów w ten sposób pozwala przewidzieć, jak duży będzie element, bez względu na to, jaką wartość będzie miał jego padding czy border. Wielkość conetentu elementu jest tu wyliczana automatycznie, po odjęciu od wysokości i szerokości całego elementu, wartości paddingu i borderu. Wartość border-box jest obecnie stosowana jako rozwiązanie standardowe dla określania box sizing.<br> 
+					Zarówno w przypadku content-box, jak i border-box, wielkość marginesu nie wpływa na wielkość elementu, gdyż margines znajduje się już poza elementem.<br>
+					<img class="image" src="box-sizing.jpg" alt="Porównanie elementów określonych za pomocą content-box i border-box."/><br>
+					Jeśli mamy dwa elementy, z których jeden jest ostylowany za pomocą border-box, a drugi za pomocą content-box i chcemy, by oba miały taką samą wysokość i szerokość równą 200px, padding o wartości 40px i border równy 20px, to w przypadku elementu ostylowanego za pomocą box-sizing: border-box, wystarczy, że określimy dla tego elementu width i height, definiując dla nich wartość 200px i podamy wartości dla padding i border zgodne z powyższymi. Z kolei element ostylowany za pomocą box-sizing: conent-box, który ma padding równy 40px i border równy 20px, by uzyskać wielkość 200px, musi mieć wysokość i szerkość 80px (80px sam conent plus 2x40px paddingu i 2x20px borderu daje w sumie 200px dla całego elementu).
+				</p>
+			</article>
+			<article class="article">
+				<h3 class="article-header">Position i float</h3>
+				<p class="paragraph">
+					<h4 class="paragraph-header">Position: static</h4>
+					Własność position: static oznacza, że to przeglądarka decyduje, gdzie dany element umieścić, wyliczając to sobie na podstawie zdefiniowanych stylów dla elementów na stronie (czy blok, czy inline, odległości, etc.). Jest to wartość domyślna, znajduje zastosowanie, gdy nie ma określonej wprost wartości dla position. Można ją jednak również określić jawnie. 
+				</p>
+				<p class="paragraph">
+					<h4 class="paragraph-header">Position: relative, position: absolute</h4>
+					Własność position: relative pozwala na stworzenie przestrzeni, względem której możemy umieszczać inne elementy. Po dodaniu tego stylu wygląd elementu się nie zmienia, ale stworzona za jego pomocą przestrzeń umożliwia wykorzystanie własności position: absolute.<br> 
+					Position: absolute pozwala na pozycjonowanie względem elementu, który ma zdefiniowaną pozycję relative. Element z pozycją absolute może być przesuwany po stworzonej warstwie względem rodzica, który jest w pozycji relative za pomocą wartości top, right, bottom, left. Pozycja jest liczona od krawędzi elementu, nie uwzględniając bordera.<br>
+					<img class="image" src="position-absolute.jpg" alt="Przykład elementu ostylowanego za pomocą position: absolute."/>
+				</p>
+				<p class="paragraph">
+					<h4 class="paragraph-header">z-index</h4>
+					Jeśli dwa elementy mają zdefiniowaną tę samą pozycję, to widoczny na wierzchu jest ten, którego definicja stylu znajduje się bliżej końca pliku, czyli ten, który renderuje się później (renderowanie - proces przekształcania kodu i danych w finalną postać, która jest widoczna i interaktywna dla użytkownika. Polega na konwersji abstrakcyjnych danych w konkretne elementy graficzne lub wizualne reprezentacje). W takiej sytuacji umiejscowieniem elementu można sterować za pomocą własności z-index, która odpowiada za warstwowanie - im wyższa wartość z-index, tym dany element jest wyżej. Do pozycjonowania staramy się używać sensownych, niezbyt dużych liczb (np. z-index: 10;) i zwiększać je powoli. Wóczas zastosowanie dużej liczby, np. 1000 sprawi, że elementy wypozycjonowane niżej znajdą się pod spodem i nie zasłaniały wybranego elementu.<br>
+					<img class="image" src="z-index.jpg" alt="Przykład warstwowania elementów za pomocą własności z-index."/><br>
+					Warstwowanie elementów na stronie jest dobrze zobrazowane w przeglądarce Edge. Po uruchomieniu w devtools za pomocą skrótu ctrl + shift + p panelu wyszukiwania należy wpisać i wybrać '3d view' i wówczas pojawi się zakładka, w której możemy podejrzeć naszą stronę w ujęciu trójwymiarowym. Widok można obracać stosując strzałki widoczne w oknie. Jedną z opcji widoku jest z-index, gdzie można podejrzeć jak elementy układają się na warstwach według zdefiniowanych wartości z-index.<br>
+					<img class="image" src="3Dview.jpg" alt="Widok okna 3d view w narzędziach developerskich na przeglądarce Chrome."/><br>
+					Panel 3D view posiada również zakłądkę DOM, w której można podejrzeć zagnieżdżenia elementów na stronie w ujęciu trójwymiarowym, czyli jak strona jest zbudowana.
+				</p>
+				<p class="paragraph">
+					<h4 class="paragraph-header">Position: fixed</h4>
 				</p>
 			</article>
 		</section>
