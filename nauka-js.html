@@ -121,6 +121,63 @@
 				</p>
 			</article>
 		</section>
+		<section class="section">
+			<h2 class="section-header">JavaScript - tydzień 4</h2>
+			<article class="article">
+				<h3 class="article-header">Typy i struktury danych, immutability</h3>
+				<p class="paragraph">
+					Zmienne w Java Script możemy zadeklarować (stworzyć) za pomocą trzech słów kluczowych: LET, CONST i VAR, omówionych poniżej.
+				</p>
+				<p class="paragraph">
+					<h4 class="paragraph-header">LET</h4>				
+					LET - zmienne, które definiujemy tylko raz, ale których połączenie możemy przepinać, w wyniku czego można zmieniać przypisaną danej zmiennej wartość tak, jak w przykłądzie poniżej. Po utworzeniu zmiennej za pomocą słowa kluczowego LET, możemy później za pomocą tej zmiennej wskazywać na inne wartości, zmieniać je.<br>
+					let isHappy = false;<br>
+					isHappy = true;<br>
+					isHappy = 'tak';<br>
+					<img class="image" src="let-variable.jpg" alt="Przykład definiowania zmiennej za pomocą słowa kluczowego let."/>
+				</p>
+				<p class="paragraph">
+					<h4 class="paragraph-header">CONST</h4>	
+					CONST - tworzy zmienne, które mają stałe połączenie z jedną wartością, tak jak w definicjach poniżej. Jeśli będziemy próbowali przypisać do zmiennej age lub name jakąś inną wartość (np. age = 25), to otrzymmay błąd.<br>
+					const name = 'Magdalena';<br>
+					const age = 39;<br>
+					<img class="image" src="constant-variable.jpg" alt="Przykłady definiowania zmiennych za pomocą słowa kluczowego const."/>
+				</p>
+				<p class="paragraph">
+					<h4 class="paragraph-header">VAR</h4>	
+					VAR - obecnie definiowanie zmiennych za pomocą tego słowa kluczowego wychodzi z użycia.
+				</p>
+				<p class="paragraph">
+					<h4 class="paragraph-header">Definiowanie zmiennych - przykłady</h4>	
+					Poniżej znajdują sie dwa przykłady definiowania zmiennych. W pierwszym definiujemy zmienną x za pomocą CONST, przypisując jej wartość 10. Następnie definiujemy zmienną y za pomocą LET, przypisując jej wartość x. Po wykonaniu tego kodu, obie zmienne, x i y będą równe 10. Gdy zmiennej y przypiszemy następnie inną wartość, 20, to po wykonaniu kodu, zmienna y będzie miała wartość 20, ale zmienna x nadal będzie miałą wartość 10.<br>
+					W drugim przykładzie odwracamy sytuację i definiujemy zmienną a za pomocą LET, przypisując jej wartość 20, a następnie definiujemy zmienną b za pomocą CONST, przypisując jej wartość a. Po wykonaniu kodu, obie zmienne będą miały wartość 20. Jeśli następnie zmiennej a przypiszemy inną wartość, 13, to po wykonaniu kodu, zmienna a będzie miała wartość 13, ale zmienna b nadal będzie miała wartość 10.<br>
+					Dzieje się tak, ponieważ kod wykonuje się tylko raz. Wartość do zmiennej x w przykładzie pierwszym i zmiennej b w przykładzie drugim przypisujemy tylko w momencie pierwszego wykonania kodu. Wartość jest do nich przypisywana w momencie definiowania tych zmiennych. To, że następnie wartości zmiennych y i a ulegają zmianie, z punktu widzenia zmiennych x i b nie ma znaczenia. Powiązanie zostało bowiem wykonane wcześniej, gdy miały one inne wartości. W przykładach tych nie dokonujemy powiązania między zmiennymi ani między wartościami. Przypisujemy jedynie wskazanie na wartość, jaką wskazywała dana zmienna w momencie jej tworzenia.<br>
+					<img class="image" src="variables-definition-example1.jpg" alt="Przykład pierwszy definiowania zmiennych za pomocą const i let."/><br>
+					<img class="image" src="variables-definition-example2.jpg" alt="Przykład drugi definiowania zmiennych za pomocą const i let."/><br>
+				</p>
+				<p class="paragraph">
+					<h4 class="paragraph-header">Typy proste w JS</h4>	
+					Java Script jest językiem nietypowanym, co oznacza, że jako wartość zmiennej można podpiąć absolutnie wszystko. Typy w innych językach oprogramowania określają, jaki rodzaj wartości można podpiąć do zmiennej. Jednak pomimo tego, że jest to język nietypowany, Java Script posiada typy proste (primitives), czyli rodzaje wartości, które obejmują:<br>
+					- string - tekst, który otaczamy za pomocą podwójnego apostrofu ", pojedynczego apostrofu ' lub kopniętego apostrofu ` (do zwykłych tekstów, w których nie używamy dodatkowych zmiennych, Maciek zaleca korzystanie z pojedynczych apostrofów);<br>
+					- number - liczba;<br>
+					- bigint - duża liczba, większa niż 2 do potęgi 53;<br>
+					- boolean - true lub false, prawda lub fałsz, typ ten jest wykorzystywany do tworzenia logiki w JS, sprawdzania warunków etc.;<br>
+					- null - wartość celowo niezdefiniowana, wiemy, że powinna być jakaś wartość, ale jej nie ma i celowo oznaczamy, że jej nie ma, ale sama zmienna jest zdefiniowana; wartość zapisujemy bez żadnych apostrofów, gdyż nie jest to wartość jako taka, ale typ wartości;<br>
+					- undefined - brak definicji, dana zmienna nie została w ogóle zadeklarowana;
+					- symbol - typ wartości wykorzystywany do tworzenia "unikalnych opakowań", raczej nie jest wykorzystywany, wymieniony został bardziej jako ciekawostka.<br> 
+					<img class="image" src="primitives-in-js.jpg" alt="Lista typów prostych w Java Script."/>
+				</p>
+				<p class="paragraph">
+					<h4 class="paragraph-header">Instrukcja typeof</h4>	
+					To, jaki typ ma dana zmienna możemy sprawdzić za pomocą instrukcji typeof. Instrukcja ta nie zawsze zwraca poprawny typ, którego się spodziewamy w danym przypadku. Na przykładzie podanym poniżej, przy sprawdzaniu typu zmiennej, do której została przypisana wartość null, typeof zwraca object zamiast null. Dzieje się tak dlatego, że w Java Script, jako języku obiektowym, wszystko jest obiektem, a null jest wskazaniem na pusty obiekt, w którym w przyszłości ma się znaleźć jakaś inna wartość.<br>
+					<img class="image" src="typeof-instruction-examples.jpg" alt="Przykłady sprawdzania typu zmiennych za pomocą instrukcji typeof."/>
+				</p>
+				<p class="paragraph">
+					<h4 class="paragraph-header">Immutability</h4>	
+					Immutability, czyli niemutowalność, jest to jeden z fundamentalnych konceptów Java Script. Oznacza, że nie można zmieniać wartości primitive values w Java Script. To, co zmieniamy, to połączenie między tymi wartościami a zmiennymi. Sam wszechświat wartości jest niezmienny. Nasze zmienne nie mogą ich modyfikować i sprawić, że np. 20 to będzie 13.
+				</p>
+			</article>
+		</section>
 
 
 	</main>

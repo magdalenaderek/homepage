@@ -577,14 +577,45 @@ Marginesy zapisujemy tak samo jak padding. Marginesy zewnętrzne nakładają si�
 				</p>
 				<p class="paragraph">
 					<h4 class="paragraph-header">z-index</h4>
-					Jeśli dwa elementy mają zdefiniowaną tę samą pozycję, to widoczny na wierzchu jest ten, którego definicja stylu znajduje się bliżej końca pliku, czyli ten, który renderuje się później (renderowanie - proces przekształcania kodu i danych w finalną postać, która jest widoczna i interaktywna dla użytkownika. Polega na konwersji abstrakcyjnych danych w konkretne elementy graficzne lub wizualne reprezentacje). W takiej sytuacji umiejscowieniem elementu można sterować za pomocą własności z-index, która odpowiada za warstwowanie - im wyższa wartość z-index, tym dany element jest wyżej. Do pozycjonowania staramy się używać sensownych, niezbyt dużych liczb (np. z-index: 10;) i zwiększać je powoli. Wóczas zastosowanie dużej liczby, np. 1000 sprawi, że elementy wypozycjonowane niżej znajdą się pod spodem i nie zasłaniały wybranego elementu.<br>
+					Jeśli dwa elementy mają zdefiniowaną tę samą pozycję, to widoczny na wierzchu jest ten, którego definicja stylu znajduje się bliżej końca pliku, czyli ten, który renderuje się później (renderowanie - proces przekształcania kodu i danych w finalną postać, która jest widoczna i interaktywna dla użytkownika. Polega na konwersji abstrakcyjnych danych w konkretne elementy graficzne lub wizualne reprezentacje). W takiej sytuacji umiejscowieniem elementu można sterować za pomocą własności z-index, która odpowiada za warstwowanie - im wyższa wartość z-index, tym dany element jest wyżej. Do pozycjonowania staramy się używać sensownych, niezbyt dużych liczb (np. z-index: 10;) i zwiększać je powoli. Wóczas zastosowanie dużej liczby, np. 1000 sprawi, że elementy wypozycjonowane niżej znajdą się pod spodem i nie będą zasłaniały wybranego elementu.<br>
 					<img class="image" src="z-index.jpg" alt="Przykład warstwowania elementów za pomocą własności z-index."/><br>
 					Warstwowanie elementów na stronie jest dobrze zobrazowane w przeglądarce Edge. Po uruchomieniu w devtools za pomocą skrótu ctrl + shift + p panelu wyszukiwania należy wpisać i wybrać '3d view' i wówczas pojawi się zakładka, w której możemy podejrzeć naszą stronę w ujęciu trójwymiarowym. Widok można obracać stosując strzałki widoczne w oknie. Jedną z opcji widoku jest z-index, gdzie można podejrzeć jak elementy układają się na warstwach według zdefiniowanych wartości z-index.<br>
 					<img class="image" src="3Dview.jpg" alt="Widok okna 3d view w narzędziach developerskich na przeglądarce Chrome."/><br>
-					Panel 3D view posiada również zakłądkę DOM, w której można podejrzeć zagnieżdżenia elementów na stronie w ujęciu trójwymiarowym, czyli jak strona jest zbudowana.
+					Panel 3D view posiada również zakładkę DOM, w której można podejrzeć zagnieżdżenia elementów na stronie w ujęciu trójwymiarowym, czyli jak strona jest zbudowana.
 				</p>
 				<p class="paragraph">
 					<h4 class="paragraph-header">Position: fixed</h4>
+					Własność position o wartości fixed pozwala na przyklejenie elementu do viewportu, czyli widocznego okna przeglądarki. Ostylowany w ten sposób element wyskakuje z pudełka i przykleja się w zdefiniowanym miejscu przeglądarki. Jeśłi nadamy takiemu elementowi dodatkowo z-index o wartości ujemnej, np. -1, to scrollując treści w oknie przeglądarki, będzie on się cały czas przesuwał, by być widoczny w viewport, ale będzie się chował pod innymi elementami, które domyślnie mają przypisaną wartość z-index: 0. Wartość fixed jest często używana w urządzenianiach mobilnych, np. do przyklejenia przycisku menu.<br>
+					<img class="image" src="position-fixed.jpg" alt="Przykład ostylowania elementu za pomocą własności position: fxed."/>
+				</p>
+				<p class="paragraph">
+					<h4 class="paragraph-header">Position: sticky</h4>
+					Wartość sticky jest bardzo przydatka, np. gdy mamy dłuższe treści i chcemy przykleić nagłówek wewnątrz danego kontenera. Należy mieć jednak na uwadze, ze styl sticky nie zadziała, jeśli rodzic danego elementu ostylowanego w ten sposób ma przypisaną własność własność overflow. Dodatkowo, element, któremu nadajemy własność sticky musi zostać jakoś umiejscowiony w kontenerze względem viewport, np. za pomocą własności top: 0. W tym przypadku element sticky przyklei się do góry strony i gdy będziemy scrollować stronę, zostanie cały czas w tym samym miejscu aż do momentu, gdy wyjdziemy z danego elementu rodzicielskiego, wówczas nie będzie się już dalej przesuwał i zniknie z viewport razem z całym kontenerem. Sticky bowiem działa tylko wewnątrz danego rodzica. Można go wykorzystać np. gdy mamy dłuższy tekst i chcemy, by nagłówki się przyklejały w pewnym momencie przy scrollowaniu dalszej części tekstu. Odległość od góry strony można oczywiście określić według potrzeb.<br>
+					<img class="image" src="position-sticky.jpg" alt="Przykład ostylowania elementu za pomocą własności position: sticky."/><br>
+					Do niedawna, zanim powstała własność position: sticky, ten sposób ostylowania elementu trzeba było kodować w JS. Ponadto, w odróżnieniu od wartości absolute, która żyje swoim życiem i nie zmienia treści elementu, wartość sticky stanowi element treści i zachowuje się tak, jak cała reszta treści, dopóki nie zaczniemy scrollować. W związku z tym nie musimy podawać dla sticky dodatkowych paddingów i marginesów, Przeglądarka sama sobie to wyliczy. Wystarczy podać jakąś wartość top, a w przypadku stron scrollowanych w poziomie, jakąś odległość left lub right.
+				</p>
+				<p class="paragraph">
+					<h4 class="paragraph-header">Float</h4>
+					Element ostylowany za pomocą wartości float zachowuje się w ten sposób, że jest opływany przez treść, która znajduje się po nim. Float może przykleić nasz element do lewej strony (float: left;) lub prawej (float: right;).
+					Kiedyś stylowanie za pomocą float było bardzo popularne jako technika budowania stron internetowych, ale obecnie Maciek go nie rekomenduje. Można go wykorzystać do rozrzucania tekstu np. do wrzucenia w treść obrazka, ostylowania jakiegoś obrazka w taki sposób, by był opływany przez tekst. <strong>Float nie służy do budowania layoutów.</strong> Obecnie wykorzystywane są do tego nowoczesne techniki, które będą omówione później.<br>
+					<img class="image" src="float.jpg" alt="Elementy ostylowane za pomocą własności float."/>
+				</p>
+				<p class="paragraph">
+					<h4 class="paragraph-header">Clear</h4>
+					Własność clear czyści nam floaty. Jeśli do kontenera div, w którym znajdują się elementy mające zdefiniowaną własność float, dodamy kolejnego diva ostylowanego za pomocą własności clear, to wyczyści on floaty zdefiniowane w ramach tego samego diva rodzicielskiego (clear: both). Elementy o wartości float nadal będą przyklejone do lewej lub prawej, ale tekst spadnie poniżej. Sam div ostylowany za pomocą clear nie jest widoczny bezpośrednio na stronie, wpływa jedynie na inne elementy.<br>
+					<img class="image" src="clear.jpg" alt="Przykład użycia własności clear."/>
+				</p>
+			</article>
+			<article class="article">
+				<h3 class="article-header">Normalizacja vs reset</h3>
+				<p class="paragraph">
+					<h4 class="paragraph-header">Domyślne style przeglądarki</h4>
+					Normalizacja i reset to metody ujednolicania stylów. Przeglądarki internetowe posiadają bowiem swoje style domyślne, które nadają wszystkim elementom na stronie. Można je podejrzeć w devtools, na przykładzie poniżej są opisane jako "user agent stylesheet".<br>
+					<img class="image" src="browser-default-styles.jpg" alt="Podgląd domyśnych stylów przeglądarki w devtools."/>
+				</p>
+				<p class="paragraph">
+					<h4 class="paragraph-header">Reset</h4>
+					
 				</p>
 			</article>
 		</section>
