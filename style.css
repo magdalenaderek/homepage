@@ -1,9 +1,22 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
 .body {
 	background: #6C534E;
 }
 
+.header {
+	padding: 16px;
+}
+
 .section {
 	background: #FFFFFF;
+	padding: 16px;
 }
 
 .paragraph {
@@ -16,6 +29,7 @@
 
 .main-header {
 	color: #FFB140;
+	padding: 16px;
 }
 
 .section-header {
@@ -28,6 +42,7 @@
 
 .footer {
 	color: #FFFFFF;
+	padding: 16px;
 }
 
 .header-link {

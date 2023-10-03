@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Notatki z frontendu</title>
+	<link href="normalize.css" rel="stylesheet" type="text/css">
 	<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -362,13 +363,13 @@
 				definicji, ale reszta przestrzeni zostanie zarezerowana również dla tego elementu, a pozostałe elementy
 				zrzucone niżej. <br>
 				<img class="image" src="display-block.jpg"
-					alt="Przykład treści ostylowanej za pomocą własności display: block." />
+					alt="Przykład treści ostylowanej za pomocą własności display: block." /><br>
 				<b>display: inline;</b> - każdy z boxów, który ostylujemy w ten sposób, dostosowuje się do tego, co się
 				w nim znajduje. Nie zajmuje zatem całej dostępnej szerokości, a tylko taką, jaka potrzebna jest do
 				wyświetlenia jego zawartości. Ponadto do elementu ostylowanego w ten sposób nie będą miały zastosowania
 				zdefiniowane dla niego wartości height i width, element taki musi być liniowy.<br>
 				<img class="image" src="display-inline.jpg"
-					alt="Przykład treści ostylowanej za pomocą własności display: inline." />
+					alt="Przykład treści ostylowanej za pomocą własności display: inline." /><br>
 				<b>display: inline-block;</b> - jest to hybryda wartości inline i block; elementy ostylowane w ten
 				sposób, jeśli mają małą zawartość, to zachowują się jak elementy inline. Jeśli natomiast element jest
 				szerszy i wychodzi na kolejny wiersz, to rozszerza się i blokuje całą jego szerokość.<br> Jeśli
@@ -483,7 +484,6 @@
 			<article class="article">
 				<h3 class="article-header">Box model: padding, border i margin</h3>
 				<p class="paragraph">
-
 					Wszystkie elementy na stronie internetowej otoczone są niewidzialnym prostokątem, który ma jakąś
 					wysokość i szerokość i który możemy podejrzeć, najeżdżąjąc na te elementy za pomocą devtools. Box
 					model jest to zatem opis wymiarów naszego elementu, który składa się z kilku wartości:<br>
@@ -557,7 +557,7 @@ Marginesy zapisujemy tak samo jak padding. Marginesy zewnętrzne nakładają si�
 				<h3 class="article-header">Box sizing - content-box versus border-box</h3>
 				<p class="paragraph">
 					Domyślny box sizing to content-box, czyli definicja szerokości i wysokości elementu odnosi się do samego contentu, nie obejmuje paddingu i borderu. Jeśli zatem zmniejszymy lub zwiększymy padding i/lub border, to wpłynie to również na wielkość samego elementu.<br>
-					Box sizing może być jednak również określany przez wartość border-box, gdzie definicja wysokości i szerokości elementu odnosi się do całego elementu i oprócz contentu obejmuje również padding i border. Aby było to mozłiwe, należy dla danego elementu lub grupy elementów dodać własność box-sizing: border-box. Definiowanie wielkości elementów w ten sposób pozwala przewidzieć, jak duży będzie element, bez względu na to, jaką wartość będzie miał jego padding czy border. Wielkość conetentu elementu jest tu wyliczana automatycznie, po odjęciu od wysokości i szerokości całego elementu, wartości paddingu i borderu. Wartość border-box jest obecnie stosowana jako rozwiązanie standardowe dla określania box sizing.<br> 
+					Box sizing może być jednak również określany przez wartość border-box, gdzie definicja wysokości i szerokości elementu odnosi się do całego elementu i oprócz contentu obejmuje również padding i border. Aby było to możliwe, należy dla danego elementu lub grupy elementów dodać własność box-sizing: border-box. Definiowanie wielkości elementów w ten sposób pozwala przewidzieć, jak duży będzie element, bez względu na to, jaką wartość będzie miał jego padding czy border. Wielkość contentu elementu jest tu wyliczana automatycznie, po odjęciu od wysokości i szerokości całego elementu, wartości paddingu i borderu. Wartość border-box jest obecnie stosowana jako rozwiązanie standardowe dla określania box sizing.<br> 
 					Zarówno w przypadku content-box, jak i border-box, wielkość marginesu nie wpływa na wielkość elementu, gdyż margines znajduje się już poza elementem.<br>
 					<img class="image" src="box-sizing.jpg" alt="Porównanie elementów określonych za pomocą content-box i border-box."/><br>
 					Jeśli mamy dwa elementy, z których jeden jest ostylowany za pomocą border-box, a drugi za pomocą content-box i chcemy, by oba miały taką samą wysokość i szerokość równą 200px, padding o wartości 40px i border równy 20px, to w przypadku elementu ostylowanego za pomocą box-sizing: border-box, wystarczy, że określimy dla tego elementu width i height, definiując dla nich wartość 200px i podamy wartości dla padding i border zgodne z powyższymi. Z kolei element ostylowany za pomocą box-sizing: conent-box, który ma padding równy 40px i border równy 20px, by uzyskać wielkość 200px, musi mieć wysokość i szerkość 80px (80px sam conent plus 2x40px paddingu i 2x20px borderu daje w sumie 200px dla całego elementu).
@@ -615,7 +615,16 @@ Marginesy zapisujemy tak samo jak padding. Marginesy zewnętrzne nakładają si�
 				</p>
 				<p class="paragraph">
 					<h4 class="paragraph-header">Reset</h4>
-					
+					Reset jest pierwszą z technik, która powstała, by ujednolicić style. Kod umieszczamy w znaczniku style, który dodajemy w sekcji head w tym miejscu, gdzie linkuje się plik ze stylami. Jako selektor podajemy gwiazdkę *, która odnosi się do wszystkich elementów na stronie i dla wybranych własności podajemy wartość zero 0 (margin, padding) lub none (outline, listy). Na obrazku poniżej przy outline o wartości none jest przerażona emotka, gdyż Maciek uważa dodawanie tej własności w reset jako dziwną praktykę. Wyłączenie outline powoduje bowiem, że przy przechodzeniu klawiaturą przez elementy klikalne na stronie, element, na którym w danym momemncie jest fokus, nie jest zaznaczony. Praktyka ta może zatem budzić wątpliwości w kontekście dostępności strony. Maciek zaleca więc, by parametru outline nie resetować.<br>
+					Niektórzy do resetu dodawali jeszcze własność font-size o wartości 16px. Obecnie jednak od stosowania resetu już się odchodzi.<br>
+					<img class="image" src="styles-reset.jpg" alt="Kod do ujednolicania domyślnych stylów przeglądarki za pomocą metody reset."/>
+				</p>
+				<p class="paragraph">
+					<h4 class="paragraph-header">Normalizacja</h4>
+					Normalizacja jest kolejną metodą, która powstała, by znormalizować, ujednolicić style między przeglądarkami, ponieważ każda z przeglądarek może nieco inaczej interpretować i wyświetlać elementy na stronie, posiadać dla nich inne style domyślne. Dzięki temu punkt wyjścia dla stylów we wszystkich przeglądarkach jest taki sam.<br>
+					W celu normalizacji stylów w przeglądarkach powstał projekt normalize.css, który tworzy standard i wytyczne dla ujednolicania stylów między przeglądarkami. Wystarczy wejść na stronę projektu np. na github, pobrać kod i skopiować go w całości do pliku normalize.css, który dodajemy do projektu. Treści pliku nie musimy edytować, możemy dodać go tak, jak jest. Następnie linkujemy ten plik w sekcji head w plikach HTML-owych w projekcie za pomocą znacznika link, tak samo jak plik ze stylami style.css.<br>
+					Do pliku normalize.css można również dodać defnicję własności box-sizing: border-box, czyli stosowany obecnie standard, w ramach którego padding i border wliczane są do wielkości elementu. Z uwagi jednak na to, że w razie aktualizacji standardu normalizacji i wklejeniu nowego kodu, definicja ta mogłaby zostać z rozpędu wycofana, lepiej zawrzeć ją w pliku ze stylami, zakotwiczając ją na selektorze elementu html. Następnie dodajemy jeszcze dziedziczenie własności box-sizing z tego elementu we wszystkich pozostałych elementach na stronie, zakotwiczając się na selektorach *, *:before i *:after, które w definicji stylu wymieniamy po prostu po przecinku, by nie powtarzać kodu trzykrotnie, osobno dla każdego z nich.<br>
+					<img class="image" src="normalize-box-sizing.jpg" alt="Kod do normalizacji własności box-sizing."/>
 				</p>
 			</article>
 		</section>
