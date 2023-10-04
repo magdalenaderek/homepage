@@ -5,30 +5,30 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Notatki z frontendu</title>
-	<link href="normalize.css" rel="stylesheet" type="text/css">
-	<link href="style.css" rel="stylesheet" type="text/css">
+	<link href="/normalize.css" rel="stylesheet" type="text/css">
+	<link href="/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body class="body">
-	<header class="header">
-		<nav>
-			<a class="header-link" href="index.html">Strona główna</a>
-			<a class="header-link" href="nauka-html.html">Nauka HTML</a>
-			<a class="header-link" href="nauka-css.html">Nauka CSS</a>
-			<a class="header-link" href="nauka-js.html">Nauka JavaScriptu</a>
-			<a class="header-link" href="nauka-varia.html">Nauka - varia</a>
+	<header id="top" class="header">
+		<nav class="navigation">
+			<a class="navigation__link" href="/index.html">Strona główna</a>
+			<a class="navigation__link" href="/nauka-html.html">Nauka HTML</a>
+			<a class="navigation__link" href="/nauka-css.html">Nauka CSS</a>
+			<a class="navigation__link" href="/nauka-js.html">Nauka JavaScriptu</a>
+			<a class="navigation__link" href="/nauka-varia.html">Nauka - varia</a>
 		</nav>
 
 	</header>
 	<main class="main">
-		<header id="top">
+		<header >
 			<h1 class="main-header">Nauka - pozostałe tematy</h1>
 
 		</header>
 
 		<section class="section">
 			<h2 class="section-header">Varia - tydzień 2</h2>
-			<article id="schemat-blokowy" class="article">
+			<article class="article">
 				<h3 class="article-header">Schemat blokowy</h3>
 				<p class="paragraph">
 					Zapis kroków/instrukcji, które powinny się po sobie wydarzać to
@@ -38,7 +38,7 @@
 					Trapez – rzeczy, które trzeba przygotować przed rozpoczęciem akcji, warunki rozpoczęcia <br>
 					Okręgi – start i stop – rozpoczęcie i zakończenie algorytmu
 				</p>
-				<img class="image" src="schemat-blokowy.JPG"
+				<img class="image" src="/schemat-blokowy.JPG"
 					alt="Krótki schemat blokowy na przykładzie akcji czytania książki." />
 				<p class="paragraph">Devtools – narzędzia developerskie w przeglądarce. </p>
 			</article>
@@ -90,7 +90,7 @@
 				</p>
 				<p class="paragraph">
 					<b>URL - Uniform Resource Locator</b> - ujednolicony lokalizator zasobów, adres wpisywanej strony.<br>
-					<img class="image" src="url.jpg" alt="Adres strony internetowej rozbity na elementy." /><br>
+					<img class="image" src="/url.jpg" alt="Adres strony internetowej rozbity na elementy." /><br>
 					Port najczęściej nie jest widoczny, przeglądarka sama go sobie dopisuje automatycznie,
 					gdy wykrywa, czy korzystamy z protokołu HTTP (dla którego używany jest zwykle port 80) czy HTTPS (dla którego używany jest zwykle port 443). Port to informacja, w którym miejscu
 					na serwerze znajdują się pliki. Innymi słowy, na którym porcie przeglądarka musi dogadywać się
@@ -125,7 +125,7 @@
 				</p>
 				<p class="paragraph">
 					Schemat komunikacji między przeglądarką i serwerem.<br>
-					<img class="image" src="request-response-schema.JPG"
+					<img class="image" src="/request-response-schema.JPG"
 						alt="Schemat komunikacji między przeglądarką i serwerem w modelu request-response." /><br>
 					Komunikacja przeglądarki i serwera jest w modelu request-response, czyli przeglądarka wysyła
 					zapytanie
@@ -161,7 +161,7 @@
 					ścieżki względne, gdzie na początku adresu zasobu znaku / nie ma.
 				</p>
 
-				<img class="image" src="root-explanation1.JPG"
+				<img class="image" src="/root-explanation1.JPG"
 					alt="Przedstawienie na przykładzie adresu cotenfrontend.pl, na czym polega działanie roota, gdy adres obrazka podany jest ze znakiem slash na początku i bez tego znaku." /><br>
 				<p class="paragraph">
 					Gdy wchodzimy na stronę <b>https://cotenfrontend.pl/</b>, to doklejamy wskazany wyżej adres obrazka
@@ -176,7 +176,7 @@
 					obrazka.<br><br>
 				</p>
 
-				<img class="image" src="root-explanation2.JPG"
+				<img class="image" src="/root-explanation2.JPG"
 					alt="Przedstawienie na przykładzie podstrony domeny cotenforntend.pl, na czym polega działanie roota, gdy adres obrazka podany jest ze znakiem slash na początku i bez tego znaku." /><br>
 				<p class="paragraph">
 					Jeśli natomiast wejdziemy na podstronę o adresie <b>https://cotenfrontend.pl/podstrona/</b>, to w
@@ -215,7 +215,7 @@
 					Do skakania po wprowadzonych poleceniach, by wprowadzić w nowej linii ich zawartość, można używać
 					strzałek góra/dół.
 				</p>
-				<img class="image" src="terminal-commands.JPG"
+				<img class="image" src="/terminal-commands.JPG"
 					alt="Podstawowe komendy dla terminala w systemie Windows." /><br>
 					<p class="paragraph">
 					<b>Podstawowe polecenia dla Linuxa (przy używaniu WSL):</b><br>
@@ -265,7 +265,7 @@
 					C:\dev\homepage>git init<br>
 					Initialized empty Git repository in C:/dev/homepage/.git/
 				</p>
-				<img class="image" src="commit-process.JPG"
+				<img class="image" src="/commit-process.JPG"
 					alt="Obrazek przedstawiający, na czym polega commit. Na osi czasu znajdują się punkty będące commitami z opisem zmian w projekcie." /><br>
 				<p class="paragraph">
 					<b>Commit</b> - stan projektu na daną chwilę i opis tego, co się zmieniło od ostatniego zapisu. W
@@ -329,13 +329,32 @@
 				</p>
 			</article>
 		</section>
+		<section class="section">
+			<h2 class="section-header">Varia - tydzień 4</h2>
+			<article class="article">
+				<h3 class="article-header">Serwer lokalny</h3>
+				<p class="paragraph">
+					Aby odejść od ładowania strony bezpośrednio z dysku na rzecz ładowania przez serwer należy zainstalować w edytorze VSC odpowiednie rozszerzenie - w menu po lewej stronie wybieramy opcję extensions i wyszukujemy live server. Najlepiej zainstalować taki z największą liczbą pobrań. Po zakończeniu instalacji w stopce edytora, w prawym dolnym rogu VSC pojawia się przycisk 'go live'. Po kliknięciu w ten przycisk nasza strona zostaje uruchomiona z serwera lokalnego, a w jej URL pojawia się cyfrowy adres tego serwera 127.0.0.1 z portem 5500.<br>
+					Dzięki wczytywaniu strony z lokalnego serwera:
+				</p>
+					<ul class="unordered-list">
+						<li class="unordered-list__element">możemy dodać root / do elementów, które odnoszą się do korzenia naszej strony, np. do linkowanych obrazków i plików;</li>
+						<li class="unordered-list__element">nie trzeba odświeżać strony w przeglądarce - strona sama od razu się aktualizuje po zapisaniu zmian w pliku;</li>
+						<li class="unordered-list__element">możemy uruchomić stronę na telefonie, łącząc się z serwerem lokalnym.</li>
+					</ul>
+				
+				<p class="paragraph">
+					Aby uruchomić naszą stronę na telefonie musimy zdobyć nasz lokalny adres IP. Nie jest to wewnętrzny adres naszego komputera 127.0.0.1:5500, czyli tzw. lokalhost, który wyświetla się w URL. Aby zdobyć lokalny IP należy otworzyć terminal cmd i uruchomić komendę ipconfig. i spośród wyświetlonych rezultatów skopiować IPv4 Address (u mnie 192.168.0.4) i wkleić go w miejsce adresu 127.0.0.1, podając również port 5500. Po wpisaniu strony z takim adresem zarówno na kompie, jak i telefonie lub innym urządzeniu, strona się uruchomi, pod warunkiem, że jesteśmy w tej samej sieci WiFi. IPv4 Address można również podejrzeć w panelu zarządzania w zakładce network & internet, sprawdzając ustawienia naszej sieci WiFi.
+				</p>
+			</article>
+		</section>
 
 	</main>
 	<footer class="footer">Strona domowa Magdaleny Derek, wszystkie treści są wynikiem nauki w ramach szkolenia WTF: Co
 		ten frontend.
 		<a class="footer-link" href="#top">Wróć na górę strony ⬆️</a>
 	</footer>
-	<script src="main.js"></script>
+	<script src="/main.js"></script>
 </body>
 
 </html>

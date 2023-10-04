@@ -10,8 +10,12 @@ html {
 	background: #6C534E;
 }
 
-.header {
+.navigation {
 	padding: 16px;
+}
+
+.navigation__link {
+	color: #FFB140;
 }
 
 .section {
@@ -45,9 +49,6 @@ html {
 	padding: 16px;
 }
 
-.header-link {
-	color: #FFB140;
-}
 
 .footer-link {
 	color: #FFB140;

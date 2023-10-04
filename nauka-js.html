@@ -5,23 +5,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Notatki z frontendu</title>
-	<link href="normalize.css" rel="stylesheet" type="text/css">
-	<link href="style.css" rel="stylesheet" type="text/css">
+	<link href="/normalize.css" rel="stylesheet" type="text/css">
+	<link href="/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body class="body">
-	<header class="header">
-		<nav>
-			<a class="header-link" href="index.html">Strona główna</a>
-			<a class="header-link" href="nauka-html.html">Nauka HTML</a>
-			<a class="header-link" href="nauka-css.html">Nauka CSS</a>
-			<a class="header-link" href="nauka-js.html">Nauka JavaScriptu</a>
-			<a class="header-link" href="nauka-varia.html">Nauka - varia</a>
+	<header id="top" class="header">
+		<nav class="navigation">
+			<a class="navigation__link" href="/index.html">Strona główna</a>
+			<a class="navigation__link" href="/nauka-html.html">Nauka HTML</a>
+			<a class="navigation__link" href="/nauka-css.html">Nauka CSS</a>
+			<a class="navigation__link" href="/nauka-js.html">Nauka JavaScriptu</a>
+			<a class="navigation__link" href="/nauka-varia.html">Nauka - varia</a>
 		</nav>
 
 	</header>
 	<main class="main">
-		<header id="top">
+		<header>
 			<h1 class="main-header">Nauka JavaScriptu</h1>
 
 		</header>
@@ -66,13 +66,13 @@
 					oznaczający zakończenie linii.<br>
 
 				</p>
-				<img class="image" src="tag-script.JPG"
+				<img class="image" src="/tag-script.JPG"
 					alt="Przedstawienie umiejscowienia znacznika script z funkcją alert przed domknięciem znacznika body." />
 				<p class="paragraph">
 					Skrypt wykonuje się tylko raz, jeszcze przed załadowaniem strony. W przypadku funkcji alert jest to
 					wyskakujące okienko zawierające treść podaną w parametrach funkcji.
 				</p>
-				<img class="image" src="alert-example.JPG"
+				<img class="image" src="/alert-example.JPG"
 					alt="Przykład działania funkcji alert na stronie - wyskakujące okienko." />
 				<p class="paragraph">
 					Tak, jak w przypadku stylów, bezpośrednie pisanie kodu JavaScript w pliku z htmlem zadziała, ale
@@ -84,7 +84,7 @@
 					body, używając znacznika "script".
 					Używamy atrybutu "src", tak jak w obrazkach, a nie "href", tak jak w przypadku stylów.
 				</p>
-				<img class="image" src="main-file.JPG" alt="Odwołanie do pliku z kodem JavaScript w pliku HTML." />
+				<img class="image" src="/main-file.JPG" alt="Odwołanie do pliku z kodem JavaScript w pliku HTML." />
 				<p class="paragraph">
 					Kolejnym poleceniem jest funkcja console.log, która w przeciwieństwie do funkcji alert nie wyświetla
 					informacji na stronie, ale w narzędziach deweloperskich w zakładce "console".<br>
@@ -92,7 +92,7 @@
 					console.log('tekst');<br>
 					Jeśli wpisze się funkcję dwa razy, to zostanie ona wywołana dwukrotnie.
 				</p>
-				<img class="image" src="consolelog-example1.JPG"
+				<img class="image" src="/consolelog-example1.JPG"
 					alt="Przykład dwukrotnego wywołania funkcji console.log w konsoli w narzędziach deweloperskich w przeglądarce." />
 				<p class="paragraph">
 					Zmienna w JavaScript to stworzenie powiązania między nazwą, której chcemy użyć a wartością, którą chcemy
@@ -104,7 +104,7 @@
 					Przy tworzeniu zmiennych nie trzeba dawać średnika na końcu linii, przeglądarka to przetworzy. Jednak dla
 					dobrej praktyki lepiej to robić, żeby zaznaczyć w ten sposób koniec linii.<br>
 					Wywołując nazwę zmiennej w funkcji nie używamy apostrofów.<br>
-					<img class="image" src="consolelog-example2.JPG"
+					<img class="image" src="/consolelog-example2.JPG"
 						alt="Stworzenie zmiennej słownej i liczbowej oraz ich wywołanie w funkcji console.log." />
 
 				</p>
@@ -114,7 +114,7 @@
 					nazywamy <b>literałem</b>.<br>
 					console.log(`Nazywam się ${firstName} i mam ${age} lat.`);
 				</p>
-				<img class="image" src="consolelog-example3.JPG"
+				<img class="image" src="/consolelog-example3.JPG"
 					alt="Wykorzystanie w funkcji console.log jednocześnie zmiennej oraz tekstu, czyli literału." />
 				<p class="paragraph">
 					Kod JS uruchamia się raz (po załadowaniu strony). Może też oczywiście działać później, jeśli ma odpowiednie
@@ -135,14 +135,14 @@
 					let isHappy = false;<br>
 					isHappy = true;<br>
 					isHappy = 'tak';<br>
-					<img class="image" src="let-variable.jpg" alt="Przykład definiowania zmiennej za pomocą słowa kluczowego let."/>
+					<img class="image" src="/let-variable.jpg" alt="Przykład definiowania zmiennej za pomocą słowa kluczowego let."/>
 				</p>
 				<p class="paragraph">
 					<h4 class="paragraph-header">CONST</h4>	
 					CONST - tworzy zmienne, które mają stałe połączenie z jedną wartością, tak jak w definicjach poniżej. Jeśli będziemy próbowali przypisać do zmiennej age lub name jakąś inną wartość (np. age = 25), to otrzymmay błąd.<br>
 					const name = 'Magdalena';<br>
 					const age = 39;<br>
-					<img class="image" src="constant-variable.jpg" alt="Przykłady definiowania zmiennych za pomocą słowa kluczowego const."/>
+					<img class="image" src="/constant-variable.jpg" alt="Przykłady definiowania zmiennych za pomocą słowa kluczowego const."/>
 				</p>
 				<p class="paragraph">
 					<h4 class="paragraph-header">VAR</h4>	
@@ -153,8 +153,8 @@
 					Poniżej znajdują sie dwa przykłady definiowania zmiennych. W pierwszym definiujemy zmienną x za pomocą CONST, przypisując jej wartość 10. Następnie definiujemy zmienną y za pomocą LET, przypisując jej wartość x. Po wykonaniu tego kodu, obie zmienne, x i y będą równe 10. Gdy zmiennej y przypiszemy następnie inną wartość, 20, to po wykonaniu kodu, zmienna y będzie miała wartość 20, ale zmienna x nadal będzie miałą wartość 10.<br>
 					W drugim przykładzie odwracamy sytuację i definiujemy zmienną a za pomocą LET, przypisując jej wartość 20, a następnie definiujemy zmienną b za pomocą CONST, przypisując jej wartość a. Po wykonaniu kodu, obie zmienne będą miały wartość 20. Jeśli następnie zmiennej a przypiszemy inną wartość, 13, to po wykonaniu kodu, zmienna a będzie miała wartość 13, ale zmienna b nadal będzie miała wartość 10.<br>
 					Dzieje się tak, ponieważ kod wykonuje się tylko raz. Wartość do zmiennej x w przykładzie pierwszym i zmiennej b w przykładzie drugim przypisujemy tylko w momencie pierwszego wykonania kodu. Wartość jest do nich przypisywana w momencie definiowania tych zmiennych. To, że następnie wartości zmiennych y i a ulegają zmianie, z punktu widzenia zmiennych x i b nie ma znaczenia. Powiązanie zostało bowiem wykonane wcześniej, gdy miały one inne wartości. W przykładach tych nie dokonujemy powiązania między zmiennymi ani między wartościami. Przypisujemy jedynie wskazanie na wartość, jaką wskazywała dana zmienna w momencie jej tworzenia.<br>
-					<img class="image" src="variables-definition-example1.jpg" alt="Przykład pierwszy definiowania zmiennych za pomocą const i let."/><br>
-					<img class="image" src="variables-definition-example2.jpg" alt="Przykład drugi definiowania zmiennych za pomocą const i let."/><br>
+					<img class="image" src="/variables-definition-example1.jpg" alt="Przykład pierwszy definiowania zmiennych za pomocą const i let."/><br>
+					<img class="image" src="/variables-definition-example2.jpg" alt="Przykład drugi definiowania zmiennych za pomocą const i let."/><br>
 				</p>
 				<p class="paragraph">
 					<h4 class="paragraph-header">Typy proste w JS</h4>	
@@ -166,12 +166,12 @@
 					- null - wartość celowo niezdefiniowana, wiemy, że powinna być jakaś wartość, ale jej nie ma i celowo oznaczamy, że jej nie ma, ale sama zmienna jest zdefiniowana; wartość zapisujemy bez żadnych apostrofów, gdyż nie jest to wartość jako taka, ale typ wartości;<br>
 					- undefined - brak definicji, dana zmienna nie została w ogóle zadeklarowana;
 					- symbol - typ wartości wykorzystywany do tworzenia "unikalnych opakowań", raczej nie jest wykorzystywany, wymieniony został bardziej jako ciekawostka.<br> 
-					<img class="image" src="primitives-in-js.jpg" alt="Lista typów prostych w Java Script."/>
+					<img class="image" src="/primitives-in-js.jpg" alt="Lista typów prostych w Java Script."/>
 				</p>
 				<p class="paragraph">
 					<h4 class="paragraph-header">Instrukcja typeof</h4>	
 					To, jaki typ ma dana zmienna możemy sprawdzić za pomocą instrukcji typeof. Instrukcja ta nie zawsze zwraca poprawny typ, którego się spodziewamy w danym przypadku. Na przykładzie podanym poniżej, przy sprawdzaniu typu zmiennej, do której została przypisana wartość null, typeof zwraca object zamiast null. Dzieje się tak dlatego, że w Java Script, jako języku obiektowym, wszystko jest obiektem, a null jest wskazaniem na pusty obiekt, w którym w przyszłości ma się znaleźć jakaś inna wartość.<br>
-					<img class="image" src="typeof-instruction-examples.jpg" alt="Przykłady sprawdzania typu zmiennych za pomocą instrukcji typeof."/>
+					<img class="image" src="/typeof-instruction-examples.jpg" alt="Przykłady sprawdzania typu zmiennych za pomocą instrukcji typeof."/>
 				</p>
 				<p class="paragraph">
 					<h4 class="paragraph-header">Immutability</h4>	
@@ -186,7 +186,7 @@
 		ten frontend.
 		<a class="footer-link" href="#top">Wróć na górę strony ⬆️</a>
 	</footer>
-	<script src="main.js"></script>
+	<script src="/main.js"></script>
 </body>
 
 </html>
