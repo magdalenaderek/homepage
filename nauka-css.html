@@ -10,7 +10,7 @@
 </head>
 
 <body class="body">
-	<header id="top" class="header">
+	<header class="header">
 		<nav class="navigation">
 			<a class="navigation__link" href="/index.html">Strona główna</a>
 			<a class="navigation__link" href="/nauka-html.html">Nauka HTML</a>
@@ -22,13 +22,13 @@
 	</header>
 	<main class="main">
 		<header>
-			<h1 class="main-header">Nauka CSS-a</h1>
+			<h1 id="top" class="main__header">Nauka CSS-a</h1>
 
 		</header>
 		<section class="section">
-			<h2 class="section-header">CSS - tydzień 2</h2>
+			<h2 class="section__header">CSS - tydzień 2</h2>
 			<article class="article">
-				<h3 class="article-header">CSS - podstawowe informacje i selektory, kolory</h3>
+				<h3 class="article__header">CSS - podstawowe informacje i selektory, kolory</h3>
 				<p class="paragraph"><b>CSS – Cascading style sheets</b> – odpowiada za prezentację, wygląd treści.
 					Każdy język ma swoją składnię, w przypadku CSS są to reguły, mające następującą budowę: <br>
 					selektor { <br>
@@ -62,9 +62,9 @@
 			</article>
 		</section>
 		<section class="section">
-			<h2 class="section-header">CSS - tydzień 3</h2>
+			<h2 class="section__header">CSS - tydzień 3</h2>
 			<article class="article">
-				<h3 class="article-header">Stylowanie w oparciu o atrybuty element, id i klasa</h3>
+				<h3 class="article__header">Stylowanie w oparciu o atrybuty element, id i klasa</h3>
 				<p class="paragraph">
 					Oprócz tego, że style można zamieścić w ramach znacznika style w sekcji "head" lub w pliku
 					zewnętrznym, można je też zastosować używając atrybutu "style" i przypisując go do konkretnego
@@ -122,7 +122,7 @@
 				</p>
 			</article>
 			<article class="article">
-				<h3 class="article-header">!important i specyficzność w CSS</h3>
+				<h3 class="article__header">!important i specyficzność w CSS</h3>
 				<p class="paragraph">
 					!important to zmora, jeśli chodzi o stylowanie. Nie powinno się tego używać, ponieważ !important
 					dopisany przy wartości dla danej własności opisującej określony element sprawia, że styl, przy
@@ -287,7 +287,7 @@
 				</p>
 			</article>
 			<article class="article">
-				<h3 class="article-header">Dziedziczenie</h3>
+				<h3 class="article__header">Dziedziczenie</h3>
 				<p class="paragraph">
 					Cześć własności, zdefiniowanych dla danego elementu, może być dziedziczona (ale nie wszystkie).
 					Dziedziczenie idzie z góry do dołu, od rodzica, do potomków. Jeśli nie mamy jawnie zdefiniowanych
@@ -337,9 +337,9 @@
 			</article>
 		</section>
 		<section class="section">
-			<h2 class="section-header">CSS - tydzień 4</h2>
+			<h2 class="section__header">CSS - tydzień 4</h2>
 			<article class="article">
-				<h3 class="article-header">Box model i własności CSS</h3>
+				<h3 class="article__header">Box model i własności CSS</h3>
 				<p class="paragraph">
 					Box model to fundamentalny model, z którego korzysta nasza przeglądarka do wyświetlania treści.
 					Świat stron internetowych jest co do zasady płaski, dwuwymiarowy. Poruszamy się w przestrzeni x i
@@ -394,7 +394,7 @@
 					alt="Przykład treści ostylowanej za pomocą własności display: inline-block." />
 			</article>
 			<article class="article">
-				<h3 class="article-header">Width i height</h3>
+				<h3 class="article__header">Width i height</h3>
 				<p class="paragraph">
 					Jeśli nasz element ma zdefiniowaną wysokość i szerokość i zmniejszymy okno przeglądarki, to sam
 					element
@@ -438,7 +438,7 @@
 				</p>
 			</article>
 			<article class="article">
-				<h3 class="article-header">Overflow</h3>
+				<h3 class="article__header">Overflow</h3>
 				<p class="paragraph">
 					Własność overflow definiuje, jak ma zachować się element w sytuacji, gdy treść za niego wystaje.<br>
 				</p>
@@ -482,7 +482,7 @@
 					alt="Przykład treści ostylowanej za pomocą własności overflow: visible." />
 			</article>
 			<article class="article">
-				<h3 class="article-header">Jednostki</h3>
+				<h3 class="article__header">Jednostki</h3>
 				<p class="paragraph">
 				<h4 class="paragraph-header">Piksele</h4>
 				Wartość 0 możemy zapisywać bez jednostek. Nie ma znaczenia, czy są to piksele, procenty czy jeszcze coś
@@ -527,7 +527,7 @@
 				</p>
 			</article>
 			<article class="article">
-				<h3 class="article-header">Box model: padding, border i margin</h3>
+				<h3 class="article__header">Box model: padding, border i margin</h3>
 				<p class="paragraph">
 					Wszystkie elementy na stronie internetowej otoczone są niewidzialnym prostokątem, który ma jakąś
 					wysokość i szerokość i który możemy podejrzeć, najeżdżąjąc na te elementy za pomocą devtools. Box
@@ -594,21 +594,21 @@
 				</p>
 				<p class="paragraph">
 				<h4 class="paragraph-header">Margin</h4>
-				Marginesy zapisujemy tak samo jak padding. Marginesy zewnętrzne nakładają się na siebie, co zonacza, ze
+				Marginesy zapisujemy tak samo jak padding. Marginesy zewnętrzne nakładają się na siebie, co oznacza, że
 				jeśli mamy obok siebie dwa elementy i dla jednego zdefiniujemy margin: 100px, a dla drugiego margin:
-				120px, to odległóść między tymi elementami wyniesie 120px, a nie 220px. Dla marginesów występują również
+				120px, to odległość między tymi elementami wyniesie 120px, a nie 220px. Dla marginesów występują również
 				wartości lustrzane, które wykorzystywane są często by wyśrodkować dany element. By uzyskać taki efekt do
 				własności margin dodajemy dwie wartości - odstęp oraz auto, np. margin: 50px auto. Jeśli element zajmuje
 				całą dostępną szerokość okna, to będzie po prostu oddalony o krawędzi okna o wartość zdefiniowaną dla
 				margin, jeśli jednak szerokość elementu jest mniejsza niż dostępne okno przeglądarki, to wartość auto
 				sprawi, że element zostanie wyśrodkowany. Jeśli dany element jest zagnieżdżony w innym divie, to w takim
-				przypadku będzie centrowany nie do dostępnego omna, ale w ramach swojego rodzica, nadrzędnego diva.<br>
+				przypadku będzie centrowany nie do dostępnego okna, ale w ramach swojego rodzica, nadrzędnego diva.<br>
 				<img class="image" src="/margin-auto.jpg"
 					alt="Element wyśrodkowany za pomocą wartości auto zdefiniowanej dla marginesu." />
 				</p>
 			</article>
 			<article class="article">
-				<h3 class="article-header">Box sizing - content-box versus border-box</h3>
+				<h3 class="article__header">Box sizing - content-box versus border-box</h3>
 				<p class="paragraph">
 					Domyślny box sizing to content-box, czyli definicja szerokości i wysokości elementu odnosi się do
 					samego contentu, nie obejmuje paddingu i borderu. Jeśli zatem zmniejszymy lub zwiększymy padding
@@ -636,7 +636,7 @@
 				</p>
 			</article>
 			<article class="article">
-				<h3 class="article-header">Position i float</h3>
+				<h3 class="article__header">Position i float</h3>
 				<p class="paragraph">
 				<h4 class="paragraph-header">Position: static</h4>
 				Własność position: static oznacza, że to przeglądarka decyduje, gdzie dany element umieścić, wyliczając
@@ -692,9 +692,9 @@
 				</p>
 				<p class="paragraph">
 				<h4 class="paragraph-header">Position: sticky</h4>
-				Wartość sticky jest bardzo przydatka, np. gdy mamy dłuższe treści i chcemy przykleić nagłówek wewnątrz
-				danego kontenera. Należy mieć jednak na uwadze, ze styl sticky nie zadziała, jeśli rodzic danego
-				elementu ostylowanego w ten sposób ma przypisaną własność własność overflow. Dodatkowo, element, któremu
+				Wartość sticky jest bardzo przydatna, np. gdy mamy dłuższe treści i chcemy przykleić nagłówek wewnątrz
+				danego kontenera. Należy mieć jednak na uwadze, że styl sticky nie zadziała, jeśli rodzic danego
+				elementu ostylowanego w ten sposób ma przypisaną własność overflow. Dodatkowo, element, któremu
 				nadajemy własność sticky musi zostać jakoś umiejscowiony w kontenerze względem viewport, np. za pomocą
 				własności top: 0. W tym przypadku element sticky przyklei się do góry strony i gdy będziemy scrollować
 				stronę, zostanie cały czas w tym samym miejscu aż do momentu, gdy wyjdziemy z danego elementu
@@ -734,7 +734,7 @@
 				</p>
 			</article>
 			<article class="article">
-				<h3 class="article-header">Normalizacja vs reset</h3>
+				<h3 class="article__header">Normalizacja vs reset</h3>
 				<h4 class="paragraph-header">Domyślne style przeglądarki</h4>
 				<p class="paragraph">
 					Normalizacja i reset to metody ujednolicania stylów. Przeglądarki internetowe posiadają bowiem swoje
@@ -784,7 +784,7 @@
 
 			</article>
 			<article class="article">
-				<h3 class="article-header">BEM - block element modifier</h3>
+				<h3 class="article__header">BEM - block element modifier</h3>
 				<p class="paragraph">
 					BEM to sposób nazywania klass CSS, który wprowadza porządek do projektu. Jest to odpowiedź na wysoki stopień skomplikowania stylowania oraz brak ujednolicenia jego stosowania. Pozwala ponadto na odwzorowanie struktury HTML w CSS poprzez nadawanie nazwom klas sensu semantycznego.
 				</p>
@@ -816,11 +816,13 @@
 		</section>
 
 	</main>
-	<footer class="footer">Strona domowa Magdaleny Derek, wszystkie treści są wynikiem nauki w ramach szkolenia WTF: Co
-		ten frontend.
-		<a class="footer-link" href="#top">Wróć na górę strony ⬆️</a>
-	</footer>
-	<script src="/main.js"></script>
+    <footer class="footer">
+		<p class="footer__content">Strona domowa Magdaleny Derek, wszystkie treści są wynikiem nauki w ramach szkolenia WTF: Co
+			ten frontend. 
+			<a class="footer__top-link" href="#top">Wróć na górę strony ⬆️</a>
+		</p>
+		</footer>
+	<script defer src="/main.js"></script>
 </body>
 
 </html>

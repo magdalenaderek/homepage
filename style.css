@@ -10,6 +10,14 @@ html {
 	background: #6C534E;
 }
 
+.header {
+	position: sticky;
+	top: 0;
+	background: #6C534E;
+	max-width: 768px;
+	margin: 0 auto;
+}
+
 .navigation {
 	padding: 16px;
 }
@@ -23,6 +31,10 @@ html {
 	padding: 16px;
 }
 
+.section__header {
+	color: #084C61;
+}
+
 .paragraph {
 	background: #FFFFFF;
 }
@@ -31,33 +43,47 @@ html {
 	background: #FFFFFF;
 }
 
-.main-header {
+.article__header {
+	color: #084C61;
+}
+
+.main {
+	max-width: 768px;
+	margin: 0 auto;
+}
+
+.main__header {
 	color: #FFB140;
 	padding: 16px;
-}
-
-.section-header {
-	color: #084C61;
-}
-
-.article-header {
-	color: #084C61;
+	background: #6C534E;
 }
 
 .footer {
-	color: #FFFFFF;
-	padding: 16px;
+	max-width: 768px;
+	margin: 0 auto;
 }
 
+.footer__content {
+	color: #FFFFFF;
+	padding: 16px;
+	background: #6C534E;
+}
 
-.footer-link {
+.footer__top-link {
+	position: fixed;
+	right: 6px;
+	bottom: 6px;
+	padding: 4px 4px;
+	display: block;
+	border-radius: 6px;
 	color: #FFB140;
+	background: #6C534E;
 }
 
 .link {
 	color: #F51AA4;
 }
+
 .image {
-	max-height: 50%;
-	max-width: 50%;
+	max-width: 100%;
 }

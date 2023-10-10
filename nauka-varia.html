@@ -10,7 +10,7 @@
 </head>
 
 <body class="body">
-	<header id="top" class="header">
+	<header class="header">
 		<nav class="navigation">
 			<a class="navigation__link" href="/index.html">Strona główna</a>
 			<a class="navigation__link" href="/nauka-html.html">Nauka HTML</a>
@@ -22,14 +22,14 @@
 	</header>
 	<main class="main">
 		<header >
-			<h1 class="main-header">Nauka - pozostałe tematy</h1>
+			<h1 id="top" class="main__header">Nauka - pozostałe tematy</h1>
 
 		</header>
 
 		<section class="section">
-			<h2 class="section-header">Varia - tydzień 2</h2>
+			<h2 class="section__header">Varia - tydzień 2</h2>
 			<article class="article">
-				<h3 class="article-header">Schemat blokowy</h3>
+				<h3 class="article__header">Schemat blokowy</h3>
 				<p class="paragraph">
 					Zapis kroków/instrukcji, które powinny się po sobie wydarzać to
 					algorytmy. Algorytm można zapisać za pomocą <b>schematu blokowego</b>. <br>
@@ -44,9 +44,9 @@
 			</article>
 		</section>
 		<section class="section">
-			<h2 class="section-header">Varia - tydzień 3</h2>
+			<h2 class="section__header">Varia - tydzień 3</h2>
 			<article class="article">
-				<h3 class="article-header">Nazywanie rzeczy</h3>
+				<h3 class="article__header">Nazywanie rzeczy</h3>
 				<p class="paragraph">
 					Wymyślając nazwy, które stosujemy w programowaniu, należy stosować się do następujących zasad:
 					<br>
@@ -75,7 +75,7 @@
 				</p>
 			</article>
 			<article class="article">
-				<h3 class="article-header">Działanie przeglądarki</h3>
+				<h3 class="article__header">Działanie przeglądarki</h3>
 				<p class="paragraph">
 					HTTP (HTTPS) - protokół, z którego zazwyczaj korzysta przeglądarka, żeby pobrać pliki występujace na
 					stronach, a następnie wyświetlić je użytkownikowi. <b>HTTP - HyperText Transfer Protocol</b>, a
@@ -134,7 +134,7 @@
 				</p>
 			</article>
 			<article class="article">
-				<h3 class="article-header">Kody odpowiedzi protokołu HTTP</h3>
+				<h3 class="article__header">Kody odpowiedzi protokołu HTTP</h3>
 				<p class="paragraph">
 					100 - poczekaj, za chwilę dostaniesz opowiedź.<br>
 					200 - OK, serwer odpowiada, że ma taki zasób i przekazuje go przeglądarce.<br>
@@ -153,7 +153,7 @@
 				</p>
 			</article>
 			<article class="article">
-				<h3 class="article-header">ROOT /</h3>
+				<h3 class="article__header">ROOT /</h3>
 				<p class="paragraph">
 					Root to istotna część ścieżki do zasobu - mówi, w którym miejscu przeglądarka powinna szukać danego
 					zasobu.<br>
@@ -194,7 +194,7 @@
 				</p>
 			</article>
 			<article class="article">
-				<h3 class="article-header">Terminal</h3>
+				<h3 class="article__header">Terminal</h3>
 				<p class="paragraph">
 					W Windowsie wchodzimy do terminala poprzez komendę cmd wpisaną w wyszukiwarce systemowej i wybieramy
 					wiersz poleceń. Windowsy są jednak różnie skonstruowane - niektóre posiadają WSL (Windows Subsystem for Linux), który również możemy uruchomić wpisując w wyszukiwarkę systemową wsl. KOrzystając z WSL, używamy komend przewidzianych dla Linuxa.<br>
@@ -232,9 +232,9 @@
 			</article>
 		</section>
 		<section class="section">
-			<h2 class="section-header">Varia - tydzień 4</h2>
+			<h2 class="section__header">Varia - tydzień 4</h2>
 			<article class="article">
-				<h3 class="article-header">GIT</h3>
+				<h3 class="article__header">GIT</h3>
 				<p class="paragraph">
 					GIT narzędzie kontroli wersji kodu, wersjonowania kodu, stworzone przez Linusa Torvaldsa (tego od
 					Linuxa). Można z niego korzystać za pomocą terminali:<br>
@@ -317,7 +317,7 @@
 				</p>
 			</article>
 			<article class="article">
-				<h3 class="article-header">GitHub</h3>
+				<h3 class="article__header">GitHub</h3>
 				<p class="paragraph">
 					GitHuba to nie GIT, choć mają części wspólne. GIT to narzędzie kontroli wersji do wykorzystywania na
 					naszym komputerze. GitHub natomiast to serwer zewnętrzny, platforma, z której korzystają programiści
@@ -330,9 +330,9 @@
 			</article>
 		</section>
 		<section class="section">
-			<h2 class="section-header">Varia - tydzień 4</h2>
+			<h2 class="section__header">Varia - tydzień 4</h2>
 			<article class="article">
-				<h3 class="article-header">Serwer lokalny</h3>
+				<h3 class="article__header">Serwer lokalny</h3>
 				<p class="paragraph">
 					Aby odejść od ładowania strony bezpośrednio z dysku na rzecz ładowania przez serwer należy zainstalować w edytorze VSC odpowiednie rozszerzenie - w menu po lewej stronie wybieramy opcję extensions i wyszukujemy live server. Najlepiej zainstalować taki z największą liczbą pobrań. Po zakończeniu instalacji w stopce edytora, w prawym dolnym rogu VSC pojawia się przycisk 'go live'. Po kliknięciu w ten przycisk nasza strona zostaje uruchomiona z serwera lokalnego, a w jej URL pojawia się cyfrowy adres tego serwera 127.0.0.1 z portem 5500.<br>
 					Dzięki wczytywaniu strony z lokalnego serwera:
@@ -350,11 +350,13 @@
 		</section>
 
 	</main>
-	<footer class="footer">Strona domowa Magdaleny Derek, wszystkie treści są wynikiem nauki w ramach szkolenia WTF: Co
-		ten frontend.
-		<a class="footer-link" href="#top">Wróć na górę strony ⬆️</a>
-	</footer>
-	<script src="/main.js"></script>
+    <footer class="footer">
+		<p class="footer__content">Strona domowa Magdaleny Derek, wszystkie treści są wynikiem nauki w ramach szkolenia WTF: Co
+			ten frontend. 
+			<a class="footer__top-link" href="#top">Wróć na górę strony ⬆️</a>
+		</p>
+		</footer>
+	<script defer src="/main.js"></script>
 </body>
 
 </html>
