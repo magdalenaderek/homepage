@@ -814,6 +814,55 @@
 				<img class="image" src="/bem-article-css.jpg" alt="Przedstawienie modelu stylowania BEM na przykładzie artykułu w przełożeniu na kod CSS."/>
 			</article>
 		</section>
+		<section class="section">
+			<h2 class="section__header">CSS - tydzień 5</h2>
+			<article class="article">
+				<h3 class="article__header">Typografia</h3>
+				<p class="paragraph">
+					Własność font-size, odnoszącą się do rozmiaru tekstu na stronie, można definiować za pomocą różnych jednostek:
+				</p>
+					<ul class="unordered-list">
+						<li class="unordered-list__element">piksel</li>
+						<li class="unordered-list__element">rem</li>
+						<li class="unordered-list__element">em</li>
+					</ul>
+				<p class="paragraph">
+					Własność font-family odpowiada za krój czcionki, jej wygląd. Domyślne wartości, jakie prezglądarka nadaje tekstowi można podejrzeć w devtools Elelemts - Computed - zaznaczone 'group' - zaznaczone 'show all' - zwinięcie innych sekcji i rozwinięcie sekcji 'text'. W przypadku Chrome, domyślna własność font-family to Times New Roman. Aby ustawić własny krój czcionki dla całej strony, najlepiej zrobić to na tagu body. Przy definiowaniu czcionki, VSC podpowiada co do zasady bezpieczne wartości font-family, czyli takie, które działają na większości systemów. Jeśli danego fontu nie ma, to po przecinku wypisane są alternatywy, które będą miały wówczas zastosowanie (np. Verdana, Geneva, Tahoma, sans-serif). Można oczywiście wykorzystać również czcionkę, której nie m na liście pdpowiedzi w VSC.Jeżeli font ma w nazwie spację, to musi być podany w apostrofach. Czcionki mogą mieć przypisane wartości:
+				</p>
+				<ul class="unordered-list">
+					<li class="unordered-list__element">monospace - oznacza, że każda litera zajmuje tyle samo miejsca; wykorzystywana raczej do nagłówków lub do pisania kodu;</li>
+					<li class="unordered-list__element">serif - czcionki szeryfowe, zawierające elementy dekoracyjne przy literach;używane zwykle do tekstów drukowanych;</li>
+					<li class="unordered-list__element">sans-serif - pismo bezszeryfowe, o kroju pozbawionym ozdobników w postaci szeryfów (końcówki znaków są proste), krój taki uznawany jest za bardziej nowoczesny.</li>
+				</ul>
+				<p class="paragraph">
+					W devtools można podejrzeć czcionki, które się wyrenderowały i wyświetliły na stronie.
+				</p>
+				<p class="paragraph">
+					Własność font-weight definiuje grubość czcionki. Po wpisaniu tej własności w pliku ze stylami w VSC, edytor podpowiada dostępne opcje w formie numerycznej, od najcieńszej 100 do najgrubszej 900. Są również dostępne opcję w formie opisowej, np. bold, bolder, lighter, normal. Standardowa grubość czcionki, font-weight normal, to 400, a bold to najczęściej 700. Zależy to jednak od rodzaju czcionki, nie wszystkie wspierają wszystkie grubości. Obecnie już raczej nie operujemy wartościami słownymi, tylko numerycznymi.
+				</p>
+				<p class="paragraph">
+					Własność line-height odpowiada za wyskość tekstu. Wysokość fontu w przeglądarce ma zwykle 16px. Domyślny przeglądarkowy line-height jest zwykle trochę większy i wynosi około 18,5px. Zwykle definiuje się go na nieco większy. Jeśli nadamy mu wartość line-height: 1,5, bez żadnej jednostki, to wyniesie on 150% wysokości czcionki., dla czcionki o wysokości 16px, będą t0 24px.
+				</p>
+				<p class="paragraph">
+					Własność letter-spacing określa odległość między literami. Nietypowe wartości można wykorzystać np. w nagłówkach. Letter-spacing można podać w różnych jednostkach, np. w pikselach. Można używać wartości ujemnych (np. -0.2px, -2px), wówczas litery zaczną na siebie nachodzić. Wartość definiujemy zależnie od tego, jaki efekt artystyczny chcemy osiągnąć i co widzimy na stronie.
+				</p>
+				<p class="paragraph">
+					Przy stylowaniu tesktów wykorzystujemy znacznik span - nie ma on znaczenia semantycznego, jest jak div, tylko odnosi się do tekstów, np. w danej linii, a nie całych większych kontenerów. Span pozwala na tworzenie wyróżników wizualnych dla treści na stronie, które chcemy wyróżnić graficznie, ale których nie ma sensu wyróżniać semantycznie. Opakowujemy sobie w takiej sytuacji wybrane treści w znacznik span o określonej klasie i definiujemy dla tej klasy wybrane style.
+				</p>
+				<p class="paragraph">
+					Jednostka EM ma swoje korzenie w wysokości czcionek drukarskich w czasach, gdy były osadzone na prostokątnych elementach. 1 em odpowiada wartości font-size, jaka została zdefiniowana lub odziedziczona przez dany element, pomnożonej przez 1. Za pomocą emów możemy definiować rozmiar czcionki, ale też inne własności, np wysokość. Jeśli przykładowo dla nagłówka określimy sobie font-size" 10px i damy temu nagłówkowi wysokość równą 10em, to sam literał nagłówka będzie miał 10px, ale cały element 100px (10px*10em). Emy są dość problematyczne, bo nie zawsze możemy przewidzieć jaka ta jednostka jest dla danego elementu. Świetnie sprawdzają się jednak dla takich własności jak letter-spacing, gdzie jeśli rozmar czcionki będzie rósł, to letter-spacing () będzie się również proporcjonalnie zmieniać. Na przykładzie prezentowanym przez Maćka letter-spacing określony jest jako wartość ujemna -0.05em, stanowiąca procent wartości font-size ustawionej na naszym elemencie.
+				</p>
+				<img class="image" src="/em-definition.jpg" alt="Definicja jednostki em."/>
+				<img class="image" src="/em-example.jpg" alt="Przeliczenie wartości em na piksele na przykładzie nagłówka."/>
+				<p class="paragraph">
+					Jednostka REM - R z przodu odpowiada root elementowi naszego HTMLa, czyli 1rem to font-size dla naszego root elementu pomnożony przez 1. (Root elementem, czyli elementem bazowym nazywamy znacznik HTML, w którym zawiera się cała treść strony.) 1rem to zwykle 16px, 2rem to 32px, 0.5rem to 8px, etc. gdyż w domyślnych stylach, jakie przeglądarka zwykle nadaje czcionkom, font-size wynosi 16px. Zatem jeśli ustawimy sobie styl dla nagłówka, nadając czcionce wartość 2rem, to mimo, że rodzicu tego elementu font-size będzie ustawiony na 10px, to nagłówek będzie miał 32px, gdyż odwołujemy się tu bezpośrednio do root elementu naszego HTMLa, a nie rodzica. Jeśli jednak w sposób jawny zdefiniujemy dla znacznika html font-size i nadamy mu wartość np. 20px, to w takim przypadku 1rem będzie wynosił 20px, 2rem natomiast 40px, etc. Maciek zaleca jednak, by nie definiować tej własności w znaczniku w elemencie html i zostawić to przeglądarce. Każdy ma bowiem swoje preferencje, na tych customowych ustawieniach przeglądarkowych mogą operować np. osoby niedowidzące, i obecnie w świecie designu i frontendu operuje się właśnie względem tych domyślnych 16px. Kiedyś funkcjonowała praktyka, że root elemencie definiowano font-size jako 10px (lub 62.5%, co miało ten sam skutek), by łatwiej było przeliczać, ale z podanych wcześniej względów, Maciek to odradza. Jeśłi już bardzo musimy, to można ustawić jawnie font-size dla elementu html jako 16px, ale Maciek zaleca, by jednak pozostawić to domyślnym ustawieniom przeglądarki. Remy można również stosować do nagłówków czy marginesów. Jednostka ta stała się obecnie dość popularna.
+				</p>
+				<img class="image" src="/rem-definition.jpg" alt="Definicja jednostki rem."/></br>
+				<p class="paragraph">
+					Na stronie <a class="link" href="https://nekocalc.com/px-to-rem-converter">px to rem converter</a> znajduje się kalkulator, gdzie możemy przeliczać remy na piksele i odwrotnie.
+				</p>
+			</article>
+		</section>
 
 	</main>
     <footer class="footer">

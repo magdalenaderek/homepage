@@ -7,6 +7,9 @@ html {
 }
 
 .body {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	line-height: 1.5;
+	letter-spacing: 1.25;
 	background: #6C534E;
 }
 
