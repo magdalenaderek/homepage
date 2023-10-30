@@ -330,7 +330,7 @@
 			</article>
 		</section>
 		<section class="section">
-			<h2 class="section__header">Varia - tydzień 4</h2>
+			<h2 class="section__header">Varia - tydzień 4 i 5</h2>
 			<article class="article">
 				<h3 class="article__header">Serwer lokalny</h3>
 				<p class="paragraph">
@@ -346,6 +346,38 @@
 				<p class="paragraph">
 					Aby uruchomić naszą stronę na telefonie musimy zdobyć nasz lokalny adres IP. Nie jest to wewnętrzny adres naszego komputera 127.0.0.1:5500, czyli tzw. lokalhost, który wyświetla się w URL. Aby zdobyć lokalny IP należy otworzyć terminal cmd i uruchomić komendę ipconfig. i spośród wyświetlonych rezultatów skopiować IPv4 Address (u mnie 192.168.0.4) i wkleić go w miejsce adresu 127.0.0.1, podając również port 5500. Po wpisaniu strony z takim adresem zarówno na kompie, jak i telefonie lub innym urządzeniu, strona się uruchomi, pod warunkiem, że jesteśmy w tej samej sieci WiFi. IPv4 Address można również podejrzeć w panelu zarządzania w zakładce network & internet, sprawdzając ustawienia naszej sieci WiFi.
 				</p>
+			</article>
+			<article class="article">
+				<h3 class="article__header">Debugging</h3>
+				<p class="paragraph">
+					Jeśli coś nie działa, to:
+				</p>
+					<ol class="ordered-list">
+						<li class="ordered-list__element">Sprawdź, czy plik jest zapisany.</li>
+						<li class="ordered-list__element">Sprawdź, czy edytujesz właściwy plik.</li>
+						<li class="ordered-list__element">Sprawdź, czy odświeżyłaś przeglądarkę - CTRL + F5, czyli twarde oświeżenie, które nie korzysta z plików tymczasowych.</li>
+						<li class="ordered-list__element">Sprawdź, czy nie masz błędów w edytorze/devtools - czytaj błędy.</li>
+						<li class="ordered-list__element">Zajrzyj w zakładkę network w devtools i sprawdź, czy wszystkie pliki się wczytały.</li>
+						<li class="ordered-list__element">Pogadaj z kaczką - tłumaczenie samej sobie jak działa kod tak, jakbyś opowiadała to komuś, kto nie wie, o co w nim chodzi.</li>
+						<li class="ordered-list__element">Google it - poszukaj informacji w internetach, ale szukając informacji na temat stylów, CSS, najlepiej zawęzić wyniki do rekordów z ostatniego roku, bo wiedza w tym obszarze szybko się dezaktualizuje.</li>
+						<li class="ordered-list__element">Nie wchodź na stronę w3schools - zdarzają się tam błędy lub informacje nieaktualne, a w3c, czyli organizacja odpowiedzialna za standardy w przeglądarkach to nie to samo co w3schools.</li>
+					</ol>
+					<p class="paragraph">
+						Strony w internetach, na które można zajrzeć:
+					</p>
+					<ul class="unordered-list">
+						<li class="unordered-list__element"><a class="link" href="https://developer.mozilla.org">MDN</a> - strona z informacjami dla developerów, cała dokumentacja w przyjaznej formie (developer.mozilla.org).</li>
+						<li class="unordered-list__element"><a class="link" href="https://stackoverflow.com">Stack Overflow</a> - strona, na której można zadawać pytania związane z programowaniem i uzyskać odpowiedzi.</li>
+						<li class="unordered-list__element">Dokumentacja narzędzi, z których korzystamy, np. <a class="link" href="https://code.visualstudio.com/docs">dla VSC</a>, gdzie można znaleźć skróty możliwe do użycia w edytorze.</li>
+						<li class="unordered-list__element"><a class="link" href="https://github.com/features/issues">GitHub issues</a> - błędy zgłaszane przez użytkowników danej biblioteki, jeśli jest ona kodem publicznym, który dołączyliśmy do swojego projektu (np. repozytorium blibioteki REACT w GitHub -> zakładka issues). Błędy zgłaszane przez użytkowników mogą być później rozwiązywane przez osoby zajmujące się danym projektem, jeśli są to błędy w działaniu samej biblioteki.</li>
+						<li class="unordered-list__element"><a class="link" href="https://devdocs.io/">devdocs</a> - dokumentacja dla różnych języków i narzędzi zebrana w jednym miejscu, działa również offline jako web aplikacja (inaczej PWA - Progressive Web App).</li>
+						<li class="unordered-list__element"><a class="link" href="https://caniuse.com/">caniuse</a> - strona, na której mozemy znaleźć informacje, czy możemy skorzystać z danej własności css, html i ogólnie frontendowej, czy przeglądarki to wspierają (uwzględniane są też konkretne wersje przeglądarek).</li>
+						<li class="unordered-list__element"><a class="link" href="https://css-tricks.com/almanac/">Zakładka almanac na stronie css-tricks</a>, gdzie opisane są selektory i własności wraz z przykładami i demo zrobionym w codepen oraz ogólną informacją na temat wsparcia w danej przeglądarce.</li>
+						<li class="unordered-list__element">Specyfikacje dla <a class="link" href="https://html.spec.whatwg.org/multipage/">HTML</a> i <a class="link" href="https://www.w3.org/TR/css/">CSS</a> na stronie organizacji w3c - najbardziej aktualne informacje.</li>
+						<li class="unordered-list__element">Grupy na Facebooku na temat programowania dla początkujących.</li>
+					</ul>
+					<img class="image" src="/internet-sources.jpg" alt="Lista polecanych źródeł internetowych na temat programowania."/>
+					<img class="image" src="/facebook-programming-groups.jpg" alt="Lista polskojęzycznych grup na Facebooku na temat programowania dla początkujących."/>
 			</article>
 		</section>
 
