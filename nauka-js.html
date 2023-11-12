@@ -29,10 +29,10 @@
 			<h2 class="section__header">JavaScript - tydzień 2 i 3</h2>
 			<article class="article">
 				<h3 class="article__header">Podstawy</h3>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					JAVA SCRIPT – umożliwia interakcje
 				</p>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					ECMAScript - skryptowy język oprogramowania, ustandaryzowany przez organizację ECMA, ECMAScript
 					Language Specification.<br>
 					ECMA - European Association for Standardizing Information and Communication Systems jest to
@@ -42,7 +42,7 @@
 					Nowo wprowadzone feature'y, funkcje języka, mogą nie być wspierane we wszystkich przeglądarkach, które też muszą wprowadzać nowe wersje, żeby gonić standardy, ale
 					można to obejść.
 				</p>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					JavaScript jest obiektowym językiem programowania i składa się z następujących elementów:<br>
 					- wartości,<br>
 					- zmienne,<br>
@@ -51,12 +51,12 @@
 					- obiekty,<br>
 					- operacje porównywania.
 				</p>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					Wartości są dla JS tym, czym liczby dla matematyki - jest to pewien zbiór, który już istnieje, nie
 					tworzymy go.
 					Wartością może być np. jakaś liczba, słowo. Są one niezmienialne.
 				</p>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					Pliki zawierające kod JavaScript mają rozszerzenie .js. Podobnie jak style mają też swój znacznik
 					"script".<br>
 					Znacznik "script" dodajemy na samym dole strony, po stopce "footer", tuż przed domknięciem znacznika
@@ -68,13 +68,13 @@
 				</p>
 				<img class="image" src="/tag-script.JPG"
 					alt="Przedstawienie umiejscowienia znacznika script z funkcją alert przed domknięciem znacznika body." />
-				<p class="paragraph">
+				<p class="article__paragraph">
 					Skrypt wykonuje się tylko raz, jeszcze przed załadowaniem strony. W przypadku funkcji alert jest to
 					wyskakujące okienko zawierające treść podaną w parametrach funkcji.
 				</p>
 				<img class="image" src="/alert-example.JPG"
 					alt="Przykład działania funkcji alert na stronie - wyskakujące okienko." />
-				<p class="paragraph">
+				<p class="article__paragraph">
 					Tak, jak w przypadku stylów, bezpośrednie pisanie kodu JavaScript w pliku z htmlem zadziała, ale
 					jest mało praktyczne, dlatego stosuje się wydzielanie kodu JavaScript do osobnego pliku, np.
 					main.js.<br>
@@ -85,7 +85,7 @@
 					Używamy atrybutu "src", tak jak w obrazkach, a nie "href", tak jak w przypadku stylów.
 				</p>
 				<img class="image" src="/main-file.JPG" alt="Odwołanie do pliku z kodem JavaScript w pliku HTML." />
-				<p class="paragraph">
+				<p class="article__paragraph">
 					Kolejnym poleceniem jest funkcja console.log, która w przeciwieństwie do funkcji alert nie wyświetla
 					informacji na stronie, ale w narzędziach deweloperskich w zakładce "console".<br>
 					Funkcja console.log pozwala na wyświetlenie określonego tekstu lub wartości, np.:<br>
@@ -94,7 +94,7 @@
 				</p>
 				<img class="image" src="/consolelog-example1.JPG"
 					alt="Przykład dwukrotnego wywołania funkcji console.log w konsoli w narzędziach deweloperskich w przeglądarce." />
-				<p class="paragraph">
+				<p class="article__paragraph">
 					Zmienna w JavaScript to stworzenie powiązania między nazwą, której chcemy użyć a wartością, którą chcemy
 					przypisać tej zmiennej.<br>
 					const name = 'Magdusia';<br>
@@ -108,7 +108,7 @@
 						alt="Stworzenie zmiennej słownej i liczbowej oraz ich wywołanie w funkcji console.log." />
 
 				</p>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					Backtick/backquote (`) - przetrącony apostrof, na klawiaturze znajduje się tam, gdzie tylda ~.<br>
 					Używamy go, jeśli chcemy wykorzystać w jakiejś funkcji jednocześnie zmienną i tekst - taki ciąg znaków
 					nazywamy <b>literałem</b>.<br>
@@ -116,7 +116,7 @@
 				</p>
 				<img class="image" src="/consolelog-example3.JPG"
 					alt="Wykorzystanie w funkcji console.log jednocześnie zmiennej oraz tekstu, czyli literału." />
-				<p class="paragraph">
+				<p class="article__paragraph">
 					Kod JS uruchamia się raz (po załadowaniu strony). Może też oczywiście działać później, jeśli ma odpowiednie
 					instrukcje.
 				</p>
@@ -126,10 +126,10 @@
 			<h2 class="section__header">JavaScript - tydzień 4</h2>
 			<article class="article">
 				<h3 class="article__header">Typy i struktury danych, immutability</h3>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					Zmienne w Java Script możemy zadeklarować (stworzyć) za pomocą trzech słów kluczowych: LET, CONST i VAR, omówionych poniżej.
 				</p>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					<h4 class="paragraph-header">LET</h4>				
 					LET - zmienne, które definiujemy tylko raz, ale których połączenie możemy przepinać, w wyniku czego można zmieniać przypisaną danej zmiennej wartość tak, jak w przykłądzie poniżej. Po utworzeniu zmiennej za pomocą słowa kluczowego LET, możemy później za pomocą tej zmiennej wskazywać na inne wartości, zmieniać je.<br>
 					let isHappy = false;<br>
@@ -137,18 +137,18 @@
 					isHappy = 'tak';<br>
 					<img class="image" src="/let-variable.jpg" alt="Przykład definiowania zmiennej za pomocą słowa kluczowego let."/>
 				</p>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					<h4 class="paragraph-header">CONST</h4>	
 					CONST - tworzy zmienne, które mają stałe połączenie z jedną wartością, tak jak w definicjach poniżej. Jeśli będziemy próbowali przypisać do zmiennej age lub name jakąś inną wartość (np. age = 25), to otrzymmay błąd.<br>
 					const name = 'Magdalena';<br>
 					const age = 39;<br>
 					<img class="image" src="/constant-variable.jpg" alt="Przykłady definiowania zmiennych za pomocą słowa kluczowego const."/>
 				</p>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					<h4 class="paragraph-header">VAR</h4>	
 					VAR - obecnie definiowanie zmiennych za pomocą tego słowa kluczowego wychodzi z użycia.
 				</p>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					<h4 class="paragraph-header">Definiowanie zmiennych - przykłady</h4>	
 					Poniżej znajdują sie dwa przykłady definiowania zmiennych. W pierwszym definiujemy zmienną x za pomocą CONST, przypisując jej wartość 10. Następnie definiujemy zmienną y za pomocą LET, przypisując jej wartość x. Po wykonaniu tego kodu, obie zmienne, x i y będą równe 10. Gdy zmiennej y przypiszemy następnie inną wartość, 20, to po wykonaniu kodu, zmienna y będzie miała wartość 20, ale zmienna x nadal będzie miałą wartość 10.<br>
 					W drugim przykładzie odwracamy sytuację i definiujemy zmienną a za pomocą LET, przypisując jej wartość 20, a następnie definiujemy zmienną b za pomocą CONST, przypisując jej wartość a. Po wykonaniu kodu, obie zmienne będą miały wartość 20. Jeśli następnie zmiennej a przypiszemy inną wartość, 13, to po wykonaniu kodu, zmienna a będzie miała wartość 13, ale zmienna b nadal będzie miała wartość 10.<br>
@@ -156,7 +156,7 @@
 					<img class="image" src="/variables-definition-example1.jpg" alt="Przykład pierwszy definiowania zmiennych za pomocą const i let."/><br>
 					<img class="image" src="/variables-definition-example2.jpg" alt="Przykład drugi definiowania zmiennych za pomocą const i let."/><br>
 				</p>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					<h4 class="paragraph-header">Typy proste w JS</h4>	
 					Java Script jest językiem nietypowanym, co oznacza, że jako wartość zmiennej można podpiąć absolutnie wszystko. Typy w innych językach oprogramowania określają, jaki rodzaj wartości można podpiąć do zmiennej. Jednak pomimo tego, że jest to język nietypowany, Java Script posiada typy proste (primitives), czyli rodzaje wartości, które obejmują:<br>
 					- string - tekst, który otaczamy za pomocą podwójnego apostrofu ", pojedynczego apostrofu ' lub kopniętego apostrofu ` (do zwykłych tekstów, w których nie używamy dodatkowych zmiennych, Maciek zaleca korzystanie z pojedynczych apostrofów);<br>
@@ -168,50 +168,50 @@
 					- symbol - typ wartości wykorzystywany do tworzenia "unikalnych opakowań", raczej nie jest wykorzystywany, wymieniony został bardziej jako ciekawostka.<br> 
 					<img class="image" src="/primitives-in-js.jpg" alt="Lista typów prostych w Java Script."/>
 				</p>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					<h4 class="paragraph-header">Instrukcja typeof</h4>	
 					To, jaki typ ma dana zmienna możemy sprawdzić za pomocą instrukcji typeof. Instrukcja ta nie zawsze zwraca poprawny typ, którego się spodziewamy w danym przypadku. Na przykładzie podanym poniżej, przy sprawdzaniu typu zmiennej, do której została przypisana wartość null, typeof zwraca object zamiast null. Dzieje się tak dlatego, że w Java Script, jako języku obiektowym, wszystko jest obiektem, a null jest wskazaniem na pusty obiekt, w którym w przyszłości ma się znaleźć jakaś inna wartość.<br>
 					<img class="image" src="/typeof-instruction-examples.jpg" alt="Przykłady sprawdzania typu zmiennych za pomocą instrukcji typeof."/>
 				</p>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					<h4 class="paragraph-header">Immutability</h4>	
 					Immutability, czyli niemutowalność, jest to jeden z fundamentalnych konceptów Java Script. Oznacza, że nie można zmieniać wartości primitive values w Java Script. To, co zmieniamy, to połączenie między tymi wartościami a zmiennymi. Sam wszechświat wartości jest niezmienny. Nasze zmienne nie mogą ich modyfikować i sprawić, że np. 20 to będzie 13.
 				</p>
 			</article>
 			<article class="article">
 				<h3 class="article__header">DOM - document object model</h3>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					DOM (obiektowy model dokumentu) to jest to, co widzimy w devtools w zakładce Elements. Nie jest to plik z kodem HTML w edytorze ani jako źródło naszej strony. DOM w devtools ma się tak do pliku z kodem HTML jak gotowy skręcony mebel do instrukcji jak go skręcić. Kod HTML jest to zatem instrukcja, która jest następnie interpretowana przez przeglądarkę i wyświetlana w postaci DOM. DOM jest zatem "złożonym" w przeglądarce kodem HTML. 
 				</p>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					DOM stanowi pomost pomiędzy kodem HTML a JavaScriptem. DOM może być bowiem przez JavaScript modyfikowany. Powstał po to, by można było modyfikować strony internetowe, operować na nich za pomocą JavaScriptu, by odnosząc się do nich dodać np. interakcje. Podobnie jak w CSS, żeby odnieść się do danego elementu używamy selektorów w postaci klas czy id, tak w przypadku JavaScriptu funkcję tę pełnią query selektory. Query selector jako parametr wykorzystuje te same selektory wskazujące na dany element, które stosowane są w CSS. Za pomocą querySelector wybieramy zatem węzły w HTML, by móc na nich operować (w naszym przykładzie modyfikacje nagłówka h1). Funkcja querySelector zwraca zatem node (węzeł) z HTML-a.
 				</p>
 				<img class="image" src="query-selector.jpg" alt="Funkcja wykorzystująca query selectory."/><br>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					Odpowiednikiem powyższego zapisu funkcji w jQuery, który obecnie stanowi już raczej ciekawostkę i element legacy, jest zapis z użyciem dolara: $('.selector').
 				</p>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					Do oznaczania elementów za pomocą specjalnej klasy, która będzie się odnosiła tylko do JavaScriptu wykorzystywana jest właśnie konwencja nazewnicza BEM: block__element--js.
 				</p>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					Aby wywołać sobie za pomocą funkcji console.log jakiś element na stronie możemy wykorzystać do tego jakąś zmienną, np. const header, wyszukując ją na stronie za pomocą querySelector. Przy ładowaniu z serwera, przeglądarka może czasem nie zdążyć zaczytać odpowiednio naszego DOM i pliku z kodem JavaScript i wówczas w devtools w Console przy wywołaniu danej funkcji, zamiast wyświetlenia wywołanego za pomocą funkcji elementu, pojawia się węzeł z pulą możliwych funkcji do wykorzystania na naszym elemencie. Można tam podejrzeć również tekst, kod html czy style naszego elementu, czyli cały pojedynczy węzeł naszego DOM, który widzi nasza przeglądrka (na naszym przykładzie jest to element h1). Nie wpływa to jednak na funkcjonalność strony, bo sam skrypt wykona nam się poprawnie, jest to tylko kwestia wizualnej reprezentacji tego obiektu. 
 				</p>
 				<img class="image" src="node.jpg" alt="Węzeł z pulą dostępnych funkcji w zakładce Console w devtools."/>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					Aby jednak zniwelować szansę na wystąpienie takiej sytuacji i zapewnić, by skrypty wczytywały nam się w odpowiednej kolejności, do linku z odniesieniem do naszego pliku JS w kodzie HTML należy dodać atrybut defer (wpisujemy go po znaczniku script, przed adresem src). Wówczas po wywołaniu funkcji w zakładce Console powinien nam się wyświetlić dany element w takiej samej postaci, w jakiej jest widoczny w zakładce Elements w DOM.
 				</p>
 				<img class="image" src="query-selector-example.jpg" alt="Funkcja wywołująca element h1 na naszej stronie za pomocą query selector."/>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					Jak już zostało wcześniej wspomniane, w celu ułatwienia identyfikacji, do oznaczenia naszego elementu można wykorzystać BEM i dodatkową klasę z modyfikatorem --js. Selektorów takich nie wykorzystujemy do stylowania w CSS. Używamy ich jedynie w JavaScript, dzięki czemu nasze skrypty będą nadal działać nawet wówczas, gdy zdecydujemy się na zmianę stylów CSS czy przeniesienie elementu.
 				</p>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					JavaScript, jako nawyższa wartstwa na naszej stronie, może zmieniać na niej wszystko. Możemy więc zmienić np. treść naszego elementu h1. Mamy już wybrany nasz element za pomocą querySelectora i możemy teraz wykonywać na nim operacje. Możemy w tym celu wykorzystać własność innerHTML, która odpowiada za treść naszego elementu, czyli to co, jaki html znajduje się w środku tego elementu: nazwaZmiennejQuerySelector.innerHTML = 'treść'.
 				</p>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					Działając na naszym przykładzie nagłówka h1 i wywołując w console.log naszą funkcję header, w konsoli wyświetla nam się cały nasz obiekt, który po najechaniu zostaje również podświetlony na stronie w oknie przeglądarki. Jeśłi jednak wywołamy sobie header.innerHTML, to w konsoli wyświetli nam się tylko zawartość elementu, jego treść, odnosimy się bowiem do samej wartości. Możemy również tę treść zmienić, podając nową: header.innerHTML = 'Hej'. Jest to przykład, gdy w pliku HTML i w źródle strony będziemy mieć wcześniejszą wartość, natomiast w DOM wyświetli się już nowa treść nagłówka, podmieniona za pomocą JavaScriptu. Czyli przykład różnicy między instrukcją a złożonym meblem. Jako nową treść możemy również podstawić utworzone wcześniej zmienne name i age: header.innerHTML = `Witaj, nazywam się ${firstName} i mam ${age} lat.` Przy tworzeniu stron statycznych nie robimy takich rzeczy, nie wrzucamy treści statycznej za pomocą skryptów, ale już przy korzystaniu z danych zewnętrznych alo danych przeliczanych przez JavaScript będziemy w ten sposób podmieniać dane (np. zmiana licznika, gdy użytkownik kliknie na plus).
 				</p>
 				<img class="image" src="inner-html.jpg" alt="Wykonanie skryptu zmieniającego treść nagłówka."/>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					Za pomocą skryptów JS możemy również modyfikować style. Jeśli wywołamy sobie console.log dla naszego elementu header, podając własność style (console.log(header.style)), to w devtools w zakładce Console wyświetli nam się obiekt CSSStyleDeclaration, gdzie po rozwinięciu bedą widoczne wszystkie możliwe własności CSS, dostępne style, jakie możemy wykorzystać w danym elemencie. Możemy te własności modyfikować, przypisać za pomocą tego obiektu. Aby zmodyfikować kolor, podajemy tę własność z nową wartością, jaką chcemy nadać alementowi, np. header.style.color = 'red'. Jeśli podejrzymy sobie strukturę DOM w zakładce Elements w devtools, to widzimy, że JavaScript, wykonując skrypt po prostu dokłada zmieniający kolor styl inline przy nagłówku h1. W pliku HTML oczywiście nie będzie on widoczny. Wprowadza to duży bałagan do kodu. Trzymanie się poszczególnych wartsw strony i ich funkcji zapewnia nam przewidywalność zachowania naszej strony. Są jednak oczywiście przypadki, gdy takie modyfikacje mogą się nam przydać.
 				</p>
 				<img class="image" src="css-style-declaration.jpg" alt="Wykonanie skryptu zmieniającego kolor nagłówka."/>

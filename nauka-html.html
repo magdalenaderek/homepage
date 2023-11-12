@@ -29,7 +29,7 @@
 			<h2 class="section__header">HTML - tydzień 2</h2>
 			<article class="article">
 				<h3 class="article__header">HTML - podstawowe informacje i znaczniki</h3>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					<b>HTML</b> – nie jest to język programowania, lecz <b>język znaczników (HyperText Markup Language)
 					</b>; odpowiada
 					za semantykę, nadaje znaczenie i strukturę elementom składającym się na treść strony. <br>
@@ -38,8 +38,8 @@
 					Obecnie obowiązujący standard to HTML 5, który stał się tzw. living standard, czyli zmienianym ewolucyjnie, a
 					nie w ramach nowych edycji.
 				</p>
-				<p class="paragraph"><strong>Żeby w notatkach zapisywać nawiasy ostre i nie były one traktowane jako kawałek kodu, można użyć "& l t ;" i "& g t ;", pisane bez spacji między znakami.</strong> Są to tzw. encje.</p>
-				<p class="paragraph">
+				<p class="article__paragraph"><strong>Żeby w notatkach zapisywać nawiasy ostre i nie były one traktowane jako kawałek kodu, można użyć "& l t ;" i "& g t ;", pisane bez spacji między znakami.</strong> Są to tzw. encje.</p>
+				<p class="article__paragraph">
 					DOCTYPE – określa typ dokumentu, aktualnie będzie to raczej zawsze html <br>
 					Lang – wybór języka, np. en, pl; ma znaczenie dla dostępności, kierują się tym czytniki treści
 					<br>
@@ -73,7 +73,7 @@
 			<h2 class="section__header">HTML - tydzień 3</h2>
 			<article class="article">
 				<h3 class="article__header">Znaczniki wyróżniające treść</h3>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					"znacznik atrybut="wartość""treść"/znacznik" <br>
 					br - znacznik pozwalający na przejście do nowej linii. Po dodaniu go na końcu frazy, po której
 					chcemy rozpocząć nową linię, kolejna część tekstu zaczyna się w nowej linii. Jest to znacznik
@@ -95,7 +95,7 @@
 			</article>
 			<article class="article">
 				<h3 class="article__header">Linkowanie i nawigacja</h3>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					a (anchor) - znacznik używany do tworzenia linków zewnętrznych oraz łącza wewnątrz dokumentu, opisywany jest
 					najczęściej przez dwa atrybuty - href i target. <br>
 					"a href="" target="""opis łącza"/a" <br>
@@ -111,7 +111,7 @@
 					na powrót na górę strony wyglądające w ten sposób: href="#top" i jako opis łącza podać "Wróć na górę
 					strony".
 				</p>
-				<p class="paragraph"> nav - służy do nawigacji, np. między podstronami w ramach dokumentu; wskazuje, że
+				<p class="article__paragraph"> nav - służy do nawigacji, np. między podstronami w ramach dokumentu; wskazuje, że
 					jest to główna nawigacja po stronie/serwisie. <br>
 					Aby utworzyć kolejne podstrony, tworzymy kolejny plik, np. nauka-html.html (nie używamy znaków
 					diakrytcznych ani spacji, rozdzielamy myślinikami). Kopiujemy całą treść z pliku index.html i
@@ -130,7 +130,7 @@
 			</article>
 			<article class="article">
 				<h3 class="article__header">Dodawanie obrazków na stronie</h3>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					img scr="" alt="" <br>
 					img - znacznik, który pozwala na dołączenie obrazka, który ma podany adres <br>
 					Aby dodać obrazek, zapisujemy go w formacie np. jpg lub gif w folderze naszego projektu. Jest on
@@ -139,7 +139,7 @@
 					przykład schematu blokowego w notatce na ten temat w pliku nauka-js.html.
 					<a class="link" href="nauka-js.html">Obrazek znajduje się na tej podstronie.</a>
 				</p>
-				<p class="paragraph">
+				<p class="article__paragraph">
 					W pliku tym, w miejscu, gdzie chcemy dodać obrazek, otwieramy znacznik img i wskazujemy adres
 					obrazka, podając jego nazwę, w moim przypadku to src="schemat-blokowy.JPG". Dodajemy też tekst alternatywny
 					jako wartość dla atrybutu "alt". Tekst ten nie jest widoczny dla użytkownika na stronie, ale
@@ -171,7 +171,7 @@
 				</dd>
 				<dt class="description-list__term">Własność list-style-type</dt>
 				<dd class="description-list__details">
-					Możemy określić sposób wyświetania listy za pomocą własności list-style lub list-style-type. Po wpisaniu tej własności w pliku ze stylami, edytor podpowiada dostępne opcje. Jeśli chcemy, by lista wyświetlała sie bez żadnych elementów z przodu, nadajemy jej wartość list-style-type: none.</br>
+					Możemy określić sposób wyświetania listy za pomocą własności list-style lub list-style-type. Po wpisaniu tej własności w pliku ze stylami, edytor podpowiada dostępne opcje. Jeśli chcemy, by lista wyświetlała sie bez żadnych elementów z przodu, nadajemy jej wartość list-style-type: none.<br>
 					W przypadku listy uporządkowanej, również możemy ją sobie dowolnie ostylować, np. wylistować elementy za pomocą kropek. Wizaualnie nie musi to być lista numeryczna, choć oczywiście jako lista uporządkowana, semantycznie kolejność będzie tu miała nadal znaczenie.
 				</dd>
 				<dt class="description-list__term">Zagnieżdżanie list</dt>
@@ -188,7 +188,7 @@
 			</article>
 			<article class="article">
 				<h3 class="article__header">Tabela</h3>
-			<p class="paragraph">
+			<p class="article__paragraph">
 				W tabeli (znacznik table) zawieramy dane tabelaryczne, czyli takie, które standardowo byśmy umieścili w tabeli. W skład znacznika table wchodzą następujące elementy:
 				<ul class="unordered-list">
 					<li class="unordered-list__element">tr - table row (wiersz tabeli)</li>
@@ -200,15 +200,15 @@
 				</ul>
 			</p>
 			<img class="image" src="/table-example.jpg" alt="Przykład kodu tworzącego tabelę w html."/>
-			<p class="paragraph">
+			<p class="article__paragraph">
 				Kiedyś używano tabel do budowania całych stron - swego czasu był popularny 3-kolumnowy układ stron internetowych: w pierwszej kolumnie znajdowało się menu po lewej, w drugą kolumnę wrzucano treść, a w trzeciej kolumnie robiło się przykładowo drugie menu. Obecnie jednak nie używa się już tabel do budowania layoutów, choć jak najbardziej nadal można je stosować, ale tylko do danych, które są tabelaryczne (swego czasu krytyka tabel zaszła tak daleko, że praktycznie zaprzestano ich stosowania nawet wówczas, gdy było to zasadne).
 			</p>
 		</article>
 		<h3 class="article__header">Encje - entities</h3>
-		<p class="paragraph">
+		<p class="article__paragraph">
 			Encje to specjalne znaki, których nie ma na klawiaturze albo które ciężko wprowadzić z poziomu klawiatury, bo np. nadają znaczenie semantyczne. Żeby taki znak wprowadzić w treści należy użyć określonej składni, przykładowo dla znaczka &copy; jest to ampersand, nazwa tej encji oraz średnik, czyli & copy ; pisane bez spacji. Przykłądem mogą być też tagi, czyli nawiasy ostre użyte z elementami o znaczeniu semantycznym. Normalnie zapisany tag zamieni sie bowiem w prawdziwy element HTML, który jako taki będzie interpretowany przez przeglądarkę. A zatem używamy tu encji & lt ; pisanej bez spacji, jako otwarcia nawiasu ostrego (lub znaku mniejszości) przed jakimś znacznikiem HTML &lt; oraz encji & gt ; pisanej bez spacji, jako zamknięcia nawiasu ostrego (lub znaku większości) po danym znaczniku &lt;. Przy kopiowaniu takiego tagu ze strony internetowej, kopiujemy już jednak prawdziwy tag, a nie encję, za pomocą której został zapisany w kodzie. Znak jest zatem interpretowany poprawnie przy próbie kopiowania i zapisu.
 		</p>
-		<p class="paragraph">
+		<p class="article__paragraph">
 			Przykładowy zestaw encji wraz z ich opisem możemy znaleźć na stronie <a class="link" href="https://developer.mozilla.org/en-US/docs/Glossary/Entity">MDN - Mozilli dla developerów</a>. Poniżej znajduje się zestawienie podstawowych encji zapożyczone z tej właśnie strony. Na stronie MDN znajduje się jednak odnośnik do całej długiej listy nazwanych i opisanych encji, z których można skorzystać, jeśli do zapisu danego znaku specjalnego nie chcemy używać grafik.
 		</p>
 		<img class="image" src="/entity-examples.jpg" alt="Przykładowe encje i ich znaczenie."/>
