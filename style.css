@@ -90,3 +90,11 @@ html {
 .image {
 	max-width: 100%;
 }
+
+.description-list__term {
+	font-weight: 700;
+}
+
+.unordered-list {
+	list-style-type: none;
+}

@@ -156,6 +156,64 @@
 
 			</article>
 		</section>
+		<section class="section">
+			<h2 class="section__header">HTML - tydzień 5</h2>
+			<article class="article">
+				<h3 class="article__header">Listy i definicje</h3>
+				<dl class="description-list">
+				<dt class="description-list__term">Lista nieuporządkowana - unordered list (ul)</dt>
+					<dd class="description-list__details">
+				Lista nieuporządkowana, której nieodłączną częścią jest element listy - list item (li). Jeśli nie określimy sposobu, w jaki ma się lista wyświetlać, to przeglądarka nada jej swoje style domyślne, w tym przypadku elementy były wylistowane po kropkach, według stylu disc.
+			</dd>
+			<dt class="description-list__term">Lista uporządkowana - ordered list (ol)</dt>
+			<dd class="description-list__details">
+					Lista uporządkowana, której nieodłączną częścią jest element listy - list item (li). Jeśli nie określimy sposobu, w jaki ma się lista wyświetlać, to przeglądarka nada jej swoje style domyślne, w tym przypadku elementy były wyświetlone jako lista numeryczna.
+				</dd>
+				<dt class="description-list__term">Własność list-style-type</dt>
+				<dd class="description-list__details">
+					Możemy określić sposób wyświetania listy za pomocą własności list-style lub list-style-type. Po wpisaniu tej własności w pliku ze stylami, edytor podpowiada dostępne opcje. Jeśli chcemy, by lista wyświetlała sie bez żadnych elementów z przodu, nadajemy jej wartość list-style-type: none.</br>
+					W przypadku listy uporządkowanej, również możemy ją sobie dowolnie ostylować, np. wylistować elementy za pomocą kropek. Wizaualnie nie musi to być lista numeryczna, choć oczywiście jako lista uporządkowana, semantycznie kolejność będzie tu miała nadal znaczenie.
+				</dd>
+				<dt class="description-list__term">Zagnieżdżanie list</dt>
+				<dd class="description-list__details">
+					Listy możemy zagnieżdżać, robić sobie podlisty, przy czym nie muszą to być listy jednego typu, czyli w ramach listy nieuporządkowanej możemy sobie umieścić listę uporządkowaną lub odwrotnie. Istotne jest tylko to, by zagnieżdżenie znajdowało się w ramach któregoś z punktów listy, czyli list item (po otwarciu znacznika li i jego treści, ale przed domknięciem znacznika), a nie pomiędzy nimi. W tej drugiej opcji kod również nam się w jakiś sposób wyrenderuje, ale nie jest to poprawne.
+				</dd>
+				<img class="image" src="/list-tag.jpg" alt="Przykład kodu z listą nieuporządkowaną, w której zagnieżdżona jest lista uporządkowana."/>
+				<dt class="description-list__term">Lista definicji - description list (dl)</dt>
+				<dd class="description-list__details">
+					Lista definicji, której nieodłącznymi częściami są opisywany termin, czyli pojęcie - description term (dt) oraz opis, czyli szczegóły tego pojęcia/terminu - description details (dd). Nie jest to zbyt popularny znacznik, ale warto go znać.
+				</dd>
+				<img class="image" src="/description-list.jpg" alt="Przykład listy definicji."/>
+			</dl>
+			</article>
+			<article class="article">
+				<h3 class="article__header">Tabela</h3>
+			<p class="paragraph">
+				W tabeli (znacznik table) zawieramy dane tabelaryczne, czyli takie, które standardowo byśmy umieścili w tabeli. W skład znacznika table wchodzą następujące elementy:
+				<ul class="unordered-list">
+					<li class="unordered-list__element">tr - table row (wiersz tabeli)</li>
+					<li class="unordered-list__element">td - table data/cell (komórka tabeli)</li>
+					<li class="unordered-list__element">thead - table header (nagłówek tabeli)</li>
+					<li class="unordered-list__element">th - komórka w nagłówku tabeli</li>
+					<li class="unordered-list__element">tbody - "ciało" tabeli</li>
+					<li class="unordered-list__element">caption - opis tabeli</li>
+				</ul>
+			</p>
+			<img class="image" src="/table-example.jpg" alt="Przykład kodu tworzącego tabelę w html."/>
+			<p class="paragraph">
+				Kiedyś używano tabel do budowania całych stron - swego czasu był popularny 3-kolumnowy układ stron internetowych: w pierwszej kolumnie znajdowało się menu po lewej, w drugą kolumnę wrzucano treść, a w trzeciej kolumnie robiło się przykładowo drugie menu. Obecnie jednak nie używa się już tabel do budowania layoutów, choć jak najbardziej nadal można je stosować, ale tylko do danych, które są tabelaryczne (swego czasu krytyka tabel zaszła tak daleko, że praktycznie zaprzestano ich stosowania nawet wówczas, gdy było to zasadne).
+			</p>
+		</article>
+		<h3 class="article__header">Encje - entities</h3>
+		<p class="paragraph">
+			Encje to specjalne znaki, których nie ma na klawiaturze albo które ciężko wprowadzić z poziomu klawiatury, bo np. nadają znaczenie semantyczne. Żeby taki znak wprowadzić w treści należy użyć określonej składni, przykładowo dla znaczka &copy; jest to ampersand, nazwa tej encji oraz średnik, czyli & copy ; pisane bez spacji. Przykłądem mogą być też tagi, czyli nawiasy ostre użyte z elementami o znaczeniu semantycznym. Normalnie zapisany tag zamieni sie bowiem w prawdziwy element HTML, który jako taki będzie interpretowany przez przeglądarkę. A zatem używamy tu encji & lt ; pisanej bez spacji, jako otwarcia nawiasu ostrego (lub znaku mniejszości) przed jakimś znacznikiem HTML &lt; oraz encji & gt ; pisanej bez spacji, jako zamknięcia nawiasu ostrego (lub znaku większości) po danym znaczniku &lt;. Przy kopiowaniu takiego tagu ze strony internetowej, kopiujemy już jednak prawdziwy tag, a nie encję, za pomocą której został zapisany w kodzie. Znak jest zatem interpretowany poprawnie przy próbie kopiowania i zapisu.
+		</p>
+		<p class="paragraph">
+			Przykładowy zestaw encji wraz z ich opisem możemy znaleźć na stronie <a class="link" href="https://developer.mozilla.org/en-US/docs/Glossary/Entity">MDN - Mozilli dla developerów</a>. Poniżej znajduje się zestawienie podstawowych encji zapożyczone z tej właśnie strony. Na stronie MDN znajduje się jednak odnośnik do całej długiej listy nazwanych i opisanych encji, z których można skorzystać, jeśli do zapisu danego znaku specjalnego nie chcemy używać grafik.
+		</p>
+		<img class="image" src="/entity-examples.jpg" alt="Przykładowe encje i ich znaczenie."/>
+	</article>
+		</section>
 
 	</main>
     <footer class="footer">
