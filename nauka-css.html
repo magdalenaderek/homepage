@@ -29,13 +29,15 @@
 			<h2 class="section__header">CSS - tydzień 2</h2>
 			<article class="article">
 				<h3 class="article__header">CSS - podstawowe informacje i selektory, kolory</h3>
-				<p class="article__paragraph"><b>CSS – Cascading style sheets</b> – odpowiada za prezentację, wygląd treści.
+				<p class="article__paragraph"><b>CSS – Cascading style sheets</b> – odpowiada za prezentację, wygląd
+					treści.
 					Każdy język ma swoją składnię, w przypadku CSS są to reguły, mające następującą budowę: <br>
 					selektor { <br>
 					właściwość: wartość; <br>
 					}
 				</p>
-				<p class="article__paragraph">Style co do zasady definiuje się w osobnym pliku o rozszerzeniu .css, ale można je
+				<p class="article__paragraph">Style co do zasady definiuje się w osobnym pliku o rozszerzeniu .css, ale
+					można je
 					też zdefiniować w
 					pliku html w sekcji "head" poprzez dodanie znacznika "style", gdzie definiujemy właściwości
 					poszczególnych elementów, odnosząc się do nich za pomocą selektorów, którymi mogą być nazwy tych
@@ -44,7 +46,8 @@
 					color: green; <br>
 					}
 				</p>
-				<p class="article__paragraph">Sposobów zapisu kolorów jest kilka, np. angielska nazwa, zapis heksadecymalny,
+				<p class="article__paragraph">Sposobów zapisu kolorów jest kilka, np. angielska nazwa, zapis
+					heksadecymalny,
 					czyli w systemie
 					szestnastkowym - #xxyyzz, gdzie xx to kanał czerwony, yy to kanał zielony, a zz to kanał niebieski.
 					Style określa się jednak najczęściej w zewnętrznym arkuszu stylów, a w samym pliku html zawiera się
@@ -349,7 +352,7 @@
 					ten przydaje się przy stylowaniu, ale jeśli używamy go po prostu do opakowywywania treści, to
 					prawdopodobnie robimy to źle.
 				</p>
-				<h4 class="paragraph-header">Display: block</h4>
+				<p class="article__paragraph">Display: block</p>
 				<p class="article__paragraph">
 					Element, który ostylujemy, nadając mu własność display o wartości
 					block, zajmuje całą szerokość, jaką może zająć, a kolejne elementy będą przerzucane do nowej linii.
@@ -370,7 +373,7 @@
 				</p>
 				<img class="image" src="/display-block.jpg"
 					alt="Przykład treści ostylowanej za pomocą własności display: block." />
-				<h4 class="paragraph-header">Display: inline</h4>
+				<p class="article__paragraph">Display: inline</p>
 				<p class="article__paragraph">
 					Każdy z boxów, który ostylujemy w ten sposób, dostosowuje się do tego, co się
 					w nim znajduje. Nie zajmuje zatem całej dostępnej szerokości, a tylko taką, jaka potrzebna jest do
@@ -380,15 +383,17 @@
 				</p>
 				<img class="image" src="/display-inline.jpg"
 					alt="Przykład treści ostylowanej za pomocą własności display: inline." />
+				<p class="article__paragraph">Display: inline-block</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">Display: inline-block</h4>
-				Jest to hybryda wartości inline i block. Elementy ostylowane w ten
-				sposób, jeśli mają małą zawartość, to zachowują się jak elementy inline. Jeśli natomiast element jest
-				szerszy i wychodzi na kolejny wiersz, to rozszerza się i blokuje całą jego szerokość.<br> Jeśli
-				natomiast element taki będzie miał zdefiniowaną wysokość i szerokość, to podobnie, jak w przypadku
-				wartości block, gdy jest dostępna przestrzeń większa niż zdefiniowana, element będzie miał szerokość
-				określoną w definicji, ale pozostała przestrzeń nie będzie już dla niego zarezerwowana, zostanie zajęta
-				przez kolejny element.
+					Jest to hybryda wartości inline i block. Elementy ostylowane w ten
+					sposób, jeśli mają małą zawartość, to zachowują się jak elementy inline. Jeśli natomiast element
+					jest
+					szerszy i wychodzi na kolejny wiersz, to rozszerza się i blokuje całą jego szerokość.<br> Jeśli
+					natomiast element taki będzie miał zdefiniowaną wysokość i szerokość, to podobnie, jak w przypadku
+					wartości block, gdy jest dostępna przestrzeń większa niż zdefiniowana, element będzie miał szerokość
+					określoną w definicji, ale pozostała przestrzeń nie będzie już dla niego zarezerwowana, zostanie
+					zajęta
+					przez kolejny element.
 				</p>
 				<img class="image" src="/display-inline-block.jpg"
 					alt="Przykład treści ostylowanej za pomocą własności display: inline-block." />
@@ -405,36 +410,38 @@
 					zdefiniowane, to przy zmniejszaniu/zwiększaniu okna przeglądarki, wielkość elementu zmienia się,
 					dostosowując do dostępnego miejsca.
 				</p>
+				<p class="article__paragraph">max-width</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">max-width</h4>
-				Jeśli okno przeglądarki jest szersze niż zdefiniowana wartość dla szerkości elementu,
-				to jego szerokość jest dokładnie taka, jak określono w definicji. Jeśli natomiast zmiejszymy okno
-				przeglądarki i jej szerokość będzie mniejsza niż maksymalna szerokość zdefiniowana dla elementu, to
-				szerokość elementu się zmniejszy i dostosowuje się on do dostępnej przestrzeni. Czyli wraz ze zmianą
-				szerokości okna przeglądarki, szerokość elementu może się zmniejszać, ale nie zwiększy się bardziej niż
-				wartość określona w max-width.
+					Jeśli okno przeglądarki jest szersze niż zdefiniowana wartość dla szerkości elementu,
+					to jego szerokość jest dokładnie taka, jak określono w definicji. Jeśli natomiast zmiejszymy okno
+					przeglądarki i jej szerokość będzie mniejsza niż maksymalna szerokość zdefiniowana dla elementu, to
+					szerokość elementu się zmniejszy i dostosowuje się on do dostępnej przestrzeni. Czyli wraz ze zmianą
+					szerokości okna przeglądarki, szerokość elementu może się zmniejszać, ale nie zwiększy się bardziej
+					niż
+					wartość określona w max-width.
 				</p>
+				<p class="article__paragraph">max-height</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">max-height</h4>
-				Jeśli określimy max-height i będzie ona większa niż zawartość elementu, który
-				stanowi przykładowo jakiś literał, to w oknie przeglądarki element zajmie najmniejszą potrzebną mu
-				wysokość - w tym przypadku jeden wiersz. Jeśli natomiast zawartość elementu jest większa niż wartość
-				max-height, np. jest to wiele linijek tekstu, to element wyświetli się w maksymalnie określonej
-				wysokości, natomiast jego zawartość będzie wykraczać poza przewidzianą dla elementu przestrzeń.
+					Jeśli określimy max-height i będzie ona większa niż zawartość elementu, który
+					stanowi przykładowo jakiś literał, to w oknie przeglądarki element zajmie najmniejszą potrzebną mu
+					wysokość - w tym przypadku jeden wiersz. Jeśli natomiast zawartość elementu jest większa niż wartość
+					max-height, np. jest to wiele linijek tekstu, to element wyświetli się w maksymalnie określonej
+					wysokości, natomiast jego zawartość będzie wykraczać poza przewidzianą dla elementu przestrzeń.
 				</p>
 				<img class="image" src="/max-height.jpg"
 					alt="Przykład treści ostylowanej za pomocą wartości max-height, gdy zawartość elementu jest wyższa i wystaje poza element." />
+				<p class="article__paragraph">min-width</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">min-width</h4>
-				Jeśli ustalimy minimalną szerokość większą niż dostępna szerokość okna, to pojawi się
-				scroll, który pozwoli na dostanie się do niedostępnej części elementu.
+					Jeśli ustalimy minimalną szerokość większą niż dostępna szerokość okna, to pojawi się
+					scroll, który pozwoli na dostanie się do niedostępnej części elementu.
 				</p>
+				<p class="article__paragraph">min-height</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">min-height</h4>
-				Jeśli ustalimy minimalną wysokość dla elementów, to te elementy, których zawartość
-				nie przekracza ustalonej wysokości minimalnej będą miały taką wysokość, jak zdefiniowana minimalna.
-				Jeśli natomiast zawartość elementu ma większą wysokość niż zdefiniowana minimalna, to element przyjmie
-				taką wysokość, jaka jest potrzebna, by zmieścić zawartość.
+					Jeśli ustalimy minimalną wysokość dla elementów, to te elementy, których zawartość
+					nie przekracza ustalonej wysokości minimalnej będą miały taką wysokość, jak zdefiniowana minimalna.
+					Jeśli natomiast zawartość elementu ma większą wysokość niż zdefiniowana minimalna, to element
+					przyjmie
+					taką wysokość, jaka jest potrzebna, by zmieścić zawartość.
 				</p>
 			</article>
 			<article class="article">
@@ -442,88 +449,106 @@
 				<p class="article__paragraph">
 					Własność overflow definiuje, jak ma zachować się element w sytuacji, gdy treść za niego wystaje.<br>
 				</p>
+				<p class="article__paragraph">overflow: hidden</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">overflow: hidden</h4>
-				Ukrywa całą treść, która nie mieści się w elemencie, ucina wszystko, co
-				wystaje poza jego zdefiniowaną wysokość i szerokość.
+					Ukrywa całą treść, która nie mieści się w elemencie, ucina wszystko, co
+					wystaje poza jego zdefiniowaną wysokość i szerokość.
 				</p>
+				<p class="article__paragraph">overflow: auto</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">overflow: auto</h4>
-				W sytuacji, gdy zawrtość elementu jest wyższa niż element, własność overflow o
-				wartości auto dodaje wewnątrz elementu scrolla, który pozwala na dostęp do całej treści zawartej w
-				elemencie.
+					W sytuacji, gdy zawrtość elementu jest wyższa niż element, własność overflow o
+					wartości auto dodaje wewnątrz elementu scrolla, który pozwala na dostęp do całej treści zawartej w
+					elemencie.
 				</p>
 				<img class="image" src="/overflow-auto.jpg"
 					alt="Przykład treści ostylowanej za pomocą własności overflow: auto." />
+				<p class="article__paragraph">overflow: clip</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">overflow: clip</h4>
-				Na naszym obecnym przykładzie zachowuje się jak overflow:hidden, ale gdy
-				stylujemy nasze strony w bardziej zaawansowany sposób, to wykorzystujemy w sytuacji, gdy pewne elementy
-				chcemy tak wypozycjonować, by wykraczały poza nasze body.
+					Na naszym obecnym przykładzie zachowuje się jak overflow:hidden, ale gdy
+					stylujemy nasze strony w bardziej zaawansowany sposób, to wykorzystujemy w sytuacji, gdy pewne
+					elementy
+					chcemy tak wypozycjonować, by wykraczały poza nasze body.
 				</p>
+				<p class="article__paragraph">overflow: scroll</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">overflow: scroll</h4>
-				Dodawany jest scroll do wszystkich elementów ostylowanych w ten sposób,
-				niezależnie od wysokości i szerokości. Nie we wszystkich elementach scroll będzie działać, a jedynie w
-				tych, w przypadku których zawartość elementu wykracza poza określoną dla niego wysokość lub szerokość. W
-				przypadku overflow: auto, scroll dodawany jest tylko tam, gdzie jest naprawdę potrzebny.
+					Dodawany jest scroll do wszystkich elementów ostylowanych w ten sposób,
+					niezależnie od wysokości i szerokości. Nie we wszystkich elementach scroll będzie działać, a jedynie
+					w
+					tych, w przypadku których zawartość elementu wykracza poza określoną dla niego wysokość lub
+					szerokość. W
+					przypadku overflow: auto, scroll dodawany jest tylko tam, gdzie jest naprawdę potrzebny.
 				</p>
 				<img class="image" src="/overflow-scroll.jpg"
 					alt="Przykład treści ostylowanej za pomocą własności overflow: scroll." />
+				<p class="article__paragraph">overflow: visible</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">overflow: visible</h4>
-				Powoduje, że treść, która wykracza poza dostępną wysokość lub szerokość
-				elementu nie jest ukrywana, ale wystaje za element. Jeśli za elementem, z którego wystaje treść,
-				umieścimy kolejny, w którym określona dla niego zawrtość się mieści, to element ten dodawany jest od
-				razu za poprzedzającym go elementem. Przestrzeń nie jest rezerowana na niemieszczącą się treść. W takiej
-				sytuacji treści obu elementów mogą się na siebie nakładać.
+					Powoduje, że treść, która wykracza poza dostępną wysokość lub szerokość
+					elementu nie jest ukrywana, ale wystaje za element. Jeśli za elementem, z którego wystaje treść,
+					umieścimy kolejny, w którym określona dla niego zawrtość się mieści, to element ten dodawany jest od
+					razu za poprzedzającym go elementem. Przestrzeń nie jest rezerowana na niemieszczącą się treść. W
+					takiej
+					sytuacji treści obu elementów mogą się na siebie nakładać.
 				</p>
 				<img class="image" src="/overflow-visible.jpg"
 					alt="Przykład treści ostylowanej za pomocą własności overflow: visible." />
 			</article>
 			<article class="article">
 				<h3 class="article__header">Jednostki</h3>
+				<p class="article__paragraph">Piksele</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">Piksele</h4>
-				Wartość 0 możemy zapisywać bez jednostek. Nie ma znaczenia, czy są to piksele, procenty czy jeszcze coś
-				innego, zapisujemy po prostu 0.<br>
-				Piksele zapisujemy jako px, piksel jest to po prostu punkt na ekranie. Jednostke zapisujemy razem z
-				liczbą, bez spacji, np. 200px, w przeciwnym razie to nie zadziała. Piksel jako jednostka nie ma
-				przełożenia na gęstość pikselową ekranów. Piksele określające np. rozdzielczość HD składają się na
-				większe piksele, które stosowane są jako jednostki. To, że rozdzielczość ekranów zmienia się, składa się
-				na nią coraz większa liczba pikseli, poprawiając jakość obrazu, nie wpływa na zmianę wielkości piskeli
-				jako jednostek, które wciąż pozostają takie same. Przeglądarka sobie to poprawnie przelicza.
+					Wartość 0 możemy zapisywać bez jednostek. Nie ma znaczenia, czy są to piksele, procenty czy jeszcze
+					coś
+					innego, zapisujemy po prostu 0.<br>
+					Piksele zapisujemy jako px, piksel jest to po prostu punkt na ekranie. Jednostke zapisujemy razem z
+					liczbą, bez spacji, np. 200px, w przeciwnym razie to nie zadziała. Piksel jako jednostka nie ma
+					przełożenia na gęstość pikselową ekranów. Piksele określające np. rozdzielczość HD składają się na
+					większe piksele, które stosowane są jako jednostki. To, że rozdzielczość ekranów zmienia się, składa
+					się
+					na nią coraz większa liczba pikseli, poprawiając jakość obrazu, nie wpływa na zmianę wielkości
+					piskeli
+					jako jednostek, które wciąż pozostają takie same. Przeglądarka sobie to poprawnie przelicza.
 				</p>
+				<p class="article__paragraph">Procenty</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">Procenty</h4>
-				Procenty zapisujemy jako %, również bez spacji, np. 50%. Wartość ta musi mieć jakiś punkt odniesienia,
-				rodzica, w naszym przypadku będzie to po prostu body. Jeśli podamy dla elementu szerokość 50%, to będzie
-				on zajmował połowę dostępnego okna przeglądarki. W przypadku wysokości natomiast nie jest to już tak
-				proste, bo rodzic nie ma domyślnej wartości, do której moglibyśmy się odnieść, a wysokość okna zależy od
-				zawartości elementów, co może być zmienne. Jeśli chcemy wysokość jakiegość elementu określić procentowo,
-				to musimy zdefiniować wysokość dla wszystkich elementów nadrzędnych, w których dany element jest
-				zagnieżdżony. W przypadku div'a zagnieżdżonego bezpośrednio w body, aby określić jego procentową
-				wysokość, musimy określić wysokość body oraz naszego root'a, czyli html np. jako 100% albo w pikselach.
-				Generalnie jednak nie definiujemy wysokości w ten sposób jak na podanym przykładzie, jest to bardzo
-				ekstremalny przypadek.<br>
+					Procenty zapisujemy jako %, również bez spacji, np. 50%. Wartość ta musi mieć jakiś punkt
+					odniesienia,
+					rodzica, w naszym przypadku będzie to po prostu body. Jeśli podamy dla elementu szerokość 50%, to
+					będzie
+					on zajmował połowę dostępnego okna przeglądarki. W przypadku wysokości natomiast nie jest to już tak
+					proste, bo rodzic nie ma domyślnej wartości, do której moglibyśmy się odnieść, a wysokość okna
+					zależy od
+					zawartości elementów, co może być zmienne. Jeśli chcemy wysokość jakiegość elementu określić
+					procentowo,
+					to musimy zdefiniować wysokość dla wszystkich elementów nadrzędnych, w których dany element jest
+					zagnieżdżony. W przypadku div'a zagnieżdżonego bezpośrednio w body, aby określić jego procentową
+					wysokość, musimy określić wysokość body oraz naszego root'a, czyli html np. jako 100% albo w
+					pikselach.
+					Generalnie jednak nie definiujemy wysokości w ten sposób jak na podanym przykładzie, jest to bardzo
+					ekstremalny przypadek.
+				</p>
 				<img class="image" src="/height-in-percent.jpg"
-					alt="Przykład treści ostylowanej za pomocą wysokości zdefiniowanej w procentach." /><br>
-				Jeśli natomiast będziemy mieć element zawarty w innym elemencie, którego wysokość i szerokość zostały
-				zdefiniowane, do nadając temu zagnieżdżonemu elementowi wysokość i szerokość o wartości 50%, zajmie on
-				połowę wysokości i szerokości rodzica, a nie całego body.
-				</p>
+					alt="Przykład treści ostylowanej za pomocą wysokości zdefiniowanej w procentach." />
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">Viewport width i viewport height</h4>
-				Viewport width (vw) jest to jednostka odnosząca się do szerokości okna, w którym wyświetla się nasz
-				dokument. Jednostka ta zawsze działa w kontekście szerokości całego ekranu, czyli nawet jeśli mamy
-				element zagnieżdżony w innym elemencie o określonej szerokości, to nadając temu zagnieżdżonemu
-				elementowi szerokość 50vw, zajmie on połowę dostępnego ekranu, a nie połowę szerokości rodzica.<br>
-				W przypadku jednostki viewport height (vh) jej zastosowanie nie powoduje takich problemów jak
-				definiowanie wysokości w procentach. Jednostka vieport height bazuje na wysokości dostępnego okna, w
-				którym wyświetla się treść, a nie wysokości całego dokumentu. Czyli jeśli wysokość elementu zdefiniujemy
-				na 33vh, to zajmie on 33% dostępnego okna przeglądarki. Jeśli natomiast wysokość elementu zdefiniujemy
-				na 100vh, to zajmie on 100% dostępnego okna przeglądarki i by dostać się do treści spoza elementu,
-				będziemy musieli się przescrollować. Można w ten sposób np. wykonać pokaz slajdów na stronie.
+					Jeśli natomiast będziemy mieć element zawarty w innym elemencie, którego wysokość i szerokość
+					zostały
+					zdefiniowane, do nadając temu zagnieżdżonemu elementowi wysokość i szerokość o wartości 50%, zajmie
+					on
+					połowę wysokości i szerokości rodzica, a nie całego body.
+				</p>
+				<p class="article__paragraph">Viewport width i viewport height</p>
+				<p class="article__paragraph">
+					Viewport width (vw) jest to jednostka odnosząca się do szerokości okna, w którym wyświetla się nasz
+					dokument. Jednostka ta zawsze działa w kontekście szerokości całego ekranu, czyli nawet jeśli mamy
+					element zagnieżdżony w innym elemencie o określonej szerokości, to nadając temu zagnieżdżonemu
+					elementowi szerokość 50vw, zajmie on połowę dostępnego ekranu, a nie połowę szerokości rodzica.<br>
+					W przypadku jednostki viewport height (vh) jej zastosowanie nie powoduje takich problemów jak
+					definiowanie wysokości w procentach. Jednostka vieport height bazuje na wysokości dostępnego okna, w
+					którym wyświetla się treść, a nie wysokości całego dokumentu. Czyli jeśli wysokość elementu
+					zdefiniujemy
+					na 33vh, to zajmie on 33% dostępnego okna przeglądarki. Jeśli natomiast wysokość elementu
+					zdefiniujemy
+					na 100vh, to zajmie on 100% dostępnego okna przeglądarki i by dostać się do treści spoza elementu,
+					będziemy musieli się przescrollować. Można w ten sposób np. wykonać pokaz slajdów na stronie.
 				</p>
 			</article>
 			<article class="article">
@@ -540,72 +565,94 @@
 					ma być oddalony od innych elementów i o ile te inne elementy mają być oddalone od naszego
 					elementu.<br>
 					Box model dla danego elementu można podejrzeć w devtools. Wartości są tam opisane w pikselach.<br>
-					<img class="image" src="/box-model.jpg"
-						alt="Box model składający się z elementu, paddingu, borderu i marginu." />
 				</p>
+				<img class="image" src="/box-model.jpg"
+					alt="Box model składający się z elementu, paddingu, borderu i marginu." />
+				<p class="article__paragraph">Padding</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">Padding</h4>
-				Padding, czyli wewnętrzny margines, jest własnością, która posiada kilka wartości. Można go opisać w
-				sposób pełny, podając odległość od treści elementu od ramki po stronie lewej, prawej oraz od góry i
-				dołu, opisując każdą z wartości osobno i definiując je w sposob jawny. Można również dokonać zapisu
-				skrótowego (shorthand), bez opisywania każdej strony osobno, podając same wartości dla paddingu według
-				określonej kolejności, zgodnie z ruchem wskazówek zegara: góra prawo, dół, lewo. Jeśli natomiast padding
-				będzie miał przypisaną tylko jedną wartość, to będzie ona miała zastosowanie do wszystkich czterech
-				stron. Innymi słowy, jeśłi wszystkie wartości paddingu są takie same, to wystarczy opisać padding za
-				pomocą tej jednej wartości (np. padding: 10px), bez wyszczególniania padding-bottom, padding-top,
-				padding-left, padding-right.<br>
+					Padding, czyli wewnętrzny margines, jest własnością, która posiada kilka wartości. Można go opisać w
+					sposób pełny, podając odległość od treści elementu od ramki po stronie lewej, prawej oraz od góry i
+					dołu, opisując każdą z wartości osobno i definiując je w sposob jawny. Można również dokonać zapisu
+					skrótowego (shorthand), bez opisywania każdej strony osobno, podając same wartości dla paddingu
+					według
+					określonej kolejności, zgodnie z ruchem wskazówek zegara: góra prawo, dół, lewo. Jeśli natomiast
+					padding
+					będzie miał przypisaną tylko jedną wartość, to będzie ona miała zastosowanie do wszystkich czterech
+					stron. Innymi słowy, jeśłi wszystkie wartości paddingu są takie same, to wystarczy opisać padding za
+					pomocą tej jednej wartości (np. padding: 10px), bez wyszczególniania padding-bottom, padding-top,
+					padding-left, padding-right.
+				</p>
 				<img class="image" src="/padding-description.jpg"
 					alt="Przykład zapisu pełnego i skróconego dla paddingu." /> <br>
-				Padding można opisać również za pomocą tzw. wartości lustrzanych, jeśli chcemy, by wartości góra/dół
-				oraz prawo/lewo, były takie same. Możemy podać w takiej sytuacji dla paddingu tylko dwie wartości i
-				wówczas zostaną one dobrane parami - pierwsza zostanie przypisana do odległości góra/dół, z kolei druga
-				dla stron prawo/lewo.<br>
-				<img class="image" src="/padding-mirror-values.jpg"
-					alt="Przykład zapisu wartości lustrzanych dla paddingu." /><br>
-				</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">Border</h4>
-				Podobnie jak padding, border również może być opisany w sposób pełny i zawierający definicje wszystkich
-				własności lub w sposób skrótowy (shorthand), gdzie wszytskie wartości są wrzucone do jednej własności o
-				nazwie border. Border może być opisany za pomocą wartości:<br>
-				- border-width - opisuje szerokość ramki;<br>
-				- border-style - opisuje styl ramki, wartość ta musi być podana, by ramka się w ogóle pojawiła;<br>
-				- border-color - opisuje kolor ramki.<br>
-				Jeśli dany element zostanie ostylowany podwójnie, np. za pomocą opisu pełnego i skrótowego, gdzie będą
-				podane różne wartości, to zgodnie z ogólnymi regułami specyficzności, zastosowanie będzie miał styl
-				znajdujący się niżej w pliku, czyli ten, który de facto jest bliżej danego elementu.<br>
-				Ramka nie musi znajdować się po każdej ztronie elementu, możemy sobie zdefiniować, po której stronie
-				chcemy ją umieścić, opisując ją za pomocą wartości border-bottom, border-left, border-top, border-right,
-				definiując tylko tę stronę, po której chcemy mieć ramkę. Jeśli natomiast damy definicję ogólną dla
-				border, to style poszczególnych stron ramki możemy sobie nadpisywać dodając definicje np. dla border-top
-				i border-bottom. W podanym przykładzie ramka po stronie lewej i prawej będzie ostylowana według
-				definicji ogólnej, natomiast góra i dół ramki zostaną ostylowane według definicji szczegółówych
-				określonych w sposób jawny dla border-bottom i border-top.<br>
+					Padding można opisać również za pomocą tzw. wartości lustrzanych, jeśli chcemy, by wartości góra/dół
+					oraz prawo/lewo, były takie same. Możemy podać w takiej sytuacji dla paddingu tylko dwie wartości i
+					wówczas zostaną one dobrane parami - pierwsza zostanie przypisana do odległości góra/dół, z kolei
+					druga
+					dla stron prawo/lewo.
+				</p>
+				<img class="image" src="/padding-mirror-values.jpg"
+					alt="Przykład zapisu wartości lustrzanych dla paddingu." />
+				<p class="article__paragraph">Border</p>
+				<p class="article__paragraph">
+					Podobnie jak padding, border również może być opisany w sposób pełny i zawierający definicje
+					wszystkich
+					własności lub w sposób skrótowy (shorthand), gdzie wszytskie wartości są wrzucone do jednej
+					własności o
+					nazwie border. Border może być opisany za pomocą wartości:<br>
+					- border-width - opisuje szerokość ramki;<br>
+					- border-style - opisuje styl ramki, wartość ta musi być podana, by ramka się w ogóle pojawiła;<br>
+					- border-color - opisuje kolor ramki.<br>
+					Jeśli dany element zostanie ostylowany podwójnie, np. za pomocą opisu pełnego i skrótowego, gdzie
+					będą
+					podane różne wartości, to zgodnie z ogólnymi regułami specyficzności, zastosowanie będzie miał styl
+					znajdujący się niżej w pliku, czyli ten, który de facto jest bliżej danego elementu.<br>
+					Ramka nie musi znajdować się po każdej ztronie elementu, możemy sobie zdefiniować, po której stronie
+					chcemy ją umieścić, opisując ją za pomocą wartości border-bottom, border-left, border-top,
+					border-right,
+					definiując tylko tę stronę, po której chcemy mieć ramkę. Jeśli natomiast damy definicję ogólną dla
+					border, to style poszczególnych stron ramki możemy sobie nadpisywać dodając definicje np. dla
+					border-top
+					i border-bottom. W podanym przykładzie ramka po stronie lewej i prawej będzie ostylowana według
+					definicji ogólnej, natomiast góra i dół ramki zostaną ostylowane według definicji szczegółówych
+					określonych w sposób jawny dla border-bottom i border-top.
+				</p>
 				<img class="image" src="/border-description.jpg"
-					alt="Własność border opisana w sposób pełny i skrótowy." /><br>
-				Do ramki można dodać również efekt zaokrąglenia za pomocą wartości <strong>border-radius</strong>. Żeby
-				skorzystać z tego efektu nie musimy wcale mieć definicji dla ramki - w takiej sytuacji zaokrąglony
-				zostanie sam element. Border-radius opisujemy za pomocą pikseli lub procentów. Jeśli określimy, ze
-				border-radius: 100%, to dany element zostanie zaokrąglony na całej długości i szerokości. Border-radius
-				można również wykorzystać do zrobienia kółka za pomocą CSS. Aby uzyskać taki efekt, element musi mieć
-				taką samą wysokość i szerokość i definiujemy dla niego border-radius: 100%.<br>
+					alt="Własność border opisana w sposób pełny i skrótowy." />
+				<p class="article__paragraph">
+					Do ramki można dodać również efekt zaokrąglenia za pomocą wartości <strong>border-radius</strong>.
+					Żeby
+					skorzystać z tego efektu nie musimy wcale mieć definicji dla ramki - w takiej sytuacji zaokrąglony
+					zostanie sam element. Border-radius opisujemy za pomocą pikseli lub procentów. Jeśli określimy, ze
+					border-radius: 100%, to dany element zostanie zaokrąglony na całej długości i szerokości.
+					Border-radius
+					można również wykorzystać do zrobienia kółka za pomocą CSS. Aby uzyskać taki efekt, element musi
+					mieć
+					taką samą wysokość i szerokość i definiujemy dla niego border-radius: 100%.
+				</p>
 				<img class="image" src="/border-radius.jpg"
 					alt="Przykłady elementów ostylowanych za pomocą własności border-radius." />
-				</p>
+				<p class="article__paragraph">Margin</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">Margin</h4>
-				Marginesy zapisujemy tak samo jak padding. Marginesy zewnętrzne nakładają się na siebie, co oznacza, że
-				jeśli mamy obok siebie dwa elementy i dla jednego zdefiniujemy margin: 100px, a dla drugiego margin:
-				120px, to odległość między tymi elementami wyniesie 120px, a nie 220px. Dla marginesów występują również
-				wartości lustrzane, które wykorzystywane są często by wyśrodkować dany element. By uzyskać taki efekt do
-				własności margin dodajemy dwie wartości - odstęp oraz auto, np. margin: 50px auto. Jeśli element zajmuje
-				całą dostępną szerokość okna, to będzie po prostu oddalony o krawędzi okna o wartość zdefiniowaną dla
-				margin, jeśli jednak szerokość elementu jest mniejsza niż dostępne okno przeglądarki, to wartość auto
-				sprawi, że element zostanie wyśrodkowany. Jeśli dany element jest zagnieżdżony w innym divie, to w takim
-				przypadku będzie centrowany nie do dostępnego okna, ale w ramach swojego rodzica, nadrzędnego diva.<br>
+					Marginesy zapisujemy tak samo jak padding. Marginesy zewnętrzne nakładają się na siebie, co oznacza,
+					że
+					jeśli mamy obok siebie dwa elementy i dla jednego zdefiniujemy margin: 100px, a dla drugiego margin:
+					120px, to odległość między tymi elementami wyniesie 120px, a nie 220px. Dla marginesów występują
+					również
+					wartości lustrzane, które wykorzystywane są często by wyśrodkować dany element. By uzyskać taki
+					efekt do
+					własności margin dodajemy dwie wartości - odstęp oraz auto, np. margin: 50px auto. Jeśli element
+					zajmuje
+					całą dostępną szerokość okna, to będzie po prostu oddalony o krawędzi okna o wartość zdefiniowaną
+					dla
+					margin, jeśli jednak szerokość elementu jest mniejsza niż dostępne okno przeglądarki, to wartość
+					auto
+					sprawi, że element zostanie wyśrodkowany. Jeśli dany element jest zagnieżdżony w innym divie, to w
+					takim
+					przypadku będzie centrowany nie do dostępnego okna, ale w ramach swojego rodzica, nadrzędnego diva.
+				</p>
 				<img class="image" src="/margin-auto.jpg"
 					alt="Element wyśrodkowany za pomocą wartości auto zdefiniowanej dla marginesu." />
-				</p>
 			</article>
 			<article class="article">
 				<h3 class="article__header">Box sizing - content-box versus border-box</h3>
@@ -622,9 +669,11 @@
 					elementu, wartości paddingu i borderu. Wartość border-box jest obecnie stosowana jako rozwiązanie
 					standardowe dla określania box sizing.<br>
 					Zarówno w przypadku content-box, jak i border-box, wielkość marginesu nie wpływa na wielkość
-					elementu, gdyż margines znajduje się już poza elementem.<br>
-					<img class="image" src="/box-sizing.jpg"
-						alt="Porównanie elementów określonych za pomocą content-box i border-box." /><br>
+					elementu, gdyż margines znajduje się już poza elementem.
+				</p>
+				<img class="image" src="/box-sizing.jpg"
+					alt="Porównanie elementów określonych za pomocą content-box i border-box." />
+				<p class="article__paragraph">
 					Jeśli mamy dwa elementy, z których jeden jest ostylowany za pomocą border-box, a drugi za pomocą
 					content-box i chcemy, by oba miały taką samą wysokość i szerokość równą 200px, padding o wartości
 					40px i border równy 20px, to w przypadku elementu ostylowanego za pomocą box-sizing: border-box,
@@ -637,113 +686,149 @@
 			</article>
 			<article class="article">
 				<h3 class="article__header">Position i float</h3>
+				<p class="article__paragraph">Position: static</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">Position: static</h4>
-				Własność position: static oznacza, że to przeglądarka decyduje, gdzie dany element umieścić, wyliczając
-				to sobie na podstawie zdefiniowanych stylów dla elementów na stronie (czy blok, czy inline, odległości,
-				etc.). Jest to wartość domyślna, znajduje zastosowanie, gdy nie ma określonej wprost wartości dla
-				position. Można ją jednak również określić jawnie.
+					Własność position: static oznacza, że to przeglądarka decyduje, gdzie dany element umieścić,
+					wyliczając
+					to sobie na podstawie zdefiniowanych stylów dla elementów na stronie (czy blok, czy inline,
+					odległości,
+					etc.). Jest to wartość domyślna, znajduje zastosowanie, gdy nie ma określonej wprost wartości dla
+					position. Można ją jednak również określić jawnie.
 				</p>
+				<p class="article__paragraph">Position: relative, position: absolute</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">Position: relative, position: absolute</h4>
-				Własność position: relative pozwala na stworzenie przestrzeni, względem której możemy umieszczać inne
-				elementy. Po dodaniu tego stylu wygląd elementu się nie zmienia, ale stworzona za jego pomocą przestrzeń
-				umożliwia wykorzystanie własności position: absolute.<br>
-				Position: absolute pozwala na pozycjonowanie względem elementu, który ma zdefiniowaną pozycję relative.
-				Element z pozycją absolute może być przesuwany po stworzonej warstwie względem rodzica, który jest w
-				pozycji relative za pomocą wartości top, right, bottom, left. Pozycja jest liczona od krawędzi elementu,
-				nie uwzględniając bordera.<br>
+					Własność position: relative pozwala na stworzenie przestrzeni, względem której możemy umieszczać
+					inne
+					elementy. Po dodaniu tego stylu wygląd elementu się nie zmienia, ale stworzona za jego pomocą
+					przestrzeń
+					umożliwia wykorzystanie własności position: absolute.<br>
+					Position: absolute pozwala na pozycjonowanie względem elementu, który ma zdefiniowaną pozycję
+					relative.
+					Element z pozycją absolute może być przesuwany po stworzonej warstwie względem rodzica, który jest w
+					pozycji relative za pomocą wartości top, right, bottom, left. Pozycja jest liczona od krawędzi
+					elementu,
+					nie uwzględniając bordera.
+				</p>
 				<img class="image" src="/position-absolute.jpg"
 					alt="Przykład elementu ostylowanego za pomocą position: absolute." />
-				</p>
+				<p class="article__paragraph">z-index</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">z-index</h4>
-				Jeśli dwa elementy mają zdefiniowaną tę samą pozycję, to widoczny na wierzchu jest ten, którego
-				definicja stylu znajduje się bliżej końca pliku, czyli ten, który renderuje się później (renderowanie -
-				proces przekształcania kodu i danych w finalną postać, która jest widoczna i interaktywna dla
-				użytkownika. Polega na konwersji abstrakcyjnych danych w konkretne elementy graficzne lub wizualne
-				reprezentacje). W takiej sytuacji umiejscowieniem elementu można sterować za pomocą własności z-index,
-				która odpowiada za warstwowanie - im wyższa wartość z-index, tym dany element jest wyżej. Do
-				pozycjonowania staramy się używać sensownych, niezbyt dużych liczb (np. z-index: 10;) i zwiększać je
-				powoli. Wóczas zastosowanie dużej liczby, np. 1000 sprawi, że elementy wypozycjonowane niżej znajdą się
-				pod spodem i nie będą zasłaniały wybranego elementu.<br>
+					Jeśli dwa elementy mają zdefiniowaną tę samą pozycję, to widoczny na wierzchu jest ten, którego
+					definicja stylu znajduje się bliżej końca pliku, czyli ten, który renderuje się później
+					(renderowanie -
+					proces przekształcania kodu i danych w finalną postać, która jest widoczna i interaktywna dla
+					użytkownika. Polega na konwersji abstrakcyjnych danych w konkretne elementy graficzne lub wizualne
+					reprezentacje). W takiej sytuacji umiejscowieniem elementu można sterować za pomocą własności
+					z-index,
+					która odpowiada za warstwowanie - im wyższa wartość z-index, tym dany element jest wyżej. Do
+					pozycjonowania staramy się używać sensownych, niezbyt dużych liczb (np. z-index: 10;) i zwiększać je
+					powoli. Wóczas zastosowanie dużej liczby, np. 1000 sprawi, że elementy wypozycjonowane niżej znajdą
+					się
+					pod spodem i nie będą zasłaniały wybranego elementu.
+				</p>
 				<img class="image" src="/z-index.jpg"
-					alt="Przykład warstwowania elementów za pomocą własności z-index." /><br>
-				Warstwowanie elementów na stronie jest dobrze zobrazowane w przeglądarce Edge. Po uruchomieniu w
-				devtools za pomocą skrótu ctrl + shift + p panelu wyszukiwania należy wpisać i wybrać '3d view' i
-				wówczas pojawi się zakładka, w której możemy podejrzeć naszą stronę w ujęciu trójwymiarowym. Widok można
-				obracać stosując strzałki widoczne w oknie. Jedną z opcji widoku jest z-index, gdzie można podejrzeć jak
-				elementy układają się na warstwach według zdefiniowanych wartości z-index.<br>
-				<img class="image" src="/3Dview.jpg"
-					alt="Widok okna 3d view w narzędziach developerskich na przeglądarce Chrome." /><br>
-				Panel 3D view posiada również zakładkę DOM, w której można podejrzeć zagnieżdżenia elementów na stronie
-				w ujęciu trójwymiarowym, czyli jak strona jest zbudowana.
-				</p>
+					alt="Przykład warstwowania elementów za pomocą własności z-index." />
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">Position: fixed</h4>
-				Własność position o wartości fixed pozwala na przyklejenie elementu do viewportu, czyli widocznego okna
-				przeglądarki. Ostylowany w ten sposób element wyskakuje z pudełka i przykleja się w zdefiniowanym
-				miejscu przeglądarki. Jeśłi nadamy takiemu elementowi dodatkowo z-index o wartości ujemnej, np. -1, to
-				scrollując treści w oknie przeglądarki, będzie on się cały czas przesuwał, by być widoczny w viewport,
-				ale będzie się chował pod innymi elementami, które domyślnie mają przypisaną wartość z-index: 0. Wartość
-				fixed jest często używana w urządzenianiach mobilnych, np. do przyklejenia przycisku menu.<br>
+					Warstwowanie elementów na stronie jest dobrze zobrazowane w przeglądarce Edge. Po uruchomieniu w
+					devtools za pomocą skrótu ctrl + shift + p panelu wyszukiwania należy wpisać i wybrać '3d view' i
+					wówczas pojawi się zakładka, w której możemy podejrzeć naszą stronę w ujęciu trójwymiarowym. Widok
+					można
+					obracać stosując strzałki widoczne w oknie. Jedną z opcji widoku jest z-index, gdzie można podejrzeć
+					jak
+					elementy układają się na warstwach według zdefiniowanych wartości z-index.
+				</p>
+				<img class="image" src="/3Dview.jpg"
+					alt="Widok okna 3d view w narzędziach developerskich na przeglądarce Chrome." />
+				<p class="article__paragraph">
+					Panel 3D view posiada również zakładkę DOM, w której można podejrzeć zagnieżdżenia elementów na
+					stronie
+					w ujęciu trójwymiarowym, czyli jak strona jest zbudowana.
+				</p>
+				<p class="article__paragraph">Position: fixed</p>
+				<p class="article__paragraph">
+					Własność position o wartości fixed pozwala na przyklejenie elementu do viewportu, czyli widocznego
+					okna
+					przeglądarki. Ostylowany w ten sposób element wyskakuje z pudełka i przykleja się w zdefiniowanym
+					miejscu przeglądarki. Jeśłi nadamy takiemu elementowi dodatkowo z-index o wartości ujemnej, np. -1,
+					to
+					scrollując treści w oknie przeglądarki, będzie on się cały czas przesuwał, by być widoczny w
+					viewport,
+					ale będzie się chował pod innymi elementami, które domyślnie mają przypisaną wartość z-index: 0.
+					Wartość
+					fixed jest często używana w urządzenianiach mobilnych, np. do przyklejenia przycisku menu.
+				</p>
 				<img class="image" src="/position-fixed.jpg"
 					alt="Przykład ostylowania elementu za pomocą własności position: fxed." />
-				</p>
+				<p class="article__paragraph">Position: sticky</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">Position: sticky</h4>
-				Wartość sticky jest bardzo przydatna, np. gdy mamy dłuższe treści i chcemy przykleić nagłówek wewnątrz
-				danego kontenera. Należy mieć jednak na uwadze, że styl sticky nie zadziała, jeśli rodzic danego
-				elementu ostylowanego w ten sposób ma przypisaną własność overflow. Dodatkowo, element, któremu
-				nadajemy własność sticky musi zostać jakoś umiejscowiony w kontenerze względem viewport, np. za pomocą
-				własności top: 0. W tym przypadku element sticky przyklei się do góry strony i gdy będziemy scrollować
-				stronę, zostanie cały czas w tym samym miejscu aż do momentu, gdy wyjdziemy z danego elementu
-				rodzicielskiego, wówczas nie będzie się już dalej przesuwał i zniknie z viewport razem z całym
-				kontenerem. Sticky bowiem działa tylko wewnątrz danego rodzica. Można go wykorzystać np. gdy mamy
-				dłuższy tekst i chcemy, by nagłówki się przyklejały w pewnym momencie przy scrollowaniu dalszej części
-				tekstu. Odległość od góry strony można oczywiście określić według potrzeb.<br>
+					Wartość sticky jest bardzo przydatna, np. gdy mamy dłuższe treści i chcemy przykleić nagłówek
+					wewnątrz
+					danego kontenera. Należy mieć jednak na uwadze, że styl sticky nie zadziała, jeśli rodzic danego
+					elementu ostylowanego w ten sposób ma przypisaną własność overflow. Dodatkowo, element, któremu
+					nadajemy własność sticky musi zostać jakoś umiejscowiony w kontenerze względem viewport, np. za
+					pomocą
+					własności top: 0. W tym przypadku element sticky przyklei się do góry strony i gdy będziemy
+					scrollować
+					stronę, zostanie cały czas w tym samym miejscu aż do momentu, gdy wyjdziemy z danego elementu
+					rodzicielskiego, wówczas nie będzie się już dalej przesuwał i zniknie z viewport razem z całym
+					kontenerem. Sticky bowiem działa tylko wewnątrz danego rodzica. Można go wykorzystać np. gdy mamy
+					dłuższy tekst i chcemy, by nagłówki się przyklejały w pewnym momencie przy scrollowaniu dalszej
+					części
+					tekstu. Odległość od góry strony można oczywiście określić według potrzeb.
+				</p>
 				<img class="image" src="/position-sticky.jpg"
-					alt="Przykład ostylowania elementu za pomocą własności position: sticky." /><br>
-				Do niedawna, zanim powstała własność position: sticky, ten sposób ostylowania elementu trzeba było
-				kodować w JS. Ponadto, w odróżnieniu od wartości absolute, która żyje swoim życiem i nie zmienia treści
-				elementu, wartość sticky stanowi element treści i zachowuje się tak, jak cała reszta treści, dopóki nie
-				zaczniemy scrollować. W związku z tym nie musimy podawać dla sticky dodatkowych paddingów i marginesów,
-				Przeglądarka sama sobie to wyliczy. Wystarczy podać jakąś wartość top, a w przypadku stron scrollowanych
-				w poziomie, jakąś odległość left lub right.
-				</p>
+					alt="Przykład ostylowania elementu za pomocą własności position: sticky." />
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">Float</h4>
-				Element ostylowany za pomocą wartości float zachowuje się w ten sposób, że jest opływany przez treść,
-				która znajduje się po nim. Float może przykleić nasz element do lewej strony (float: left;) lub prawej
-				(float: right;).
-				Kiedyś stylowanie za pomocą float było bardzo popularne jako technika budowania stron internetowych, ale
-				obecnie Maciek go nie rekomenduje. Można go wykorzystać do rozrzucania tekstu np. do wrzucenia w treść
-				obrazka, ostylowania jakiegoś obrazka w taki sposób, by był opływany przez tekst. <strong>Float nie
-					służy do budowania layoutów.</strong> Obecnie wykorzystywane są do tego nowoczesne techniki, które
-				będą omówione później.<br>
+					Do niedawna, zanim powstała własność position: sticky, ten sposób ostylowania elementu trzeba było
+					kodować w JS. Ponadto, w odróżnieniu od wartości absolute, która żyje swoim życiem i nie zmienia
+					treści
+					elementu, wartość sticky stanowi element treści i zachowuje się tak, jak cała reszta treści, dopóki
+					nie
+					zaczniemy scrollować. W związku z tym nie musimy podawać dla sticky dodatkowych paddingów i
+					marginesów,
+					Przeglądarka sama sobie to wyliczy. Wystarczy podać jakąś wartość top, a w przypadku stron
+					scrollowanych
+					w poziomie, jakąś odległość left lub right.
+				</p>
+				<p class="article__paragraph">Float</p>
+				<p class="article__paragraph">
+					Element ostylowany za pomocą wartości float zachowuje się w ten sposób, że jest opływany przez
+					treść,
+					która znajduje się po nim. Float może przykleić nasz element do lewej strony (float: left;) lub
+					prawej
+					(float: right;).
+					Kiedyś stylowanie za pomocą float było bardzo popularne jako technika budowania stron internetowych,
+					ale
+					obecnie Maciek go nie rekomenduje. Można go wykorzystać do rozrzucania tekstu np. do wrzucenia w
+					treść
+					obrazka, ostylowania jakiegoś obrazka w taki sposób, by był opływany przez tekst. <strong>Float nie
+						służy do budowania layoutów.</strong> Obecnie wykorzystywane są do tego nowoczesne techniki,
+					które
+					będą omówione później.
+				</p>
 				<img class="image" src="/float.jpg" alt="Elementy ostylowane za pomocą własności float." />
-				</p>
+				<p class="article__paragraph">Clear</p>
 				<p class="article__paragraph">
-				<h4 class="paragraph-header">Clear</h4>
-				Własność clear czyści nam floaty. Jeśli do kontenera div, w którym znajdują się elementy mające
-				zdefiniowaną własność float, dodamy kolejnego diva ostylowanego za pomocą własności clear, to wyczyści
-				on floaty zdefiniowane w ramach tego samego diva rodzicielskiego (clear: both). Elementy o wartości
-				float nadal będą przyklejone do lewej lub prawej, ale tekst spadnie poniżej. Sam div ostylowany za
-				pomocą clear nie jest widoczny bezpośrednio na stronie, wpływa jedynie na inne elementy.<br>
-				<img class="image" src="/clear.jpg" alt="Przykład użycia własności clear." />
+					Własność clear czyści nam floaty. Jeśli do kontenera div, w którym znajdują się elementy mające
+					zdefiniowaną własność float, dodamy kolejnego diva ostylowanego za pomocą własności clear, to
+					wyczyści
+					on floaty zdefiniowane w ramach tego samego diva rodzicielskiego (clear: both). Elementy o wartości
+					float nadal będą przyklejone do lewej lub prawej, ale tekst spadnie poniżej. Sam div ostylowany za
+					pomocą clear nie jest widoczny bezpośrednio na stronie, wpływa jedynie na inne elementy.
 				</p>
+				<img class="image" src="/clear.jpg" alt="Przykład użycia własności clear." />
 			</article>
 			<article class="article">
 				<h3 class="article__header">Normalizacja vs reset</h3>
-				<h4 class="paragraph-header">Domyślne style przeglądarki</h4>
+				<p class="article__paragraph">Domyślne style przeglądarki</p>
 				<p class="article__paragraph">
 					Normalizacja i reset to metody ujednolicania stylów. Przeglądarki internetowe posiadają bowiem swoje
 					style domyślne, które nadają wszystkim elementom na stronie. Można je podejrzeć w devtools, na
-					przykładzie poniżej są opisane jako "user agent stylesheet".<br>
-					<img class="image" src="/browser-default-styles.jpg"
-						alt="Podgląd domyśnych stylów przeglądarki w devtools." />
+					przykładzie poniżej są opisane jako "user agent stylesheet".
 				</p>
-				<h4 class="paragraph-header">Reset</h4>
+				<img class="image" src="/browser-default-styles.jpg"
+					alt="Podgląd domyśnych stylów przeglądarki w devtools." />
+				<p class="article__paragraph">Reset</p>
 				<p class="article__paragraph">
 					Reset jest pierwszą z technik, która powstała, by ujednolicić style. Kod umieszczamy w znaczniku
 					style, który dodajemy w sekcji head w tym miejscu, gdzie linkuje się plik ze stylami. Jako selektor
@@ -755,11 +840,11 @@
 					ta może zatem budzić wątpliwości w kontekście dostępności strony. Maciek zaleca więc, by parametru
 					outline nie resetować.<br>
 					Niektórzy do resetu dodawali jeszcze własność font-size o wartości 16px. Obecnie jednak od
-					stosowania resetu już się odchodzi.<br>
+					stosowania resetu już się odchodzi.
 				</p>
 				<img class="image" src="/styles-reset.jpg"
 					alt="Kod do ujednolicania domyślnych stylów przeglądarki za pomocą metody reset." />
-				<h4 class="paragraph-header">Normalizacja</h4>
+				<p class="article__paragraph">Normalizacja</p>
 				<p class="article__paragraph">
 					Normalizacja jest kolejną metodą, która powstała, by znormalizować, ujednolicić style między
 					przeglądarkami, ponieważ każda z przeglądarek może nieco inaczej interpretować i wyświetlać elementy
@@ -781,37 +866,59 @@
 					trzykrotnie, osobno dla każdego z nich.<br>
 				</p>
 				<img class="image" src="/normalize-box-sizing.jpg" alt="Kod do normalizacji własności box-sizing." />
-
 			</article>
 			<article class="article">
 				<h3 class="article__header">BEM - block element modifier</h3>
 				<p class="article__paragraph">
-					BEM to sposób nazywania klass CSS, który wprowadza porządek do projektu. Jest to odpowiedź na wysoki stopień skomplikowania stylowania oraz brak ujednolicenia jego stosowania. Pozwala ponadto na odwzorowanie struktury HTML w CSS poprzez nadawanie nazwom klas sensu semantycznego.
+					BEM to sposób nazywania klass CSS, który wprowadza porządek do projektu. Jest to odpowiedź na wysoki
+					stopień skomplikowania stylowania oraz brak ujednolicenia jego stosowania. Pozwala ponadto na
+					odwzorowanie struktury HTML w CSS poprzez nadawanie nazwom klas sensu semantycznego.
 				</p>
 				<ul class="unordered-list">
 					<li class="unordered-list__element">Block - nadrzędny element.</li>
-					<li class="unordered-list__element">Element - część bloku, nie musi być bezpośrednim dzieckiem, może być zagnieżdżona głębiej, ale musi się odnosić w jakiś logiczny sposób do elementu nadrzędnego jeśli chodzi o nazewnictwo.</li>
-					<li class="unordered-list__element">Modifier - modyfikator, jeśli element występuje w kilku wariantach, to tworzymy dla nich dodatkową klasę.</li>
+					<li class="unordered-list__element">Element - część bloku, nie musi być bezpośrednim dzieckiem, może
+						być zagnieżdżona głębiej, ale musi się odnosić w jakiś logiczny sposób do elementu nadrzędnego
+						jeśli chodzi o nazewnictwo.</li>
+					<li class="unordered-list__element">Modifier - modyfikator, jeśli element występuje w kilku
+						wariantach, to tworzymy dla nich dodatkową klasę.</li>
 				</ul>
-				<img class="image" src="/bem-hand.jpg" alt="Przedstawienie modelu stylowania BEM na przykładzie dłoni."/>
+				<img class="image" src="/bem-hand.jpg"
+					alt="Przedstawienie modelu stylowania BEM na przykładzie dłoni." />
 				<p class="article__paragraph">
-					Stosując model stylowania za pomocą BEM, należy wybrać jakąś logiczną część struktury naszej strony i nadać jej główną klasę, na powyższym przykładzie jest to właśnie dłoń (.hand). Wszystkie dzieci w ramach tego elementu w swojej nazwie klasy odnoszą się do klasy rodzica, zawierając część jego nazwy (.hand__finger). Niektóre z tych dzieci mają dodatkowo klasę modyfikującą (.hand__finger--pinky), wyróżniającą je spośród innych. Palce te dzielą wszystkie te własności, które mają pozostałe palce, ale mają dodatkowo swoje własności specjalne, co zostało odzwierciedlone właśnie poprzez nadanie dodatkowej klasy. Innymi słowy, jeśłi element posiada modyfikator, to opisujemy go za pomocą dwóch klas.<br>
+					Stosując model stylowania za pomocą BEM, należy wybrać jakąś logiczną część struktury naszej strony
+					i nadać jej główną klasę, na powyższym przykładzie jest to właśnie dłoń (.hand). Wszystkie dzieci w
+					ramach tego elementu w swojej nazwie klasy odnoszą się do klasy rodzica, zawierając część jego nazwy
+					(.hand__finger). Niektóre z tych dzieci mają dodatkowo klasę modyfikującą (.hand__finger--pinky),
+					wyróżniającą je spośród innych. Palce te dzielą wszystkie te własności, które mają pozostałe palce,
+					ale mają dodatkowo swoje własności specjalne, co zostało odzwierciedlone właśnie poprzez nadanie
+					dodatkowej klasy. Innymi słowy, jeśłi element posiada modyfikator, to opisujemy go za pomocą dwóch
+					klas.<br>
 					Na obrazku poniżej przykład ten został przełożony na kod HTML.
 				</p>
-				<img class="image" src="/bem-hand-html.jpg" alt="Przedstawienie modelu stylowania BEM na przykładzie dłoni w przełożeniu na kod HTML."/>
+				<img class="image" src="/bem-hand-html.jpg"
+					alt="Przedstawienie modelu stylowania BEM na przykładzie dłoni w przełożeniu na kod HTML." />
 				<p class="article__paragraph">
 					Model stylowania BEM na przykładzie artykułu na stronie internetowej.
 				</p>
-				<img class="image" src="/bem-article.jpg" alt="Przedstawienie modelu stylowania BEM na przykładzie artykułu na stronie internetowej."/>
+				<img class="image" src="/bem-article.jpg"
+					alt="Przedstawienie modelu stylowania BEM na przykładzie artykułu na stronie internetowej." />
 				<p class="article__paragraph">
 					Model stylowania BEM na przykładzie artykułu na stronie internetowej po przełożeniu na kod HTML.
 				</p>
-				<img class="image" src="/bem-article-html.jpg" alt="Przedstawienie modelu stylowania BEM na przykładzie artykułu w przełożeniu na kod HTML."/>
+				<img class="image" src="/bem-article-html.jpg"
+					alt="Przedstawienie modelu stylowania BEM na przykładzie artykułu w przełożeniu na kod HTML." />
 				<p class="article__paragraph">
-					Style CSS według modelu BEM również definiuje się w sposób uporządkowany, wychodząc od elementu nadrzędnego i przechodząc po kolei przez elementy, które znajdują się w jego strukturze BEM. Należy pamiętać, żeby modyfikatory umieszczać na dole danej struktury BEM w pliku ze stylami, żeby były jak najbliżej elementów, których style wyróżniają, żeby nie zostały nadpisane przez style zdefiniowane dla ich elementów nadrzędnych. W modyfikatorze zmieniamy tylko unikalne dla niego wartości, nie przepisujemy definicji stylów z klasy bazowej.<br>
-					Poniżej znajduje się przykład modelu stylowania BEM na przykładzie artykułu na stronie internetowej po przełożeniu na kod CSS.
+					Style CSS według modelu BEM również definiuje się w sposób uporządkowany, wychodząc od elementu
+					nadrzędnego i przechodząc po kolei przez elementy, które znajdują się w jego strukturze BEM. Należy
+					pamiętać, żeby modyfikatory umieszczać na dole danej struktury BEM w pliku ze stylami, żeby były jak
+					najbliżej elementów, których style wyróżniają, żeby nie zostały nadpisane przez style zdefiniowane
+					dla ich elementów nadrzędnych. W modyfikatorze zmieniamy tylko unikalne dla niego wartości, nie
+					przepisujemy definicji stylów z klasy bazowej.<br>
+					Poniżej znajduje się przykład modelu stylowania BEM na przykładzie artykułu na stronie internetowej
+					po przełożeniu na kod CSS.
 				</p>
-				<img class="image" src="/bem-article-css.jpg" alt="Przedstawienie modelu stylowania BEM na przykładzie artykułu w przełożeniu na kod CSS."/>
+				<img class="image" src="/bem-article-css.jpg"
+					alt="Przedstawienie modelu stylowania BEM na przykładzie artykułu w przełożeniu na kod CSS." />
 			</article>
 		</section>
 		<section class="section">
@@ -819,115 +926,310 @@
 			<article class="article">
 				<h3 class="article__header">Typografia</h3>
 				<p class="article__paragraph">
-					Własność font-size, odnoszącą się do rozmiaru tekstu na stronie, można definiować za pomocą różnych jednostek:
-				</p>
-					<ul class="unordered-list">
-						<li class="unordered-list__element">piksel</li>
-						<li class="unordered-list__element">rem</li>
-						<li class="unordered-list__element">em</li>
-					</ul>
-				<p class="article__paragraph">
-					Własność font-family odpowiada za krój czcionki, jej wygląd. Domyślne wartości, jakie prezglądarka nadaje tekstowi można podejrzeć w devtools Elelemts - Computed - zaznaczone 'group' - zaznaczone 'show all' - zwinięcie innych sekcji i rozwinięcie sekcji 'text'. W przypadku Chrome, domyślna własność font-family to Times New Roman. Aby ustawić własny krój czcionki dla całej strony, najlepiej zrobić to na tagu body. Przy definiowaniu czcionki, VSC podpowiada co do zasady bezpieczne wartości font-family, czyli takie, które działają na większości systemów. Jeśli danego fontu nie ma, to po przecinku wypisane są alternatywy, które będą miały wówczas zastosowanie (np. Verdana, Geneva, Tahoma, sans-serif). Można oczywiście wykorzystać również czcionkę, której nie m na liście pdpowiedzi w VSC.Jeżeli font ma w nazwie spację, to musi być podany w apostrofach. Czcionki mogą mieć przypisane wartości:
+					Własność font-size, odnoszącą się do rozmiaru tekstu na stronie, można definiować za pomocą różnych
+					jednostek:
 				</p>
 				<ul class="unordered-list">
-					<li class="unordered-list__element">monospace - oznacza, że każda litera zajmuje tyle samo miejsca; wykorzystywana raczej do nagłówków lub do pisania kodu;</li>
-					<li class="unordered-list__element">serif - czcionki szeryfowe, zawierające elementy dekoracyjne przy literach;używane zwykle do tekstów drukowanych;</li>
-					<li class="unordered-list__element">sans-serif - pismo bezszeryfowe, o kroju pozbawionym ozdobników w postaci szeryfów (końcówki znaków są proste), krój taki uznawany jest za bardziej nowoczesny.</li>
+					<li class="unordered-list__element">piksel</li>
+					<li class="unordered-list__element">rem</li>
+					<li class="unordered-list__element">em</li>
+				</ul>
+				<p class="article__paragraph">
+					Własność font-family odpowiada za krój czcionki, jej wygląd. Domyślne wartości, jakie prezglądarka
+					nadaje tekstowi można podejrzeć w devtools Elelemts - Computed - zaznaczone 'group' - zaznaczone
+					'show all' - zwinięcie innych sekcji i rozwinięcie sekcji 'text'. W przypadku Chrome, domyślna
+					własność font-family to Times New Roman. Aby ustawić własny krój czcionki dla całej strony,
+					najlepiej zrobić to na tagu body. Przy definiowaniu czcionki, VSC podpowiada co do zasady bezpieczne
+					wartości font-family, czyli takie, które działają na większości systemów. Jeśli danego fontu nie ma,
+					to po przecinku wypisane są alternatywy, które będą miały wówczas zastosowanie (np. Verdana, Geneva,
+					Tahoma, sans-serif). Można oczywiście wykorzystać również czcionkę, której nie m na liście
+					pdpowiedzi w VSC.Jeżeli font ma w nazwie spację, to musi być podany w apostrofach. Czcionki mogą
+					mieć przypisane wartości:
+				</p>
+				<ul class="unordered-list">
+					<li class="unordered-list__element">monospace - oznacza, że każda litera zajmuje tyle samo miejsca;
+						wykorzystywana raczej do nagłówków lub do pisania kodu;</li>
+					<li class="unordered-list__element">serif - czcionki szeryfowe, zawierające elementy dekoracyjne
+						przy literach;używane zwykle do tekstów drukowanych;</li>
+					<li class="unordered-list__element">sans-serif - pismo bezszeryfowe, o kroju pozbawionym ozdobników
+						w postaci szeryfów (końcówki znaków są proste), krój taki uznawany jest za bardziej nowoczesny.
+					</li>
 				</ul>
 				<p class="article__paragraph">
 					W devtools można podejrzeć czcionki, które się wyrenderowały i wyświetliły na stronie.
 				</p>
 				<p class="article__paragraph">
-					Własność font-weight definiuje grubość czcionki. Po wpisaniu tej własności w pliku ze stylami w VSC, edytor podpowiada dostępne opcje w formie numerycznej, od najcieńszej 100 do najgrubszej 900. Są również dostępne opcję w formie opisowej, np. bold, bolder, lighter, normal. Standardowa grubość czcionki, font-weight normal, to 400, a bold to najczęściej 700. Zależy to jednak od rodzaju czcionki, nie wszystkie wspierają wszystkie grubości. Obecnie już raczej nie operujemy wartościami słownymi, tylko numerycznymi.
+					Własność font-weight definiuje grubość czcionki. Po wpisaniu tej własności w pliku ze stylami w VSC,
+					edytor podpowiada dostępne opcje w formie numerycznej, od najcieńszej 100 do najgrubszej 900. Są
+					również dostępne opcję w formie opisowej, np. bold, bolder, lighter, normal. Standardowa grubość
+					czcionki, font-weight normal, to 400, a bold to najczęściej 700. Zależy to jednak od rodzaju
+					czcionki, nie wszystkie wspierają wszystkie grubości. Obecnie już raczej nie operujemy wartościami
+					słownymi, tylko numerycznymi.
 				</p>
 				<p class="article__paragraph">
-					Własność line-height odpowiada za wyskość tekstu. Wysokość fontu w przeglądarce ma zwykle 16px. Domyślny przeglądarkowy line-height jest zwykle trochę większy i wynosi około 18,5px. Zwykle definiuje się go na nieco większy. Jeśli nadamy mu wartość line-height: 1,5, bez żadnej jednostki, to wyniesie on 150% wysokości czcionki., dla czcionki o wysokości 16px, będą t0 24px.
+					Własność line-height odpowiada za wyskość tekstu. Wysokość fontu w przeglądarce ma zwykle 16px.
+					Domyślny przeglądarkowy line-height jest zwykle trochę większy i wynosi około 18,5px. Zwykle
+					definiuje się go na nieco większy. Jeśli nadamy mu wartość line-height: 1,5, bez żadnej jednostki,
+					to wyniesie on 150% wysokości czcionki., dla czcionki o wysokości 16px, będą t0 24px.
 				</p>
 				<p class="article__paragraph">
-					Własność letter-spacing określa odległość między literami. Nietypowe wartości można wykorzystać np. w nagłówkach. Letter-spacing można podać w różnych jednostkach, np. w pikselach. Można używać wartości ujemnych (np. -0.2px, -2px), wówczas litery zaczną na siebie nachodzić. Wartość definiujemy zależnie od tego, jaki efekt artystyczny chcemy osiągnąć i co widzimy na stronie.
+					Własność letter-spacing określa odległość między literami. Nietypowe wartości można wykorzystać np.
+					w nagłówkach. Letter-spacing można podać w różnych jednostkach, np. w pikselach. Można używać
+					wartości ujemnych (np. -0.2px, -2px), wówczas litery zaczną na siebie nachodzić. Wartość definiujemy
+					zależnie od tego, jaki efekt artystyczny chcemy osiągnąć i co widzimy na stronie.
 				</p>
 				<p class="article__paragraph">
-					Przy stylowaniu tesktów wykorzystujemy znacznik span - nie ma on znaczenia semantycznego, jest jak div, tylko odnosi się do tekstów, np. w danej linii, a nie całych większych kontenerów. Span pozwala na tworzenie wyróżników wizualnych dla treści na stronie, które chcemy wyróżnić graficznie, ale których nie ma sensu wyróżniać semantycznie. Opakowujemy sobie w takiej sytuacji wybrane treści w znacznik span o określonej klasie i definiujemy dla tej klasy wybrane style.
+					Przy stylowaniu tesktów wykorzystujemy znacznik span - nie ma on znaczenia semantycznego, jest jak
+					div, tylko odnosi się do tekstów, np. w danej linii, a nie całych większych kontenerów. Span pozwala
+					na tworzenie wyróżników wizualnych dla treści na stronie, które chcemy wyróżnić graficznie, ale
+					których nie ma sensu wyróżniać semantycznie. Opakowujemy sobie w takiej sytuacji wybrane treści w
+					znacznik span o określonej klasie i definiujemy dla tej klasy wybrane style.
 				</p>
 				<p class="article__paragraph">
-					Jednostka EM ma swoje korzenie w wysokości czcionek drukarskich w czasach, gdy były osadzone na prostokątnych elementach. 1 em odpowiada wartości font-size, jaka została zdefiniowana lub odziedziczona przez dany element, pomnożonej przez 1. Za pomocą emów możemy definiować rozmiar czcionki, ale też inne własności, np wysokość. Jeśli przykładowo dla nagłówka określimy sobie font-size" 10px i damy temu nagłówkowi wysokość równą 10em, to sam literał nagłówka będzie miał 10px, ale cały element 100px (10px*10em). Emy są dość problematyczne, bo nie zawsze możemy przewidzieć jaka ta jednostka jest dla danego elementu. Świetnie sprawdzają się jednak dla takich własności jak letter-spacing, gdzie jeśli rozmar czcionki będzie rósł, to letter-spacing () będzie się również proporcjonalnie zmieniać. Na przykładzie prezentowanym przez Maćka letter-spacing określony jest jako wartość ujemna -0.05em, stanowiąca procent wartości font-size ustawionej na naszym elemencie.
+					Jednostka EM ma swoje korzenie w wysokości czcionek drukarskich w czasach, gdy były osadzone na
+					prostokątnych elementach. 1 em odpowiada wartości font-size, jaka została zdefiniowana lub
+					odziedziczona przez dany element, pomnożonej przez 1. Za pomocą emów możemy definiować rozmiar
+					czcionki, ale też inne własności, np wysokość. Jeśli przykładowo dla nagłówka określimy sobie
+					font-size" 10px i damy temu nagłówkowi wysokość równą 10em, to sam literał nagłówka będzie miał
+					10px, ale cały element 100px (10px*10em). Emy są dość problematyczne, bo nie zawsze możemy
+					przewidzieć jaka ta jednostka jest dla danego elementu. Świetnie sprawdzają się jednak dla takich
+					własności jak letter-spacing, gdzie jeśli rozmar czcionki będzie rósł, to letter-spacing () będzie
+					się również proporcjonalnie zmieniać. Na przykładzie prezentowanym przez Maćka letter-spacing
+					określony jest jako wartość ujemna -0.05em, stanowiąca procent wartości font-size ustawionej na
+					naszym elemencie.
 				</p>
-				<img class="image" src="/em-definition.jpg" alt="Definicja jednostki em."/>
-				<img class="image" src="/em-example.jpg" alt="Przeliczenie wartości em na piksele na przykładzie nagłówka."/>
+				<img class="image" src="/em-definition.jpg" alt="Definicja jednostki em." />
+				<img class="image" src="/em-example.jpg"
+					alt="Przeliczenie wartości em na piksele na przykładzie nagłówka." />
 				<p class="article__paragraph">
-					Jednostka REM - R z przodu odpowiada root elementowi naszego HTMLa, czyli 1rem to font-size dla naszego root elementu pomnożony przez 1. (Root elementem, czyli elementem bazowym nazywamy znacznik HTML, w którym zawiera się cała treść strony.) 1rem to zwykle 16px, 2rem to 32px, 0.5rem to 8px, etc. gdyż w domyślnych stylach, jakie przeglądarka zwykle nadaje czcionkom, font-size wynosi 16px. Zatem jeśli ustawimy sobie styl dla nagłówka, nadając czcionce wartość 2rem, to mimo, że rodzicu tego elementu font-size będzie ustawiony na 10px, to nagłówek będzie miał 32px, gdyż odwołujemy się tu bezpośrednio do root elementu naszego HTMLa, a nie rodzica. Jeśli jednak w sposób jawny zdefiniujemy dla znacznika html font-size i nadamy mu wartość np. 20px, to w takim przypadku 1rem będzie wynosił 20px, 2rem natomiast 40px, etc. Maciek zaleca jednak, by nie definiować tej własności w znaczniku w elemencie html i zostawić to przeglądarce. Każdy ma bowiem swoje preferencje, na tych customowych ustawieniach przeglądarkowych mogą operować np. osoby niedowidzące, i obecnie w świecie designu i frontendu operuje się właśnie względem tych domyślnych 16px. Kiedyś funkcjonowała praktyka, że root elemencie definiowano font-size jako 10px (lub 62.5%, co miało ten sam skutek), by łatwiej było przeliczać, ale z podanych wcześniej względów, Maciek to odradza. Jeśłi już bardzo musimy, to można ustawić jawnie font-size dla elementu html jako 16px, ale Maciek zaleca, by jednak pozostawić to domyślnym ustawieniom przeglądarki. Remy można również stosować do nagłówków czy marginesów. Jednostka ta stała się obecnie dość popularna.
+					Jednostka REM - R z przodu odpowiada root elementowi naszego HTMLa, czyli 1rem to font-size dla
+					naszego root elementu pomnożony przez 1. (Root elementem, czyli elementem bazowym nazywamy znacznik
+					HTML, w którym zawiera się cała treść strony.) 1rem to zwykle 16px, 2rem to 32px, 0.5rem to 8px,
+					etc. gdyż w domyślnych stylach, jakie przeglądarka zwykle nadaje czcionkom, font-size wynosi 16px.
+					Zatem jeśli ustawimy sobie styl dla nagłówka, nadając czcionce wartość 2rem, to mimo, że rodzicu
+					tego elementu font-size będzie ustawiony na 10px, to nagłówek będzie miał 32px, gdyż odwołujemy się
+					tu bezpośrednio do root elementu naszego HTMLa, a nie rodzica. Jeśli jednak w sposób jawny
+					zdefiniujemy dla znacznika html font-size i nadamy mu wartość np. 20px, to w takim przypadku 1rem
+					będzie wynosił 20px, 2rem natomiast 40px, etc. Maciek zaleca jednak, by nie definiować tej własności
+					w znaczniku w elemencie html i zostawić to przeglądarce. Każdy ma bowiem swoje preferencje, na tych
+					customowych ustawieniach przeglądarkowych mogą operować np. osoby niedowidzące, i obecnie w świecie
+					designu i frontendu operuje się właśnie względem tych domyślnych 16px. Kiedyś funkcjonowała
+					praktyka, że root elemencie definiowano font-size jako 10px (lub 62.5%, co miało ten sam skutek), by
+					łatwiej było przeliczać, ale z podanych wcześniej względów, Maciek to odradza. Jeśłi już bardzo
+					musimy, to można ustawić jawnie font-size dla elementu html jako 16px, ale Maciek zaleca, by jednak
+					pozostawić to domyślnym ustawieniom przeglądarki. Remy można również stosować do nagłówków czy
+					marginesów. Jednostka ta stała się obecnie dość popularna.
 				</p>
-				<img class="image" src="/rem-definition.jpg" alt="Definicja jednostki rem."/><br>
+				<img class="image" src="/rem-definition.jpg" alt="Definicja jednostki rem." />
 				<p class="article__paragraph">
-					Na stronie <a class="link" href="https://nekocalc.com/px-to-rem-converter">px to rem converter</a> znajduje się kalkulator, gdzie możemy przeliczać remy na piksele i odwrotnie.
+					Na stronie <a class="link" href="https://nekocalc.com/px-to-rem-converter">px to rem converter</a>
+					znajduje się kalkulator, gdzie możemy przeliczać remy na piksele i odwrotnie.
 				</p>
 			</article>
 			<article class="article">
 				<h3 class="article__header">Flexbox - tryb działania i zawijanie</h3>
 				<p class="article__paragraph">
-					Flex jest kolejną wartością własności display i stanowi odpowiedź na problemy z wyśrodkowywaniem elementów i treści. Nie jest to zwykła wartość, która decyduje o tym, jak element będzie się wyświetlał, ale algorytm, tryb działania własności display, który będzie przeliczał umiejscowienie naszych elementów, żeby wyświetlały się w oczekiwany sposób. Display: flex dodany na poziomie kontenera sprawia, że 5 elementów, znajdujących się w ramach tego kontenera, które wcześniej rozciągały się na całą szerokość wiersza i zajmowały w sumie 5 wierszy, spadają do jednego wiersza i każdy z elementów zajmuje tyle miejsca, ile ma treści.
+					Flex jest kolejną wartością własności display i stanowi odpowiedź na problemy z wyśrodkowywaniem
+					elementów i treści. Nie jest to zwykła wartość, która decyduje o tym, jak element będzie się
+					wyświetlał, ale algorytm, tryb działania własności display, który będzie przeliczał umiejscowienie
+					naszych elementów, żeby wyświetlały się w oczekiwany sposób. Display: flex dodany na poziomie
+					kontenera sprawia, że 5 elementów, znajdujących się w ramach tego kontenera, które wcześniej
+					rozciągały się na całą szerokość wiersza i zajmowały w sumie 5 wierszy, spadają do jednego wiersza i
+					każdy z elementów zajmuje tyle miejsca, ile ma treści.
 				</p>
-				<img class="image" src="/display-flex.jpg" alt="Przykład użycia własności display: flex."/>
+				<img class="image" src="/display-flex.jpg" alt="Przykład użycia własności display: flex." />
 				<p class="article__paragraph">
-					Flex działa tylko w jednym wymiarze i może przyjmować jeden z dwóch głównych trybów działania - w poziomie, czyli w osi X (row) i w pionie, czyli w osi Y (column). W przypadku flexa możemy działać tylko w tych dwóch osiach (w odróźnieniu od wartości grid, jaką może przyjmować włąsność display, która to wartość działa w dwóch wymiarach).
+					Flex działa tylko w jednym wymiarze i może przyjmować jeden z dwóch głównych trybów działania - w
+					poziomie, czyli w osi X (row) i w pionie, czyli w osi Y (column). W przypadku flexa możemy działać
+					tylko w tych dwóch osiach (w odróźnieniu od wartości grid, jaką może przyjmować włąsność display,
+					która to wartość działa w dwóch wymiarach).
 				</p>
-				<img class="image" src="/flex-direction.jpg" alt="Opis trybów działania flexa."/>	
+				<img class="image" src="/flex-direction.jpg" alt="Opis trybów działania flexa." />
 				<p class="article__paragraph">
-					Tryb row jest dla flexa trybem domyślnym i sprawia, że elementy zachowują się tak, jak na przykładzie powyżej. Natomiast tryb column powoduje, że elementy układają się kolumnowo, w sposób, który przypomina display: block.
-				</p>	
-				<img class="image" src="/flex-direction-column.jpg" alt="Przykład użycia wartości flex w trybie column."/>		
+					Tryb row jest dla flexa trybem domyślnym i sprawia, że elementy zachowują się tak, jak na
+					przykładzie powyżej. Natomiast tryb column powoduje, że elementy układają się kolumnowo, w sposób,
+					który przypomina display: block.
+				</p>
+				<img class="image" src="/flex-direction-column.jpg"
+					alt="Przykład użycia wartości flex w trybie column." />
 				<p class="article__paragraph">
-					Własność flex-direction może przyjmować jeszcze dwie wartości: row-reverse oraz column-reverse. Sprawiają one, że elementy mają układ odpowiednio poziomy i pionowy, ale elementy w ramach kontenera ułożone są odwrotnie niż ma to miejsce w kodzie HTML. W przypadku osi poziomej idą od prawej do lewej według odwróconej kolejności, a w przypadku osi pionowej idą od dołu do góry według odwróconej kolejności. Zmienia się jednak tylko kolejność wyświetlania elementów, kolejność elementów w DOM pozostaje taka, jak w kodzie HTML. W przypadku zwykłego wyśietlania blokowego odwrócenie kolejności elementów byłoby niemożliwe bez zmian w drzewie DOM i układzie elementów w kodzie HTML.
-				</p>	
-				<img class="image" src="/row-reverse.jpg" alt="Przykład użycia wartości row-reverse."/><br>
-				<img class="image" src="/column-reverse.jpg" alt="Przykład użycia wartości column-reverse."/>	
+					Własność flex-direction może przyjmować jeszcze dwie wartości: row-reverse oraz column-reverse.
+					Sprawiają one, że elementy mają układ odpowiednio poziomy i pionowy, ale elementy w ramach kontenera
+					ułożone są odwrotnie niż ma to miejsce w kodzie HTML. W przypadku osi poziomej idą od prawej do
+					lewej według odwróconej kolejności, a w przypadku osi pionowej idą od dołu do góry według odwróconej
+					kolejności. Zmienia się jednak tylko kolejność wyświetlania elementów, kolejność elementów w DOM
+					pozostaje taka, jak w kodzie HTML. W przypadku zwykłego wyśietlania blokowego odwrócenie kolejności
+					elementów byłoby niemożliwe bez zmian w drzewie DOM i układzie elementów w kodzie HTML.
+				</p>
+				<img class="image" src="/row-reverse.jpg" alt="Przykład użycia wartości row-reverse." /><br>
+				<img class="image" src="/column-reverse.jpg" alt="Przykład użycia wartości column-reverse." />
 				<p class="article__paragraph">
-					Kolejną własnością w ramach flexa jest flex-wrap, który odpowiada za zawijanie odpowiednio wiersza lub kolumny, zależnie od tego, w której osi pracujemy, i może przyjmować wartości:
+					Kolejną własnością w ramach flexa jest flex-wrap, który odpowiada za zawijanie odpowiednio wiersza
+					lub kolumny, zależnie od tego, w której osi pracujemy, i może przyjmować wartości:
 				</p>
 				<ul class="unordered-list">
-					<li class="unordered-list__element">nowrap - brak zawijania, wartość domyślna dla własności flex-wrap</li>
+					<li class="unordered-list__element">nowrap - brak zawijania, wartość domyślna dla własności
+						flex-wrap</li>
 					<li class="unordered-list__element">wrap</li>
 					<li class="unordered-list__element">wrap-reverse</li>
 				</ul>
 				<p class="article__paragraph">
-					Flex domyślnie stara się upchnąć nasze elementy w jednym wymiarze w określonym pudełku. Jeśli na przykładzie naszego kontenera z 5 elementami, nadamy tym elementom szerokość 1000px, to flex zmniejszy ich szerokość tak, by zmieściły się w dostępnym oknie przeglądarki, jesli szerokość kontenera nie jest zdefiniowana. Jeśli natomaist szerokość kontenera/pudełka zostanie określona jako 50% dostępnego okna przeglądarki, to elementy również zostaną odpowiednio zmniejszone, by się w tej przestrzeni zmieścić, w szerokości całego flexa/kontenera, pomimo tego, że nadal każdy z elementów ma szerokość zdefiniowaną na 1000px. Flex jest bowiem algorytmem, funkcją, która przyjmuje różne wartości, ale niekoniecznie je bezpośrednio wyświetla. Szerokość pojedynczego elementu na poziomie 1000px bęzie tu miała charakter umowny, będzie parametrem wejściowym przed wyliczeniem i umiejscowieniem poszczególnych elementów przez algorytm flexowy.
+					Flex domyślnie stara się upchnąć nasze elementy w jednym wymiarze w określonym pudełku. Jeśli na
+					przykładzie naszego kontenera z 5 elementami, nadamy tym elementom szerokość 1000px, to flex
+					zmniejszy ich szerokość tak, by zmieściły się w dostępnym oknie przeglądarki, jesli szerokość
+					kontenera nie jest zdefiniowana. Jeśli natomaist szerokość kontenera/pudełka zostanie określona jako
+					50% dostępnego okna przeglądarki, to elementy również zostaną odpowiednio zmniejszone, by się w tej
+					przestrzeni zmieścić, w szerokości całego flexa/kontenera, pomimo tego, że nadal każdy z elementów
+					ma szerokość zdefiniowaną na 1000px. Flex jest bowiem algorytmem, funkcją, która przyjmuje różne
+					wartości, ale niekoniecznie je bezpośrednio wyświetla. Szerokość pojedynczego elementu na poziomie
+					1000px bęzie tu miała charakter umowny, będzie parametrem wejściowym przed wyliczeniem i
+					umiejscowieniem poszczególnych elementów przez algorytm flexowy.
 				</p>
-				<img class="image" src="/flex-nowrap.jpg" alt="Przykład użycia własności flex-wrap o wartości nowrap."/>	
+				<img class="image" src="/flex-nowrap.jpg"
+					alt="Przykład użycia własności flex-wrap o wartości nowrap." />
 				<p class="article__paragraph">
-					Na poniższym przykładzie każdy z 5 elementów znajdujących się w kontenerze flexowym ma szerokość zdefiniowaną na 300px. Przy braku zawijania, zostałyby one upchnięte w ramach jednego wiersza, jednak z uwagi na to, że na poziomie kontenera została zdefiniowana własność flex-wrap: wrap, elementy zawijają się i są przerzucane do następnego wiersza w sytuacji, gdy szerokość dostępna w ramach danego wiersza jest niewystarczająca. Flex nie stara się ich upychać w jednym wierszu, ponieważ ma informację, żeby zawijać. Każda z 3 osi poziomych na poniższym przykładzie staje się takim minikontenerem i będzie przyjmować wartości, które będziemy nadawać temu kontenerowi flexowemu. Czyli w wyniku zawijania nie powstają tu 2 wymiary, a nadal jest jeden, poziomy, połamany na 3 wiersze.
+					Na poniższym przykładzie każdy z 5 elementów znajdujących się w kontenerze flexowym ma szerokość
+					zdefiniowaną na 300px. Przy braku zawijania, zostałyby one upchnięte w ramach jednego wiersza,
+					jednak z uwagi na to, że na poziomie kontenera została zdefiniowana własność flex-wrap: wrap,
+					elementy zawijają się i są przerzucane do następnego wiersza w sytuacji, gdy szerokość dostępna w
+					ramach danego wiersza jest niewystarczająca. Flex nie stara się ich upychać w jednym wierszu,
+					ponieważ ma informację, żeby zawijać. Każda z 3 osi poziomych na poniższym przykładzie staje się
+					takim minikontenerem i będzie przyjmować wartości, które będziemy nadawać temu kontenerowi
+					flexowemu. Czyli w wyniku zawijania nie powstają tu 2 wymiary, a nadal jest jeden, poziomy, połamany
+					na 3 wiersze.
 				</p>
-				<img class="image" src="/row-wrap-example1.jpg" alt="Przykład użycia własności flex-wrap o wartości wrap w osi poziomej przy braku definicji wysokości elementu."/>	
+				<img class="image" src="/row-wrap-example1.jpg"
+					alt="Przykład użycia własności flex-wrap o wartości wrap w osi poziomej przy braku definicji wysokości elementu." />
 				<p class="article__paragraph">
-					Jeśli działając w osi poziomej, zdefiniujemy sobie również wysokość elementów i ograniczymy wysokość kontenera, to przy zawijaniu zostaną one przeniesione do kolejnych wierszy, zgodnie ze zdefiniowanymi parametrami. Flex nie będzie się starał ich upchnąć w ramach dostępnej wysokości kontenera, ta wysokość go bowiem nie interesuje. Gdy działa w osi poziomej i operuje na wierszach, to interesuje go tylko oś X i tylko w odniesieniu do niej skaluje elementy.
+					Jeśli działając w osi poziomej, zdefiniujemy sobie również wysokość elementów i ograniczymy wysokość
+					kontenera, to przy zawijaniu zostaną one przeniesione do kolejnych wierszy, zgodnie ze
+					zdefiniowanymi parametrami. Flex nie będzie się starał ich upchnąć w ramach dostępnej wysokości
+					kontenera, ta wysokość go bowiem nie interesuje. Gdy działa w osi poziomej i operuje na wierszach,
+					to interesuje go tylko oś X i tylko w odniesieniu do niej skaluje elementy.
 				</p>
-				<img class="image" src="/row-wrap-example2.jpg" alt="Przykład użycia własności flex-wrap o wartości wrap w osi poziomej przy zdefiniowanej wysokości elementu."/>	
+				<img class="image" src="/row-wrap-example2.jpg"
+					alt="Przykład użycia własności flex-wrap o wartości wrap w osi poziomej przy zdefiniowanej wysokości elementu." />
 				<p class="article__paragraph">
-					Jeśli w ramach podanego przykładu zmienilibyśmy sobie oś na pionową, nie ograniczając wysokości kontenera, to powstałaby jedna kolumna składająca się z 5 elementów i nie byłoby żadnego zawijania, ponieważ szerokość elementów na poziomie 300px nie przekracza dostępnej szerokości kolumny. Co do zasady w projektach nie chcemy bowiem ograniczać wysokości, treść może wystawać poza okno przeglądarki, bo standardem w stronach internetowym jest przewijanie treści w dół, by dostać się do całości. Jeśli jednak chcielibyśmy wywołać wrap w osi pionowej, to nie wystarczy dodanie wysokości elementów, ale również należy ograniczyć wysokość pudełka, w którym elementy te się znajdują. Jeśli zatem zdefiniujemy sobie wysokość elementów na poziomie 200px, ich szerokość na poziomie 300px, a wysokość kontenera na poziomie 500px, to elementy, które nie zmieszczą się w ramach jednej kolumny 500px, zostaną zawinięte i przeniesione do kolejnych kolumn. Flexa nie będzie tu interesować, że ostatni, piąty element się nie mieści i wystaje poza szerokość kontenera. Działa on w jednym wymiarze, a zatem jeśli pracujemy w osi pionowej i utniemy jej wysokość, to flex działając w ramach powstałych ograniczeń, będzie tworzył dodatkowe kolumny rozszerzając treść w bok, poza szerokość kontenera ograniczonego szerokością okna przeglądarki. Szerokości w poziomie flex nie potrafi tu ogarnąć, upychając elementy, bo jego głównym wymiarem jest w tym przypadku oś pionowa.
+					Jeśli w ramach podanego przykładu zmienilibyśmy sobie oś na pionową, nie ograniczając wysokości
+					kontenera, to powstałaby jedna kolumna składająca się z 5 elementów i nie byłoby żadnego zawijania,
+					ponieważ szerokość elementów na poziomie 300px nie przekracza dostępnej szerokości kolumny. Co do
+					zasady w projektach nie chcemy bowiem ograniczać wysokości, treść może wystawać poza okno
+					przeglądarki, bo standardem w stronach internetowym jest przewijanie treści w dół, by dostać się do
+					całości. Jeśli jednak chcielibyśmy wywołać wrap w osi pionowej, to nie wystarczy dodanie wysokości
+					elementów, ale również należy ograniczyć wysokość pudełka, w którym elementy te się znajdują. Jeśli
+					zatem zdefiniujemy sobie wysokość elementów na poziomie 200px, ich szerokość na poziomie 300px, a
+					wysokość kontenera na poziomie 500px, to elementy, które nie zmieszczą się w ramach jednej kolumny
+					500px, zostaną zawinięte i przeniesione do kolejnych kolumn. Flexa nie będzie tu interesować, że
+					ostatni, piąty element się nie mieści i wystaje poza szerokość kontenera. Działa on w jednym
+					wymiarze, a zatem jeśli pracujemy w osi pionowej i utniemy jej wysokość, to flex działając w ramach
+					powstałych ograniczeń, będzie tworzył dodatkowe kolumny rozszerzając treść w bok, poza szerokość
+					kontenera ograniczonego szerokością okna przeglądarki. Szerokości w poziomie flex nie potrafi tu
+					ogarnąć, upychając elementy, bo jego głównym wymiarem jest w tym przypadku oś pionowa.
 				</p>
-				<img class="image" src="/column-wrap-example1.jpg" alt="Przykład użycia własności flex-wrap o wartości wrap w osi pionowej przy zdefiniowanej szerokości elementu."/>	
+				<img class="image" src="/column-wrap-example1.jpg"
+					alt="Przykład użycia własności flex-wrap o wartości wrap w osi pionowej przy zdefiniowanej szerokości elementu." />
 				<p class="article__paragraph">
-					Jeśli w ramach podanego przykładu usunęlibyśmy szerokość zdefiniowaną dla elementów, pozostawiając ich wysokość na poziomie 200px oraz wysokość całego kontenera na poziomie 500px, to zostaną one zawinięte i upchnięte w ramach szerokości okna przeglądarki.
+					Jeśli w ramach podanego przykładu usunęlibyśmy szerokość zdefiniowaną dla elementów, pozostawiając
+					ich wysokość na poziomie 200px oraz wysokość całego kontenera na poziomie 500px, to zostaną one
+					zawinięte i upchnięte w ramach szerokości okna przeglądarki.
 				</p>
-				<img class="image" src="/column-wrap-example2.jpg" alt="Przykład użycia własności flex-wrap o wartości wrap w osi pionowej przy braku definicji szerokości elementu."/>	
+				<img class="image" src="/column-wrap-example2.jpg"
+					alt="Przykład użycia własności flex-wrap o wartości wrap w osi pionowej przy braku definicji szerokości elementu." />
 				<p class="article__paragraph">
-					Możemy również zawijać elementy w tył, korzystając z parametru wrap-reverse. Wówczas, w przypadku orientacji poziomej, elementy zaczną się u dołu kontenera i będą zawijać w górę, a w przypadku orientacji pionowej, początek będzie po prawej stronie okna przeglądarki i elementy będą zawijać się w lewą stronę okna. Odwracanie odbywa sie na poziomie całych wierszy lub odpowiednio kolumn, a nie na poziomie samych elementów.
+					Możemy również zawijać elementy w tył, korzystając z parametru wrap-reverse. Wówczas, w przypadku
+					orientacji poziomej, elementy zaczną się u dołu kontenera i będą zawijać w górę, a w przypadku
+					orientacji pionowej, początek będzie po prawej stronie okna przeglądarki i elementy będą zawijać się
+					w lewą stronę okna. Odwracanie odbywa sie na poziomie całych wierszy lub odpowiednio kolumn, a nie
+					na poziomie samych elementów.
 				</p>
-				<img class="image" src="/row-wrap-reverse.jpg" alt="Przykład użycia własności flex-wrap o wartości wrap-reverse w przypadku orientacji poziomej."/><br>
-				<img class="image" src="/column-wrap-reverse.jpg" alt="Przykład użycia własności flex-wrap o wartości wrap-reverse w przypadku orientacji pionowej."/>
+				<img class="image" src="/row-wrap-reverse.jpg"
+					alt="Przykład użycia własności flex-wrap o wartości wrap-reverse w przypadku orientacji poziomej." /><br>
+				<img class="image" src="/column-wrap-reverse.jpg"
+					alt="Przykład użycia własności flex-wrap o wartości wrap-reverse w przypadku orientacji pionowej." />
 				<p class="article__paragraph">
-					Opisane powyżej włąsności flex-direction oraz flex -wrap można podawać również w zapisie skróconym jako flex-flow, gdzie pierwsza wartość dla włąsności flex-flow odpowiada własności flex-direction, a druga to flex-wrap.
+					Opisane powyżej własności flex-direction oraz flex -wrap można podawać również w zapisie skróconym
+					jako flex-flow, gdzie pierwsza wartość dla włąsności flex-flow odpowiada własności flex-direction, a
+					druga to flex-wrap.
 				</p>
-				<img class="image" src="/flex-flow.jpg" alt="Zapis własności flex-direction oraz flex-wrap za pomocą własności flex-flow."/>
+				<img class="image" src="/flex-flow.jpg"
+					alt="Zapis własności flex-direction oraz flex-wrap za pomocą własności flex-flow." />
+			</article>
+			<article class="article">
+				<h3 class="article__header">Flexbox - justify i align</h3>
+				<p class="article__paragraph">
+					Własność justify-content pozwala na ustawienie elementów wzdłuż osi flex-direction. Własność
+					umieszcza się we flexowym kontenerze, by ostylować i rozmieścić znajdujące się w tym kontenerze
+					elementy. Same elementy nie muszą wiedzieć, że znajdują się we flexowym kontenerze, będą stylowane
+					zgodnie z algorytmem zdefiniowanym w elemencie nadrzędnym. Poniżej znajduje się lista wartości,
+					jakie może przyjmować własność justify-content.
+				</p>
+				<img class="image" src="/justify-content.jpg"
+					alt="Wartości, jakie może przyjmować własność justify-content." />
+				<dl class="description-list">
+					<dt class="description-list__term">justify-content: flex-start</dt>
+					<dd class="description-list__details">
+						Jest to wartość domyślna. Elementy zostają umieszczone na początku kontenera, czyli po lewej
+						stronie w przypadku osi poziomej oraz od góry w przypadku osi pionowej.
+					</dd>
+					<dt class="description-list__term">justify-content: flex-end</dt>
+					<dd class="description-list__details">
+						Elementy zostają umieszczone na końcu kontenera, czyli po prawej stronie w przypadku osi
+						poziomej oraz od dołu w przypadku osi pionowej. Elementy zostają uszeregowane według
+						standardowej kolejności z HTML, ich kolejność nie jest odwracana, tak jak dzieje się to przy
+						wartości row-reverse czy column-reverse dla własności flex-direction.
+					</dd>
+					<dt class="description-list__term">justify-content: center</dt>
+					<dd class="description-list__details">
+						Powoduje wyśrodkowanie elementów w kontenerze, odpowiednio w osi X lub Y, zależnie od
+						zdefiniowanego flex-direction.
+					</dd>
+				</dl>
+				<dl class="description-list">
+					<dt class="description-list__term">justify-content: space-between</dt>
+					<dd class="description-list__details">
+						Elementy zostają ułożone w kontenerze w osi pionowej lub poziomej w taki sposób, że zostaje
+						proporcjonalnie zagospodarowana wolna przestrzeń z kontenera, która była dostępna i widoczna np.
+						na końcu kontenera przy układzie elementów według wartości justify-content: flex-start. Elementy
+						zostają ułożone w taki sposób, że elementy skrajne zostają dosunięte do krawędzi kontenera, a
+						wolna przestrzeń jest równo rozdzielona pomiędzy elementy. Elementy są od siebie oddalone o taką
+						sama odległość. W momencie powiększania lub pomniejszania okna przeglądarki, odstępy pomiędzy
+						elementami są proporcjonalnie powiększane lub pomniejszane.
+					</dd>
+				</dl>
+				<img class="image" src="/space-between.jpg"
+					alt="Przykład użycia własności justify-content o wartości space-between w przypadku pionowej orientacji elementów." />
+				<dl class="description-list">
+					<dt class="description-list__term">justify-content: space-around</dt>
+					<dd class="description-list__details">
+						Wartość space-around różni się od space between tym, że dodaje przy krawędziach kontenera
+						dodatkowe przestrzenie. Elementy nie są zatem dosunięte do krawędzi kontenera, ale oddalone od
+						nich o połowę odległości, jaka jest zachowana między elementami. Wolna przestrzeń w kontenerze
+						zostaje bowiem rozdzielona tak, ze pomiędzy elementami są równe odległości, a pomiędzy
+						elementami a krawędziami kontenera jest odległość równa połowie tej odległości, która istnieje
+						między elementami. Na przykładzie poniżej jest to piąta przerwa, która zostaje podzielona na pół
+						i dodana na początku i na końcu kontenera.
+					</dd>
+				</dl>
+				<img class="image" src="/space-around.jpg"
+					alt="Przykład użycia własności justify-content o wartości space-around w przypadku poziomej orientacji elementów." />
+				<p class="article__paragraph">
+					Flex działa w jednym wymiarze, ale istnieje możliwość ustawienia elementów wzdłuż drugiej osi. Służy
+					do tego własność align-content. Align-content ustawia zatem odpowiednio, wiersze lub kolumny, wzdłuż
+					osi przeciwnej do flex-direction. Jest to taki justify-content dla drugiej osi.
+				</p>
+				<img class="image" src="/align-content.jpg"
+					alt="Wartości, jakie może przyjmować własność align-content." />
 			</article>
 		</section>
 
 	</main>
-    <footer class="footer">
-		<p class="footer__content">Strona domowa Magdaleny Derek, wszystkie treści są wynikiem nauki w ramach szkolenia WTF: Co
-			ten frontend. 
+	<footer class="footer">
+		<p class="footer__content">Strona domowa Magdaleny Derek, wszystkie treści są wynikiem nauki w ramach szkolenia
+			WTF: Co
+			ten frontend.
 			<a class="footer__top-link" href="#top">Wróć na górę strony ⬆️</a>
 		</p>
-		</footer>
+	</footer>
 	<script defer src="/main.js"></script>
 </body>
 
