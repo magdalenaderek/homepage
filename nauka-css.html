@@ -1139,7 +1139,7 @@
 					Możemy również zawijać elementy w tył, korzystając z parametru wrap-reverse. Wówczas, w przypadku
 					orientacji poziomej, elementy zaczną się u dołu kontenera i będą zawijać w górę, a w przypadku
 					orientacji pionowej, początek będzie po prawej stronie okna przeglądarki i elementy będą zawijać się
-					w lewą stronę okna. Odwracanie odbywa sie na poziomie całych wierszy lub odpowiednio kolumn, a nie
+					w lewą stronę okna. Odwracanie odbywa się na poziomie całych wierszy lub odpowiednio kolumn, a nie
 					na poziomie samych elementów.
 				</p>
 				<img class="image" src="/row-wrap-reverse.jpg"
@@ -1198,13 +1198,18 @@
 				</dl>
 				<img class="image" src="/space-between.jpg"
 					alt="Przykład użycia własności justify-content o wartości space-between w przypadku pionowej orientacji elementów." />
+				<p class="article__paragraph">
+					W przypadku, gdy mamy zdefiniowaną własność justify-content: space-beteen dla treści zorientowanej poziomo i zawijanej do kolejnego wiersza (własność flex-wrap: wrap), w taki sposób, że wjednym wierszu znajdują się 3 elementy, a w drugim dwa alementy, to tworząc odtępy między tymi elementami, flex działa w ramach każdego z wierszy osobno. Stają się one jakby osobnymi kontenerami, w ramach których elementy są układane, zgodnie z przyjętymi parametrami. W związku z tym, w pierwszym wierszu odgległość między elementami będzie mniejsza niż w wierszu drugim, ponieważ dostępna wolna przestrzeń do zagospodarowania jest mniejsza w przypadku wiersza pierwszego.
+				</p>
+				<img class="image" src="/wrap-space-between.jpg"
+						alt="Przykład użycia własności justify-content o wartości space-between w przypadku poziomej orientacji elementów oraz użycia włąsności flex-wrap o wartości wrap." />
 				<dl class="description-list">
 					<dt class="description-list__term">justify-content: space-around</dt>
 					<dd class="description-list__details">
 						Wartość space-around różni się od space between tym, że dodaje przy krawędziach kontenera
 						dodatkowe przestrzenie. Elementy nie są zatem dosunięte do krawędzi kontenera, ale oddalone od
 						nich o połowę odległości, jaka jest zachowana między elementami. Wolna przestrzeń w kontenerze
-						zostaje bowiem rozdzielona tak, ze pomiędzy elementami są równe odległości, a pomiędzy
+						zostaje bowiem rozdzielona tak, że pomiędzy elementami są równe odległości, a pomiędzy
 						elementami a krawędziami kontenera jest odległość równa połowie tej odległości, która istnieje
 						między elementami. Na przykładzie poniżej jest to piąta przerwa, która zostaje podzielona na pół
 						i dodana na początku i na końcu kontenera.
@@ -1214,11 +1219,106 @@
 					alt="Przykład użycia własności justify-content o wartości space-around w przypadku poziomej orientacji elementów." />
 				<p class="article__paragraph">
 					Flex działa w jednym wymiarze, ale istnieje możliwość ustawienia elementów wzdłuż drugiej osi. Służy
-					do tego własność align-content. Align-content ustawia zatem odpowiednio, wiersze lub kolumny, wzdłuż
-					osi przeciwnej do flex-direction. Jest to taki justify-content dla drugiej osi.
+					do tego własność align-content. Align-content ustawia zatem odpowiednio, całe wiersze lub kolumny, wzdłuż
+					osi przeciwnej do flex-direction. Jest to taki justify-content dla drugiej osi.<br>
+					Własność align-content działa tylko w przypadku, gdy mamy do czynienia z zawijaniem treści i używamy własności flex-wrap. Czyli tylko wówczas, gdy mamy do czynienia, zależnie od orientacji, z więcej niż jednym wierszem lub więcej niż jedną kolumną.
 				</p>
 				<img class="image" src="/align-content.jpg"
 					alt="Wartości, jakie może przyjmować własność align-content." />
+				<p class="article__paragraph">
+					Domyślną wartością dla własności align-content jest stretch. Sprawia on, że elementy zawierają w drugiej osi całe dostępne miejsce. Czyli jeśli mamy orientację poziomą i wysokość kontenera 300px, to elementy zostaną tak rozciągnięte w osi pionowej, że zajmą całą dostępną wysokość w ramach tej kolumny. Przy braku definicji wysokości kontenera, na podanym przykładzie elementy byłyby dużo niższe.
+				</p>	
+				<img class="image" src="/align-content-stretch.jpg"
+				alt="Przykład użycia własności align-content o wartości stretch w przypadku poziomej orientacji elementów." />		
+				<p class="article__paragraph">
+					W przypadku własności align-content o wartości odpowiednio flex-start, flex-end oraz center, wiersze zostaną dosunięte do góry kontenera, do dołu kontenera lub zostaną umieszczone pośrodku kontenera. Flex nie będzie zagospodarowywał dostępnej przestrzeni w ramach kontenera. Przy braku bezpośredniej definicji, elementy będą miały taką wysokość, jaka jest potrzebna do wyświetlenia ich treści, nie będzie ich wysokość dostosowywana do wysokości kontenera.
+				</p>
+				<img class="image" src="/align-content-flex-end.jpg"	
+				alt="Przykład użycia własności align-content o wartości flex-end w przypadku poziomej orientacji elementów." />		
+				<p class="article__paragraph">
+					W przypadku własności align-content o wartości space-between, elementy zostaną maksymalnie rozsunięte po krawędziach rodzica.
+				</p>
+				<img class="image" src="/align-content-space-between.jpg"	
+				alt="Przykład użycia własności align-content o wartości space-between w przypadku poziomej orientacji elementów." />
+				<p class="article__paragraph">
+					W przypadku własności align-content o wartości space-around, przestrzeń między elementami zostanie podzielona na 3 podprzestrzenie, przy czym zostanie ona podzielona na dwa i jedna jej część zostanie umieszczona pośrodku, między elemntami. Druga część zostanie natomiast podzielona na pół i połowa będzie oddzielała elementy od górnej krawędzi rodzica, a druga połowa od dolnej krawędzi kontenera.
+				</p>
+				<img class="image" src="/align-content-space-around.jpg"	
+				alt="Przykład użycia własności align-content o wartości space-around w przypadku poziomej orientacji elementów." />	
+				<p class="article__paragraph">
+					Analogiczną własnością do align-content, ale działającą na poziomie odpowiednio, danego wiersza lub kolumny, a nie całej osi pionowej lub poziomej, jest własność align-items. Odnosi się ona do ustawiania elementów wewnątrz naszego wiersza lub kolumny, wzdłuż osi przeciwnej do flex-direction.
+				</p>
+				<img class="image" src="/align-items.jpg"
+					alt="Wartości, jakie może przyjmować własność align-items." />
+				<p class="article__paragraph">
+					Domyślna wartość dla własności align-items to stretch. W jej wyniku elementy zostaną rozciągnięte do całej dostępnej szerokości/wysokości kolumny/wiersza z osi przeciwnej do orientacji flex-direction. Jeśli kontener nie miałby podanej wysokości, to element zostanie rozciągnięty do wysokości samego elementu, czyli tyle, ile wymaga tego jego zawartość. Jeśli któryś z elementów w wierszu miałby większą wysokość z uwagi na jego większą zawartość, to wszystkie elementy zostałyby rozciągnięte do wysokości tego najwyższego elementu.
+				</p>
+				<img class="image" src="/align-items-stretch.jpg"	
+				alt="Przykład użycia własności align-items o wartości stretch w przypadku poziomej orientacji elementów." />
+				<p class="article__paragraph">
+					W przypadku własności align-items o wartości odpowiednio flex-start, flex-end oraz center, elementy zostaną rozmieszczone odpowiednio: u góry, na dole lub w środku osi przeciwnej do orientacji flex-direction. Operując w osi poziomej, elementy zostaną umieszczone odpowiednio: przy górnej krawędzi wiersza, przy dolnej krawędzi wiersza lub pośrodku wiersza.
+				</p>	
+				<img class="image" src="/align-items-flex-end.jpg"	
+				alt="Przykład użycia własności align-items o wartości flex-end w przypadku poziomej orientacji elementów." />
+				<p class="article__paragraph">
+					W przypadku własności align-items o wartości baseline, elementy są ustawiane względem osi w ten sposób, by zaczynały się na tym samym poziomie, przy czym początek, linia bazowa, wyznaczana jest przez tekst znajdujący się w pierwszym elemencie.
+				</p>
+				<img class="image" src="/align-items-baseline.jpg"	
+				alt="Przykład użycia własności align-items o wartości baseline w przypadku poziomej orientacji elementów." />
+				<p class="article__paragraph">
+					Istnieje jeszcze coś takiego jak align-self, czyli własność, która pozwala na ustawienie pojedynczego elementu wzdłuż osi przeciwnej do flex-direction. Można zatem ustalić, ze jakiś pojedynczy element będzie zachowywał się inaczej niż pozostałe elementy znajdujące się razem z nim w wierszu.
+				</p>
+				<img class="image" src="/align-self.jpg"
+				alt="Wartości, jakie może przyjmować własność align-self." />
+				<p class="article__paragraph">
+					Na poniższym przykładzie uzycia flex-direction w osi pionowej, element 2 został ostylowany za pomocą osobnej klasy i własności align-self: center, podczas gdy pozostałe elementy w kolumnie są ostylowane za pomocą własności align-items: stretch.
+				</p>
+				<img class="image" src="/flex-item-self.jpg"
+				alt="Przykład użycia własności align-self o wartości center w przypadku pionowej orientacji elementów w sytuacji, gdy pozostałe elementy w kolumnie są ostylowane za pomocą własności align-items: stretch." />
+				<p class="article__paragraph">
+					W praktyce naczęściej wykorzystuje się własności justify-content oraz align-items, ponieważ flexa stosuje się zwykle do jednego wiersza. Raczej nie wykorzystuje się go do budowania bardziej skomplikowanych rzeczy, stąd własność align-content w powiązaniu z zawiajniem elementów jest rzadko stosowana.
+				</p>
+			</article>
+			<article class="article">
+				<h3 class="article__header">Flexbox - order, basis i devtools</h3>
+				<p class="article__paragraph">
+					Własność order odpowiada za kolejność elementów i domyślnie przyjmuje wartość 0, ale może przyjmować również inne wartości z zakresu liczb całkowitych, zarówno dodatnie, jak i ujemne. Kolejność ustawiona za pomocą stylów i własności order nie wpływa na kolejność elementów w DOM, a jedynie na kolejność, w jakiej są wyświetlane na stronie. Order działa tylko w ramach danego kontenera flexowego, odnosi się do dzieci danego flexa. Jeśli mamy kilka flexów na stronie, to one się ze sobą nie łączą. Własność order definiuje się dla każdego z nich osobno.
+				</p>
+				<img class="image" src="/flex-order.jpg"
+				alt="Wartości, jakie może przyjmować własność order." />
+				<p class="article__paragraph">
+					Przestawiając elementy według kolejności z order, im wyższa wartość, tym element będzie się znajdował wyżej w ramach układu warstwowego strony. Przy domyślnym układzie elementów, czyli przy justify-content: flex-start oraz align-items: stretch, alement 3 otrzymał wartość ujemną, podczas, gdy pozostałe elementy mają domyślną wartość order, czyli 0. W efekcie element 3 wylądował na spodzie, czyli na początku wiersza.
+				</p>
+				<img class="image" src="/flex-item-order.jpg"
+				alt="Przykład użycia własności order dla pojedynczego elementu w ramach poziomej orientacji elementów w kontenerze flexowym." />
+				<p class="article__paragraph">
+					Własność flex-grow również odnosi się do danego kontenera flexowego i domyślnie przyjmuje wartość 0. Można jej nadać równieź inną wartość w postaci innej liczby całkowitej, tzw. proporcji. 
+				</p>
+				<img class="image" src="/flex-grow.jpg"
+				alt="Wartości, jakie może przyjmować własność flex-grow." />
+				<p class="article__paragraph">
+					Jeśli nadamy elementom, znajdującym się w ramach danego kontenera flexowego, wartość 1, to wolna przestrzeń dostępna w tym kontenerze zostanie podzielona między te elementy według proporcji 1, czyli każdy z elementów otrzyma dodatkowo, poza przestrzenią, którą aktualnie zajmuje, taki sam kawałek dodatkowej przestrzeni. Na naszym przykładzie, gdzie mamy pięć elementów, wolna przestrzeń zostanie podzielona na 5 i każdy z elementów dostanie 1/5 tej przestrzeni.
+				</p>
+				<img class="image" src="/flex-grow-example1.jpg"
+				alt="Przykład użycia własności flex-grow o wartości 1 dla wszystkich elementów w kontenerze flexowym w orientacji poziomej." />
+				<p class="article__paragraph">
+					Jeśli jednemu z pieciu elementów znajdujących się w kontenerze flexowym, nadamy wartość flex-grow: 2, podczas gdy pozostałe elementy z kontenera mają wartość flex-grow: 1, to wolna przestrzeń w ramach kontenera zostanie podzielona na 6 części, i ten pojedynczy element (na poniższym przykładzie jest to element 4) otrzyma 2/6 (1/3) wolnej przestrzeni, natomiast pozostałe elementy otrzymają po 1/6 z tej przestrzeni.
+				</p>
+				<img class="image" src="/flex-grow-example2.jpg"
+				alt="Przykład użycia własności flex-grow o wartości 2 dla pojedynczego elementu w kontenerze flexowym w orientacji poziomej, podczas gdy pozostałe elementy z kontenera mają wartość flex-grow: 1." />
+				<p class="article__paragraph">
+					Za pomocą własności flex-grow możemy zatem określać proporcje elementów w ramach kontenera, ale tylko do pewnego momentu, ponieważ elementy nie mogą być mniejsze niż to, co oferuje nam cała wolna przestrzeń. Za pomocą flex-grow możemy jednak nadawać priorytety. Najpopularniejsza wartość dla flex-grow w projektach, to 1, ale można oczywiście ustawiać elementom inne proporcje i priorytety w ramach rodzica flexowego. Proporcje są tutaj liczone za pomocą algorytmu flexowego, przy uwzględnieniu zarówno zdefiniowanych przez nas wartości, jak i ilości elementów oraz dostępnej przestrzeni w kontenerze.
+				</p>
+				<p class="article__paragraph">
+					Jeśli w stosunku do jednego z elementów w ramach kontenera flexowego użyjemy wartości flex-grow: 0, a pozostałe elementy z kontenera będą miały wartość flex-grow: 1, to na naszym przykładzie pięciu emementów, dostępna wolna przestrzeń z kontenera zostanie rozdzielona równo pomiędzy 4 z tych elementów, a element ostylowany za pomocą flex-grow: 0, w ogóle nie będzie rosnął. Nie dostanie żadnej dodatkowej przestrzeni.
+				</p>
+				<img class="image" src="/flex-grow-example3.jpg"
+				alt="Przykład użycia własności flex-grow o wartości 0 dla pojedynczego elementu w kontenerze flexowym w orientacji poziomej, podczas gdy pozostałe elementy z kontenera mają wartość flex-grow: 1." />
+				<p class="article__paragraph">
+					Własność flex-shrink definiuje w jaki sposób będzie zachowywał sie dany element w sytuacji, gdy ma się kurczyć. Własność ta również odnosi się do danego kontenera flexowego i domyślnie przyjmuje wartość 1. Można jej nadać równieź inną wartość w postaci innej liczby całkowitej, tzw. proporcji. 
+				</p>
+				<img class="image" src="/flex-shrink.jpg"
+				alt="Wartości, jakie może przyjmować własność flex-shrink." />
 			</article>
 		</section>
 
