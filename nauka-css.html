@@ -758,7 +758,7 @@
 					fixed jest często używana w urządzenianiach mobilnych, np. do przyklejenia przycisku menu.
 				</p>
 				<img class="image" src="/position-fixed.jpg"
-					alt="Przykład ostylowania elementu za pomocą własności position: fxed." />
+					alt="Przykład ostylowania elementu za pomocą własności position: fixed." />
 				<p class="article__paragraph">Position: sticky</p>
 				<p class="article__paragraph">
 					Wartość sticky jest bardzo przydatna, np. gdy mamy dłuższe treści i chcemy przykleić nagłówek
@@ -1030,7 +1030,7 @@
 				<h3 class="article__header">Flexbox - tryb działania i zawijanie</h3>
 				<p class="article__paragraph">
 					Flex jest kolejną wartością własności display i stanowi odpowiedź na problemy z wyśrodkowywaniem
-					elementów i treści. Nie jest to zwykła wartość, która decyduje o tym, jak element będzie się
+					elementów i treści. Jest to jedna z napowszechniejszych obecnie technik stylowania i ustawiania elementów na stronie. Nie jest to zwykła wartość, która decyduje o tym, jak element będzie się
 					wyświetlał, ale algorytm, tryb działania własności display, który będzie przeliczał umiejscowienie
 					naszych elementów, żeby wyświetlały się w oczekiwany sposób. Display: flex dodany na poziomie
 					kontenera sprawia, że 5 elementów, znajdujących się w ramach tego kontenera, które wcześniej
@@ -1199,7 +1199,7 @@
 				<img class="image" src="/space-between.jpg"
 					alt="Przykład użycia własności justify-content o wartości space-between w przypadku pionowej orientacji elementów." />
 				<p class="article__paragraph">
-					W przypadku, gdy mamy zdefiniowaną własność justify-content: space-beteen dla treści zorientowanej poziomo i zawijanej do kolejnego wiersza (własność flex-wrap: wrap), w taki sposób, że wjednym wierszu znajdują się 3 elementy, a w drugim dwa alementy, to tworząc odtępy między tymi elementami, flex działa w ramach każdego z wierszy osobno. Stają się one jakby osobnymi kontenerami, w ramach których elementy są układane, zgodnie z przyjętymi parametrami. W związku z tym, w pierwszym wierszu odgległość między elementami będzie mniejsza niż w wierszu drugim, ponieważ dostępna wolna przestrzeń do zagospodarowania jest mniejsza w przypadku wiersza pierwszego.
+					W przypadku, gdy mamy zdefiniowaną własność justify-content: space-between dla treści zorientowanej poziomo i zawijanej do kolejnego wiersza (własność flex-wrap: wrap), w taki sposób, że wjednym wierszu znajdują się 3 elementy, a w drugim dwa alementy, to tworząc odstępy między tymi elementami, flex działa w ramach każdego z wierszy osobno. Stają się one jakby osobnymi kontenerami, w ramach których elementy są układane, zgodnie z przyjętymi parametrami. W związku z tym, w pierwszym wierszu odgległość między elementami będzie mniejsza niż w wierszu drugim, ponieważ dostępna wolna przestrzeń do zagospodarowania jest mniejsza w przypadku wiersza pierwszego.
 				</p>
 				<img class="image" src="/wrap-space-between.jpg"
 						alt="Przykład użycia własności justify-content o wartości space-between w przypadku poziomej orientacji elementów oraz użycia włąsności flex-wrap o wartości wrap." />
@@ -1352,6 +1352,31 @@
 				</p>
 				<img class="image" src="/flex-properties-example.jpg"
 				alt="Przykład skrótowego zapisu parametrów flexowych opisującyh dzieci w ramach kontenera flexowego." />
+				<p class="article__paragraph">
+					Odstępy między elementami możemy definiować za pomocą tzw. gapów. Zaczniemy od własności row-gap, który jak nazwa wskazuje, odnosi się do odstępów między wierszami. W związku z tym, że zwykle operuje się na jednym wierszu lub kolumnie, to użycie tej własnoći najlepiej będzie widać na przykładzie elementów znajdujących sie w kontenerze flexowym o orientacji pionowej.
+				</p>
+				<img class="image" src="/row-gap.jpg"
+				alt="Wartości, jakie może przyjmować własność row-gap." />
+				<p class="article__paragraph">
+					Analogicznie, użycie własności column-gap najlepiej będzie widać na przykładzie elementów znajdujących sie w kontenerze flexowym o orientacji pionowej. Na poniższym przykładzie odstępy między kolumnami zostały zdefiniowane jako 2 remy (32 piksele). Maciek zaleca stosowanie zapisu tej własności po prostu jako gap, na tym przykładzie byłoby to gap: 2rem. Wóczas nie zależnie od tego, czy będziemy znajdować się w orientacji poziomej czy pionowej, odległość między tymi elementami będzie zawsze zdefiniowana jako gap.
+				</p>
+				<img class="image" src="/column-gap-example.jpg"
+				alt="Przykład użycia własności column-gap dla elementów znajdujących sie w kontenerze flexowym o orientacji poziomej." />
+				<p class="article__paragraph">
+					Aby dobrze zobrazować sobie działanie flexa, można korzystać z narzędzi developerskich w przeglądarce, gdzie w zakładce Elements, jest widoczne użycie flexa dla danych elementów.
+				</p>
+				<img class="image" src="/devtools-flex.jpg"
+				alt="Widok użycia flexa w zakładce Elements w devtools." />
+				<p class="article__paragraph">
+					Najbardziej użyteczna jest jednak ikonka, która pojawia się przy własności display: flex zdefiniowanej dla naszego elementu. Po kliknięciu w nią, pojawia się panel, który podświetla aktualnie użyte własności i pozwala na łatwy wybór innych własności, by przetestować sobie ich użycie na naszych elementach. Efekty są od razu widoczne, bez konieczności wprowadzania zmian w kodzie. Jest to bardzo wygodna opcja, by zrozumieć, jak działa flexbox.
+				</p>
+				<img class="image" src="/devtools-flex-icon.jpg"
+				alt="Panel w devtools do testowania własności flexowych." />
+				<p class="article__paragraph">
+					W devtools można również w podobny sposób przetestować sobie wartości dla samego flexa, gdyż po dodaniu danej własności, narzędzie podpowiada nam dostępne dla niej wartości, przez które można się przeklikać, podglądając na bieżąco efekty, ale nie jest to już tak instuicyjne, jak panel dla flexboxa.
+				</p>
+				<img class="image" src="/devtools-flex-options.jpg"
+				alt="Podgląd opcji dostępnych dla danych własności flexowych." />
 			</article>
 		</section>
 
