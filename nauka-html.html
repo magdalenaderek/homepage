@@ -212,8 +212,31 @@
 			Przykładowy zestaw encji wraz z ich opisem możemy znaleźć na stronie <a class="link" href="https://developer.mozilla.org/en-US/docs/Glossary/Entity">MDN - Mozilli dla developerów</a>. Poniżej znajduje się zestawienie podstawowych encji zapożyczone z tej właśnie strony. Na stronie MDN znajduje się jednak odnośnik do całej długiej listy nazwanych i opisanych encji, z których można skorzystać, jeśli do zapisu danego znaku specjalnego nie chcemy używać grafik.
 		</p>
 		<img class="image" src="/entity-examples.jpg" alt="Przykładowe encje i ich znaczenie."/>
+		</article>
+	</section>
+	<section class="section">
+			<h2 class="section__header">HTML - tydzień 6</h2>
+			<article class="article">
+				<h3 class="article__header">Formularze</h3>
+				<p>
+					Formularze pozwalają na komunikację między frontendem a tym, co się dzieje na serwerze. Umożliwiają wysyłkę danym w inne miejsce, gdzie mogą one następnie być przetwarzane. Do wyświetlania formularza służy znacznik &lt;form&gt;. Znacznik ten wyznacza granice naszego formularza. Podstawową jednostką formularza jest tag &lt;input&gt;, będący znacznikiem samozamykającym, podobnie jak obrazek. Elementy formularza, w tym &lt;input&gt; wrzucamy w jakiś znacznik, często jest to znacznik &lt;p&gt;. Input ma bardzo dużo atrybutów, a kolejność ich umieszczenia w znaczniku nie ma znaczenia:
+					<ul class="unordered-list">
+						<li class="unordered-list__element">name - odpowiada za nazwę pola, pozwala na identyfikację inputów, tak by później serwer wiedział, co pod którym inputem się kryje;</li>
+						<li class="unordered-list__element">id - id pola, służy do identyfikacji pola, używane jest też do odniesienia się do laber for=""; Maciek co do zasady ustawia taką samą wartość id, jak name danego pola;</li>
+						<li class="unordered-list__element">type - określa typ danego inputa, podstawowym domyślnym typem jest type="text"; pozwala na wpisanie jednowierszowego tekstu, wciśnięcie entera nie spowoduje przejścia do kolejnego wiersza, ale wysłanie formularza;</li>
+						<li class="unordered-list__element">value - określa wartość danego inputa; po dodaniu tego atrybutu, pojawia się ona jako domyślna wartość danego pola, np. konretne miasto przy inpucie do wpisania miasta; nie jest to to samo co placeholder;</li>
+						<li class="unordered-list__element">placeholder - tekst podpowiedzi, pojawia się wewnątrz pola, np. dla inputu do wpisania miasta może mieć wartość placeholder="miasto"; nie jest to więć wartość wpisana w pole, ale wskazówka, co należy tam wpisać; placeholder jest widoczny w polu tylko wówczas, gdy jest ono puste.</li>
+					</ul>
+				</p>
+				<p> 
+					Dodatkowo każde pole musi mieć swoją etykietę, do czego służy znacznik &lt;label&gt;. Samo dodanie tego znacznika sprawia, że pojawia się on w strukturze DOM, ale nie jest przypięty do danego pola. Żeby to zrobić należy użyć atrybutu for="", kórego wartość definiujemy jako id pola, do którego odnosi się etykieta. Po powiązaiu w ten sposób inputu z etykietą, kliknięcie w samą etykietę na stronie powoduje przeniesienia fokusa na wnętrzne pola. Jest to jedna z opcji zapewniających dostępność strony.
+				</p>
+				<p> 
+					Należy mieć na uwadze, że atrybut placeholder nie zastępuje elementu label.
+				</p>
+				<img class="image" src="/text-form.jpg" alt="Przykład inputów tekstowych w formularzu."/>
 	</article>
-		</section>
+	</section>
 
 	</main>
     <footer class="footer">
