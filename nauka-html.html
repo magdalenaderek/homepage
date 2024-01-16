@@ -35,17 +35,22 @@
 					za semantykę, nadaje znaczenie i strukturę elementom składającym się na treść strony. <br>
 					Tworzymy główny plik – index.html. Po utworzeniu pliku wpisujemy w pierwszej linii ”!” i klikamy
 					tabulator. Automatycznie wkleja nam się wówczas podstawowa struktura dokumentu html. <br>
-					Obecnie obowiązujący standard to HTML 5, który stał się tzw. living standard, czyli zmienianym ewolucyjnie, a
+					Obecnie obowiązujący standard to HTML 5, który stał się tzw. living standard, czyli zmienianym
+					ewolucyjnie, a
 					nie w ramach nowych edycji.
 				</p>
-				<p class="article__paragraph"><strong>Żeby w notatkach zapisywać nawiasy ostre i nie były one traktowane jako kawałek kodu, można użyć "& l t ;" i "& g t ;", pisane bez spacji między znakami.</strong> Są to tzw. encje.</p>
+				<p class="article__paragraph"><strong>Żeby w notatkach zapisywać nawiasy ostre i nie były one traktowane
+						jako kawałek kodu, można użyć "& l t ;" i "& g t ;", pisane bez spacji między znakami.</strong>
+					Są to tzw. encje.</p>
 				<p class="article__paragraph">
 					DOCTYPE – określa typ dokumentu, aktualnie będzie to raczej zawsze html <br>
 					Lang – wybór języka, np. en, pl; ma znaczenie dla dostępności, kierują się tym czytniki treści
 					<br>
-					&lt;head&gt; to co jest w tej sekcji nie jest widoczne na stronie, ale wpływa na jej wygląd i treść <br>
+					&lt;head&gt; to co jest w tej sekcji nie jest widoczne na stronie, ale wpływa na jej wygląd i treść
+					<br>
 					"main" główna treść dokumentu, <br>
-					"header" główny nagłówek dokumentu, sekcji lub artykułu (dodawany np. w przypadku artykułów na blogu i
+					"header" główny nagłówek dokumentu, sekcji lub artykułu (dodawany np. w przypadku artykułów na blogu
+					i
 					zawierający wówczas nazwisko autora czy datę,<br>
 					"footer" stopka dokumentu, sekcji lub artykułu, <br>
 					"section" sekcja dokumentu, część treści logicznie wyodrębniona; każda sekcja powinna mieć nagłówek,
@@ -57,14 +62,19 @@
 					Wszystko to zawiera się w "body", a potem w "main". <br>
 					ctrl+shift+p i wyszukiwana fraza „format” – z podpowiedzi wybieramy „format document” i
 					automatycznie formatuje nam dokument napisany w html. <br>
-					Możemy też regulować wyrównywanie, głębokość wcięć. Wybieramy w tym celu opcję "spaces" na dolnej belce VSC po
-					prawej stronie, następnie na rozwijanej liście klikamy w opcję indent using tabs i wpisujemy wybraną wartość
+					Możemy też regulować wyrównywanie, głębokość wcięć. Wybieramy w tym celu opcję "spaces" na dolnej
+					belce VSC po
+					prawej stronie, następnie na rozwijanej liście klikamy w opcję indent using tabs i wpisujemy wybraną
+					wartość
 					(wybrałam 2, wcześniej było 4). To samo można zastosować w pliku ze stylami.
 				</p>
-				<p>
-					Kod HTML ma strukturę drzewa, rodziny, klanu z zagnieżdżonymi elementami, które zawierają się jedne w drugich w relacji
-					rodzic (element, w którym jest zagnieżdżony inny element) - dziecko (element, który jest zagnieżdżony w innym
-					elemencie, swoim rodzicu). Poszczególne zagnieżdżone elementy to węzły (node), a element, z którego wychodzą
+				<p class="article__paragraph">
+					Kod HTML ma strukturę drzewa, rodziny, klanu z zagnieżdżonymi elementami, które zawierają się jedne
+					w drugich w relacji
+					rodzic (element, w którym jest zagnieżdżony inny element) - dziecko (element, który jest
+					zagnieżdżony w innym
+					elemencie, swoim rodzicu). Poszczególne zagnieżdżone elementy to węzły (node), a element, z którego
+					wychodzą
 					to korzeń (root element - znacznik html).
 				</p>
 			</article>
@@ -83,35 +93,45 @@
 					nową llinię. Ale najlepiej zapisać go po prostu w nawiasach ostrych jako "br/". <br>
 					b (bold) - wyróżnienie wizualne tekstu z otaczającej go treści poprzez pogrubienie, nie ma żadnego
 					znaczenia semantycznego, obecnie zamiast tego znacznika w tym celu stosuje się stylowanie w css,<br>
-					u (underline) - podkreślenie tekstu, obecnie nie używa sie go do stylowania tesktu, bo mógłby być mylony np. z linkiem, a zgodnie z dokumentacją służy do dodania nietekstowej adnotacji, np. podkreślenie błędu,<br>
+					u (underline) - podkreślenie tekstu, obecnie nie używa sie go do stylowania tesktu, bo mógłby być
+					mylony np. z linkiem, a zgodnie z dokumentacją służy do dodania nietekstowej adnotacji, np.
+					podkreślenie błędu,<br>
 					i (italic) - wyróżnienie wizualne tekstu z otaczającej go treści poprzez kursywę, nie ma żandego
 					znaczenia semantycznego, obecnie zamiast tego znacznika w tym celu stosuje się stylowanie w css,<br>
 					strong - wyróżnia wizualnie tekst poprzez pogrubienie, ale ma również znaczenie semantyczne, służy
 					podkreśleniu znaczenia danej frazy, <br>
 					em - wyróżnia wizualnie tekst poprzez kursywę, ale ma również znaczenie semantyczne, służy
 					podkreśleniu, że dany zwrot został użyty w innym znaczeniu niż dosłowne, często ironicznie.<br>
-					Znaczniki b, i, u obecnie są traktowane przez przeglądarki jak dawniej, czyli odczytywane są jako domyślne stylowanie, ale nic nie stoi na przeszkodzie, by w przyszłości przeglądarki przestały nadać im znaczenie stylujące, dlatego lepiej ich nie stosować. Do stylowania służy css.
+					Znaczniki b, i, u obecnie są traktowane przez przeglądarki jak dawniej, czyli odczytywane są jako
+					domyślne stylowanie, ale nic nie stoi na przeszkodzie, by w przyszłości przeglądarki przestały nadać
+					im znaczenie stylujące, dlatego lepiej ich nie stosować. Do stylowania służy css.
 				</p>
 			</article>
 			<article class="article">
 				<h3 class="article__header">Linkowanie i nawigacja</h3>
 				<p class="article__paragraph">
-					a (anchor) - znacznik używany do tworzenia linków zewnętrznych oraz łącza wewnątrz dokumentu, opisywany jest
+					a (anchor) - znacznik używany do tworzenia linków zewnętrznych oraz łącza wewnątrz dokumentu,
+					opisywany jest
 					najczęściej przez dwa atrybuty - href i target. <br>
 					"a href="" target="""opis łącza"/a" <br>
 					Tworząc link zewnętrzny jako wartość atrybutu href podajemy adres strony, do której chcemy się
 					odwołać, np. href="https://cotenfrontend.pl", a w opisie łącza wskazujemy dokąd link prowadzi
 					(będzie to literał, który będzie linkował do przestrzeni zewnętrznej). <br>
-					Atrybut target natomiast pozwala na otworzenie strony, do której linkujemy, w nowej zakładce, jeśli nadamy mu wartość target="_blank". Jeśli tego atrybutu nie dodamy, to strona otworzy się w zakładce, w której się znajdujemy.<br>
+					Atrybut target natomiast pozwala na otworzenie strony, do której linkujemy, w nowej zakładce, jeśli
+					nadamy mu wartość target="_blank". Jeśli tego atrybutu nie dodamy, to strona otworzy się w zakładce,
+					w której się znajdujemy.<br>
 					Tworząc łącze w ramach dokumentu musimy posłużyc się atrybutem "id" identyfikującym dany element,
 					np. daną sekcję, header, etc. Identyfikator powinien być unikalny w ramach dokumentu
 					(id="moj-identyfikator") i odnosimy się do niego podając na początku jego wartości znak #. Czyli
-					jeśli danemu elementowi nadamy id o wartości "notatki", to odnosimy się do niego wpisując href="#notatki". ważne jest też, m. in. z punktu widzenia dostępności strony, by w opisie łącza wskazywać dokładnie, dokąd link prowadzi.
+					jeśli danemu elementowi nadamy id o wartości "notatki", to odnosimy się do niego wpisując
+					href="#notatki". ważne jest też, m. in. z punktu widzenia dostępności strony, by w opisie łącza
+					wskazywać dokładnie, dokąd link prowadzi.
 					Przykładowo, jeśli w elemencie header damy id="top", to w stopce możemy stworzyć łącze pozwalające
 					na powrót na górę strony wyglądające w ten sposób: href="#top" i jako opis łącza podać "Wróć na górę
 					strony".
 				</p>
-				<p class="article__paragraph"> nav - służy do nawigacji, np. między podstronami w ramach dokumentu; wskazuje, że
+				<p class="article__paragraph"> nav - służy do nawigacji, np. między podstronami w ramach dokumentu;
+					wskazuje, że
 					jest to główna nawigacja po stronie/serwisie. <br>
 					Aby utworzyć kolejne podstrony, tworzymy kolejny plik, np. nauka-html.html (nie używamy znaków
 					diakrytcznych ani spacji, rozdzielamy myślinikami). Kopiujemy całą treść z pliku index.html i
@@ -119,11 +139,18 @@
 					poza znacznikiem main. Dzięki temu na wszystkich podstronach będzie powtarzał się ten sam nagłówek.
 					Każdą treść powtarzalną wyrzucamy poza main, czyli oprócz znacznika header może to być przykładowo
 					znacznik footer. Treści takie nie są analizowane przez wyszukiwarki czy czytniki treści, które
-					skupiają się na treści zawartej w tagu main. Treść zawarta w znaczniku main powinna być unikalna.<br>
+					skupiają się na treści zawartej w tagu main. Treść zawarta w znaczniku main powinna być
+					unikalna.<br>
 					W takim znaczniku header znajdującym się poza tagiem main, wpisujemy tag nav i w ramach tego
-					znacznika, stosując znaczniki a, dodajemy linkowanie do podstron, tworząc w ten sposób spis treści. Jako adres podajemy nazwę pliku podstrony, do której linkujemy, czyli np. href="nauka-html.html". Dobrą praktyką jest, by menu się powtarzało, czyli zawierało takie same linki na wszystkich podstronach, co oznacza, że na podstronie "strona główna" powinien być również link do strony głównej. Przy przeklikiwaniu między stronami widać, że zmienia
+					znacznika, stosując znaczniki a, dodajemy linkowanie do podstron, tworząc w ten sposób spis treści.
+					Jako adres podajemy nazwę pliku podstrony, do której linkujemy, czyli np. href="nauka-html.html".
+					Dobrą praktyką jest, by menu się powtarzało, czyli zawierało takie same linki na wszystkich
+					podstronach, co oznacza, że na podstronie "strona główna" powinien być również link do strony
+					głównej. Przy przeklikiwaniu między stronami widać, że zmienia
 					się adres w urlu - na index lub nauka-html. <br>
-					Elementem powtarzalnym jest również stopka, więc wycinamy ją na obu dokumentach z sekcji main i wklejamy poza tym znacznikiem. Sam nagłówek h1 w header w sekcji main zostawiamy w obu dokumentach, tylko zmieniamy jego treść w pliku
+					Elementem powtarzalnym jest również stopka, więc wycinamy ją na obu dokumentach z sekcji main i
+					wklejamy poza tym znacznikiem. Sam nagłówek h1 w header w sekcji main zostawiamy w obu dokumentach,
+					tylko zmieniamy jego treść w pliku
 					nauka-html.html, tak aby odpowiadał treści na tej podstronie, czyli np. "Nauka HTML-a". Robimy też
 					roszady w treści dokumentów.
 				</p>
@@ -137,11 +164,12 @@
 					wówczas widoczny również wśród plików wyświetlonych w edytorze kodu. Następnie wybieramy miejsce,
 					gdzie chcemy taki obrazek dodać - ja postanowiłam dodać stworzony przeze mne obrazek przedstawiający
 					przykład schematu blokowego w notatce na ten temat w pliku nauka-js.html.
-					<a class="link" href="nauka-js.html">Obrazek znajduje się na tej podstronie.</a>
+					<a class="article__link" href="nauka-js.html">Obrazek znajduje się na tej podstronie.</a>
 				</p>
 				<p class="article__paragraph">
 					W pliku tym, w miejscu, gdzie chcemy dodać obrazek, otwieramy znacznik img i wskazujemy adres
-					obrazka, podając jego nazwę, w moim przypadku to src="schemat-blokowy.JPG". Dodajemy też tekst alternatywny
+					obrazka, podając jego nazwę, w moim przypadku to src="schemat-blokowy.JPG". Dodajemy też tekst
+					alternatywny
 					jako wartość dla atrybutu "alt". Tekst ten nie jest widoczny dla użytkownika na stronie, ale
 					posługują się nim wyszukiwarki oraz mające na celu zapewnienie dostępności czytniki stron
 					internetowych. Warto więc w miarę dokładnie opisać zawartość obrazka. W moim przypadku to
@@ -161,35 +189,53 @@
 			<article class="article">
 				<h3 class="article__header">Listy i definicje</h3>
 				<dl class="description-list">
-				<dt class="description-list__term">Lista nieuporządkowana - unordered list (ul)</dt>
+					<dt class="description-list__term">Lista nieuporządkowana - unordered list (ul)</dt>
 					<dd class="description-list__details">
-				Lista nieuporządkowana, której nieodłączną częścią jest element listy - list item (li). Jeśli nie określimy sposobu, w jaki ma się lista wyświetlać, to przeglądarka nada jej swoje style domyślne, w tym przypadku elementy były wylistowane po kropkach, według stylu disc.
-			</dd>
-			<dt class="description-list__term">Lista uporządkowana - ordered list (ol)</dt>
-			<dd class="description-list__details">
-					Lista uporządkowana, której nieodłączną częścią jest element listy - list item (li). Jeśli nie określimy sposobu, w jaki ma się lista wyświetlać, to przeglądarka nada jej swoje style domyślne, w tym przypadku elementy były wyświetlone jako lista numeryczna.
-				</dd>
-				<dt class="description-list__term">Własność list-style-type</dt>
-				<dd class="description-list__details">
-					Możemy określić sposób wyświetania listy za pomocą własności list-style lub list-style-type. Po wpisaniu tej własności w pliku ze stylami, edytor podpowiada dostępne opcje. Jeśli chcemy, by lista wyświetlała sie bez żadnych elementów z przodu, nadajemy jej wartość list-style-type: none.<br>
-					W przypadku listy uporządkowanej, również możemy ją sobie dowolnie ostylować, np. wylistować elementy za pomocą kropek. Wizaualnie nie musi to być lista numeryczna, choć oczywiście jako lista uporządkowana, semantycznie kolejność będzie tu miała nadal znaczenie.
-				</dd>
-				<dt class="description-list__term">Zagnieżdżanie list</dt>
-				<dd class="description-list__details">
-					Listy możemy zagnieżdżać, robić sobie podlisty, przy czym nie muszą to być listy jednego typu, czyli w ramach listy nieuporządkowanej możemy sobie umieścić listę uporządkowaną lub odwrotnie. Istotne jest tylko to, by zagnieżdżenie znajdowało się w ramach któregoś z punktów listy, czyli list item (po otwarciu znacznika li i jego treści, ale przed domknięciem znacznika), a nie pomiędzy nimi. W tej drugiej opcji kod również nam się w jakiś sposób wyrenderuje, ale nie jest to poprawne.
-				</dd>
-				<img class="image" src="/list-tag.jpg" alt="Przykład kodu z listą nieuporządkowaną, w której zagnieżdżona jest lista uporządkowana."/>
-				<dt class="description-list__term">Lista definicji - description list (dl)</dt>
-				<dd class="description-list__details">
-					Lista definicji, której nieodłącznymi częściami są opisywany termin, czyli pojęcie - description term (dt) oraz opis, czyli szczegóły tego pojęcia/terminu - description details (dd). Nie jest to zbyt popularny znacznik, ale warto go znać.
-				</dd>
-				<img class="image" src="/description-list.jpg" alt="Przykład listy definicji."/>
-			</dl>
+						Lista nieuporządkowana, której nieodłączną częścią jest element listy - list item (li). Jeśli
+						nie określimy sposobu, w jaki ma się lista wyświetlać, to przeglądarka nada jej swoje style
+						domyślne, w tym przypadku elementy były wylistowane po kropkach, według stylu disc.
+					</dd>
+					<dt class="description-list__term">Lista uporządkowana - ordered list (ol)</dt>
+					<dd class="description-list__details">
+						Lista uporządkowana, której nieodłączną częścią jest element listy - list item (li). Jeśli nie
+						określimy sposobu, w jaki ma się lista wyświetlać, to przeglądarka nada jej swoje style
+						domyślne, w tym przypadku elementy były wyświetlone jako lista numeryczna.
+					</dd>
+					<dt class="description-list__term">Własność list-style-type</dt>
+					<dd class="description-list__details">
+						Możemy określić sposób wyświetania listy za pomocą własności list-style lub list-style-type. Po
+						wpisaniu tej własności w pliku ze stylami, edytor podpowiada dostępne opcje. Jeśli chcemy, by
+						lista wyświetlała sie bez żadnych elementów z przodu, nadajemy jej wartość list-style-type:
+						none.<br>
+						W przypadku listy uporządkowanej, również możemy ją sobie dowolnie ostylować, np. wylistować
+						elementy za pomocą kropek. Wizaualnie nie musi to być lista numeryczna, choć oczywiście jako
+						lista uporządkowana, semantycznie kolejność będzie tu miała nadal znaczenie.
+					</dd>
+					<dt class="description-list__term">Zagnieżdżanie list</dt>
+					<dd class="description-list__details">
+						Listy możemy zagnieżdżać, robić sobie podlisty, przy czym nie muszą to być listy jednego typu,
+						czyli w ramach listy nieuporządkowanej możemy sobie umieścić listę uporządkowaną lub odwrotnie.
+						Istotne jest tylko to, by zagnieżdżenie znajdowało się w ramach któregoś z punktów listy, czyli
+						list item (po otwarciu znacznika li i jego treści, ale przed domknięciem znacznika), a nie
+						pomiędzy nimi. W tej drugiej opcji kod również nam się w jakiś sposób wyrenderuje, ale nie jest
+						to poprawne.
+					</dd>
+					<img class="image" src="/list-tag.jpg"
+						alt="Przykład kodu z listą nieuporządkowaną, w której zagnieżdżona jest lista uporządkowana." />
+					<dt class="description-list__term">Lista definicji - description list (dl)</dt>
+					<dd class="description-list__details">
+						Lista definicji, której nieodłącznymi częściami są opisywany termin, czyli pojęcie - description
+						term (dt) oraz opis, czyli szczegóły tego pojęcia/terminu - description details (dd). Nie jest
+						to zbyt popularny znacznik, ale warto go znać.
+					</dd>
+					<img class="image" src="/description-list.jpg" alt="Przykład listy definicji." />
+				</dl>
 			</article>
 			<article class="article">
 				<h3 class="article__header">Tabela</h3>
-			<p class="article__paragraph">
-				W tabeli (znacznik table) zawieramy dane tabelaryczne, czyli takie, które standardowo byśmy umieścili w tabeli. W skład znacznika table wchodzą następujące elementy:
+				<p class="article__paragraph">
+					W tabeli (znacznik table) zawieramy dane tabelaryczne, czyli takie, które standardowo byśmy
+					umieścili w tabeli. W skład znacznika table wchodzą następujące elementy:
 				<ul class="unordered-list">
 					<li class="unordered-list__element">tr - table row (wiersz tabeli)</li>
 					<li class="unordered-list__element">td - table data/cell (komórka tabeli)</li>
@@ -198,53 +244,118 @@
 					<li class="unordered-list__element">tbody - "ciało" tabeli</li>
 					<li class="unordered-list__element">caption - opis tabeli</li>
 				</ul>
-			</p>
-			<img class="image" src="/table-example.jpg" alt="Przykład kodu tworzącego tabelę w html."/>
+				</p>
+				<img class="image" src="/table-example.jpg" alt="Przykład kodu tworzącego tabelę w html." />
+				<p class="article__paragraph">
+					Kiedyś używano tabel do budowania całych stron - swego czasu był popularny 3-kolumnowy układ stron
+					internetowych: w pierwszej kolumnie znajdowało się menu po lewej, w drugą kolumnę wrzucano treść, a
+					w trzeciej kolumnie robiło się przykładowo drugie menu. Obecnie jednak nie używa się już tabel do
+					budowania layoutów, choć jak najbardziej nadal można je stosować, ale tylko do danych, które są
+					tabelaryczne (swego czasu krytyka tabel zaszła tak daleko, że praktycznie zaprzestano ich stosowania
+					nawet wówczas, gdy było to zasadne).
+				</p>
+			</article>
+			<h3 class="article__header">Encje - entities</h3>
 			<p class="article__paragraph">
-				Kiedyś używano tabel do budowania całych stron - swego czasu był popularny 3-kolumnowy układ stron internetowych: w pierwszej kolumnie znajdowało się menu po lewej, w drugą kolumnę wrzucano treść, a w trzeciej kolumnie robiło się przykładowo drugie menu. Obecnie jednak nie używa się już tabel do budowania layoutów, choć jak najbardziej nadal można je stosować, ale tylko do danych, które są tabelaryczne (swego czasu krytyka tabel zaszła tak daleko, że praktycznie zaprzestano ich stosowania nawet wówczas, gdy było to zasadne).
+				Encje to specjalne znaki, których nie ma na klawiaturze albo które ciężko wprowadzić z poziomu
+				klawiatury, bo np. nadają znaczenie semantyczne. Żeby taki znak wprowadzić w treści należy użyć
+				określonej składni, przykładowo dla znaczka &copy; jest to ampersand, nazwa tej encji oraz średnik,
+				czyli & copy ; pisane bez spacji. Przykłądem mogą być też tagi, czyli nawiasy ostre użyte z elementami o
+				znaczeniu semantycznym. Normalnie zapisany tag zamieni sie bowiem w prawdziwy element HTML, który jako
+				taki będzie interpretowany przez przeglądarkę. A zatem używamy tu encji & lt ; pisanej bez spacji, jako
+				otwarcia nawiasu ostrego (lub znaku mniejszości) przed jakimś znacznikiem HTML &lt; oraz encji & gt ;
+				pisanej bez spacji, jako zamknięcia nawiasu ostrego (lub znaku większości) po danym znaczniku &lt;. Przy
+				kopiowaniu takiego tagu ze strony internetowej, kopiujemy już jednak prawdziwy tag, a nie encję, za
+				pomocą której został zapisany w kodzie. Znak jest zatem interpretowany poprawnie przy próbie kopiowania
+				i zapisu.
 			</p>
-		</article>
-		<h3 class="article__header">Encje - entities</h3>
-		<p class="article__paragraph">
-			Encje to specjalne znaki, których nie ma na klawiaturze albo które ciężko wprowadzić z poziomu klawiatury, bo np. nadają znaczenie semantyczne. Żeby taki znak wprowadzić w treści należy użyć określonej składni, przykładowo dla znaczka &copy; jest to ampersand, nazwa tej encji oraz średnik, czyli & copy ; pisane bez spacji. Przykłądem mogą być też tagi, czyli nawiasy ostre użyte z elementami o znaczeniu semantycznym. Normalnie zapisany tag zamieni sie bowiem w prawdziwy element HTML, który jako taki będzie interpretowany przez przeglądarkę. A zatem używamy tu encji & lt ; pisanej bez spacji, jako otwarcia nawiasu ostrego (lub znaku mniejszości) przed jakimś znacznikiem HTML &lt; oraz encji & gt ; pisanej bez spacji, jako zamknięcia nawiasu ostrego (lub znaku większości) po danym znaczniku &lt;. Przy kopiowaniu takiego tagu ze strony internetowej, kopiujemy już jednak prawdziwy tag, a nie encję, za pomocą której został zapisany w kodzie. Znak jest zatem interpretowany poprawnie przy próbie kopiowania i zapisu.
-		</p>
-		<p class="article__paragraph">
-			Przykładowy zestaw encji wraz z ich opisem możemy znaleźć na stronie <a class="link" href="https://developer.mozilla.org/en-US/docs/Glossary/Entity">MDN - Mozilli dla developerów</a>. Poniżej znajduje się zestawienie podstawowych encji zapożyczone z tej właśnie strony. Na stronie MDN znajduje się jednak odnośnik do całej długiej listy nazwanych i opisanych encji, z których można skorzystać, jeśli do zapisu danego znaku specjalnego nie chcemy używać grafik.
-		</p>
-		<img class="image" src="/entity-examples.jpg" alt="Przykładowe encje i ich znaczenie."/>
-		</article>
-	</section>
-	<section class="section">
+			<p class="article__paragraph">
+				Przykładowy zestaw encji wraz z ich opisem możemy znaleźć na stronie <a class="article__link"
+					href="https://developer.mozilla.org/en-US/docs/Glossary/Entity">MDN - Mozilli dla developerów</a>.
+				Poniżej znajduje się zestawienie podstawowych encji zapożyczone z tej właśnie strony. Na stronie MDN
+				znajduje się jednak odnośnik do całej długiej listy nazwanych i opisanych encji, z których można
+				skorzystać, jeśli do zapisu danego znaku specjalnego nie chcemy używać grafik.
+			</p>
+			<img class="image" src="/entity-examples.jpg" alt="Przykładowe encje i ich znaczenie." />
+			</article>
+		</section>
+		<section class="section">
 			<h2 class="section__header">HTML - tydzień 6</h2>
 			<article class="article">
-				<h3 class="article__header">Formularze</h3>
-				<p>
-					Formularze pozwalają na komunikację między frontendem a tym, co się dzieje na serwerze. Umożliwiają wysyłkę danym w inne miejsce, gdzie mogą one następnie być przetwarzane. Do wyświetlania formularza służy znacznik &lt;form&gt;. Znacznik ten wyznacza granice naszego formularza. Podstawową jednostką formularza jest tag &lt;input&gt;, będący znacznikiem samozamykającym, podobnie jak obrazek. Elementy formularza, w tym &lt;input&gt; wrzucamy w jakiś znacznik, często jest to znacznik &lt;p&gt;. Input ma bardzo dużo atrybutów, a kolejność ich umieszczenia w znaczniku nie ma znaczenia:
-					<ul class="unordered-list">
-						<li class="unordered-list__element">name - odpowiada za nazwę pola, pozwala na identyfikację inputów, tak by później serwer wiedział, co pod którym inputem się kryje;</li>
-						<li class="unordered-list__element">id - id pola, służy do identyfikacji pola, używane jest też do odniesienia się do laber for=""; Maciek co do zasady ustawia taką samą wartość id, jak name danego pola;</li>
-						<li class="unordered-list__element">type - określa typ danego inputa, podstawowym domyślnym typem jest type="text"; pozwala na wpisanie jednowierszowego tekstu, wciśnięcie entera nie spowoduje przejścia do kolejnego wiersza, ale wysłanie formularza;</li>
-						<li class="unordered-list__element">value - określa wartość danego inputa; po dodaniu tego atrybutu, pojawia się ona jako domyślna wartość danego pola, np. konretne miasto przy inpucie do wpisania miasta; nie jest to to samo co placeholder;</li>
-						<li class="unordered-list__element">placeholder - tekst podpowiedzi, pojawia się wewnątrz pola, np. dla inputu do wpisania miasta może mieć wartość placeholder="miasto"; nie jest to więć wartość wpisana w pole, ale wskazówka, co należy tam wpisać; placeholder jest widoczny w polu tylko wówczas, gdy jest ono puste.</li>
-					</ul>
+				<h3 class="article__header">Formularze - podstawy</h3>
+				<p class="article__paragraph">
+					Formularze pozwalają na komunikację między frontendem a tym, co się dzieje na serwerze. Umożliwiają
+					wysyłkę danym w inne miejsce, gdzie mogą one następnie być przetwarzane. Do wyświetlania formularza
+					służy znacznik &lt;form&gt;. Znacznik ten wyznacza granice naszego formularza. Podstawową jednostką
+					formularza jest tag &lt;input&gt;, będący znacznikiem samozamykającym, podobnie jak obrazek.
+					Elementy formularza, w tym &lt;input&gt; wrzucamy w jakiś znacznik, często jest to znacznik
+					&lt;p&gt;. Input ma bardzo dużo atrybutów, a kolejność ich umieszczenia w znaczniku nie ma
+					znaczenia:
+				<ul class="unordered-list">
+					<li class="unordered-list__element">name - odpowiada za nazwę pola, pozwala na identyfikację
+						inputów, tak by później serwer wiedział, co pod którym inputem się kryje;</li>
+					<li class="unordered-list__element">id - id pola, służy do identyfikacji pola, używane jest też do
+						odniesienia się do laber for=""; Maciek co do zasady ustawia taką samą wartość id, jak name
+						danego pola;</li>
+					<li class="unordered-list__element">type - określa typ danego inputa, podstawowym domyślnym typem
+						jest type="text"; pozwala na wpisanie jednowierszowego tekstu, wciśnięcie entera nie spowoduje
+						przejścia do kolejnego wiersza, ale wysłanie formularza;</li>
+					<li class="unordered-list__element">value - określa wartość danego inputa; po dodaniu tego atrybutu,
+						pojawia się ona jako domyślna wartość danego pola, np. konretne miasto przy inpucie do wpisania
+						miasta; nie jest to to samo co placeholder;</li>
+					<li class="unordered-list__element">placeholder - tekst podpowiedzi, pojawia się wewnątrz pola, np.
+						dla inputu do wpisania miasta może mieć wartość placeholder="miasto"; nie jest to więć wartość
+						wpisana w pole, ale wskazówka, co należy tam wpisać; placeholder jest widoczny w polu tylko
+						wówczas, gdy jest ono puste.</li>
+				</ul>
 				</p>
-				<p> 
-					Dodatkowo każde pole musi mieć swoją etykietę, do czego służy znacznik &lt;label&gt;. Samo dodanie tego znacznika sprawia, że pojawia się on w strukturze DOM, ale nie jest przypięty do danego pola. Żeby to zrobić należy użyć atrybutu for="", kórego wartość definiujemy jako id pola, do którego odnosi się etykieta. Po powiązaiu w ten sposób inputu z etykietą, kliknięcie w samą etykietę na stronie powoduje przeniesienia fokusa na wnętrzne pola. Jest to jedna z opcji zapewniających dostępność strony.
+				<p id="label-tag" class="article__paragraph">
+					Dodatkowo każde pole musi mieć swoją etykietę, do czego służy znacznik &lt;label&gt;. Samo dodanie
+					tego znacznika sprawia, że pojawia się on w strukturze DOM, ale nie jest przypięty do danego pola.
+					Żeby to zrobić należy użyć atrybutu for="", kórego wartość definiujemy jako id pola, do którego
+					odnosi się etykieta. Po powiązaiu w ten sposób inputu z etykietą, kliknięcie w samą etykietę na
+					stronie powoduje przeniesienia fokusa na wnętrzne pola. Jest to jedna z opcji zapewniających
+					dostępność strony.
 				</p>
-				<p> 
+				<p class="article__paragraph">
 					Należy mieć na uwadze, że atrybut placeholder nie zastępuje elementu label.
 				</p>
-				<img class="image" src="/text-form.jpg" alt="Przykład inputów tekstowych w formularzu."/>
-	</article>
-	</section>
+				<img class="image" src="/text-form.jpg" alt="Przykład inputów tekstowych w formularzu." />
+				<p class="article__paragraph">
+					Pola w formularzu mogą być pogrupowane w sekcje, np. tematyczne. Służy do tego znacznik
+					&lt;fieldset&gt;. Dodaje się do niego znacznik &lt;legend&gt;, który służy do opisania danego
+					fieldseta i domyślnie przyjmuje formę ramki z tekstem wprowadzonego opisu.
+				</p>
+				<img class="image" src="/fieldset.jpg" alt="Użycie znacznika fieldset do pól z danymi adresowymi." />
+			</article>
+			<article class="article">
+				<h3 class="article__header">Rodzaje inputów</h3>
+				<p class="article__paragraph">type="radio"</p>
+				<p class="article__paragraph">
+					Radiobuttony, inaczej radioprzyciski. Pole jednnokrotnego wyboru - tylko jedno pole radio moż być
+					aktywne. Po dodaniu pustego inputa o typie radio w formularzu pojawia się już pojedyncza kropka. Do
+					pola standardowo dodajemy etykietę. Może być ona wprowadzona jako osobny znacznik z atrybutem for,
+					tak jak <a class="article__link" href="#label-tag">na wcześniejszym przykładzie</a>. Można nią też
+					jednak bezpośrednio opakować pole input. Forma z for i id jest jednak bardziej czytelna, nie trzeba
+					robić wówczas zagnieżdżeń. Grupę pól radio można również opakować w fieldset, choć nie trzeba.</br>
+					Jeśli dodamy kilka inputów o typie radio opakowanych w etykiety, to nie będą one jednak stanowiły od
+					razu zestawu opcji jednokrotnego wyboru, nawet jeżeli opakujemy je w fieldset. Aby taki efekt
+					uzyskać należy te inputy ze sobą powiązać, co robimy za pomocą atrybutu "name", nadając mu taką samą wartość dla wybranej grupy radiobuttonów. W przypadku połączonych w ten sposób inputów, tylko jeden spośród niech może zostać zaznaczony.</br>
+					Oprócz opisu pola radio, który zawiera się w znaczniku label, musimy nadać temu polu jeszcze atrybut value, żeby przekazać wartość tego pola. Wartości tej nie widać w przeglądarce, jest ona ukryta w atrybucie i przekazywana do backendu.</br>
+					Aby jeden spośród grupy radiobuttonów był domyślnie zaznaczony, należy dodać mu odpowiedni atrybut - jest to po prostu słowo "checked" (w kodzie wpisuje się je bez apostrofów).
+				</p>
+				<img class="image" src="/input-radio.jpg" alt="Przykład użycia inputów o typie radio." />
+			</article>
+		</section>
 
 	</main>
-    <footer class="footer">
-		<p class="footer__content">Strona domowa Magdaleny Derek, wszystkie treści są wynikiem nauki w ramach szkolenia WTF: Co
-			ten frontend. 
+	<footer class="footer">
+		<p class="footer__content">Strona domowa Magdaleny Derek, wszystkie treści są wynikiem nauki w ramach szkolenia
+			WTF: Co
+			ten frontend.
 			<a class="footer__top-link" href="#top">Wróć na górę strony ⬆️</a>
 		</p>
-		</footer>
+	</footer>
 	<script defer src="/main.js"></script>
 </body>
 
