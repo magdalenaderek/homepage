@@ -332,7 +332,7 @@
 				<h3 class="article__header">Rodzaje inputów</h3>
 				<p class="article__paragraph">type="radio"</p>
 				<p class="article__paragraph">
-					Radiobuttony, inaczej radioprzyciski. Pole jednnokrotnego wyboru - tylko jedno pole radio moż być
+					Radiobuttony, inaczej radioprzyciski. Pole jednnokrotnego wyboru - tylko jedno pole radio może być
 					aktywne. Po dodaniu pustego inputa o typie radio w formularzu pojawia się już pojedyncza kropka. Do
 					pola standardowo dodajemy etykietę. Może być ona wprowadzona jako osobny znacznik z atrybutem for,
 					tak jak <a class="article__link" href="#label-tag">na wcześniejszym przykładzie</a>. Można nią też
@@ -340,11 +340,56 @@
 					robić wówczas zagnieżdżeń. Grupę pól radio można również opakować w fieldset, choć nie trzeba.</br>
 					Jeśli dodamy kilka inputów o typie radio opakowanych w etykiety, to nie będą one jednak stanowiły od
 					razu zestawu opcji jednokrotnego wyboru, nawet jeżeli opakujemy je w fieldset. Aby taki efekt
-					uzyskać należy te inputy ze sobą powiązać, co robimy za pomocą atrybutu "name", nadając mu taką samą wartość dla wybranej grupy radiobuttonów. W przypadku połączonych w ten sposób inputów, tylko jeden spośród niech może zostać zaznaczony.</br>
+					uzyskać należy te inputy ze sobą powiązać, co robimy za pomocą atrybutu "name", nadając mu taką samą wartość dla wybranej grupy radiobuttonów. W przypadku połączonych w ten sposób inputów, tylko jeden spośród nich może zostać zaznaczony.</br>
 					Oprócz opisu pola radio, który zawiera się w znaczniku label, musimy nadać temu polu jeszcze atrybut value, żeby przekazać wartość tego pola. Wartości tej nie widać w przeglądarce, jest ona ukryta w atrybucie i przekazywana do backendu.</br>
 					Aby jeden spośród grupy radiobuttonów był domyślnie zaznaczony, należy dodać mu odpowiedni atrybut - jest to po prostu słowo "checked" (w kodzie wpisuje się je bez apostrofów).
 				</p>
 				<img class="image" src="/input-radio.jpg" alt="Przykład użycia inputów o typie radio." />
+				<p class="article__paragraph">type="checkbox"</p>
+				<p class="article__paragraph">
+					Checkbox jest podobny w budowie do radiobuttonów. Sama zmiana typu inputu na checkbox zmienia sposób zachowania pól - domyślnie kropki zmieniają się w kwadraty i można wybrać więcej niż jedną z opcji wyświetlanych w ramach zestawu pól, połączonych za pomocą atrybutu name. Pola zaznaczają sie zarówno poprzez kliknięcie bezpośrednio w kwadrat, jak i w samą labelkę. Tutaj również oprócz etykiety należy nadać polom atrybut value, aby przekazać wartość pola dalej, i można je opakować w fieldset. Etykieta, czyli opis tego, co zaznaczamy, nie jest przekazywana do backendu, może mieć nawet formę jakiejś grafiki, nie musi to być literał.
+				</p>
+				<img class="image" src="/input-checkbox.jpg" alt="Przykład użycia inputów o typie checkbox." />
+				<p class="article__paragraph">type="number"</p>
+				<p class="article__paragraph">
+					Input o typie number służy do wprowadzania liczb. Może służyć np. do wprowadzenia wieku. Dodajemy tu takie atrubuty jak name i id oraz wiążemy pole ze znacznikiem label z atrybutem for, któremu nadajemy wartość, jaką ma id. Można również dodać tutaj atrybut placeholder. Po dodaniu atrybutu type="number", w polu pojawia się opcja zarówno wprowadzenia wartości poprzez jej wpisanie, jak i następnie zmianę liczby o 1 w dół lub w górę, klikając w odpowiednie strzałki, które wyświetlają się w inpucie w sposób domyślny. Typ number uniemożłiwia wpisanie do pola innej wartości niż cyfry i przecinki.
+				</p>
+				<img class="image" src="/input-number.jpg" alt="Przykład użycia inputów o typie number." />
+				<p class="article__paragraph">type="tel"</p>
+				<p class="article__paragraph">
+					Input o typie tel służy do wprowadzania numeru telefonu. Dodajemy tu takie atrubuty jak name i id oraz wiążemy pole ze znacznikiem label z atrybutem for, któremu nadajemy wartość, jaką ma id. Można również dodać tutaj atrybut placeholder. W tej formie do inputu można będzie wpisać wszystko, również litery, ale typ ten umożliwi później sprawdzenie, czy mamy do czynienia z numerem telefonu.
+				</p>
+				<p class="article__paragraph">type="email"</p>
+				<p class="article__paragraph">
+					Input o typie email służy do wprowadzania adresów e-mail. Dodajemy tu takie atrybuty jak name i id oraz wiążemy pole ze znacznikiem label z atrybutem for, któremu nadajemy wartość, jaką ma id. Można również dodać tutaj atrybut placeholder. W tej formie do inputu można będzie wpisać wszystko, również litery, ale typ ten umożliwi później sprawdzenie, czy mamy do czynienia z poprawnym formatem adresu e-mail. Jeśli pole nazywa się podobnie jak w formularzach z innych stron, na których były już w danej przeglądarce uzupełniane wartości, to mogą się one pojawić jako podpowiedzi z przeglądarki po wejściu w ten input.
+				</p>
+				<img class="image" src="/input-email.jpg" alt="Przykład użycia inputów o typie email." />
+				<p class="article__paragraph">type="range"</p>
+				<p class="article__paragraph">
+					Input o typie range pozwala na podanie zakresu i wskazanie wartości minimalnej, maksymalnej oraz kroku, co jaki wartość może się zmieniać.
+				</p>
+				<img class="image" src="/input-range.jpg" alt="Wartości przyjmowane przez atrybut type range." />
+				<p class="article__paragraph">
+					Do inputu o typie range dodajemy również takie atrybuty jak name i id oraz wiążemy pole ze znacznikiem label z atrybutem for, któremu nadajemy wartość, jaką ma id. Jeśli podamy sam typ="range", bez podawania dla niego konkretnych wartości, to pole będzie domyślnie wyświetlane jako suwak, którym będzie można dowolnie przesuwać. Jeśli zdefiniujemy sobie granice wartości tego zakresu oraz step, to suwak będzie nam przeskakiwał o wartość określoną w kroką. Mozemy również dodać wartość domyślnie wyświetlaną w formularzu jako atrybut value. W tej formie jednak wartości nie będą się wyświetlały na formatce, będzie tam widoczny tylko sam suwak.
+				</p>
+				<p class="article__paragraph">
+					Za pomocą JavaScriptu można dostać się do wartości danego inputa i ustawić ją sobie dla value. Aby to zrobić musimy mieć jakieś odwołanie do naszego dokumentu - można tu wykorzystać id pola. Jeśli w konsoli w devtools wpiszemy id danego znacznika, to zostanie on nam w całości zwrócony w konsoli. Wszystkie elementy na stronie, które mają dodane id, posiadają domyślnie globalne zmienne przyjmujące wartość tych id i by się do tych znaczników dostać, nie trzeba korzystać z queryselektorów, tylko wystarczy odwołać się właśnie do tej globalnej zmiennej, czyli wartości id elementu. Jeśli element posiada atrybut value, to możemy go również podejrzeć w przeglądarce, odwołując się do do wartości id oraz atrybutu value (id.value). Po zmianie wartości z poziomu przeglądarki, możemy wywołać ją na nowo, uzyskując aktualna wartość. Można ponowić komendę znajdującą się w konsoli powyżej, klikając strzałkę w górę i zatwierdzając enterem.
+				</p>
+				<img class="image" src="/range-value.jpg" alt="Odwołanie się do value elementu przy użyciu jego id." />
+				<p class="article__paragraph">
+					Zamiast odwoływać się do domyślnych zmiennych globalnych z użyciem id elementów, można również dostać się do danego znacznika w sposób bardziej tradycyjny, tworząc odpowiednią zmienną. Jeśli utworzymy zmienną o nazwie takiej, jak nazwa zmiennej globalnej bazująca na wartości id elementu, to ta zmienna globalna zostanie nadpisana. Nie będzie już wówczas odnosiła się do tego znacznika.
+				</p>
+				<img class="image" src="/range-new-variable.jpg" alt="Nadpisanie zmiennej globalnej bazującej na wartości id elementu." />
+				<p class="article__paragraph">
+					Aby odnieść się do elementu w sposób tradycyjny za pomocą queryselektora, tworzymy zmienną, w której odwołujemy się do id elementu, a następnie po wywołaniu tej zmiennej, zwracany jest również cały element, tak jak w przypadku odwołania się od razu do zmiennej globalnej. Odnosząc sie następnie do utworzonej zmiennej i value elementu, możemy uzyskać jego wartość, a także ją ustalić. W takiej sytuacji w przeglądarce suwak zostanie automatycznie przesunięty, zgodnie z nowoustaloną wartością. Za pomocą atrybutu value, po pobraniu queryselektorem naszego elementu związanego z formularzem, możemy zatem zarówno pobierać wartości atrybutów value, jak i modyfikować te wartości formularza za pomocą JavaScriptu.
+				</p>
+				<img class="image" src="/input-range-queryselector.jpg" alt="Odwołanie się do inputu za pomocą zmiennej bazującej na queryselektorze i ustalenie nowej wartości." />
+			</article>
+			<article class="article">
+				<h3 class="article__header"></h3>
+				<p class="article__paragraph">
+
+				</p>
 			</article>
 		</section>
 
