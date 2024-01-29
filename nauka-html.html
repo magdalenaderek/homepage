@@ -408,9 +408,17 @@
 				<img class="image" src="/textarea.jpg" alt="Przykład użycia elementu textarea." />
 			</article>
 			<article class="article">
-				<h3 class="article__header">Metody GET i POST w formularzach</h3>
+				<h3 class="article__header">Wysyłka formularza - metody GET i POST</h3>
 				<p class="article__paragraph">
-					
+					Opisane wyżej pola pozwalają na wprowadzenie danych do formularza, ale nie umożliwiają jego wysyłki. Aby móc wysłać formularz należy dodać jeszcze jedno pole: input z atrybutem type="submit", które to pole będzie przyciskiem. Atrybut value dodany do tego pola sprawia, ze zdefiniowana na nim wartość jest wyświetlona jako tekst na przycisku. Input ten jako jedyny nie ma elementu label.</br>
+					Po kliknięciu w przycisk następuje wysłanie formularza, co jest widoczne w zmienionym adresie w pasku przeglądarki. Wysyłka formularza nastąpi również domyślnie jeśli po jego uzupełnieniu klikniemy w enter.
+				</p>
+				<img class="image" src="/input-submit.jpg" alt="Przykład użycia pola o typie submit." />
+				<p class="article__paragraph">
+					Zamiast pola z atrybutem type="submit" do wsyłki fomularza możemy użyć również znacznika &lt;button&gt; i wówczas tekst, który ma być widoczny na przycisku, np. wyślij, umieszczamy między tagiem otwierającym i zamykającym element button. Jeśli to będzie jedyny przycisk w środku naszego formularza, to również będzie służył do jego wysyłki. Domyślnym sposobem wysyłki jest jednak input z atrybutem type="submit". (Wydaje mi się jednak, że z punktu widzenia dostępności button może mieć tu większy sens).
+				</p>
+				<p class="article__paragraph">
+					Jeżeli wyślemy formularz w taki sposób, jak powyżej, do zostanie on wysłany niejako sam do siebie - wskazuje w adresie URL na ten sam plik. Aby wysłać formularz już w jakieś konkretne miejsce możemy skorzystać z dwóch opcji wysyłki: GET i POST. Żeby to zrobić musimy najpierw wrócić do naszego znacznika form i dodać do niego atrybut action, w którym nalezy wskazać adres, z którym chcemy się łaczyć: action="URL://z-którym-gadamy".
 				</p>
 			</article>
 		</section>
