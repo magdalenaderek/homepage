@@ -384,11 +384,33 @@
 					Aby odnieść się do elementu w sposób tradycyjny za pomocą queryselektora, tworzymy zmienną, w której odwołujemy się do id elementu, a następnie po wywołaniu tej zmiennej, zwracany jest również cały element, tak jak w przypadku odwołania się od razu do zmiennej globalnej. Odnosząc sie następnie do utworzonej zmiennej i value elementu, możemy uzyskać jego wartość, a także ją ustalić. W takiej sytuacji w przeglądarce suwak zostanie automatycznie przesunięty, zgodnie z nowoustaloną wartością. Za pomocą atrybutu value, po pobraniu queryselektorem naszego elementu związanego z formularzem, możemy zatem zarówno pobierać wartości atrybutów value, jak i modyfikować te wartości formularza za pomocą JavaScriptu.
 				</p>
 				<img class="image" src="/input-range-queryselector.jpg" alt="Odwołanie się do inputu za pomocą zmiennej bazującej na queryselektorze i ustalenie nowej wartości." />
+				<p class="article__paragraph">type="password"</p>
+				<p class="article__paragraph">
+					Działa na takiej samej zasadzie jak każde inne pole tekstowe. Dodajemy tu takie atrybuty jak name i id oraz wiążemy pole ze znacznikiem label z atrybutem for, któremu nadajemy wartość, jaką ma id. Można również dodać tutaj atrybut placeholder. Gdy dodamy do pola atrybut type="password" i zaczniemy wpisywać do niego jakiś tekst, to zostanie on zamaskowany. Możemy jednak pobrać to hasło, odwołując się do jego wartości w konsoli przeglądarki.
+				</p>
+				<img class="image" src="/input-password.jpg" alt="Przykład użycia inputu o typie password." />
+				<p class="article__paragraph">type="file"</p>
+				<p class="article__paragraph">
+					Kolejnym typem inputu jest plik. Ma on domyślnie formę przycisku, więc nie dodajemy tu atrybutu placeholder, ale pozostałe owszem, czyli takie atrybuty jak name i id oraz wiążemy pole ze znacznikiem label z atrybutem for, któremu nadajemy wartość, jaką ma id. Gdy dodamy do pola atrybut type="file", to stanie się on domyślnie przyciskiem, będącym systemową kontrolką dla tego pola, odpowiednio opisaną i pozwalającą na wybór i załączenie pliku do formularza.
+				</p>
+				<img class="image" src="/input-file.jpg" alt="Przykład użycia inputu o typie file." />
+				<p class="article__paragraph">Lista wyboru - element select</p>
+				<p class="article__paragraph">
+					Elementem związanym z formularzem jest również znacznik &lt;select&gt;, który służy do tworzenia list wyboru. Select to rozwijana lista, która podobnie jak input zawiera takie atrybuty jak name i id oraz wiąże element select ze znacznikiem label za pomocą atrybutu for, któremu nadajemy wartość, jaką ma id. Po dodaniu samego elementu select pojawia się ptak/select, który pozwoli na wybór opcji, które należy dodać do znacznika, korzystając z tagu &lt;option&gt;. Pojawi się wówczas natywna, systemowa kontrolka w formie listy z dostępnymi opcjami i zaznaczoną opcją wybraną. Częstą opcją jest obecnie stylowanie tylko zwiniętego selecta i pozostawianie rozwiniętej listy w domyślnej wersji przeglądarkowej.</br>
+					Do znaczników opcji dodajemy atrybut value i jeśli chcemy, by domyślnie została zaznaczona inna opcja niż pierwsza z listy, to dodajemy do niej atrybut "selected".
+				</p>
+				<img class="image" src="/select-options.jpg" alt="Przykład użycia listy rozwijanej z dostępnymi opcjami." />
+				<p class="article__paragraph">Element &lt;textarea&gt;</p>
+				<p class="article__paragraph">
+					Ostatnim elementem związanym z formularzem jest znacznik &lt;textarea&gt;. Odpowiada on za pole tekstowe, czyli za dłuższy tekst, który możemy wprowadzić w formularzu. Element zawiera takie atrybuty jak name i id oraz powiązany jest ze znacznikiem label za pomocą atrybutu for, któremu nadajemy wartość, jaką ma id tagu textarea. Pole jest domyślnie rozszerzalne za pomocą myszkki, ale możemy mu dodać również definicje dla kolumn i wierszy (cols i rows) jako atrybuty w kodzie HTML. Możemy też zdefiniować wysokość i szerkość pola, np. jako width o wartości 100% i określone min-height w pliku ze stylami, odnosząc się do danego znacznika texarea.</br>
+					Jeśli w tagu textarea wpiszemy jakąś treść, to pojawi sie ona w polu na formularzu, przy czym zostaną uwzględnione białe znaki, jak odstępy w formie tabów/spacji. Jeżlei chcemy więć, by tekst znajdował się na początku pola, to powinien znajdować się na początku linii lub tuż przy znaczniku otwierającym tag. Można również dodać atrybut placeholder, wpisując domyślny tekst, ale należy mieć wówczas na uwadze, by białe znaki nie przysłoniły tego domyślnego tekstu z placeholdera, czyli np. nie pozostawić żadnego miejsca między tagiem otwierającym i zamykającym element textarea.
+				</p>
+				<img class="image" src="/textarea.jpg" alt="Przykład użycia elementu textarea." />
 			</article>
 			<article class="article">
-				<h3 class="article__header"></h3>
+				<h3 class="article__header">Metody GET i POST w formularzach</h3>
 				<p class="article__paragraph">
-
+					
 				</p>
 			</article>
 		</section>
