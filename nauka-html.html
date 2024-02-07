@@ -418,7 +418,34 @@
 					Zamiast pola z atrybutem type="submit" do wsyłki fomularza możemy użyć również znacznika &lt;button&gt; i wówczas tekst, który ma być widoczny na przycisku, np. wyślij, umieszczamy między tagiem otwierającym i zamykającym element button. Jeśli to będzie jedyny przycisk w środku naszego formularza, to również będzie służył do jego wysyłki. Domyślnym sposobem wysyłki jest jednak input z atrybutem type="submit". (Wydaje mi się jednak, że z punktu widzenia dostępności button może mieć tu większy sens).
 				</p>
 				<p class="article__paragraph">
-					Jeżeli wyślemy formularz w taki sposób, jak powyżej, do zostanie on wysłany niejako sam do siebie - wskazuje w adresie URL na ten sam plik. Aby wysłać formularz już w jakieś konkretne miejsce możemy skorzystać z dwóch opcji wysyłki: GET i POST. Żeby to zrobić musimy najpierw wrócić do naszego znacznika form i dodać do niego atrybut action, w którym nalezy wskazać adres, z którym chcemy się łaczyć: action="URL://z-którym-gadamy".
+					Jeżeli wyślemy formularz w taki sposób, jak powyżej, do zostanie on wysłany niejako sam do siebie - wskazuje w adresie URL na ten sam plik. Aby wysłać formularz już w jakieś konkretne miejsce możemy skorzystać z dwóch opcji wysyłki: GET i POST. Żeby to zrobić musimy najpierw wrócić do naszego znacznika form i dodać do niego atrybut action, w którym należy wskazać adres, z którym chcemy się łączyć:</br>
+					action="URL://z-którym-gadamy".
+				</p>
+				<p class="article__paragraph">
+					Maciek stworzył kawałek backendu, do którego możemy strzelać z danymi: https://forms.cotenfrontend.pl i który będzie odbierał i sprawdzał nasze pola. Znajduje się tam lista pól wraz z przypisanymi do nich wartościami. W adresie URL natomiast jest widoczny tzw. query string, w którym znajdują się wyszczególnione wszystkie przesłane pola wraz z ich wartościami. Są one tam widoczne w sposób jawny, co jest domyślnym sposobem prezentacji, jeśli chodzi o formularze, nie jest on jednak zbyt popularny. Jest to żądanie typu GET. Wszystko, co jest potrzebne do obsłużenia żądania tego typu, jest widoczne w adresie. Jeśli zmienimy w URL wartość danego parametru, to po odświeżeniu zmieni się on również na stronie. Jeśli taki adres komuś wyślemy, to również otworzy on stronę ze zmienionymi danymi.
+				</p>
+				<img class="image" src="/form-backend.jpg" alt="Podpięcie atrybutu action do formularza i wyniki strzału do backendu." />
+				<p class="article__paragraph">
+					Atrybutem, który odpowiada za to, w jaki sposób wyślemy nasz formularz jest atrybut method, który podobnie jak action dodajemy do znacznika formularza. Jak było wskazane wyżej, jego domyślną wartością jest GET, ale alternatywnie można jeszcze użyć metody POST. Po wysyłce formularza za pomocą tej metody, adres URL się nie zmienia, nie są tam dopisywane parametry wraz z wartościami, tak jak ma to miejsce w przypadku metody GET. Wysłane dane są jednak widoczne na stronie weryfikującej dane z formularza.
+				</p>
+				<img class="image" src="/method-post.jpg" alt="Wysyłka formularza za pomoca metody POST." />
+				<p class="article__paragraph">
+					Jeśli odświeżymy stronę i po zapytaniu o wysyłkę formularza, wyślemy formularz ponownie, to dostaniemy te same dane. Po odświeżeniu strony bez wysyłki formularza, nie dostaniemy już danych z formularza, bo będzie to wówczas zwykła wysyłka GET bez żadnych danych/parametrów. Jest to standardowe żądanie, gdy wpisujemy adres URL w przeglądarkę. Możemy to podejrzeć w zakładce network w devtools, gdzie w request headers widać metodę wykorzystaną w żądaniu a także ścieżkę query string, która zawiera wszystkie parametry i wartości z formularza. W sposób bardziej przystępny są one widoczne w zakładce payload w query string parameters. W przypadku użycia metody POST w payload mamy obiekt form data, gdzie wyszczególnione są parametry wraz z wartościami.
+				</p>
+				<img class="image" src="/devtools-get-method.jpg" alt="Widok zakładki network w devtools dla metody GET." />
+				<p class="article__paragraph">
+					Żądanie typu GET możemy wygenerować nawet bez wysyłki formularza. Do URL dodajemy wówczas po znaku zapytania parametr wraz z wartością, np. https://forms.cotenfrontend.pl/?testowa=Testowa. 
+				</p>
+				<img class="image" src="/get-without-form.jpg" alt="Wysyłka parametrów metodą GET bez wysyłki formularza." />
+				<p class="article__paragraph">
+					Jest jeszcze jeden atrybut, który możemy dodać do znacznika form: enctype. Domyślną wartością jest "application/x-www-form-urlencoded", która służy do zwykłej wysyłki formularza. Drugą opcją jest wartość "multipart/form-data", której używamy, gdy chcemy wysłać na serwer plik. Pliki muszą być obługiwane przez serwer. Jeśli, wykorzystująć input o typie file,  wyślemy jakiś plik na Maćkowy serwer, który plików nie obługuje, to jako efekt żądania otrzymamy pole jedynie z wpisaną nazwą pliku, bez samego pliku. Czyli informacje na temat obiektu będą, ale wyświetli nam się sama nazwa.
+				</p>
+				<img class="image" src="/attribute-enctype.jpg" alt="Wartości, jakie może przyjmować atrybut enctype." />
+			</article>
+			<article class="article">
+				<h3 class="article__header">Walidacja pól formularza</h3>
+				<p class="article__paragraph">
+					Walidacja to sprawdzenie poprawności danych zanim jeszcze wyślemy je do backendu.
 				</p>
 			</article>
 		</section>
@@ -426,8 +453,7 @@
 	</main>
 	<footer class="footer">
 		<p class="footer__content">Strona domowa Magdaleny Derek, wszystkie treści są wynikiem nauki w ramach szkolenia
-			WTF: Co
-			ten frontend.
+			WTF: Co ten frontend.
 			<a class="footer__top-link" href="#top">Wróć na górę strony ⬆️</a>
 		</p>
 	</footer>
