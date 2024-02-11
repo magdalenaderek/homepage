@@ -215,10 +215,78 @@
 					Za pomocą skryptów JS możemy również modyfikować style. Jeśli wywołamy sobie console.log dla naszego elementu header, podając własność style (console.log(header.style)), to w devtools w zakładce Console wyświetli nam się obiekt CSSStyleDeclaration, gdzie po rozwinięciu bedą widoczne wszystkie możliwe własności CSS, dostępne style, jakie możemy wykorzystać w danym elemencie. Możemy te własności modyfikować, przypisać za pomocą tego obiektu. Aby zmodyfikować kolor, podajemy tę własność z nową wartością, jaką chcemy nadać alementowi, np. header.style.color = 'red'. Jeśli podejrzymy sobie strukturę DOM w zakładce Elements w devtools, to widzimy, że JavaScript, wykonując skrypt po prostu dokłada zmieniający kolor styl inline przy nagłówku h1. W pliku HTML oczywiście nie będzie on widoczny. Wprowadza to duży bałagan do kodu. Trzymanie się poszczególnych wartsw strony i ich funkcji zapewnia nam przewidywalność zachowania naszej strony. Są jednak oczywiście przypadki, gdy takie modyfikacje mogą się nam przydać.
 				</p>
 				<img class="image" src="css-style-declaration.jpg" alt="Wykonanie skryptu zmieniającego kolor nagłówka."/>
+			</article>	
+		</section>
+		<section class="section">
+			<h2 class="section__header">JavaScript - tydzień 5</h2>
+			<article class="article">
+				<h3 class="article__header">Funkcje</h3>
+				<p class="article__paragraph">
+					W matematyce jedną z prostszych funkcji jest funkacja liniowa, gdzie w nawiasie podajemy argument lub więcej arumentów oraz jej wynik.
+				</p>
+				<img class="image" src="linear-function.jpg" alt="Wykres funkcji liniowej."/>
+				<p class="article__paragraph">
+					Mamy tu przykład najprostszej funkcji, składającej sie z nazwy f, argumentu w nawiasie i wyniku funkcji: f(x)=x, gdzie f(2)=2, etc. 
+				</p>
+				<img class="image" src="function-definition.jpg" alt="Definicja funkcji liniowej."/>
+				<p class="article__paragraph">
+					Możemy tutaj wykonywać różne operacje, np. f(x)=x*7, gdzie argument x jest mnożony przez 7 i w efekcie mamy wynik f(1)=7, f(2)=14, etc.
+				</p>
+				<p class="article__paragraph">
+					Funkcję w matematyce definiuje się w ten sposób, że funcja na wejściu dostaje dane, czyli argumenty i dla podanego argumentu zwraca jakąś wartość. Funkcja posiada określony wzór.
+				</p>
+				<p class="article__paragraph">
+					Funkcję w JavaScript definiuje się natomiast w ten sposób, że zamiast f mamy słowo kluczowe function, następnie podajemy nazwę funkcji (tu: calculate), w nawiasie dajemy nazwę naszego argumentu (tu: myNumber), bez żadnego słowa kluczowego typu let czy const. Następnie za pomoca nawiasów klamrowych otwieramy ciało naszej funkcji, gdzie możemy opisać wiele rzeczy. Na koniec, jeśli funkcja ma coś zwracać, to dajemy słówko retur i to, co ma być zwrócone (tu: nasz argument myNumber pomnożony przez 7). Jest to odpowiednik matematycznego zapisu f(x)=x*7.
+				</p>
+				<p class="article__paragraph">
+					Opisując funkcję w JavaScript językiem bardziej programistycznym, mamy deklarację, czyli słowo kluczowe function, następnie mamy parametr, czyli argument oraz słowo kluczowe return i wynik.
+				</p>
+				<img class="image" src="function-js.jpg" alt="Definicja funkcji w JavaScript."/>
+				<p class="article__paragraph">
+					Nazwę funkcji najlepiej zapisać za pomocą camelCase.
+				</p>
+				<p class="article__paragraph">
+					Jeśli stworzymy sobie funkcję zgodnie z powyższym przykładem i nasz parametr myNumber powiążemy z wartością 2, na którym wykonamy operację mnożenia razy 7, to po wywołaniu funkcji za pomocą console.log, otrzymamy w devtools wynik 14.
+				</p>
+				<img class="image" src="function-example1.jpg" alt="Przykład zastosowania funkcji z parametrem myNumber o wartości 2."/>
+				<p class="article__paragraph">
+					Słowo kluczowe może wystąpić, ale nie musi, bo nie każda funkcja musi nam coś zwracać. Jeśli nie zdefiniujemy sobie za pomocą return, co dana funkcja ma zwrócić, to dostaniemy po prostu undefined.
+				</p>
+				<p class="article__paragraph">
+					W ciele funkcji możemy zrobić wiele rzeczy, nie musi nam od razu czegoś zwracać. Możemy wykonywać np. obliczenia, modyfikacje napisów, wywołania innych funkcji etc. Na przykładzie poniżej mamy wywołanie za pomocą console.log funkcji myNumber wewnątrz ciała funkcji oraz zmianę przypisania wartości z myNumber na myNumber plus 3.
+				</p>
+				<img class="image" src="function-example2.jpg" alt="Przykład zapisu funkcji z większą ilością operacji."/>
+				<p class="article__paragraph">
+					Funkcję możemy wywołać również bez użycia console.log, wywołując ją po prostu z określoną wartością przypisaną do jej argumentu. Na poniższym przykładzie wywołując funkcję calculate z przypisaną do argumentu wartością 1 otrzymujemy wynik 4. W devtools widać, że odnosimy się tutaj do linii 17 w pliku, gdzie następuje wywołąnie funkcji za pomocą console.log. Ostatnia linia ciała funkcji, w której stosujemy słowo return, nie zostaje nigdzie użyta, dlatego zapis ten nie wpływa na otrzymany wynik.
+				</p>
+				<img class="image" src="function-example3.jpg" alt="Przykład bezpośredniego wywołania funkcji calculate z przypisaną wartością 1."/>
+				<p class="article__paragraph">
+					Wartość z linii 18 możemy jednak przypisać do zmiennej. Tworzymy zmienną result, do której przypisujemy wartość funkcji caluculate(1). Po wywołaniu zmiennej za pomocą console.log otrzymujemy wynik 28 (do funcji calcultae przypisujemy argument 1, który następnie zwiększamy o 3, a później po jego wywołaniu mnożymy przez 7). W devtools widać, że dwukrotnie otrzymujemy wynik 4. Dzieje się tak dlatego, że funkcja została wywołana zarówno w linii 21, poprzez samo jej wywołanie bez przypisywania nigdzie tego wyniku, jak i następnie w momencie przypisania funkcji calculate z argumentem 1 do zmiennej result.
+				</p>
+				<img class="image" src="function-example4.jpg" alt="Przykład przypisania funkcji calculate z wartością 1 do zmiennej result."/>
+				<p class="article__paragraph">
+					Jeśli do zmiennej result przypiszemy funkcję calculate z argumentem 2, a następnie ją wywołamy, to po wykonaniu otrzymamy wynik 35 (do funcji calcultae przypisujemy argument 2, który następnie zwiększamy o 3, a później po jego wywołaniu mnożymy przez 7). W devtools widać, że funkcja zostaje najpierw wykonana z argumentem z przyisamą wartością 1 w linii 21, a następmnie w momencie jej przypisania do zmiennej result z argumentem o wartości 2 w linii 23.
+				</p>
+				<img class="image" src="function-example4.jpg" alt="Przykład przypisania funkcji calculate z wartością 2 do zmiennej result."/>
+				<p class="article__paragraph">
+					Wracając do porównania funkcji w JavaScript do funkcji matematycznej, możemy podsumować, że: 
+				</p>
+				<ol class="ordered-list">
+					<li class="ordered-list__element">Deklarujemy nazwę funkcji (nie zawsze).</li>
+					<li class="ordered-list__element">W środku dokonujemy obliczeń lub wykonujemy zadania.</li>
+					<li class="ordered-list__element">Funkcja przyjmuje argumenty (nie musi).</li>
+					<li class="ordered-list__element">Funkcja zawsze coś zwraca. Jeśli nie mamy słowa kluczowego return, to wówczas zwraca undefined.</li>
+				</ol>
+				<p class="article__paragraph">
+					Przykładem funkcji bez argumentu może być poniższa funkcja hello, która wywołuje po prostu inną funkcję, wypisującą po prostu "hello" w konsoli w devtools. Jeśłi następnie wywołamy sobie po prostu tę funkcję wpisując jej nazwę, to wykona się i w devtools dostaniemy jako wynik jej wykonania napis hello w konsoli. Wykonują się wtedy te operacje, które są w środku w ciele funkcji hello. Jeśli znajdzie sie tam kilkukrotne wywołanie funkcji console.log, to po wywołaniu funcji hello, wykonają sie wszystkie operacje w niej zawarte. Nie ma return, więc funkcja nic tutaj nie zwraca - jest po prostu skrótem do uruchomienia wielu operacji, które się w niej znajdują.
+				</p>
+				<img class="image" src="function-example6.jpg" alt="Przykład zastosowania funkcji bez argumentu."/>
+				<p class="article__paragraph">
+					Posługując sie dalej tym przykładem, jeśli następnie wywołamy sobie funkcję hello za pomocą console.log, to otrzymamy jako wynik undefined, jako że sama funkcja nic nie zwraca, nie posiada słowa kluczowego return. Mimo tego, że funkcja nic nie zwraca, jako że nie posiada return, to w momencie wywołania jej za pomocą console.log, wykonają się również wszystkie operacje, które są w niej zawarte. 
+				</p>
+				<img class="image" src="function-example7.jpg" alt="Wywołanie za pomocą console.log funkcji nie zawierającej słowa kluczowego return."/>
 			</article>
 		</section>
-
-
 	</main>
     <footer class="footer">
 		<p class="footer__content">Strona domowa Magdaleny Derek, wszystkie treści są wynikiem nauki w ramach szkolenia WTF: Co

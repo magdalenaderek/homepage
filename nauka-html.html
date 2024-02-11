@@ -447,6 +447,27 @@
 				<p class="article__paragraph">
 					Walidacja to sprawdzenie poprawności danych zanim jeszcze wyślemy je do backendu.
 				</p>
+				<p class="article__paragraph">required</p>
+				<p class="article__paragraph">
+					Atrybut required odpowiada za to, ze pole, które będzie oznaczone tym atrybutem będzie wymagane i bez uzupełnienia tego pola nie wyślemy formularza. Po zastosowaniu tego atrybutu przy wybranym polu i próbie wysłania formularza, pojawia sie domyślny komunikat przeglądarki o obowiązkowym charakterze uzupełnienia tego pola i widok przeglądarki zostaje automatycznie przeniesiony w to miejsce.
+				</p>
+				<img class="image" src="/attribute-required.jpg" alt="Użycie atrybutu required przy polu formularza." />
+				<p class="article__paragraph">
+					Walidacyjny charakter mają również wartości, jakie nadajemy atrybutowi type przy danym polu. Dotyczy to np. typu e-mail. Jeśli do danego pola dodamy atrybut type z taką wartością, to przy próbie wysłania formularza nastąpi walidacja formatu tesktu wpisanego w pole i jeśli nie będzie on odpowiadał formatowi przypisanemu do danej wartości atrybutu type, przeglądarka domyślnie podstawi odpowiedni komunikat informacyjny i formularz nie zostanie wysłany.
+				</p>
+				<img class="image" src="/email-validation.jpg" alt="Działanie walidacji dla pola e-mail." />
+				<p class="article__paragraph">pattern</p>
+				<p class="article__paragraph">
+					Atrybut pattern pozwala na przypisanie do danego pola określonego wyrażenia regularnego. Listę wyrażeń regularnym możemy znaleźć w wielu miejscach, np. na stronie https://html5pattern.com/Names, gdzie znajdziemy wyrażenia regularne definiujące np. kody pocztowe wybranych krajów. Należy mieć na uwadze, że w niektórych wyrażeniach na niektórych stronach mogą znaleźć się jakies błędy.
+				</p>
+				<img class="image" src="/attribute-pattern.jpg" alt="Sposób definiowania atrybutu pattern." />
+				<p class="article__paragraph">
+					W ten sposób możemy roższerzać nasze patterny dla innych pól, które nie są standardowe, tak jak np. e-mail, który korzysta z tego samego mechanizmu i który już sam w sobie ma wszytą tę definicję.
+				</p>
+				<img class="image" src="/postal-code-pattern.jpg" alt="Użycie atrybutu pattern z wyrażeniem regularnym definiującym polski kod pocztowy." />
+				<p class="article__paragraph">
+					Należy mieć na uwadze, ze walidacja po stronie frontendu nie zastępuje walidacji po stronie backendu, a jedynie ją uzupełnia. Walidację po stronie frontendu można bowiem obejść, np. po wysyłce formularza za pomocą metody GET można w URL przeglądarki podmienić wartości przypisane do danych parametrów i backend je przyjmie mimo, że nie będą zgodne z walidacją frontendową. Walidacja backendowa pozwala w takim przypadku na nieobsłużenie pól, które przyjdą z wartościami niezgodnymi z walidacją frontendową. Podobnie w drugą stronę - walidacja po stronie backendu nie zastępuje walidacji po stronie frontendu. Użytkownicy powinni bowiem widzieć od razu, w jak sposób poprawnie uzupełnić formularz.
+				</p>
 			</article>
 		</section>
 
