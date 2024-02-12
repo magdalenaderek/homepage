@@ -285,6 +285,52 @@
 					Posługując sie dalej tym przykładem, jeśli następnie wywołamy sobie funkcję hello za pomocą console.log, to otrzymamy jako wynik undefined, jako że sama funkcja nic nie zwraca, nie posiada słowa kluczowego return. Mimo tego, że funkcja nic nie zwraca, jako że nie posiada return, to w momencie wywołania jej za pomocą console.log, wykonają się również wszystkie operacje, które są w niej zawarte. 
 				</p>
 				<img class="image" src="function-example7.jpg" alt="Wywołanie za pomocą console.log funkcji nie zawierającej słowa kluczowego return."/>
+				<p class="article__paragraph">
+					Przyczyny powstania funkcji:
+				</p>
+				<ol class="ordered-list">
+					<li class="ordered-list__element">Deklaracja/opakowanie w funkcję kodu, który sie powtarza (DRY - don't repeat yourself).</li>
+					<li class="ordered-list__element">Zwiększenie czytelności kodu.</li>
+					<li class="ordered-list__element">Ułatwienie wyszukiwania błędów.</li>
+					<li class="ordered-list__element">Odpowiedzialność za wykonywanie zadania w jednym miejscu.</li>
+				</ol>
+				<p class="article__paragraph">
+					(Fat) arrow functions =>
+				</p>
+				<p class="article__paragraph">
+					(Fat) arrow functions zostały wprowadzone w ECMAScript 6. Funkcja strzałkowa jest to trochę inny sposób definiowania funkcji. Zamiast korzystać ze słowa kluczowego function, podpisujemy funkcję pod jakąś zmienną, w naszym przykładzie jest to zmienna o nazwie calculate dla której po znaku równości w nawiasie podajemy argumenty i następnie używamy strzałki, po której otwieramy nawias klamrowy, w którym ciało funkcji wygląda już tak samo jak przy definiowaniu funkcji za pomocą słowa kluczowego function.
+				</p>
+				<img class="image" src="arrow-function.jpg" alt="Sposób definiowania arrow function."/>
+				<p class="article__paragraph">
+					Istnieją różnice w działaniu tych funkcji, ale na tym etapie działają one dla nas identycznie.
+				</p>
+				<img class="image" src="arrow-function-example.jpg" alt="Przykład zastowania funkcji strzałkowej."/>
+				<p class="article__paragraph">
+					Plusem arrow functions jest to, że mają trochę skróconą formę zapisu. Jeśli mamy podany tylko jeden argument dla funkcji, w naszym przypadku myNumber, to nie musimy podawać go w nawiasie. Ponadto jeśli w ciele funkcji mamy tylko prostą operację, którą można zapisać w jednej linii, to nie musimy umieszczać jej w ciele funkcji w nawiasach klamrowych. Zamiast tego po strzałce możemy umieścić jednolinijkowy zwrot, tak jakbyśmy podawali return. Samego słowa kluczowego return nie musimy jednak w tym przypadku podawać, będzie ono zastosowane domyślnie.
+				</p>
+				<img class="image" src="arrow-function-short.jpg" alt="Skrócony zapis funkcji strzałkowej."/>
+				<p class="article__paragraph">
+					Po zapisaniu naszej dotychczasowej funkcji w formie skróconej, otzrymujemy prawie dokładnie to samo co wcześniej - z wyjątkiem console.log, ale on nie jest nam potrzebny do liczenia funkcji, pozwala tylko na podejrzenie, co aktualnie znajduje się w środku funkcji.
+				</p>
+				<img class="image" src="arrow-function-short-example.jpg" alt="Przykład zastowania funkcji strzałkowej w skróconej formie zapisu."/>
+				<p class="article__paragraph">
+					Cechy (fat) arrow function:
+				</p>
+				<ol class="ordered-list">
+					<li class="ordered-list__element">Skraca zapis deklaracji funkcji.</li>
+					<li class="ordered-list__element">Zwiększenie czytelność (dyskusyjne).</li>
+					<li class="ordered-list__element">Nie tworzy nowego kontekstu this, nie ma dostępu do arguments i super.</li>
+					<li class="ordered-list__element">Nie stanowi zamiennika tradycyjnej funkcji, ale w większości przypadków nie będzie widać różnicy w ich zastosowaniu (jeśłi nie będzie się korzystać z opcji z punktu 3).</li>
+				</ol>
+				<p class="article__paragraph">
+					Warto w projekcie trzymać się jednego sposobu zapisu funkcji.
+				</p>
+			</article>
+			<article class="article">
+				<h3 class="article__header">Obiekty w JS</h3>
+				<p class="article__paragraph">
+					Prawie wszystko w JavaScript jest obiektem, bo nawet typy proste, mimo, że nie są obiektem, to się tak zachowują. Obiekt jest strukturą danych, sposobem pisu danych. Nie jest to typ prosty. JavaScript, podobnie jak świat, jest obiektowy. Znajdują sie w nim obiekty, które możemy opisać za pomocą pewnych własności i które mogą czasem wykonywać jakieś akcje.
+				</p>
 			</article>
 		</section>
 	</main>
