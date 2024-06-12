@@ -25,6 +25,7 @@
 			<h1 id="top" class="main__header">Nauka JavaScriptu</h1>
 
 		</header>
+		<div class="section-grid">
 		<section class="section">
 			<h2 class="section__header">JavaScript - tydzień 2 i 3</h2>
 			<article class="article">
@@ -374,14 +375,148 @@
 				<img class="image" src="/variables-definition-example4.jpg" alt="Przedstawienie połączeń między zmiennymi na schemacie."/>
 				<img class="image" src="/variables-definition-example5.jpg" alt="Zmiana przypisania zmiennej do wartości."/>
 				<img class="image" src="/variables-definition-example6.jpg" alt="Przedstawienie zmiany połączenia zmiennej z wartością na schemacie."/>
-			</article>
 			<p class="article__paragraph">
 				Przenosząc ten przykład na obiekty, mamy dwie zmienne humanOne i humanTwo, które wskazują na obiekt, który ma takie własności jak name i age, wskazujące na konretne wartości. Różnica w stosunku do poprzedniego przykładu jest taka, że połączenia między własnościami i wartościami nie są stałe, można je zmieniać (na wcześniejszym przykładzie można było zmienić tylko przypisanie zmiennej zdefiniowanej za pomocą słowa kluczowego let). Własności nie mają takich sztywnych ram jak zmienne.
 			</p>
 			<img class="image" src="/object-variable-example1.jpg" alt="Definicja zmiennych i obiektów."/>
 			<img class="image" src="/object-variable-example2.jpg" alt="Przedstawienie połączeń między zmiennymi, obiektami i wartościami za pomocą grafu."/>
 			<img class="image" src="/object-variable-example3.jpg" alt="Zmiana własności age dla jednego z obiektów."/>
+			<p class="article__paragraph">
+				Po zmianie przypisania wartości dla własności age w obiekcie humanTwo, w console.log zostanie zwrócona nowoprzypisana wartość tej własności.
+			</p>
+			<img class="image" src="/object-variable-example4.jpg" alt="Widok wywołania obiektu ze zmienioną wartością własności age w zakładce console w devtools."/>
+			<p class="article__paragraph">
+				Jeśli zmienimy przypisanie w ten sposób, że obiekt humanTwo będzie wskazywał na obiekt humanOne, to powstaną dwa obiekty z własnościami o takich samych wartościach. Tak naprawdę nie będą to jednak dwa obiekty, nie powstanie kopia obiektu humanOne, tylko obie zmienne, humanOne i humanTwo będą wskazywały na ten sam obiekt.
+			</p>
+			<img class="image" src="/object-variable-example5.jpg" alt="Graf przedstawiający sytuację, gdzie zmienna humanTwo wskazuje na obiekt humanOne."/>
+			<p class="article__paragraph">
+				Jeśli następnie zmienimy wartość własności age dla zmiennej humanTwo, to zmieni się ona również dla humanOne, gdyż obie wskazują na ten sam obiekt. Możemy zatem zmieniać wartości własności jednej zmiennej za pomocą zmian w drugiej zmiennej, gdyż każda zmiana w jednej zmiennej, będzie miała zastosowanie również dla drugiej. Jeśli chcielibyśmy zrobić kopię obiektu, to robimy to w inny sposób, który zostanie opisany w kolejnych lekcjach.
+			</p>
+			<img class="image" src="/object-variable-example6.jpg" alt="Widok wywołania obiektu ze zmienioną wartością własności age w zakładce console w devtools w sytuacji, gdy zmienne humanOne i humanTwo wskazują na ten sam obiekt."/>
+			<img class="image" src="/object-variable-example7.jpg" alt="Graf przedstawiający sytuację, gdzie zmienne humanTwo i humanOne wskazują na ten sam obiekt, dla którego zostaje zmieniona wartość własności age poprzez zmianę w zmiennej humanTwo."/>
+			<p class="article__paragraph">
+				Jeśli natomiast pod wiek zmiennej humanTwo podepniemy wiek ze zmiennej humanOne, to mamy dwa obiekty, gdzie w jednym z nich mamy wskazanie na własnoć zdefiniowaną w drugim. W takiej sytuacji nie dochodzi do połaczenia między obiektami, ale po prostu obie własności z obu obiektów wskazują na tę samą wartość (age 32).
+			</p>
+			<img class="image" src="/object-variable-example8.jpg" alt="Widok wywołania obiektów w zakładce console w devtools w sytuacji, gdy własność age ze zmiennej humanTwo odnosi się do wartości wasności age ze zmiennej humanOne."/>
+			<img class="image" src="/object-variable-example9.jpg" alt="Graf przedstawiający sytuację, gdzie własność age ze zmiennej humanTwo odnosi się do wartości wasności age ze zmiennej humanOne."/>
+			<p class="article__paragraph">
+				Jeśli wartość age z hunamOne się zmieni, to nie dojdzie do automatycznej zmiany wartości własności age w humanTwo. W sytuacji, gdy wskazujemy na typy proste, następuje bowiem wskazanie bezpośrednio na wartość. Czyli kopiujemy połączenie między własnością age z humanOne i wartością 32. Zatem jeżeli zmienimy wiek dla humanOne, to wiek dla humanTwo nie ulegnie zmianie. Dzieje się tak, ponieważ, gdy tworzyliśmy ten obiekt dla zmiennej humanTwo, to wskazanie dla age było na wartość 32. Nie było to żadne specjalne wskazanie na humanOne, lecz po prostu skopiowanie wartości.
+			</p>
+			<img class="image" src="/object-variable-example10.jpg" alt="Widok wywołania obiektów w zakładce console w devtools w sytuacji, gdy własność age ze zmiennej humanTwo odnosi się do wartości własności age ze zmiennej humanOne, a następnie zmieniamy wartość age dla humanOne."/>
+			<p class="article__paragraph">
+				Korzystanie z zagnieżdżonych obiektów - do zmiennej humanOne dodajemy własność adres, na którą składa się ulica i miasto, które stanowią tak naprawdę nowy obiekt. Natomiast w zmiennej humanTwo, własność adres wskazuje na humanOne.address. W efekcie w zmiennej humanOne mamy taki sam adres, bo jest to ten sam obiekt. Jest to podobna sytuacja do tej, w której wskazywaliśmy, że humanTwo = humanOne.
+			</p>
+			<img class="image" src="/object-variable-example11.jpg" alt="Widok wywołania obiektów w zakładce console w devtools w sytuacji, gdy własność address ze zmiennej humanTwo odnosi się do własności address ze zmiennej humanOne, przy czym własność ta jest obiektem."/>
+			<img class="image" src="/object-variable-example12.jpg" alt="Graf przedstawiający sytuację, gdzie własność address ze zmiennej humanTwo odnosi się do obiektu address ze zmiennej humanOne."/>
+			<p class="article__paragraph">
+				Jeśli zmienimy wartość własności street w obiekcie address zagnieżdżonym w obiekcie humanOne, to po wywołąniu zmiennych humanOne i humanTwo, w obu wartość własności street będzie zmieniona. Dzieje się tak, ponieważ odwołujemy się bezpośrednio do obiektu, który tę własność zawiera. Zmiana nastąpiła tylko w obiekcie address w zmiennej humanOne, który wskazuje teraz na inny typ prosty. W przypadku humanTwo nic sie nie zmieniło - wskazuje cały czas na ten sam obiekt. Jeśli zatem w naszym obiekcie wskazujemy na obiekt zagnieżdżony w innym obiekcie, to każda zmiana w tym zagnieżdżonym obiekcie będzie powodowała również zmianę w obiekcie, który się do niego odwołuje.
+			</p>
+			<img class="image" src="/object-variable-example13.jpg" alt="Widok wywołania obiektów w zakładce console w devtools w sytuacji, gdy własność address ze zmiennej humanTwo odnosi się do wartości własności address ze zmiennej humanOne, a następnie zmieniamy wartość własności street wchodzącej w skład obiektu address dla humanOne."/>
+			<img class="image" src="/object-variable-example14.jpg" alt="Graf przedstawiający sytuację, gdy własność address ze zmiennej humanTwo odnosi się do wartości własności address ze zmiennej humanOne, a następnie zmieniamy wartość własności street wchodzącej w skład obiektu address dla humanOne."/>
+			<p class="article__paragraph">
+				Odmiennie będzie wyglądać sytuacja w przypadku, gdy do zmiennej humanTwo dodamy własność adres, ale z własnym obiektem, a nie ze wskazaniem na adres ze zmiennej humanOne, przy czym w obiekcie tym własność street będzie się odwoływała do wartości własności street ze zmiennej humanOne. Odwołujemy się tutaj do samej wartości danej własności, a nie całego obiektu, a zatem w przypadku późniejszej zmiany tej wartości dla zmiennej humanOne, w zmiennej humanTwo wartość ta się nie zmieni. Pozostanie taka sama, jaka została zdefiniowana w momencie utworzenia powiązania. Wskazanie było na typ prosty, a nie na obiekt, a zatem w momencie tworzenia powiązania w zmiennej humanTwo, została pobrana wartość, jaka istniała w momencie tworzenia obiektu humanOne. Późniejsza zmiana wartości w humanOne, nie będzie miała dla humanTwo zastosowania.
+			</p>
+			<img class="image" src="/object-variable-example15.jpg" alt="Widok wywołania obiektów w zakładce console w devtools w sytuacji, gdy własność street składająca się na obiekt address ze zmiennej humanTwo odnosi się do wartości własności street ze zmiennej humanOne, a następnie zmieniamy wartość własności street wchodzącej w skład obiektu address dla humanOne."/>
+			<img class="image" src="/object-variable-example16.jpg" alt="Graf przedstawiający sytuację, gdy własność street składająca się na obiekt address ze zmiennej humanTwo odnosi się do wartości własności street ze zmiennej humanOne, a następnie zmieniamy wartość własności street wchodzącej w skład obiektu address dla humanOne."/>
+			<p class="article__paragraph">
+				Podsumowując, jeśli za pomocą własności lub zmiennej wskazujemy na jakiś obiekt, to wszystko, co jest do tego obiektu podłączone, będzie posiadało zaktualizowaną wartość własności składających się na ten obiekt. Jeśli natomiast własność wskazuje na typ prosty, to kopiujemy tylko połączenie do typu prostego i możemy je zmieniać bez konsekwencji dla innych zmiennych lub własności.
+			</p>
+			</article>
 		</section>
+		<section class="section">
+			<h2 class="section__header">JavaScript - tydzień 6</h2>
+			<article class="article">
+				<h3 class="article__header">Logika w JS</h3>
+				<p class="article__paragraph">
+					Spora część programowania opiera się na logice, a logika jest często odpowiedzią na pytanie, czy wyrażenie, o które pytamy jest prawdziwe czy fałszywe i wykonaniem odpowiednich operacji zależnie od tej odpowiedzi. Pytanie o prawdę i fałsz, to tzw. porównanie. Aby zapisać porównanie za pomocą JavaScriptu można skorzystać z instrukcji if - jeśli wynik porównania jest prawdą, to należy wykonać kawałek kodu znajdujący się w nawiasach klamrowych, jeśli natomiast nie jest prawdą, to należy po prostu przejść dalej. Poniżej znajduje si przykład porównania w oparciu o operator porównnia !=, czyli nie równa się. Gdyby porównywane stringi były identyczne, czyli wartość porównania logicznego byłaby fałszem, to wówczas kod w nawiasie klamrowym by się nie wykonał.
+				</p>
+				<img class="image" src="/logic-if-instruction.jpg" alt="Przykład instrukcji if zawierającej porównanie dwóch stringów."/>
+				<p class="article__paragraph">
+					Poniżej znajduje się lista operatorów porównania wykorzystywanych w JavaScript. Operatory mniejszości/większości służą standardowo do porównywania liczb i działają tak samo jak w matematyce.
+				</p>
+				<img class="image" src="/comparison-operators.jpg" alt="Operatory porównania wykorzystywane w JavaScript."/>
+				<p class="article__paragraph">
+					Pojedynczy znak równości to operator przypisania, nie używamy go przy porównaniach. Żeby porównać dwie strony używamy podwójnego znaku równości. Można porównywać zarówno liczby, jak i inne wyrażenia. Natomiast 3 znaki równości sprawdzają również typeof, czyli jeśli porównamy cyfry 2 w formie liczby oraz cyfrę dwa w formie stringa uzyskamy fałsz. Jeśłi to samo porównanie wykonamy wykorzystując 2 znaki równości, to wynikiem będzie prawda. Operator porównania skłądający się z 3 znaków równości najpierw sprawdza typy, jeśli są różne, to zwraca fałsz i nie weryfikuje już wartości. Jeśli chcemy porównać po prostu ilość sztuk, to zwykły podwójny znak równości będzie ok, ale jeśli porównujemy np. wartości w dwóch walutach (np. 2 eur i 2 pln), to zasadne będzie porównanie za pomocą potrójnego znaku równości, weryfikującego również typeof. Bezpieczniejsze i bardziej przewidywalne jest porównywanie za pomocą 3 znaków, dzięki czemu mamy pewność, że to jest ten sam typ.
+				</p>
+				<img class="image" src="/logic-operator-example1.jpg" alt="Przykład porównania dwóch wartości za pomocą operatora potrójnego znaku równości."/>
+				<p class="article__paragraph">
+					Analogicznie działa porównanie z zaprzeczeniem, czyli sprawdzanie, czy obie strony są różne. Jeśli użyjemy operatora z podwójnym znakiem równości !==, to nawet jeśli będziemy mieli te same wartości, ale mające odmienne type of (number i string), to uzyskamy wartość prawda, jako, że strony równania nie są takie same.
+				</p>
+				<img class="image" src="/logic-operator-example2.jpg" alt="Przykład porównania z zaprzeczeniem dwóch wartości o odmiennym typeof za pomocą operatora z podwójnym znakiem równości."/>
+				<p class="article__paragraph">
+					Korzystając z instrukcji if, możemy również używać tzw. falsy, czyli fałszywych wartości, które zwracają false w JavaScript. Takich wartości jest 6. 
+				</p>
+				<img class="image" src="/falsy-examples.jpg" alt="Wartości falsy w JavaScript."/>
+				<p class="article__paragraph">
+					Pierwsza to po prostu false. Druga to 0, które zwróci zawsze wartość fałszywą. Kolejna to pusty string, niezawierający żadnego znaku. Następnie null, undefined i NaN, czyli not a number, który jest zwracany, gdy próbujemy wykonać operację z czymś, co nie jest liczbą. Poniżej przykład takiej operacji, gdzie strong mnożymy razy 6 i uzyskujemy Nan, czyli w efekcie false (kod nie jest wykonywany).
+				</p>
+				<img class="image" src="/falsy-nan.jpg" alt="Przykład kodu, w którym jako rezultat uzyskujemy not a number."/>
+				<p class="article__paragraph">
+					JavaScript działa tutaj w sposób szczególny, bo w sytuacji, gdy zamiast mnożyć jakiegoś stringa, dodamy do niego jakąś liczbę, to uzyskamy prawdę.
+				</p>
+				<img class="image" src="/truthy-example.jpg" alt="Przykład kodu z użyciem wartości truthy, w którym jako rezultat uzyskujemy prawdę."/>
+				<p class="article__paragraph">
+					Dzieje się tak, ponieważ wszystkie wartości poza wyżej wymienionymi, to tzw. truthy, czyli wartości, dla których zwraca nam prawdę. Są to między innymi stringi, czyli tekst, liczby dodatnie i ujemne, z wyjątkiem 0, pusty obiekt, czy nawiasy klamrowe bez zawartości, tablica, którą zapisujemy jako nawiasy kwadratowe oraz wyrażenie true jako sama wartość, a nie wynik jakiegoś wyrażenia.
+				</p>
+				<img class="image" src="/truthy-example1.jpg" alt="Lista przykładowych wartości truthy."/>
+				<p class="article__paragraph">
+					Nasze wyrażenia logiczne możemy ze sobą łączyć, co robimy za pomocą logicznego "i" zapisywanego jako dwa znaki ampersand (&&). Aby wyrażenie logiczne skłądające sie z wyrażeń połączonych ze sobą za pomocą AND było prawdziwe, to każde z nich musi być prawdą. Jeśli choć jedno będzie fałszywe, to całe wyrażenie główne również zwróci fałsz.
+				</p>
+				<img class="image" src="/logic-and.jpg" alt="Łączenie wyrażeń logicznych za pomocą AND."/>
+				<img class="image" src="/operator-and-example.jpg" alt="Przykład użycia operatora AND w kodzie."/>
+				<p class="article__paragraph">
+					Drugim operatorem, za pomocą którego możemy łączyć nasze wyrażenia logiczne jest OR, czyli "lub" zapisywany w formie dwóch pionowych kresek (||). W tym przypadku wystarczy, że jedno wyrażenie, wchodzące w skłąd wyrażenia głównego, jest prawdziwe i wówczas całe wyrażenie główne jest prawdziwe.
+				</p>
+				<img class="image" src="/logic-or.jpg" alt="Łączenie wyrażeń logicznych za pomocą OR."/>
+				<p class="article__paragraph">
+					Kolejnym operatorem logicznym jest NOT zapisywany w formie pojedynczego wykrzyknika (!), który odwraca wartość naszego wyrażenia logicznego. Dodajemy go na początku wyrażenia, którego wartość chcemy odwrócić. W efekcie !false zwróci nam prawdę, a !true da wynik fałszywy.
+				</p>
+				<img class="image" src="/logic-not.jpg" alt="Wykorzystanie w wyrażeniu logicznym operatora NOT."/>
+				<p class="article__paragraph">
+					Jeśli chcemy rozbudować nasz warunek i stworzyć dodatkowe warunki, możemy wykorzystać instrukcję ELSE, której kod zostanie wykonany w sytuacji, gdy sprawdzane wyrażenie będzie fałszywe.
+				</p>
+				<img class="image" src="/logic-else.jpg" alt="Sposób wykorzystania instrukcji ELSE."/>
+				<img class="image" src="/else-example.jpg" alt="Przykład kodu z wykorzystaniem instrukcji ELSE."/>
+				<p class="article__paragraph">
+					Poniżej znajduje się przykład wykorzystania instrukcji ELSE w przypadku zmiennej, której nadajemy na początku wartość false, a następnie zmieniamy na true (na przepięcie pozwala nam zdefiniowanie zmiennej za pomocą LET). Kod wykoywany jest z góry na dół, a zatem najpierw wykona się kod znajdujący się po instrukcji ELSE, a następnie ten po instrukcji IF.
+				</p>
+				<img class="image" src="/else-example1.jpg" alt="Przykład kodu z wykorzystaniem instrukcji ELSE oraz zmiennych o wartości true i false."/>
+				<p class="article__paragraph">
+					Instrukcja ELSE IF bardzo dokładnie specyfikuje to, co ma zostać sprawdzone. Nie zostanie wykonana zawsze, a jedynie w określonej sytuacji. Jeśli pierwszy z napotkanych if/else if, okaże się prawdą, to kolejne nie są już sprawdzane, nawet jeśli okazałyby się również prawdą.
+				</p>
+				<img class="image" src="/logic-elseif.jpg" alt="Sposób wykorzystania instrukcji ELSE IF."/>
+				<p class="article__paragraph">
+					Możemy zatem rozbudowywać nasze wyrażenie o kolejne warunki, korzystając z instrukcji ELSE IF i na koniec obsłużyć wszystkie pozostałe przypadki, które nie zostały uwzględnione w tych warunkach, za pomocą instrukcji ELSE.
+				</p>
+				<img class="image" src="/elseif-example.jpg" alt="Przykład wykorzystania instrukcji ELSE IF oraz ELSE."/>
+				<p class="article__paragraph">
+					Do porównań, które odwołują się typowo do wartości, czyli sprawdzają za pomocą operatora, że jest równe, wykorzystywana jest instrukcja SWITCH, która przyjmuje jako parametr albo zmienną albo jakąś wartość, i za pomocą instrukcji CASE wykonuje odpowiedni kod, jeśli dana zmienna wskazuje na wartość z danego CASE, a następnie za pomocą instrukcji BREAK wychodzi z głównego bloku kodu.
+				</p>
+				<img class="image" src="/logic-switch.jpg" alt="Sposób wykorzystania instrukcji SWITCH."/>
+				<p class="article__paragraph">
+					Składnia instrukcji SWITCH jest trochę inna niż w poznanych do tej pory - dwukropek przy CASE, a następnie średnik z BREAK stanowią odpowienik klamr, które stosowaliśmy dotychczas do otwarcia i zamknięcia. Zatem poszczególne warunki CASE są odpowiednikiem ELSE IF, a DEFAULT pełni taką rolę jak ELSE we wcześniejszym przykładzie. W przypadku DEFAULT nie dodajemy już żadnego BREAK na końcu, bo jest to domyślna ostania odpowiedź.
+				</p>
+				<img class="image" src="/switch-example.jpg" alt="Przykład wykorzystania instrukcji SWITCH."/>
+				<p class="article__paragraph">
+					Istnieje również zapis skrócony instrukcji IF przy użyciu znaku zapytania i dwukropka (tzw. ternary/conditional operator). Ternary, czyli potrójny, składa się on bowiem z trzech części, pierwsza to nasze porównanie, coś, co chcemy sprawdzić, po którym dajemy znak zapytania; druga to kod, który ma się wykonać w sytuacji, gdy porównanie da wynik prawda, po którym dajemy dwukropek, i trzecia część, czyli kod, który ma się wykonać, gdy uzyskamy wynik false.
+				</p>
+				<img class="image" src="/short-if.jpg" alt="Skrócony zapis instrukcji IF."/>
+				<p class="article__paragraph">
+					Na stronie Mozilli operator ten został opisany tak:
+				</p>
+				<p class="article__paragraph">
+					The conditional (ternary) operator is the only JavaScript operator that takes three operands: a condition followed by a question mark (?), then an expression to execute if the condition is truthy followed by a colon (:), and finally the expression to execute if the condition is falsy. This operator is frequently used as an alternative to an if...else statement.
+				</p>
+				<img class="image" src="/ternary-operator.jpg" alt="Przykład użycia potrójnego operatora."/>
+				<p class="article__paragraph">
+					W przypadku tego potrójnego operatora nie chcemy wrzucać dużych bloków kodu, są to dosłownie jednolinijkowe porównania na szybko, które są często wykorzystywane np. w pracy z blibioteką REACT.
+				</p>
+				<p class="article__paragraph">
+				Maciek podał namiary na prezentację WAT, która opisuje dziwne rzeczy związane z JavaScriptem i to, jak ten jezyk zachowuje się w pewnych przypadkach, gdy dodajemy do siebie różne rzeczy i jakie wartości wówczas zwraca, mimo, że nie jest to logiczne: <a class="article__link" href="https://www.destroyallsoftware.com/talks/wat">prezentacja WAT o dziwnych zachowania w JavaScript</a>.
+			</p>
+			</article>
+		</section>
+	</div>
 	</main>
     <footer class="footer">
 		<p class="footer__content">Strona domowa Magdaleny Derek, wszystkie treści są wynikiem nauki w ramach szkolenia WTF: Co
