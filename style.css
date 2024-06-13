@@ -46,6 +46,16 @@ html {
 	background: #FFFFFF;
 }
 
+.article__button {
+	background: #084C61;
+	color: #FFFFFF;
+	font-weight: 600;
+	padding: 4px 8px;
+	display: inline-block;
+	border: 0;
+	border-radius: 6px;
+}
+
 .article__header {
 	color: #084C61;
 }

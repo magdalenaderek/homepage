@@ -67,13 +67,13 @@
 					oznaczający zakończenie linii.<br>
 
 				</p>
-				<img class="image" src="//tag-script.JPG"
+				<img class="image" src="/tag-script.JPG"
 					alt="Przedstawienie umiejscowienia znacznika script z funkcją alert przed domknięciem znacznika body." />
 				<p class="article__paragraph">
 					Skrypt wykonuje się tylko raz, jeszcze przed załadowaniem strony. W przypadku funkcji alert jest to
 					wyskakujące okienko zawierające treść podaną w parametrach funkcji.
 				</p>
-				<img class="image" src="//alert-example.JPG"
+				<img class="image" src="/alert-example.JPG"
 					alt="Przykład działania funkcji alert na stronie - wyskakujące okienko." />
 				<p class="article__paragraph">
 					Tak, jak w przypadku stylów, bezpośrednie pisanie kodu JavaScript w pliku z htmlem zadziała, ale
@@ -85,7 +85,7 @@
 					body, używając znacznika "script".
 					Używamy atrybutu "src", tak jak w obrazkach, a nie "href", tak jak w przypadku stylów.
 				</p>
-				<img class="image" src="//main-file.JPG" alt="Odwołanie do pliku z kodem JavaScript w pliku HTML." />
+				<img class="image" src="/main-file.JPG" alt="Odwołanie do pliku z kodem JavaScript w pliku HTML." />
 				<p class="article__paragraph">
 					Kolejnym poleceniem jest funkcja console.log, która w przeciwieństwie do funkcji alert nie wyświetla
 					informacji na stronie, ale w narzędziach deweloperskich w zakładce "console".<br>
@@ -93,7 +93,7 @@
 					console.log('tekst');<br>
 					Jeśli wpisze się funkcję dwa razy, to zostanie ona wywołana dwukrotnie.
 				</p>
-				<img class="image" src="//consolelog-example1.JPG"
+				<img class="image" src="/consolelog-example1.JPG"
 					alt="Przykład dwukrotnego wywołania funkcji console.log w konsoli w narzędziach deweloperskich w przeglądarce." />
 				<p class="article__paragraph">
 					Zmienna w JavaScript to stworzenie powiązania między nazwą, której chcemy użyć a wartością, którą chcemy
@@ -105,7 +105,7 @@
 					Przy tworzeniu zmiennych nie trzeba dawać średnika na końcu linii, przeglądarka to przetworzy. Jednak dla
 					dobrej praktyki lepiej to robić, żeby zaznaczyć w ten sposób koniec linii.<br>
 					Wywołując nazwę zmiennej w funkcji nie używamy apostrofów.<br>
-					<img class="image" src="//consolelog-example2.JPG"
+					<img class="image" src="/consolelog-example2.JPG"
 						alt="Stworzenie zmiennej słownej i liczbowej oraz ich wywołanie w funkcji console.log." />
 
 				</p>
@@ -115,7 +115,7 @@
 					nazywamy <b>literałem</b>.<br>
 					console.log(`Nazywam się ${firstName} i mam ${age} lat.`);
 				</p>
-				<img class="image" src="//consolelog-example3.JPG"
+				<img class="image" src="/consolelog-example3.JPG"
 					alt="Wykorzystanie w funkcji console.log jednocześnie zmiennej oraz tekstu, czyli literału." />
 				<p class="article__paragraph">
 					Kod JS uruchamia się raz (po załadowaniu strony). Może też oczywiście działać później, jeśli ma odpowiednie
@@ -136,14 +136,14 @@
 					let isHappy = false;<br>
 					isHappy = true;<br>
 					isHappy = 'tak';<br>
-					<img class="image" src="//let-variable.jpg" alt="Przykład definiowania zmiennej za pomocą słowa kluczowego let."/>
+					<img class="image" src="/let-variable.jpg" alt="Przykład definiowania zmiennej za pomocą słowa kluczowego let."/>
 				</p>
 				<p class="article__paragraph">
 					<h4 class="paragraph-header">CONST</h4>	
 					CONST - tworzy zmienne, które mają stałe połączenie z jedną wartością, tak jak w definicjach poniżej. Jeśli będziemy próbowali przypisać do zmiennej age lub name jakąś inną wartość (np. age = 25), to otrzymmay błąd.<br>
 					const name = 'Magdalena';<br>
 					const age = 39;<br>
-					<img class="image" src="//constant-variable.jpg" alt="Przykłady definiowania zmiennych za pomocą słowa kluczowego const."/>
+					<img class="image" src="/constant-variable.jpg" alt="Przykłady definiowania zmiennych za pomocą słowa kluczowego const."/>
 				</p>
 				<p class="article__paragraph">
 					<h4 class="paragraph-header">VAR</h4>	
@@ -154,8 +154,8 @@
 					Poniżej znajdują sie dwa przykłady definiowania zmiennych. W pierwszym definiujemy zmienną x za pomocą CONST, przypisując jej wartość 10. Następnie definiujemy zmienną y za pomocą LET, przypisując jej wartość x. Po wykonaniu tego kodu, obie zmienne, x i y będą równe 10. Gdy zmiennej y przypiszemy następnie inną wartość, 20, to po wykonaniu kodu, zmienna y będzie miała wartość 20, ale zmienna x nadal będzie miałą wartość 10.<br>
 					W drugim przykładzie odwracamy sytuację i definiujemy zmienną a za pomocą LET, przypisując jej wartość 20, a następnie definiujemy zmienną b za pomocą CONST, przypisując jej wartość a. Po wykonaniu kodu, obie zmienne będą miały wartość 20. Jeśli następnie zmiennej a przypiszemy inną wartość, 13, to po wykonaniu kodu, zmienna a będzie miała wartość 13, ale zmienna b nadal będzie miała wartość 10.<br>
 					Dzieje się tak, ponieważ kod wykonuje się tylko raz. Wartość do zmiennej x w przykładzie pierwszym i zmiennej b w przykładzie drugim przypisujemy tylko w momencie pierwszego wykonania kodu. Wartość jest do nich przypisywana w momencie definiowania tych zmiennych. To, że następnie wartości zmiennych y i a ulegają zmianie, z punktu widzenia zmiennych x i b nie ma znaczenia. Powiązanie zostało bowiem wykonane wcześniej, gdy miały one inne wartości. W przykładach tych nie dokonujemy powiązania między zmiennymi ani między wartościami. Przypisujemy jedynie wskazanie na wartość, jaką wskazywała dana zmienna w momencie jej tworzenia.<br>
-					<img class="image" src="//variables-definition-example1.jpg" alt="Przykład pierwszy definiowania zmiennych za pomocą const i let."/><br>
-					<img class="image" src="//variables-definition-example2.jpg" alt="Przykład drugi definiowania zmiennych za pomocą const i let."/><br>
+					<img class="image" src="/variables-definition-example1.jpg" alt="Przykład pierwszy definiowania zmiennych za pomocą const i let."/><br>
+					<img class="image" src="/variables-definition-example2.jpg" alt="Przykład drugi definiowania zmiennych za pomocą const i let."/><br>
 				</p>
 				<p class="article__paragraph">
 					<h4 class="paragraph-header">Typy proste w JS</h4>	
@@ -167,12 +167,12 @@
 					- null - wartość celowo niezdefiniowana, wiemy, że powinna być jakaś wartość, ale jej nie ma i celowo oznaczamy, że jej nie ma, ale sama zmienna jest zdefiniowana; wartość zapisujemy bez żadnych apostrofów, gdyż nie jest to wartość jako taka, ale typ wartości;<br>
 					- undefined - brak definicji, dana zmienna nie została w ogóle zadeklarowana;
 					- symbol - typ wartości wykorzystywany do tworzenia "unikalnych opakowań", raczej nie jest wykorzystywany, wymieniony został bardziej jako ciekawostka.<br> 
-					<img class="image" src="//primitives-in-js.jpg" alt="Lista typów prostych w Java Script."/>
+					<img class="image" src="/primitives-in-js.jpg" alt="Lista typów prostych w Java Script."/>
 				</p>
 				<p class="article__paragraph">
 					<h4 class="paragraph-header">Instrukcja typeof</h4>	
 					To, jaki typ ma dana zmienna możemy sprawdzić za pomocą instrukcji typeof. Instrukcja ta nie zawsze zwraca poprawny typ, którego się spodziewamy w danym przypadku. Na przykładzie podanym poniżej, przy sprawdzaniu typu zmiennej, do której została przypisana wartość null, typeof zwraca object zamiast null. Dzieje się tak dlatego, że w Java Script, jako języku obiektowym, wszystko jest obiektem, a null jest wskazaniem na pusty obiekt, w którym w przyszłości ma się znaleźć jakaś inna wartość.<br>
-					<img class="image" src="//typeof-instruction-examples.jpg" alt="Przykłady sprawdzania typu zmiennych za pomocą instrukcji typeof."/>
+					<img class="image" src="/typeof-instruction-examples.jpg" alt="Przykłady sprawdzania typu zmiennych za pomocą instrukcji typeof."/>
 				</p>
 				<p class="article__paragraph">
 					<h4 class="paragraph-header">Immutability</h4>	
@@ -209,7 +209,7 @@
 					JavaScript, jako nawyższa wartstwa na naszej stronie, może zmieniać na niej wszystko. Możemy więc zmienić np. treść naszego elementu h1. Mamy już wybrany nasz element za pomocą querySelectora i możemy teraz wykonywać na nim operacje. Możemy w tym celu wykorzystać własność innerHTML, która odpowiada za treść naszego elementu, czyli to co, jaki html znajduje się w środku tego elementu: nazwaZmiennejQuerySelector.innerHTML = 'treść'.
 				</p>
 				<p class="article__paragraph">
-					Działając na naszym przykładzie nagłówka h1 i wywołując w console.log naszą funkcję header, w konsoli wyświetla nam się cały nasz obiekt, który po najechaniu zostaje również podświetlony na stronie w oknie przeglądarki. Jeśłi jednak wywołamy sobie header.innerHTML, to w konsoli wyświetli nam się tylko zawartość elementu, jego treść, odnosimy się bowiem do samej wartości. Możemy również tę treść zmienić, podając nową: header.innerHTML = 'Hej'. Jest to przykład, gdy w pliku HTML i w źródle strony będziemy mieć wcześniejszą wartość, natomiast w DOM wyświetli się już nowa treść nagłówka, podmieniona za pomocą JavaScriptu. Czyli przykład różnicy między instrukcją a złożonym meblem. Jako nową treść możemy również podstawić utworzone wcześniej zmienne name i age: header.innerHTML = `Witaj, nazywam się ${firstName} i mam ${age} lat.` Przy tworzeniu stron statycznych nie robimy takich rzeczy, nie wrzucamy treści statycznej za pomocą skryptów, ale już przy korzystaniu z danych zewnętrznych alo danych przeliczanych przez JavaScript będziemy w ten sposób podmieniać dane (np. zmiana licznika, gdy użytkownik kliknie na plus).
+					Działając na naszym przykładzie nagłówka h1 i wywołując w console.log naszą funkcję header, w konsoli wyświetla nam się cały nasz obiekt, który po najechaniu zostaje również podświetlony na stronie w oknie przeglądarki. Jeśli jednak wywołamy sobie header.innerHTML, to w konsoli wyświetli nam się tylko zawartość elementu, jego treść, odnosimy się bowiem do samej wartości. Możemy również tę treść zmienić, podając nową: header.innerHTML = 'Hej'. Jest to przykład, gdy w pliku HTML i w źródle strony będziemy mieć wcześniejszą wartość, natomiast w DOM wyświetli się już nowa treść nagłówka, podmieniona za pomocą JavaScriptu. Czyli przykład różnicy między instrukcją a złożonym meblem. Jako nową treść możemy również podstawić utworzone wcześniej zmienne name i age: header.innerHTML = `Witaj, nazywam się ${firstName} i mam ${age} lat.` Przy tworzeniu stron statycznych nie robimy takich rzeczy, nie wrzucamy treści statycznej za pomocą skryptów, ale już przy korzystaniu z danych zewnętrznych albo danych przeliczanych przez JavaScript będziemy w ten sposób podmieniać dane (np. zmiana licznika, gdy użytkownik kliknie na plus).
 				</p>
 				<img class="image" src="/inner-html.jpg" alt="Wykonanie skryptu zmieniającego treść nagłówka."/>
 				<p class="article__paragraph">
@@ -514,6 +514,52 @@
 				<p class="article__paragraph">
 				Maciek podał namiary na prezentację WAT, która opisuje dziwne rzeczy związane z JavaScriptem i to, jak ten jezyk zachowuje się w pewnych przypadkach, gdy dodajemy do siebie różne rzeczy i jakie wartości wówczas zwraca, mimo, że nie jest to logiczne: <a class="article__link" href="https://www.destroyallsoftware.com/talks/wat">prezentacja WAT o dziwnych zachowania w JavaScript</a>.
 			</p>
+			</article>
+			<article class="article">
+				<h3 class="article__header article__header--js">Eventy w JS</h3>
+				<button class="article__button article__button--js">Zmień treść nagłówka</button>
+				<p class="article__paragraph">
+					Przepis na przycisk zmieniający nagłówek, to utworzenie przycisku i nagłówka oraz napisanie kodu JS, który obsłuży klinięcie oraz kodu, który zmieni treść nagłówka.
+				</p>
+				<p class="article__paragraph">
+					&lt;button&gt; to tag HTML, który służy do interakcji z użytkownikiem. Treść buttonu jest opisem akcji, która się wykona, gdy użytkownik w niego kliknie. Do nagłówka, którego treść będziemy zmieniać oraz do przycisku, dodajmy klasę, która będzie służyła do odnoszenia się do niej za pomocą JS.
+				</p>
+				<p class="article__paragraph">
+					Zasadnicza różnica między tagiem &lt;button&gt; a tagiem &lt;a&gt; jest taka, że ten pierwszy służy do interakcji na stronie, a drugi do nawigacji.
+				</p>
+				<p class="article__paragraph">
+					Po utworzeniu przycisku, piszemy skrypt, który będzie nasługiwał na to kliknięcie, które ma zmienić treść nagłówka. Korzystamy w tym celu z poniższej metody.
+				</p>
+				<img class="image" src="/event-listener.jpg" alt="Metoda nasłuchująca wystąpienie eventów."/>
+				<p class="article__paragraph">
+					W metodzie służącej do nasłuchiwania, podajemy typ eventu, na który chcemy nasłuchiwać (w naszym przypadku kliknięcie, a zatem click) oraz listener, czyli funkcję, która będzie się wykonywać, gdy ten event wystąpi. Podajemy tylko nazwę funkcji jako parametr, bez żadnych nawiasów, listener będzie już wiedział, do której funkcji się odwołać i ją wykonać. Metodę tę możemy podpiąć pod dowolny element (może być to body, button, etc.).
+				</p>
+				<p class="article__paragraph">
+					Są rozmaite rodzaje eventów, które mogą wystąpić, my jednak skupimy się w tej chwili na eventach generowanych za pomocą myszki, a konkretnie na click. Pełną listę eventów myszkowych można znaleźć na stronie Mozilli: <a class="article__link" href="https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events">lista mouse events</a>.
+				</p>
+				<p class="article__paragraph">
+					W tej chwili zostało to już ujednolicone i event click wykonany za pomocą myszki jest tożsamy z dotknięciem palcem na urządzeniu mobilnym. Są jednak eventy ściśle związane z myszką, kursorem i monitorem, takie jak mouseenter, mouseleave czy mouseover, które na urządzeniach mobilnych już nie zadziałają.
+				</p>
+				<img class="image" src="/event-listener-function.jpg" alt="Metoda nasłuchująca wystąpienie eventu click i wywołująca określoną funkcję."/>
+				<p class="article__paragraph">
+					W pliku ze skryptami JS za pomocą querySelectora pobieramy nagłówek i przycisk, odwołując się do nich za pomocą dodanej klasy do obsługi skryptów JS. Możemy od razu dodać console.log, by sprawdzić, czy pobierają nam się właściwe elementy. Następnie dodajemy eventListenera, który będzie nasłuchiwać na naszym przycisku - robimy to tylko raz, on będzie działać oczywiście za każdym razem. Poniżej przykład wywołania funkcji dodającej wpisy o kliknięciu w konsoli w devtools - za każdym kliknięciem licznik jej wywołania jest odpowiednio zwiększany.
+				</p>
+				<img class="image" src="/click-function.jpg" alt="Wywołanie funkcji nasłuchującej wystąpienie eventu click i dodającej wpis w konsoli w devtools."/>
+				<p class="article__paragraph">
+					Możemy zdefiniować naszą funkcję z parametrem (e), który odnosi się do eventu i po jej wywołaniu w console.log za pomocą eventListenera, będziemy mieć pełne informacje na temat tego eventu w PointerEvent - w przypadku klinięcia będzie to między innymi położenie kursora, target, który został kliknięty (możemy się do niego odnieść poprzez e.target), etc. Pełna dokumentacja na temat eventów znajduje się na stronie Mozilli: <a class="article__link" href="https://developer.mozilla.org/en-US/docs/Web/API/event">szczegółówe informacje na temat eventów</a>.
+				</p>
+				<img class="image" src="/pointer-event.jpg" alt="Wywołanie funkcji nasłuchującej wystąpienie eventu click z parametrem e."/>
+				<p class="article__paragraph">
+					Mamy już nagłówek, przycisk i kod obsługujący kliknięcie, potrzebujemy jeszcze kodu zmieniającego treść nagłówka. Możemy w tym celu go pobrać już w ciele funkcji za pomocą querySelector. Następnie wykorzystując własność innerHTML dodajemy treść wybranego elementu HTML, jaka ma zostać wyświetlona po klinięciu w przycisk.
+				</p>
+				<img class="image" src="/change-on-click.jpg" alt="Wywołanie funkcji zmieniajcej treść nagłówka po kliknięciu w przycisk."/>
+				<p class="article__paragraph">
+					Kolejne kliknięcia w przycisk również wywołuja funkcję i zmieniają tytuł nagłówka, ale nie widzimy tego na stronie, gdy zmiana następuje z już zmienionego tutułu. Po odświeżeniu strony, wszystko wraca do normy, bo oczywiście w samym kodzie źródłowym HTML nie nastąpiły żadne zmiany, interakcje zachodzą jedynie w DOM.
+				</p>
+				<p class="article__paragraph">
+					Jeśli kod, który ma się wykonać jest dość krótki, tak jak w naszym przypadku i jest wykorzystywany tylko w jednym miejscu (u nas tylko na tym kliknięciu), to nie musimy podawać nazwy funkcji w eventListenerze, możemy samą funkcję wrzucić bezpośrednio do eventListenera po podaniu typu eventu i przecinku.
+				</p>
+				<img class="image" src="/function-in-listener.jpg" alt="Definicja funkcji zmieniajcej treść nagłówka po kliknięciu w przycisk, znajdująca się bezpośrednio w eventListenerze."/>
 			</article>
 		</section>
 	</div>
