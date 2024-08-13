@@ -1382,6 +1382,25 @@
 			<article class="article">
 				<h3 class="article__header">CSS - stylowanie tła</h3>
 				<p class="article__paragraph">
+					Główna własność CSS, która odpowiada za tła, to background, za pomocą której wcześniej ustawialiśmy kolor tło strony. Są jednak własności, za pomocą których mozna zdefiniować tło w sposób bardziej szczegółówy.
+				</p>
+				<p class="article__paragraph">
+					Własność background-image pozwala na ustawienie obrazka jako tła naszej strony lub danego elementu i zawiera ścieżkę do pliku, który tym tłem będzie. Skłąda się na nią literał url i podana w nawiasie ścieżka dostępu, najlepiej z rootem, tak jak przy standardowym wyświetlaniu obrazków.
+				</p>
+				<img class="image" src="/background-image.jpg" alt="Wzór na wykorzystanie własności backgroun-image, która zaczytuje obrazek z podanego adresu jako tło." />
+				<p class="article__paragraph">
+					Można łączyć jednocześnie kolor tła i obrazek, jeśli ma on ustawioną przezroczystość. Na poniższym przykłądzie kolor elementu jest ustawiony za pomocą własności background, a następnie jako tło ustiony jest obrazek. W efekcie obrazek nakłada się na kolor, który jest pod nim widoczny.
+				</p>
+				<img class="image" src="/background-image-color.jpg" alt="Przykład zastosowania jednocześnie koloru i obrazka jako tła, przy czym kolor jest widoczny pod obrazkiem." />
+				<p class="article__paragraph">
+					Do ustawiania pozycji tła służy własność background-position. Może ona przyjmować wartość określającą pozycję x (oś pozioma) i pozycję y (oś pionowa) - domyślnie jest to 0 0, czyli tło zaczyna się w lewym górnym rogu elementu (np. main czy body), do którego dopinamy nasze tło. Dodatnie wartości pozycji y będą przesuwać początek tła w dół elementu, a dodatnie wartości x będą przesuwać początek tła w osi poziomej w prawo.
+				</p>
+				<img class="image" src="/background-position.jpg" alt="Przykłady wartości, jakie może przyjmować własność background-position." />
+				<p class="article__paragraph">
+					Najczęściej jednak do pozycjonowania tła w osi x i y wykorzystuje się słowa kluczowe. Jeśli dla obu osi podamy pozycję center, to obrazek będzie się zaczynał w środku elementu i rozchodził z niego we wszystkich kierunkach. Jeśli będziemy mieć więcej treści i będzie ona wykraczać poza okno przeglądarki, to przy scrollowaniu obrazek będzie się powatarzał, ale za każdym razem będzie rozpoczynał się w centrum.
+				</p>
+				<img class="image" src="/background-position-center.jpg" alt="Przykład wypozycjonowania obrazka jako tła rozpoczynającego się w centrum elementu." />
+				<p class="article__paragraph">
 					
 				</p>
 			</article>
