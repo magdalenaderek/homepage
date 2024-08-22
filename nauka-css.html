@@ -1393,15 +1393,43 @@
 				</p>
 				<img class="image" src="/background-image-color.jpg" alt="Przykład zastosowania jednocześnie koloru i obrazka jako tła, przy czym kolor jest widoczny pod obrazkiem." />
 				<p class="article__paragraph">
-					Do ustawiania pozycji tła służy własność background-position. Może ona przyjmować wartość określającą pozycję x (oś pozioma) i pozycję y (oś pionowa) - domyślnie jest to 0 0, czyli tło zaczyna się w lewym górnym rogu elementu (np. main czy body), do którego dopinamy nasze tło. Dodatnie wartości pozycji y będą przesuwać początek tła w dół elementu, a dodatnie wartości x będą przesuwać początek tła w osi poziomej w prawo.
+					Do ustawiania pozycji tła względem elementu służy własność background-position. Może ona przyjmować wartość określającą pozycję x (oś pozioma) i pozycję y (oś pionowa) - domyślnie jest to 0 0, czyli tło zaczyna się w lewym górnym rogu elementu (np. main czy body), do którego dopinamy nasze tło. Dodatnie wartości pozycji y będą przesuwać początek tła w dół elementu, a dodatnie wartości x będą przesuwać początek tła w osi poziomej w prawo.
 				</p>
 				<img class="image" src="/background-position.jpg" alt="Przykłady wartości, jakie może przyjmować własność background-position." />
 				<p class="article__paragraph">
-					Najczęściej jednak do pozycjonowania tła w osi x i y wykorzystuje się słowa kluczowe. Jeśli dla obu osi podamy pozycję center, to obrazek będzie się zaczynał w środku elementu i rozchodził z niego we wszystkich kierunkach. Jeśli będziemy mieć więcej treści i będzie ona wykraczać poza okno przeglądarki, to przy scrollowaniu obrazek będzie się powatarzał, ale za każdym razem będzie rozpoczynał się w centrum.
+					Najczęściej jednak do pozycjonowania tła w osi x i y wykorzystuje się słowa kluczowe. Jeśli dla obu osi podamy pozycję center, to obrazek będzie się zaczynał w środku elementu i rozchodził z niego we wszystkich kierunkach. Jeśli będziemy mieć więcej treści i będzie ona wykraczać poza okno przeglądarki, to przy scrollowaniu obrazek będzie się powatarzał, ale za każdym razem będzie rozpoczynał się w centrum. 
 				</p>
 				<img class="image" src="/background-position-center.jpg" alt="Przykład wypozycjonowania obrazka jako tła rozpoczynającego się w centrum elementu." />
 				<p class="article__paragraph">
-					
+					Jeśli ustawimy pozycję tła jako bottom center, to będzie zaczynało się u dołu elementu i będzie ucinane u góry, w przypadku dużego obrazka. Przy pozycji top center, tło będzie zaczynać się u góry elemntu. Background-position: left center wypozycjonuje początek tła po lewej stronie i w przypadku dużych obrazków będzie ono ucinane z prawej strony, a odwrotna sytuacja będzie miała miejsce przy własności background-position: right center. W każdej z tych pozycji, w osi pionowej obrazek będzie zaczynał się w centrum elementu.
+				</p>
+				<img class="image" src="/background-position-left-center.jpg" alt="Przykład wypozycjonowania obrazka jako tła rozpoczynającego się w centrum elementu w osi pionowej i od lewej strony w osi poziomej." />
+				<p class="article__paragraph">
+					Można podać również pozycję tła względem elementu w procentach, np. background-position: 20% 20%, w przypadku której obrazek będzie się zaczynał w lewym górnym rogu, ale 20% obrazka od góry i od lewej będzie ucięta.
+				</p>
+				<img class="image" src="/background-position-in-percent.jpg" alt="Przykład wypozycjonowania obrazka za pomocą procentów, 20% od góry i od lewej." />
+				<p class="article__paragraph">
+					Kolejna własność to background-repeat.
+				</p>
+				<img class="image" src="/background-repeat.jpg" alt="Przykłady wartości, jakie może przyjmować własność background-repeat." />
+				<p class="article__paragraph">
+					Jeśli obrazek jest mniejszy od elementu, do którego dopinamy go jako tło, to będzie się powtarzał, gdyż domyślna wartość, jaką przyjmuje ta własność, to właśnie repeat. Jeśli coś się nie mieści wówczas w oknie przeglądarki, to jest ucinane i obrazek zaczyna się od kolejnego rzędu, zależnie od tego, gdzie startujemy. Jeśli ustawilibyśmy background-position o wartości center center, to tło będzie startować ze środka i rozchodzić się na wszystkie strony. Poniżej przykłąd domyślnego ustawienia.
+				</p>
+				<img class="image" src="/background-repeat-default.jpg" alt="Przykład zastosowania obrazka jako tła i jego powtarzania." />
+				<p class="article__paragraph">
+					Background-repeat o wartości repeat-x powoduje, że tło ustawia się i powtarza tylko w osi poziomej, startując z miejsca, które sobie zdefiniujemy. Będzie tylko jeden rząd takiego tła. Analogicznie background-repeat: repeat-y stworzy kolumnę z tłem, w ramach której obrazek będzie się powtarzał.
+				</p>
+				<img class="image" src="/background-repeat-y.jpg" alt="Przykład zastosowania obrazka jako tła i jego powtarzania w osi y przy zdefiniowaniu początku tła w centrum okna przeglądarki." />
+				<p class="article__paragraph">
+					Wartość no-repeat sprawi, że tło nie będzie się powtarzać i wystąpi tylko raz, w miejscu, które zdefiniujemy jako początek tła. Wyświetli się w oryginalnych rozmiarach pliku, więc w naszym przypadku będzie to mały obrazek wtf. Wartość round trochę zaokrągla rozmiar tła - będzie się powatrzać i będzie trochę przeskalowane, przez co mniej więcej będzie się mieścić w oknie przeglądarki, obrazek nie będzie ucinany. Poniżej przykład zastosowania własności background-repeat: round i przypięcia tła do elementu main.
+				</p>
+				<img class="image" src="/background-repeat-round.jpg" alt="Przykład zastosowania obrazka jako tła i jego powtarzania w opcji round." />
+				<p class="article__paragraph">
+					Ostatnia wartość własności background-repeat, space, sprawi, że obrazek będzie się powtarzał i zachowywał podobnie jak flexbox, nie będzie przeskalowany i między powtarzającymi się obrazkami pojawią się odstępy, zależne od dostępnego miejsca w oknie przeglądarki. Obrazków pojawi się tyle, ile się zmieści. Jeśli się nie mieści, to przestrzeń zachowuje się trochę jak justify space-between we flexie.
+				</p>
+				<img class="image" src="/background-repeat-space.jpg" alt="Przykład zastosowania obrazka jako tła i jego powtarzania w opcji space." />
+				<p class="article__paragraph">
+					Kolejna własność to background-attachment.
 				</p>
 			</article>
 		</section>
